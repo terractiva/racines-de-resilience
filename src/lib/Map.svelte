@@ -1,4 +1,8 @@
 <script>
+	import { text } from 'svelte/internal';
+
+	import gestes from '../contenus/gestes.js';
+
 	let canvas;
 	let context;
 	const image = new Image();
@@ -15,7 +19,7 @@
 		draw(1, 0, 0);
 	};
 
-	image.src = 'dessin.jpg';
+	image.src = 'arbre.jpg';
 
 	function draw(scale, x, y) {
 		const ratio = image.width / image.height;
@@ -25,35 +29,51 @@
 		context.translate(x, y);
 		context.drawImage(image, 0, 0, ratio * canvas.height, canvas.height);
 
-		drawItem('Élément', 0.33710829584024, 0.45121951219512196);
-		drawItem('Élément', 0.35007399952640306, 0.556910569105691);
-		drawItem('Élément', 0.41261445260083673, 0.7540650406504065);
-		drawItem('Élément', 0.3470232457178941, 0.7439024390243902);
-		drawItem('Élément', 0.21889158576051782, 0.6128048780487805);
-		drawItem('Élément', 0.08160766437761466, 0.7764227642276422);
-		drawItem('Élément', 0.4766802825795248, 0.37398373983739835);
-		drawItem('Élément', 0.7626884521272398, 0.8658536585365854);
-		drawItem('Élément', 0.2089766358828637, 0.4949186991869919);
-		drawItem('Élément', 0.6658270187070803, 0.3282520325203252);
-		drawItem('Élément', 0.7260794064251322, 0.45426829268292684);
-		drawItem('Élément', 0.8816678506590891, 0.5955284552845529);
+		for (const geste of gestes) {
+			drawItem(geste.position[0], geste.position[1], geste.texte, geste.sources);
+		}
 	}
 
-	function drawItem(text, px, py) {
-		const fontSize = 14;
-		const padding = 4;
+	function drawItem(px, py, texte, sources) {
+		const taillePolice = 5;
+		const ecartLigne = 1;
+		const ecartHautBas = 8;
+		const nbLignes = texte.length + sources.length + 1;
+		const diametre = taillePolice * nbLignes + ecartLigne * (nbLignes - 1) + ecartHautBas * 2;
 		const ratio = image.width / image.height;
 		const x = px * ratio * canvas.height;
 		const y = py * canvas.height;
 
-		context.font = `normal normal normal ${fontSize}px Arial`;
+		// Cercle
+		context.beginPath();
+		context.arc(x, y, diametre / 2, 0, 2 * Math.PI, false);
+		context.fillStyle = 'rgba(255, 255, 255, 0.8)';
+		context.fill();
+		context.lineWidth = 1;
+		context.strokeStyle = '#7C6962';
+		context.stroke();
 
-		const textWidth = context.measureText(text).width;
+		// Texte
+		// const largeurText = context.measureText(text).width;
+		let position = y - diametre / 2 + ecartHautBas + taillePolice - 2;
 
-		context.fillStyle = 'white';
-		context.fillRect(x - textWidth / 2, y, textWidth + 2 * padding, fontSize + 2 * padding);
-		context.fillStyle = 'black';
-		context.fillText(text, x + padding - textWidth / 2, y + padding + fontSize);
+		for (let nLigne = 0; nLigne < nbLignes; nLigne++) {
+			let couleur = 'black';
+			let ligne = texte[nLigne];
+
+			if (texte.length <= nLigne) {
+				couleur = '#7C6962';
+				ligne = nLigne === texte.length ? '⌄' : sources[nLigne - texte.length - 1];
+			}
+
+			context.fillStyle = couleur;
+			context.font = `normal normal normal ${taillePolice}px Arial`;
+			context.textAlign = 'center';
+			// context.fillText(ligne, x - largeurText / 2, y + taillePolice);
+			context.fillText(ligne, x, position);
+
+			position += taillePolice + ecartLigne;
+		}
 	}
 
 	function onMouseDown(event) {
@@ -79,11 +99,11 @@
 	}
 
 	function unzoom() {
-		draw(1 / 1.1, 0, 0);
+		draw(1 / 1.2, 0, 0);
 	}
 
 	function zoom() {
-		draw(1.1, 0, 0);
+		draw(1.2, 0, 0);
 	}
 </script>
 
