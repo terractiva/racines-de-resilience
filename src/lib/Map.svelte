@@ -1,11 +1,13 @@
 <script>
-	import { text } from 'svelte/internal';
-
+	import { onDestroy } from 'svelte';
 	import gestes from '../contenus/gestes.js';
 
 	let canvas;
 	let context;
+	let minZoom;
+	let zoom = 1;
 	const image = new Image();
+	const maxZoom = 6;
 
 	image.onload = () => {
 		canvas = document.getElementById('canvas');
@@ -16,13 +18,27 @@
 
 		canvas.addEventListener('mousedown', onMouseDown);
 
-		draw(1, 0, 0);
+		const canvasRatio = canvas.width / canvas.height;
+		const imageRatio = image.width / image.height;
+
+		minZoom = canvasRatio < imageRatio ? canvasRatio / imageRatio : 1;
+
+		draw(minZoom, 0, 0);
 	};
 
+	// Déclenche le chargement
 	image.src = 'arbre.jpg';
+
+	onDestroy(() => {
+		canvas.removeEventListener('mousedown', onMouseDown);
+	});
 
 	function draw(scale, x, y) {
 		const ratio = image.width / image.height;
+		const newZoom = scale * zoom;
+
+		if (minZoom <= newZoom && newZoom <= maxZoom) zoom = newZoom;
+		else return;
 
 		context.clearRect(0, 0, ratio * canvas.height, canvas.height);
 		context.scale(scale, scale);
@@ -98,18 +114,18 @@
 		draw(1, 0, 50);
 	}
 
-	function unzoom() {
-		draw(1 / 1.2, 0, 0);
+	function zoomIn() {
+		draw(1.1, 0, 0);
 	}
 
-	function zoom() {
-		draw(1.2, 0, 0);
+	function zoomOut() {
+		draw(1 / 1.1, 0, 0);
 	}
 </script>
 
 <div class="scale">
-	<button type="button" on:click={unzoom}>-</button>
-	<button type="button" on:click={zoom}>+</button>
+	<button type="button" on:click={zoomOut}>-</button>
+	<button type="button" on:click={zoomIn}>+</button>
 </div>
 
 <div class="move">
