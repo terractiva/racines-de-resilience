@@ -1,10 +1,14 @@
 <script>
+	import Vue from '../helpers/vue.class.js';
 	import { onDestroy } from 'svelte';
 	import gestes from '../contenus/gestes.js';
 
+	let vue;
 	let canvas;
 	let context;
 	let minZoom;
+	let x = 0;
+	let y = 0;
 	let zoom = 1;
 	const image = new Image();
 	const maxZoom = 6;
@@ -15,15 +19,17 @@
 
 		canvas.height = document.body.clientHeight;
 		canvas.width = document.body.clientWidth;
-
 		canvas.addEventListener('mousedown', onMouseDown);
 
 		const canvasRatio = canvas.width / canvas.height;
 		const imageRatio = image.width / image.height;
+		const dx = canvasRatio < imageRatio ? 0 : canvas.width - imageRatio * canvas.height;
+		const dy = canvasRatio < imageRatio ? canvas.height - canvas.width / imageRatio : 0;
 
 		minZoom = canvasRatio < imageRatio ? canvasRatio / imageRatio : 1;
+		vue = new Vue(canvas.width, canvas.height);
 
-		draw(minZoom, 0, 0);
+		draw(minZoom, dx / 2, dy / 2, true);
 	};
 
 	// Déclenche le chargement
@@ -33,16 +39,20 @@
 		canvas.removeEventListener('mousedown', onMouseDown);
 	});
 
-	function draw(scale, x, y) {
+	function draw(scale, dx, dy, initialDraw = false) {
 		const ratio = image.width / image.height;
 		const newZoom = scale * zoom;
 
+		// On empêche de trop (dé)zoomer
 		if (minZoom <= newZoom && newZoom <= maxZoom) zoom = newZoom;
 		else return;
 
+		const scaledDx = initialDraw ? dx / zoom : vue.calculerDecalageX(dx / zoom, zoom);
+		const scaledDy = initialDraw ? dy / zoom : vue.calculerDecalageY(dy / zoom, zoom);
+
 		context.clearRect(0, 0, ratio * canvas.height, canvas.height);
 		context.scale(scale, scale);
-		context.translate(x, y);
+		context.translate(scaledDx, scaledDy);
 		context.drawImage(image, 0, 0, ratio * canvas.height, canvas.height);
 
 		for (const geste of gestes) {
