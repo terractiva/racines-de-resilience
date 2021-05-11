@@ -6,12 +6,9 @@
 	let vue;
 	let canvas;
 	let context;
-	let minZoom;
 	let x = 0;
 	let y = 0;
-	let zoom = 1;
 	const image = new Image();
-	const maxZoom = 6;
 
 	image.onload = () => {
 		canvas = document.getElementById('canvas');
@@ -26,7 +23,7 @@
 		const dx = canvasRatio < imageRatio ? 0 : canvas.width - imageRatio * canvas.height;
 		const dy = canvasRatio < imageRatio ? canvas.height - canvas.width / imageRatio : 0;
 
-		minZoom = canvasRatio < imageRatio ? canvasRatio / imageRatio : 1;
+		const minZoom = canvasRatio < imageRatio ? canvasRatio / imageRatio : 1;
 		vue = new Vue(canvas.width, canvas.height);
 
 		draw(minZoom, dx / 2, dy / 2, true);
@@ -41,18 +38,18 @@
 
 	function draw(scale, dx, dy, initialDraw = false) {
 		const ratio = image.width / image.height;
-		const newZoom = scale * zoom;
 
 		// On empêche de trop (dé)zoomer
-		if (minZoom <= newZoom && newZoom <= maxZoom) zoom = newZoom;
-		else return;
+		const changementZoom = vue.calculerChangementZoom(scale);
 
-		const scaledDx = initialDraw ? dx / zoom : vue.calculerDecalageX(dx / zoom, zoom);
-		const scaledDy = initialDraw ? dy / zoom : vue.calculerDecalageY(dy / zoom, zoom);
+		// const scaledDx = initialDraw ? dx / zoom : vue.calculerDecalageX(dx / zoom, zoom);
+		// const scaledDy = initialDraw ? dy / zoom : vue.calculerDecalageY(dy / zoom, zoom);
+
+		console.log(vue._zoom);
 
 		context.clearRect(0, 0, ratio * canvas.height, canvas.height);
-		context.scale(scale, scale);
-		context.translate(scaledDx, scaledDy);
+		context.scale(changementZoom, changementZoom);
+		context.translate(dx, dy);
 		context.drawImage(image, 0, 0, ratio * canvas.height, canvas.height);
 
 		for (const geste of gestes) {
