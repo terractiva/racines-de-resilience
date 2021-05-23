@@ -1,160 +1,161 @@
 <script>
-	import Vue from '../helpers/vue.class.js';
-	import { onDestroy } from 'svelte';
-	import gestes from '../contenus/gestes.js';
+	/**
+	 * @see http://fabricjs.com/fabric-intro-part-5#pan_zoom
+	 */
+	import { fabric } from 'fabric';
+	import { onDestroy, onMount } from 'svelte';
 
-	let vue;
+	/** @type HTMLCanvasElement */
 	let canvas;
-	let context;
-	let x = 0;
-	let y = 0;
-	const image = new Image();
+	/** @type {import('@types/fabric').fabric.StaticCanvas} */
+	let fabricCanvas;
 
-	image.onload = () => {
-		canvas = document.getElementById('canvas');
-		context = canvas.getContext('2d');
+	onMount(() => {
+		fabricCanvas = new fabric.StaticCanvas(canvas, {
+			selection: false
+		});
 
-		canvas.height = document.body.clientHeight;
-		canvas.width = document.body.clientWidth;
-		canvas.addEventListener('mousedown', onMouseDown);
+		resizeCanvas();
+		window.addEventListener('resize', resizeCanvas);
+		fabricCanvas.setBackgroundImage('arbre.jpg', drawBackgroundImage);
 
-		const canvasRatio = canvas.width / canvas.height;
-		const imageRatio = image.width / image.height;
-		const dx = canvasRatio < imageRatio ? 0 : canvas.width - imageRatio * canvas.height;
-		const dy = canvasRatio < imageRatio ? canvas.height - canvas.width / imageRatio : 0;
+		canvas.addEventListener('mousedown', onMouseDown.bind(this));
+		canvas.addEventListener('mousemove', onMouseMove.bind(this));
+		canvas.addEventListener('mouseup', onMouseUp.bind(this));
 
-		const minZoom = canvasRatio < imageRatio ? canvasRatio / imageRatio : 1;
-		vue = new Vue(canvas.width, canvas.height);
+		canvas.addEventListener('touchstart', onMouseDown.bind(this));
+		canvas.addEventListener('touchmove', onMouseMove.bind(this));
+		canvas.addEventListener('touchend', onMouseUp.bind(this));
 
-		draw(minZoom, dx / 2, dy / 2, true);
-	};
-
-	// Déclenche le chargement
-	image.src = 'arbre.jpg';
-
-	onDestroy(() => {
-		canvas.removeEventListener('mousedown', onMouseDown);
+		canvas.addEventListener('mousewheel', onMouseWheel.bind(this));
 	});
 
-	function draw(scale, dx, dy, initialDraw = false) {
-		const ratio = image.width / image.height;
+	onDestroy(() => {
+		canvas.removeEventListener('mousedown', onMouseDown.bind(this));
+		canvas.removeEventListener('mousemove', onMouseMove.bind(this));
+		canvas.removeEventListener('mouseup', onMouseUp.bind(this));
 
-		// On empêche de trop (dé)zoomer
-		const changementZoom = vue.calculerChangementZoom(scale);
+		canvas.removeEventListener('touchstart', onMouseDown.bind(this));
+		canvas.removeEventListener('touchmove', onMouseMove.bind(this));
+		canvas.removeEventListener('touchend', onMouseUp.bind(this));
 
-		// const scaledDx = initialDraw ? dx / zoom : vue.calculerDecalageX(dx / zoom, zoom);
-		// const scaledDy = initialDraw ? dy / zoom : vue.calculerDecalageY(dy / zoom, zoom);
+		canvas.removeEventListener('mousewheel', onMouseWheel.bind(this));
+	});
 
-		console.log(vue._zoom);
-
-		context.clearRect(0, 0, ratio * canvas.height, canvas.height);
-		context.scale(changementZoom, changementZoom);
-		context.translate(dx, dy);
-		context.drawImage(image, 0, 0, ratio * canvas.height, canvas.height);
-
-		for (const geste of gestes) {
-			drawItem(geste.position[0], geste.position[1], geste.texte, geste.sources);
+	function checkBoundaries() {
+		var vpt = fabricCanvas.viewportTransform;
+		var zoom = fabricCanvas.getZoom();
+		if (vpt[4] >= 0) {
+			vpt[4] = 0;
+		} else if (vpt[4] < fabricCanvas.getWidth() - fabricCanvas.getWidth() * zoom) {
+			vpt[4] = fabricCanvas.getWidth() - fabricCanvas.getWidth() * zoom;
+		}
+		if (vpt[5] >= 0) {
+			vpt[5] = 0;
+		} else if (vpt[5] < fabricCanvas.getHeight() - fabricCanvas.getHeight() * zoom) {
+			vpt[5] = fabricCanvas.getHeight() - fabricCanvas.getHeight() * zoom;
 		}
 	}
 
-	function drawItem(px, py, texte, sources) {
-		const taillePolice = 5;
-		const ecartLigne = 1;
-		const ecartHautBas = 8;
-		const nbLignes = texte.length + sources.length + 1;
-		const diametre = taillePolice * nbLignes + ecartLigne * (nbLignes - 1) + ecartHautBas * 2;
-		const ratio = image.width / image.height;
-		const x = px * ratio * canvas.height;
-		const y = py * canvas.height;
+	function drawBackgroundImage() {
+		const backgroundImage = fabricCanvas.backgroundImage;
 
-		// Cercle
-		context.beginPath();
-		context.arc(x, y, diametre / 2, 0, 2 * Math.PI, false);
-		context.fillStyle = 'rgba(255, 255, 255, 0.8)';
-		context.fill();
-		context.lineWidth = 1;
-		context.strokeStyle = '#7C6962';
-		context.stroke();
-
-		// Texte
-		// const largeurText = context.measureText(text).width;
-		let position = y - diametre / 2 + ecartHautBas + taillePolice - 2;
-
-		for (let nLigne = 0; nLigne < nbLignes; nLigne++) {
-			let couleur = 'black';
-			let ligne = texte[nLigne];
-
-			if (texte.length <= nLigne) {
-				couleur = '#7C6962';
-				ligne = nLigne === texte.length ? '⌄' : sources[nLigne - texte.length - 1];
-			}
-
-			context.fillStyle = couleur;
-			context.font = `normal normal normal ${taillePolice}px Arial`;
-			context.textAlign = 'center';
-			// context.fillText(ligne, x - largeurText / 2, y + taillePolice);
-			context.fillText(ligne, x, position);
-
-			position += taillePolice + ecartLigne;
-		}
+		backgroundImage.scaleToHeight(fabricCanvas.getHeight());
+		backgroundImage.scaleToWidth(fabricCanvas.getWidth());
+		backgroundImage.center();
+		fabricCanvas.renderAll();
 	}
 
 	function onMouseDown(event) {
-		const ratio = image.width / image.height;
+		const x = event instanceof MouseEvent ? event.clientX : event.touches[0].clientX;
+		const y = event instanceof MouseEvent ? event.clientY : event.touches[0].clientY;
 
-		console.log(`${event.offsetX / (ratio * canvas.height)}, ${event.offsetY / canvas.height}`);
+		fabricCanvas.isDragging = true;
+		fabricCanvas.selection = false;
+		fabricCanvas.lastPosX = x;
+		fabricCanvas.lastPosY = y;
+	}
+	function onMouseMove(event) {
+		if (
+			fabricCanvas.isDragging &&
+			(event instanceof MouseEvent || (event instanceof TouchEvent && event.touches.length === 1))
+		) {
+			const x = event instanceof MouseEvent ? event.clientX : event.touches[0].clientX;
+			const y = event instanceof MouseEvent ? event.clientY : event.touches[0].clientY;
+
+			fabricCanvas.viewportTransform[4] += x - fabricCanvas.lastPosX;
+			fabricCanvas.viewportTransform[5] += y - fabricCanvas.lastPosY;
+			checkBoundaries();
+			fabricCanvas.requestRenderAll();
+			fabricCanvas.lastPosX = x;
+			fabricCanvas.lastPosY = y;
+
+			if (event instanceof TouchEvent) {
+				event.preventDefault();
+				event.stopPropagation();
+			}
+		}
+	}
+	function onMouseUp() {
+		fabricCanvas.setViewportTransform(fabricCanvas.viewportTransform);
+		fabricCanvas.isDragging = false;
+		fabricCanvas.selection = true;
 	}
 
-	function goDown() {
-		draw(1, 0, -50);
+	function onMouseWheel(event) {
+		updateZoom(event.deltaY, event.offsetX, event.offsetY);
+		event.preventDefault();
+		event.stopPropagation();
 	}
 
-	function goLeft() {
-		draw(1, 50, 0);
+	function resizeCanvas() {
+		fabricCanvas.setDimensions({
+			height: window.innerHeight,
+			width: window.innerWidth
+		});
 	}
 
-	function goRight() {
-		draw(1, -50, 0);
-	}
+	function updateZoom(delta, x = fabricCanvas.getWidth() / 2, y = fabricCanvas.getHeight() / 2) {
+		const min = 1;
+		const max = 4;
+		let zoom = fabricCanvas.getZoom();
 
-	function goUp() {
-		draw(1, 0, 50);
-	}
-
-	function zoomIn() {
-		draw(1.1, 0, 0);
-	}
-
-	function zoomOut() {
-		draw(1 / 1.1, 0, 0);
+		zoom *= 0.998 ** delta;
+		if (zoom > max) zoom = max;
+		if (zoom < min) zoom = min;
+		fabricCanvas.zoomToPoint({ x, y }, zoom);
+		checkBoundaries();
 	}
 </script>
 
-<div class="scale">
-	<button type="button" on:click={zoomOut}>-</button>
-	<button type="button" on:click={zoomIn}>+</button>
-</div>
+<canvas bind:this={canvas} />
 
-<div class="move">
-	<button type="button" on:click={goLeft}>&larr;</button>
-	<button type="button" on:click={goRight}>&rarr;</button>
-	<button type="button" on:click={goUp}>&uarr;</button>
-	<button type="button" on:click={goDown}>&darr;</button>
+<div>
+	<button type="button" on:click={() => updateZoom(-150)}>+</button>
+	<button type="button" on:click={() => updateZoom(150)}>-</button>
 </div>
-
-<canvas id="canvas" />
 
 <style lang="scss">
-	div {
-		position: absolute;
-		right: 10px;
+	canvas {
+		cursor: grab;
+		touch-action: none;
 
-		&.scale {
-			top: 10px;
+		&:active {
+			cursor: grabbing;
 		}
+	}
 
-		&.move {
-			bottom: 10px;
+	div {
+		bottom: 15px;
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		right: 15px;
+
+		button {
+			&:first-of-type {
+				margin-bottom: 5px;
+			}
 		}
 	}
 </style>
