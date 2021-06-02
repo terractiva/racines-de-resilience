@@ -1,4 +1,4 @@
-const gestes = [
+const actions = [
 	{
 		position: [13.13, 20.15],
 		rayon: 2.20,
@@ -55,4 +55,4 @@ const gestes = [
 	}
 ];
 
-export default gestes;
+export default actions;

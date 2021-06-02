@@ -3,16 +3,19 @@
 	 * @see http://fabricjs.com/fabric-intro-part-5#pan_zoom
 	 */
 	import { fabric } from 'fabric';
-import { ZOOM_MAX } from '../helpers/constants';
+	import { ZOOM_MAX } from '../helpers/constants';
 	import { onDestroy, onMount } from 'svelte';
 	import actions from '../helpers/actions';
+	import { writable } from 'svelte/store';
 
 	/** @type HTMLCanvasElement */
 	let canvas;
 	/** @type {import('@types/fabric').fabric.StaticCanvas} */
 	let fabricCanvas;
-	let gutterX = 0
-	let gutterY = 0
+	let gutterX = writable(0)
+	let gutterY = writable(0)
+	let width = writable(0)
+	let height = writable(0)
 
 	onMount(() => {
 		fabricCanvas = new fabric.Canvas(canvas, {
@@ -55,9 +58,9 @@ import { ZOOM_MAX } from '../helpers/constants';
 
 	function drawActions() {
 		for (const action of actions) {
-			const left = gutterX + action.position[0] * (fabricCanvas.getWidth() - 2 * gutterX) / 100;
-			const top = gutterY + action.position[1] * (fabricCanvas.getHeight() - 2 * gutterY) / 100;
-			const radius = action.rayon * (fabricCanvas.getWidth() - 2 * gutterX) / 100;
+			const left = $gutterX + action.position[0] * (fabricCanvas.getWidth() - 2 * $gutterX) / 100;
+			const top = $gutterY + action.position[1] * (fabricCanvas.getHeight() - 2 * $gutterY) / 100;
+			const radius = action.rayon * (fabricCanvas.getWidth() - 2 * $gutterX) / 100;
 
 			// Texte
 			const text = new fabric.Text(action.texte, {
@@ -85,9 +88,9 @@ import { ZOOM_MAX } from '../helpers/constants';
 			});
 
 			circle.on('modified', (event) => {
-				const radius = 100 * event.target.radius * event.target.scaleX / (fabricCanvas.getWidth() - 2 * gutterX);
-				const left = 100 * (event.target.left - gutterX) / (fabricCanvas.getWidth() - 2 * gutterX);
-				const top = 100 * (event.target.top - gutterY) / (fabricCanvas.getHeight() - 2 * gutterY);
+				const radius = 100 * event.target.radius * event.target.scaleX / (fabricCanvas.getWidth() - 2 * $gutterX);
+				const left = 100 * (event.target.left - $gutterX) / (fabricCanvas.getWidth() - 2 * $gutterX);
+				const top = 100 * (event.target.top - $gutterY) / (fabricCanvas.getHeight() - 2 * $gutterY);
 
 				console.log(`{
 					position: [${left.toFixed(2)}, ${top.toFixed(2)}],
@@ -109,11 +112,11 @@ import { ZOOM_MAX } from '../helpers/constants';
 
 		if (imageRatio < canvasRatio) {
 			backgroundImage.scaleToHeight(fabricCanvas.getHeight());
-			gutterX = (fabricCanvas.getWidth() - backgroundImage.getScaledWidth()) / 2;
+			gutterX.set((fabricCanvas.getWidth() - backgroundImage.getScaledWidth()) / 2);
 		}
 		if (imageRatio > canvasRatio) {
 			backgroundImage.scaleToWidth(fabricCanvas.getWidth());
-			gutterY = (fabricCanvas.getHeight() - backgroundImage.getScaledHeight()) / 2;
+			gutterY.set((fabricCanvas.getHeight() - backgroundImage.getScaledHeight()) / 2);
 		}
 
 		drawActions();
@@ -179,6 +182,8 @@ import { ZOOM_MAX } from '../helpers/constants';
 	}
 
 	function resizeCanvas() {
+		height.set(window.innerHeight)
+		width.set(window.innerWidth)
 		fabricCanvas.setDimensions({
 			height: window.innerHeight,
 			width: window.innerWidth
@@ -199,14 +204,44 @@ import { ZOOM_MAX } from '../helpers/constants';
 </script>
 
 <canvas bind:this={canvas} />
+{#if fabricCanvas}
+	<div class="actions">
+		{#each actions as action}
+			<div style="
+				left: {$gutterX + action.position[0] * ($width - 2 * $gutterX) / 100}px;
+				top: {$gutterY + action.position[1] * ($height - 2 * $gutterY) / 100}px;
+				height: {action.rayon * ($width - 2 * $gutterX) / 50}px;
+				width: {action.rayon * ($width - 2 * $gutterX) / 50}px;
+			">
+				{action.texte}
+			</div>
+		{/each}
+	</div>
+{/if}
 
-<div>
+<div class="zoom">
 	<button type="button" on:click={() => updateZoom(-150)}>+</button>
 	<button type="button" on:click={() => updateZoom(150)}>-</button>
 </div>
 
 <style lang="scss">
-	div {
+	.actions {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+
+		& > div {
+			position: absolute;
+			overflow: hidden;
+			background: pink;
+			opacity: 0.4;
+			border-radius: 50%;
+		}
+	}
+
+	.zoom {
 		bottom: 15px;
 		display: flex;
 		flex-direction: column;
