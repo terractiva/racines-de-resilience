@@ -3,6 +3,7 @@
   import { onDestroy, onMount } from "svelte";
   import { writable } from "svelte/store";
 
+  // TODO: utiliser svelte:window pour l'event de resize
   const height = writable(null);
   const width = writable(null);
 

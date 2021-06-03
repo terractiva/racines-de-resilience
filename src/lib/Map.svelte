@@ -131,8 +131,6 @@
 			const x = event.e instanceof MouseEvent ? event.e.clientX : event.e.touches[0].clientX;
 			const y = event.e instanceof MouseEvent ? event.e.clientY : event.e.touches[0].clientY;
 
-			console.log
-
 			fabricCanvas.isDragging = true;
 			fabricCanvas.selection = false;
 			fabricCanvas.lastPosX = x;
