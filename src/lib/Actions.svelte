@@ -1,19 +1,14 @@
 <script>
   import actions from '../helpers/actions';
-
-  /** @type number */
-  export let paddingX;
-  /** @type number */
-  export let paddingY;
-  /** @type string */
-  export let transform;
 </script>
 
 <style lang="scss">
   ul {
+    height: 100%;
     margin: 0;
+    padding: 0;
     position: relative;
-    transform-origin: top left;
+    width: 100%;
 
     li {
       border-radius: 50%;
@@ -50,12 +45,7 @@
   }
 </style>
 
-<ul style="
-  height: calc(100% - 2 * {paddingY}px);
-  padding: {paddingY}px {paddingX}px;
-  transform: {transform};
-  width: calc(100% - 2 * {paddingX}px);
-">
+<ul>
   {#each actions as action}
     <li style="
       left: {action.position[0]}%;

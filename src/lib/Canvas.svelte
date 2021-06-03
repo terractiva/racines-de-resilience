@@ -65,6 +65,6 @@
 </style>
 
 <canvas bind:this={nativeCanvas} />
-<GestureHandler fabricCanvas={fabricCanvas} paddingX={paddingX} paddingY={paddingY} let:transform={transform}>
-  <Actions paddingX={paddingX} paddingY={paddingY} transform={transform} />
+<GestureHandler fabricCanvas={fabricCanvas} paddingX={paddingX} paddingY={paddingY}>
+  <Actions />
 </GestureHandler>

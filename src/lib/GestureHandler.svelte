@@ -4,15 +4,13 @@
 
 	/** @type {import('@types/fabric').fabric.StaticCanvas} */
   export let fabricCanvas;
-  // /** @type number */
-  // export let paddingX;
-  // /** @type number */
-  // export let paddingY;
+  /** @type number */
+  export let paddingX;
+  /** @type number */
+  export let paddingY;
 
   /** @type HTMLDivElement */
   let div;
-  /** @type string */
-  let transform;
 
   const onMouseWheel = (event) => {
     updateZoom(event.deltaY, event.offsetX, event.offsetY);
@@ -81,7 +79,7 @@
 			vpt[5] = maxY;
 		}
 
-    transform = `translate(${vpt[4]}px, ${vpt[5]}px) scale(${zoom})`;
+    div.style.transform = `translate(${vpt[4]}px, ${vpt[5]}px) scale(${zoom})`
 	}
 
   // TODO: utiliser on:event
@@ -113,11 +111,11 @@
     left: 0;
     position: absolute;
     top: 0;
+    transform-origin: top left;
     width: 100%;
   }
 </style>
 
-<!-- <div bind:this={div} style="padding: {paddingY}px {paddingX}px;"> -->
-<div bind:this={div}>
-  <slot transform={transform}></slot>
+<div bind:this={div} style="padding: {paddingY}px {paddingX}px;">
+  <slot></slot>
 </div>
