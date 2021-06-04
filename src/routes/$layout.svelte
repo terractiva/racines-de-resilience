@@ -27,7 +27,6 @@
 
 	main {
 		height: calc(100% - #{$header-height});
-		overflow: hidden;
 	}
 </style>
 

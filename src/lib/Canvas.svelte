@@ -23,7 +23,6 @@
   onMount(() => {
 		fabricCanvas = new fabric.StaticCanvas(nativeCanvas, {
       // defaultCursor: 'grab',
-      // hoverCursor: 'pointer',
       selection: false
     });
     fabricCanvas.setBackgroundImage('arbre.jpg', () => (resizeBackgroundImage(width, height)));
@@ -43,7 +42,7 @@
       paddingY = 0;
 		}
 		else if (imageRatio > canvasRatio) {
-			backgroundImage.scaleToWidth(width);
+      backgroundImage.scaleToWidth(width);
       paddingX = 0;
 			paddingY = (height - backgroundImage.getScaledHeight()) / 2;
 		}
@@ -55,6 +54,7 @@
   function resizeCanvas(width, height) {
     if (!fabricCanvas) return;
 
+    fabricCanvas.setViewportTransform([1, 0, 0, 1, 0, 0]); // Réinitialise le zoom et le déplacement
 		fabricCanvas.setDimensions({ height, width });
     resizeBackgroundImage(width, height);
   }

@@ -1,6 +1,9 @@
 <script>
   import { ZOOM_MAX } from '../helpers/constants';
-  import { onDestroy, onMount } from "svelte";
+
+  // TODO: cursor grab
+  // TODO: position des actions
+  // TODO: clic sur les actions
 
 	/** @type {import('@types/fabric').fabric.StaticCanvas} */
   export let fabricCanvas;
@@ -12,55 +15,7 @@
   /** @type HTMLDivElement */
   let div;
 
-  const onMouseWheel = (event) => {
-    updateZoom(event.deltaY, event.offsetX, event.offsetY);
-		event.preventDefault();
-		event.stopPropagation();
-  };
-
-	const onMouseDown = (event) => {
-		const x = event instanceof MouseEvent ? event.clientX : event.touches[0].clientX;
-		const y = event instanceof MouseEvent ? event.clientY : event.touches[0].clientY;
-
-		fabricCanvas.isDragging = true;
-		fabricCanvas.selection = false;
-		fabricCanvas.lastPosX = x;
-		fabricCanvas.lastPosY = y;
-	}
-	const onMouseMove = (event) => {
-		if (
-			fabricCanvas.isDragging &&
-			(event instanceof MouseEvent || (event instanceof TouchEvent && event.touches.length === 1))
-		) {
-			const x = event instanceof MouseEvent ? event.clientX : event.touches[0].clientX;
-			const y = event instanceof MouseEvent ? event.clientY : event.touches[0].clientY;
-
-			fabricCanvas.viewportTransform[4] += x - fabricCanvas.lastPosX;
-			fabricCanvas.viewportTransform[5] += y - fabricCanvas.lastPosY;
-			checkBoundaries();
-			fabricCanvas.requestRenderAll();
-			fabricCanvas.lastPosX = x;
-			fabricCanvas.lastPosY = y;
-
-			if (event instanceof TouchEvent) {
-				event.preventDefault();
-				event.stopPropagation();
-			}
-		}
-	}
-	const onMouseUp = ()  =>{
-		fabricCanvas.setViewportTransform(fabricCanvas.viewportTransform);
-		fabricCanvas.isDragging = false;
-		fabricCanvas.selection = true;
-	}
-
-  onMount(() => {
-    handleListeners('addEventListener');
-  });
-
-  onDestroy(() => {
-    handleListeners('removeEventListener');
-  });
+  $: paddingX !== undefined && paddingY !== undefined && checkBoundaries();
 
 	function checkBoundaries() {
 		const vpt = fabricCanvas.viewportTransform;
@@ -82,12 +37,27 @@
     div.style.transform = `translate(${vpt[4]}px, ${vpt[5]}px) scale(${zoom})`
 	}
 
-  // TODO: utiliser on:event
-  function handleListeners(functionName) {
-    div[functionName]('mousedown', onMouseDown);
-    div[functionName]('mousemove', onMouseMove);
-    div[functionName]('mouseup', onMouseUp);
-    div[functionName]('mousewheel', onMouseWheel);
+  function moveStart(x, y) {
+		fabricCanvas.isDragging = true;
+		fabricCanvas.selection = false;
+		fabricCanvas.lastPosX = x;
+		fabricCanvas.lastPosY = y;
+  }
+
+  function moveInProgress(x, y) {
+		if (fabricCanvas.isDragging) {
+			fabricCanvas.viewportTransform[4] += x - fabricCanvas.lastPosX;
+			fabricCanvas.viewportTransform[5] += y - fabricCanvas.lastPosY;
+			checkBoundaries();
+			fabricCanvas.requestRenderAll();
+			fabricCanvas.lastPosX = x;
+			fabricCanvas.lastPosY = y;
+		}
+  }
+
+  function moveEnd() {
+		fabricCanvas.isDragging = false;
+		fabricCanvas.selection = true;
   }
 
 	function updateZoom(delta, x, y) {
@@ -99,13 +69,13 @@
 		if (zoom > max) zoom = max;
 		if (zoom < min) zoom = min;
 		fabricCanvas.zoomToPoint({ x, y }, zoom);
-    // fabricCanvas.setZoom(zoom);
 		checkBoundaries();
 	}
 </script>
 
 <style lang="scss">
   :global(main) {
+    overflow: hidden;
 		position: relative;
 	}
 
@@ -115,11 +85,36 @@
     left: 0;
     position: absolute;
     top: 0;
+    touch-action: none; // Empêche le zoom par pincement sur mobile
     transform-origin: top left;
     width: 100%;
   }
 </style>
 
-<div bind:this={div} style="padding: {paddingY}px {paddingX}px;">
+<div
+  bind:this={div}
+  on:mousedown={(event) => (moveStart(event.clientX, event.clientY))}
+  on:touchstart={(event) => {
+    if (event.touches.length === 1) {
+      (moveStart(event.touches[0].clientX, event.touches[0].clientY))
+    }
+  }}
+  on:mousemove={(event) => (moveInProgress(event.clientX, event.clientY))}
+  on:touchmove={(event) => {
+    if (event.touches.length === 1) {
+      moveInProgress(event.touches[0].clientX, event.touches[0].clientY);
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }}
+  on:mouseup={moveEnd}
+  on:touchend={moveEnd}
+  on:mousewheel={(event) => {
+    updateZoom(event.deltaY, event.offsetX, event.offsetY);
+		event.preventDefault();
+		event.stopPropagation();
+  }}
+  style="padding: {paddingY}px {paddingX}px;"
+>
   <slot></slot>
 </div>
