@@ -82,10 +82,10 @@
     }
 
     let point = { x, y };
-
+    
     if (x === undefined || y === undefined) {
       const center = fabricCanvas.getCenter();
-
+      
       point = {
         x: center.left,
         y: center.top
@@ -163,7 +163,7 @@
   on:mouseup={moveEnd}
   on:touchend={moveEnd}
   on:mousewheel={(event) => {
-    updateZoom(event.deltaY, event.offsetX, event.offsetY);
+    updateZoom(event.deltaY, event.pageX, event.pageY - 60); // TODO: à améliorer
 		event.preventDefault();
 		event.stopPropagation();
   }}
