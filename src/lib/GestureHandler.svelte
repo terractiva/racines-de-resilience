@@ -2,7 +2,7 @@
   import { ZOOM_MAX } from '../helpers/constants';
 
   // TODO: position des actions
-  // TODO: clic sur les actions
+  // TODO: boutons navigation
 
 	/** @type {import('@types/fabric').fabric.StaticCanvas} */
   export let fabricCanvas;
@@ -13,6 +13,10 @@
 
   /** @type HTMLDivElement */
   let div;
+  /** @type boolean */
+  let isDragging = false;
+  /** @type boolean */
+  let isMouseDown = false;
 
   $: paddingX !== undefined && paddingY !== undefined && checkBoundaries();
 
@@ -38,14 +42,15 @@
 
   function moveStart(x, y) {
     div.style.cursor = 'grabbing';
-		fabricCanvas.isDragging = true;
+		isMouseDown = true;
 		fabricCanvas.selection = false;
 		fabricCanvas.lastPosX = x;
 		fabricCanvas.lastPosY = y;
   }
 
   function moveInProgress(x, y) {
-		if (fabricCanvas.isDragging) {
+		if (isMouseDown) {
+      isDragging = true;
 			fabricCanvas.viewportTransform[4] += x - fabricCanvas.lastPosX;
 			fabricCanvas.viewportTransform[5] += y - fabricCanvas.lastPosY;
 			checkBoundaries();
@@ -57,7 +62,8 @@
 
   function moveEnd() {
     div.style.cursor = null;
-		fabricCanvas.isDragging = false;
+		isDragging = false;
+    isMouseDown = false;
 		fabricCanvas.selection = true;
   }
 
@@ -118,5 +124,5 @@
   }}
   style="padding: {paddingY}px {paddingX}px;"
 >
-  <slot></slot>
+  <slot isDragging={isDragging}></slot>
 </div>

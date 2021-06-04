@@ -1,5 +1,8 @@
 <script>
   import actions from '../helpers/actions';
+
+  /** @type boolean */
+  export let isDragging;
 </script>
 
 <style lang="scss">
@@ -47,11 +50,18 @@
 
 <ul>
   {#each actions as action}
-    <li style="
-      left: {action.position[0]}%;
-      top: {action.position[1]}%;
-      width: {2 * action.rayon}%;
-    ">
+    <li
+      style="
+        left: {action.position[0]}%;
+        top: {action.position[1]}%;
+        width: {2 * action.rayon}%;
+      "
+      on:mouseup={() => {
+        if (!isDragging) {
+          alert(`TODO: Ouvrir "${action.texte.split('\n').join(' ')}"`);
+        }
+      }}
+    >
       <p>{action.texte}</p>
     </li>
   {/each}
