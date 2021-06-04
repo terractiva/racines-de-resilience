@@ -2,7 +2,6 @@
   import { ZOOM_MAX } from '../helpers/constants';
 
   // TODO: position des actions
-  // TODO: boutons navigation
 
 	/** @type {import('@types/fabric').fabric.StaticCanvas} */
   export let fabricCanvas;
@@ -75,7 +74,19 @@
 		zoom *= 0.998 ** delta;
 		if (zoom > max) zoom = max;
 		if (zoom < min) zoom = min;
-		fabricCanvas.zoomToPoint({ x, y }, zoom);
+
+    let point = { x, y };
+
+    if (x === undefined || y === undefined) {
+      const center = fabricCanvas.getCenter();
+
+      point = {
+        x: center.left,
+        y: center.top
+      };
+    }
+
+    fabricCanvas.zoomToPoint(point, zoom);
 		checkBoundaries();
 	}
 </script>
@@ -86,7 +97,7 @@
 		position: relative;
 	}
 
-  div {
+  .gesture {
     box-sizing: border-box;
     cursor: grab;
     height: 100%;
@@ -97,10 +108,26 @@
     transform-origin: top left;
     width: 100%;
   }
+
+  .navigation {
+		bottom: 15px;
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		right: 15px;
+
+		button {
+			&:first-of-type {
+				margin-bottom: 5px;
+			}
+		}
+  }
 </style>
 
 <div
   bind:this={div}
+  class="gesture"
+  style="padding: {paddingY}px {paddingX}px;"
   on:mousedown={(event) => (moveStart(event.clientX, event.clientY))}
   on:touchstart={(event) => {
     if (event.touches.length === 1) {
@@ -122,7 +149,11 @@
 		event.preventDefault();
 		event.stopPropagation();
   }}
-  style="padding: {paddingY}px {paddingX}px;"
 >
   <slot isDragging={isDragging}></slot>
+</div>
+
+<div class="navigation">
+	<button type="button" on:click={() => updateZoom(-120)}>+</button>
+	<button type="button" on:click={() => updateZoom(120)}>-</button>
 </div>
