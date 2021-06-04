@@ -1,7 +1,6 @@
 <script>
   import { ZOOM_MAX } from '../helpers/constants';
 
-  // TODO: cursor grab
   // TODO: position des actions
   // TODO: clic sur les actions
 
@@ -38,6 +37,7 @@
 	}
 
   function moveStart(x, y) {
+    div.style.cursor = 'grabbing';
 		fabricCanvas.isDragging = true;
 		fabricCanvas.selection = false;
 		fabricCanvas.lastPosX = x;
@@ -56,6 +56,7 @@
   }
 
   function moveEnd() {
+    div.style.cursor = null;
 		fabricCanvas.isDragging = false;
 		fabricCanvas.selection = true;
   }
@@ -81,6 +82,7 @@
 
   div {
     box-sizing: border-box;
+    cursor: grab;
     height: 100%;
     left: 0;
     position: absolute;
