@@ -1,33 +1,22 @@
 <script>
 	import Canvas from '$lib/Canvas.svelte';
-  import { onDestroy, onMount } from "svelte";
-  import { writable } from "svelte/store";
+  import { onMount } from "svelte";
 
-  // TODO: utiliser svelte:window pour l'event de resize
-  const height = writable(null);
-  const width = writable(null);
-
-	const setSize = () => {
-    const main = document.getElementsByTagName('main')[0];
-
-    height.set(main.clientHeight);
-    width.set(main.clientWidth);
-	};
+  let height;
+  let width;
 
   onMount(() => {
 		setSize();
-		window.addEventListener('resize', setSize);
   });
 
-  onDestroy(() => {
-    window.removeEventListener('resize', setSize);
-  });
+	function setSize() {
+    const main = document.getElementsByTagName('main')[0];
+
+    height = main.clientHeight;
+    width = main.clientWidth;
+	};
 </script>
 
-<style>
-	:global(main) {
-		position: relative;
-	}
-</style>
+<svelte:window on:resize={setSize}></svelte:window>
 
-<Canvas height={$height} width={$width} />
+<Canvas height={height} width={width} />

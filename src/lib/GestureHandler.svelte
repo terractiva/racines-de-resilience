@@ -105,6 +105,10 @@
 </script>
 
 <style lang="scss">
+  :global(main) {
+		position: relative;
+	}
+
   div {
     box-sizing: border-box;
     height: 100%;
