@@ -21,16 +21,12 @@
       position: absolute;
 
       &:hover {
-        &::before {
-          opacity: 0.1;
-        }
+        background: rgba(250, 250, 250, 0.9);
       }
       
       &::before {
-        background: purple;
         content: '';
         display: block;
-        opacity: 0.2;
         padding-bottom: 100%;
       }
 
@@ -42,6 +38,7 @@
         text-align: center;
         top: 50%;
         transform: translateY(-50%);
+        user-select: none;
         width: 100%;
       }
     }

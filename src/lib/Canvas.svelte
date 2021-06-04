@@ -6,10 +6,12 @@
 
   /** @type number */
   export let height;
+  /** @type boolean */
+  export let isEdit;
   /** @type number */
   export let width;
   
-	/** @type {import('@types/fabric').fabric.StaticCanvas} */
+	/** @type import('@types/fabric').fabric.Canvas | import('@types/fabric').fabric.StaticCanvas */
   let fabricCanvas;
   /** @type number */
   let paddingX;
@@ -21,11 +23,27 @@
   $: resizeCanvas(width, height);
 
   onMount(() => {
-		fabricCanvas = new fabric.StaticCanvas(nativeCanvas, {
-      // defaultCursor: 'grab',
-      selection: false
-    });
+		fabricCanvas = new fabric[isEdit ? 'Canvas' : 'StaticCanvas'](nativeCanvas, { selection: false });
     fabricCanvas.setBackgroundImage('arbre.jpg', () => (resizeBackgroundImage(width, height)));
+
+    if (isEdit) {
+      const circle = new fabric.Circle({ radius: 25, opacity: 0.1 });
+
+			circle.on('modified', (event) => {
+				const radius = 100 * event.target.radius * event.target.scaleX / (fabricCanvas.getWidth() - 2 * paddingX);
+				const left = 100 * (event.target.left - paddingX) / (fabricCanvas.getWidth() - 2 * paddingX);
+				const top = 100 * (event.target.top - paddingY) / (fabricCanvas.getHeight() - 2 * paddingY);
+
+				console.log(`{
+					position: [${left.toFixed(4)}, ${top.toFixed(4)}],
+					rayon: ${radius.toFixed(4)},
+					sources: \`\`,
+					texte: \`\`
+				}`)
+			});
+
+      fabricCanvas.add(circle);
+    }
   });
 
   function resizeBackgroundImage(width, height) {
@@ -60,11 +78,7 @@
   }
 </script>
 
-<style lang="scss">
-
-</style>
-
 <canvas bind:this={nativeCanvas} />
-<GestureHandler fabricCanvas={fabricCanvas} paddingX={paddingX} paddingY={paddingY} let:isDragging={isDragging}>
+<GestureHandler fabricCanvas={fabricCanvas} isEdit={isEdit} paddingX={paddingX} paddingY={paddingY} let:isDragging={isDragging}>
   <Actions isDragging={isDragging} />
 </GestureHandler>

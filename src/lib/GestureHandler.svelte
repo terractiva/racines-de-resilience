@@ -1,10 +1,13 @@
 <script>
+  /**
+   * Adaptation de http://fabricjs.com/fabric-intro-part-5#pan_zoom
+   */
   import { ZOOM_MAX } from '../helpers/constants';
 
-  // TODO: position des actions
-
-	/** @type {import('@types/fabric').fabric.StaticCanvas} */
+	/** @type import('@types/fabric').fabric.Canvas | import('@types/fabric').fabric.StaticCanvas */
   export let fabricCanvas;
+  /** @type boolean */
+  export let isEdit;
   /** @type number */
   export let paddingX;
   /** @type number */
@@ -72,8 +75,11 @@
 		let zoom = fabricCanvas.getZoom();
 
 		zoom *= 0.998 ** delta;
-		if (zoom > max) zoom = max;
-		if (zoom < min) zoom = min;
+
+    if (!isEdit) {
+      if (zoom > max) zoom = max;
+      if (zoom < min) zoom = min;
+    }
 
     let point = { x, y };
 
@@ -123,6 +129,18 @@
 		}
   }
 </style>
+
+<svelte:window
+  on:keypress={(event) => {
+    if (isEdit && event.code === 'Space') {
+      if (div.style.pointerEvents) {
+        div.style.pointerEvents = null;
+      } else {
+        div.style.pointerEvents = 'none';
+      }
+    }
+  }}
+></svelte:window>
 
 <div
   bind:this={div}

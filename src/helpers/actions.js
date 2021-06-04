@@ -1,5 +1,29 @@
 const actions = [
 	{
+		position: [23.237, 15.389],
+		rayon: 2.092,
+		sources: `NégaWatt`,
+		texte: `Je\ndécouvre\net diffuse\nla démarche\n"sobriété, efficacité,\nrenouvelables"`
+	},
+	{
+		position: [15.789, 14.293],
+		rayon: 2.092,
+		sources: `Enercoop,\nGreenpeace`,
+		texte: `J'achète\nmon electricité\naux producteurs\nd'énergie\nrenouvelable`
+	},
+	{
+		position: [18.879, 17.174],
+		rayon: 2.069,
+		sources: `Énergie\npartagée`,
+		texte: `J'investis\ndans\nla production\nd'énergie\nrenouvelable`
+	},
+	{
+		position: [21.925, 20.653],
+		rayon: 1.760,
+		sources: `CLER`,
+		texte: `Je\nme forme\naux métiers\nde la transition\nénergétique`
+	},
+	{
 		position: [13.13, 20.15],
 		rayon: 2.20,
 		sources: `Plan vélo, FUB,\nTrans'bus\nKelBillet`,
@@ -12,8 +36,8 @@ const actions = [
 		texte: `Je\npousse mon\nentreprise à\nadopter un plan\nde mobilité`
 	},
 	{
-		position: [19.45, 25.37],
-		rayon: 2.02,
+		position: [19.4447, 25.4204],
+		rayon: 2.0214,
 		sources: `FNAUT\nCEREMA`,
 		texte: `Élu·e,\nusagèr·e,\nje fais changer\nles politiques de\ntransport`
 	},
