@@ -1,7 +1,3 @@
-<script>
-	import '../app.css';
-</script>
-
 <main>
 	<slot />
 </main>
@@ -10,7 +6,9 @@
 	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 </footer>
 
-<style lang="scss">
+<style global lang="scss">
+	@use 'node_modules/chota/dist/chota.min.css';
+
 	main {
 		flex: 1;
 		display: flex;
@@ -20,6 +18,17 @@
 		max-width: 1024px;
 		margin: 0 auto;
 		box-sizing: border-box;
+	}
+
+	body {
+		min-height: 100vh;
+		margin: 0;
+	}
+
+	#svelte {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
 	}
 
 	footer {
