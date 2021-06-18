@@ -1,0 +1,10 @@
+@mixin pill($is-vertical: false) {
+	background: var(--bg-color);
+	border-radius: 9999px;
+	display: flex;
+	padding: 0.5rem;
+
+	@if $is-vertical {
+		flex-direction: column;
+	}
+}

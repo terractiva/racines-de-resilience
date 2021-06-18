@@ -1,7 +1,7 @@
 <script>
 	import { fabric } from 'fabric';
 	import { onMount } from 'svelte';
-	import ActionsTreeNavigator from './ActionsTreeNavigator.svelte';
+	import ActionsTreeNavigator from './TreeNavigator.svelte';
 
 	export let height;
 	export let width;

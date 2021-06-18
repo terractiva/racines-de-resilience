@@ -1,5 +1,5 @@
 <script>
-	import ActionsTree from '$lib/components/ActionsTree.svelte';
+	import ActionsTree from '$lib/components/Tree.svelte';
 	import PageMeta from '$lib/components/PageMeta.svelte';
 	import { actionsTreePage } from '$lib/constants/pages';
 	import { onMount } from 'svelte';

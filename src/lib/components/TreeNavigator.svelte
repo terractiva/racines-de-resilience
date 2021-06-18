@@ -2,6 +2,8 @@
 	// Adaptation de http://fabricjs.com/fabric-intro-part-5#pan_zoom
 
 	import { zoomMax, zoomMin } from '$lib/constants/settings';
+	import TreeNavigatorAuthors from './TreeNavigatorAuthors.svelte';
+	import TreeNavigatorZoom from './TreeNavigatorZoom.svelte';
 
 	/** @type import('@types/fabric').fabric.StaticCanvas */
 	export let fabricCanvas;
@@ -12,10 +14,10 @@
 	let isDragging = false;
 	let isMouseDown = false;
 	let transform;
+	let zoom = 1;
 
 	function checkAndApplyMovement() {
 		const vTransform = fabricCanvas.viewportTransform; // vTransform[4] = x, vTransform[5] = y
-		const zoom = fabricCanvas.getZoom();
 		const xMax = fabricCanvas.getWidth() * (1 - zoom);
 		const yMax = fabricCanvas.getHeight() * (1 - zoom);
 
@@ -63,6 +65,12 @@
 	}
 
 	function updateZoom(newZoom, pointToZoom) {
+		if (!pointToZoom) {
+			pointToZoom = {
+				x: fabricCanvas.getCenter().left,
+				y: fabricCanvas.getCenter().top
+			};
+		}
 		if (newZoom > zoomMax) {
 			newZoom = zoomMax;
 		}
@@ -70,6 +78,7 @@
 			newZoom = zoomMin;
 		}
 
+		zoom = newZoom;
 		fabricCanvas.zoomToPoint(pointToZoom, newZoom);
 		checkAndApplyMovement();
 	}
@@ -101,6 +110,12 @@
 >
 	<slot {isDragging} />
 </div>
+<TreeNavigatorAuthors />
+<TreeNavigatorZoom
+	{zoom}
+	zoomedIn={() => updateZoom(zoom + 0.2)}
+	zoomedOut={() => updateZoom(zoom - 0.2)}
+/>
 
 <style lang="scss">
 	div {
