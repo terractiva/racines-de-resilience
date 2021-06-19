@@ -26,7 +26,7 @@ const config = {
 			plugins: postcssPlugins
 		},
 		scss: {
-			prependData: `@use 'src/styles/variables.scss';`
+			prependData: `@use 'src/styles/utilities.scss';`
 		}
 	})
 };

@@ -1,51 +1,72 @@
-<main>
+<script context="module">
+	/**
+	 * @type {import('@sveltejs/kit').Load}
+	 */
+	export async function load({ page }) {
+		return {
+			props: {
+				currentPath: page.path
+			}
+		};
+	}
+</script>
+
+<script>
+	import Footer from '$lib/components/Footer.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import { actionsTreePage } from '$lib/constants/pages';
+
+	export let currentPath;
+
+	$: isFullscreen = currentPath === actionsTreePage.path;
+</script>
+
+<Header {currentPath} />
+<main class:is-fullscreen={isFullscreen}>
 	<slot />
 </main>
-
-<footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
+{#if !isFullscreen}
+	<Footer />
+{/if}
 
 <style global lang="scss">
-	@use 'node_modules/chota/dist/chota.min.css';
+	@use 'src/styles/theme.scss';
 
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
+	html {
+		height: 100%;
 	}
 
 	body {
-		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
 		margin: 0;
+		height: 100%;
 	}
 
-	#svelte {
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
+	header,
+	nav {
+		height: utilities.$header-height;
+		position: fixed;
+		top: 0;
 	}
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
+	header {
+		left: 0;
 	}
 
-	footer a {
-		font-weight: bold;
+	nav {
+		right: 0;
 	}
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
+	main {
+		flex: 1;
+
+		&.is-fullscreen {
+			height: 100%;
+		}
+		&:not(.is-fullscreen) {
+			margin-top: utilities.$header-height;
+			padding: 4rem 0;
 		}
 	}
 </style>

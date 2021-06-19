@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="icon" href="data:;base64,iVBORw0KGgo=" />
 		%svelte.head%
 	</head>
-	<body>
-		<div id="svelte">%svelte.body%</div>
+	<body id="svelte">
+		%svelte.body%
+		<script>
+			// Voir `ThemeSwitcher`
+			if (
+				localStorage.getItem('color-scheme') === null
+					? window.matchMedia?.('(prefers-color-scheme: dark)').matches
+					: localStorage.getItem('color-scheme') === 'dark'
+			) {
+				document.body.classList.add('dark');
+			}
+		</script>
 	</body>
 </html>
