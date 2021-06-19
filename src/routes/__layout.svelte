@@ -63,6 +63,8 @@
 
 		&.is-fullscreen {
 			height: 100%;
+			overflow: hidden;
+			position: relative;
 		}
 		&:not(.is-fullscreen) {
 			margin-top: utilities.$header-height;

@@ -1,6 +1,7 @@
 <script>
 	import { fabric } from 'fabric';
 	import { onMount } from 'svelte';
+	import ActionsTreeNavigator from './ActionsTreeNavigator.svelte';
 
 	export let height;
 	export let width;
@@ -14,6 +15,7 @@
 	/** @type [x: number, y: number] */
 	let backgroundPadding; // Espace à rajouter de chaque côté de l'arrière-plan pour qu'il prenne toute la place disponible
 
+	$: showTree = !isBackgroundError && !isBackgroundLoading;
 	$: resizeCanvas(width, height);
 
 	onMount(() => {
@@ -68,17 +70,18 @@
 	}
 </script>
 
+<canvas bind:this={nativeCanvas} style="opacity: {showTree ? 1 : 0};" />
+
 {#if isBackgroundError}
-	<p class="text-error">Impossible de charger l'arbre</p>
+	<p class="text-error">Oups, il y a eu une erreur...</p>
 {/if}
 {#if isBackgroundLoading}
 	<p>Chargement de l'arbre...</p>
 {/if}
 
-<canvas
-	bind:this={nativeCanvas}
-	style="opacity: {isBackgroundError || isBackgroundLoading ? 0 : 1};"
-/>
+{#if showTree}
+	<ActionsTreeNavigator {fabricCanvas} padding={backgroundPadding} />
+{/if}
 
 <style lang="scss">
 	p {
