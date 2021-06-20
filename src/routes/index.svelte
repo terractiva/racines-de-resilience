@@ -67,15 +67,15 @@
 </section>
 
 <section class="section-origin container">
-	<h2>
-		Les origines du projet <a class="button outline primary" href={aboutPage.path}>En savoir +</a>
-	</h2>
+	<h2>Les origines du projet</h2>
+	<a class="button outline primary" href={aboutPage.path}>En savoir +</a>
 </section>
 
 <section class="section-supporters container">
-	<h2>
-		Ils nous soutiennent <a class="button outline" href={supportUsPage.path}>Nous soutenir</a>
-	</h2>
+	<div class="section-header">
+		<h2>Ils nous soutiennent</h2>
+		<a class="button outline" href={supportUsPage.path}>Nous soutenir</a>
+	</div>
 
 	<div>
 		<div />
@@ -133,6 +133,9 @@
 		}
 
 		&.section-origin {
+			align-items: center;
+			display: flex;
+			justify-content: center;
 			text-align: center;
 
 			h2 {
@@ -140,10 +143,10 @@
 				display: flex;
 				justify-content: center;
 				margin: 0;
+			}
 
-				a {
-					margin-left: 2rem;
-				}
+			a {
+				margin-left: 2rem;
 			}
 		}
 
@@ -156,17 +159,25 @@
 			}
 
 			& > div {
-				display: grid;
-				gap: var(--grid-gutter);
-				grid-template-columns: repeat(6, 1fr);
+				&.section-header {
+					align-items: flex-start;
+					display: flex;
+					justify-content: space-between;
+				}
 
-				& > div {
-					background: var(--bg-secondary-color);
+				&:not(.section-header) {
+					display: grid;
+					gap: var(--grid-gutter);
+					grid-template-columns: repeat(6, 1fr);
 
-					&::before {
-						content: '';
-						display: block;
-						padding-bottom: 100%;
+					& > div {
+						background: var(--bg-secondary-color);
+
+						&::before {
+							content: '';
+							display: block;
+							padding-bottom: 100%;
+						}
 					}
 				}
 			}

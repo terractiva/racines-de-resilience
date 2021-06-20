@@ -1,5 +1,14 @@
 @use 'node_modules/chota/dist/chota.min.css';
 
+@font-face {
+	font-family: 'Caecilia LT Std';
+	src: url('/fonts/caecilia-lt-std-heavy.woff2') format('woff2'),
+		url('/fonts/caecilia-lt-std-heavy.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
 body {
 	--font-size: 1.5rem;
 
@@ -10,4 +19,17 @@ body {
 		--color-grey: #ccc;
 		--color-darkGrey: #777;
 	}
+}
+
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+	font-family: 'Caecilia LT Std', -apple-system, BlinkMacSystemFont, Avenir, 'Avenir Next',
+		'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+		'Helvetica Neue', sans-serif;
 }
