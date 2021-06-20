@@ -23,6 +23,7 @@
 
 		align-items: center;
 		bottom: 1rem;
+		box-shadow: utilities.$shadow;
 		line-height: $height;
 		left: 1rem;
 		margin: 0;

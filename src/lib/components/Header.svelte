@@ -13,10 +13,12 @@
 	</a>
 </header>
 
-<nav class="nav tabs">
-	{#each pages as page}
-		<a class:active={page.path === currentPath} href={page.path}>{page.label}</a>
-	{/each}
+<nav class="nav">
+	<div class="tabs">
+		{#each pages as page}
+			<a class:active={page.path === currentPath} href={page.path}>{page.label}</a>
+		{/each}
+	</div>
 
 	<ThemeSwitcher />
 </nav>
@@ -24,8 +26,12 @@
 <style lang="scss">
 	header,
 	nav {
-		background: var(--bg-color);
 		z-index: utilities.$z-index-header;
+	}
+
+	header,
+	nav div {
+		background: var(--bg-color);
 	}
 
 	header {
@@ -38,6 +44,12 @@
 				height: 100%;
 				width: auto;
 			}
+		}
+	}
+
+	nav {
+		div {
+			box-shadow: utilities.$shadow;
 		}
 	}
 

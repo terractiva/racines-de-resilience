@@ -30,3 +30,9 @@
 	type="button"
 	on:click={toggleDarkMode}>{isDarkModeEnabled ? '☀️' : '🌙'}</button
 >
+
+<style lang="scss">
+	button {
+		border-radius: 50%;
+	}
+</style>
