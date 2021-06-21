@@ -1,33 +1,25 @@
-<script context="module">
-	/**
-	 * @type {import('@sveltejs/kit').Load}
-	 */
-	export async function load({ page }) {
-		return {
-			props: {
-				currentPath: page.path
-			}
-		};
-	}
-</script>
-
 <script>
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import { actionsTreePage } from '$lib/constants/pages';
+	import { layoutContext } from '$lib/contexts';
+	import { setContext } from 'svelte';
 
-	export let currentPath;
+	let currentPage;
 
-	$: isFullscreen = currentPath === actionsTreePage.path;
+	setContext(layoutContext, { setCurrentPage });
+
+	function setCurrentPage(newCurrentPage) {
+		currentPage = newCurrentPage;
+	}
 </script>
 
-<Header {currentPath} />
-<main class:is-fullscreen={isFullscreen}>
+<Header currentPath={currentPage?.path} />
+
+<main class:is-fullscreen={currentPage?.isFullscreen}>
 	<slot />
 </main>
-{#if !isFullscreen}
-	<Footer />
-{/if}
+
+<Footer />
 
 <style global lang="scss">
 	@use 'src/styles/theme.scss';
@@ -65,6 +57,10 @@
 			height: 100%;
 			overflow: hidden;
 			position: relative;
+
+			& + footer {
+				display: none;
+			}
 		}
 		&:not(.is-fullscreen) {
 			margin-top: utilities.$header-height;

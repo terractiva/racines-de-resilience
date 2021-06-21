@@ -1,0 +1,3 @@
+const layoutContext = {};
+
+export { layoutContext };

@@ -21,6 +21,7 @@ const actionsPage = {
 
 const actionsTreePage = {
 	description: 'TODO:',
+	isFullscreen: true,
 	label: 'Arbre aux actions',
 	path: '/arbre-actions',
 	title: 'Arbre aux actions'
