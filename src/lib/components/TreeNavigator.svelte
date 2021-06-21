@@ -102,7 +102,7 @@
 			event.stopPropagation();
 		}
 	}}
-	on:mousewheel={(event) => {
+	on:wheel={(event) => {
 		onScroll(event.deltaY, event.pageX, event.pageY);
 		event.preventDefault();
 		event.stopPropagation();
