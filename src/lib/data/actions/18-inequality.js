@@ -4,7 +4,7 @@ import Subcategories from '../subcategories';
 
 const inequalityActions = [
 	{
-		slug: '',
+		slug: 'revenu-universel-base',
 		level: 3,
 		categories: [Categories.Regenerate, Categories.Intervene],
 		subcategory: Subcategories.Inequality,
@@ -14,7 +14,7 @@ const inequalityActions = [
 		text: `Je défends la création d'un revenu universel de base`
 	},
 	{
-		slug: '',
+		slug: 'élu-citoyenneté-universelle',
 		level: 3,
 		categories: [Categories.Regenerate, Categories.Intervene],
 		subcategory: Subcategories.Inequality,

@@ -4,7 +4,7 @@ import Subcategories from '$lib/data/subcategories';
 
 const mobilityActions = [
 	{
-		slug: '',
+		slug: 'remplacement-voiture',
 		level: 3,
 		categories: [Categories.Construct],
 		subcategory: Subcategories.Mobility,
@@ -14,7 +14,7 @@ const mobilityActions = [
 		text: `Je remplace la voiture : vélo, transports, co-voiturage`
 	},
 	{
-		slug: '',
+		slug: 'entreprise-plan-mobilité',
 		level: 2,
 		categories: [Categories.Construct],
 		subcategory: Subcategories.Mobility,
@@ -24,7 +24,7 @@ const mobilityActions = [
 		text: `Je pousse mon entreprise à adopter un plan de mobilité`
 	},
 	{
-		slug: '',
+		slug: 'élu-politique-transport',
 		level: 1,
 		categories: [Categories.Construct],
 		subcategory: Subcategories.Mobility,

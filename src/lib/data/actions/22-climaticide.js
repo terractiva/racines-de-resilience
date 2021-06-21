@@ -4,7 +4,7 @@ import Subcategories from '../subcategories';
 
 const climaticideActions = [
 	{
-		slug: '',
+		slug: 'démantèlement-fossile',
 		level: 3,
 		categories: [Categories.Intervene],
 		subcategory: Subcategories.Climaticide,
@@ -14,7 +14,7 @@ const climaticideActions = [
 		text: `Je démantèle les infrastructures fossiles`
 	},
 	{
-		slug: '',
+		slug: 'résistante-projets-inutiles',
 		level: 2,
 		categories: [Categories.Intervene],
 		subcategory: Subcategories.Climaticide,

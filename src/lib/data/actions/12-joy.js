@@ -4,7 +4,7 @@ import Subcategories from '../subcategories';
 
 const joyActions = [
 	{
-		slug: '',
+		slug: 'art-aller-essentiel',
 		level: 3,
 		categories: [Categories.Regenerate],
 		subcategory: Subcategories.Joy,
@@ -14,7 +14,7 @@ const joyActions = [
 		text: `Je pratique l'art d'aller à l'essentiel`
 	},
 	{
-		slug: '',
+		slug: 'transition-intérieure',
 		level: 2,
 		categories: [Categories.Regenerate],
 		subcategory: Subcategories.Joy,

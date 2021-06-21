@@ -4,7 +4,7 @@ import Subcategories from '../subcategories';
 
 const resilienceActions = [
 	{
-		slug: '',
+		slug: 'élu-plan-communal-sécurité-civil',
 		level: 3,
 		categories: [Categories.Construct, Categories.Regenerate],
 		subcategory: Subcategories.Resilience,
@@ -14,7 +14,7 @@ const resilienceActions = [
 		text: `Élu·e, j'élabore un Plan Communal de Sécurité Civile`
 	},
 	{
-		slug: '',
+		slug: 'commune-régie-agricole',
 		level: 3,
 		categories: [Categories.Construct],
 		subcategory: Subcategories.Resilience,
@@ -24,7 +24,7 @@ const resilienceActions = [
 		text: `Je participe à la création d'une régie agricole dans ma commune`
 	},
 	{
-		slug: '',
+		slug: 'réseaux-entraide-rural-urbain',
 		level: 3,
 		categories: [Categories.Construct, Categories.Regenerate],
 		subcategory: Subcategories.Resilience,

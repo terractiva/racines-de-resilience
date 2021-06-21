@@ -4,7 +4,7 @@ import Subcategories from '$lib/data/subcategories';
 
 const energyActions = [
 	{
-		slug: '',
+		slug: 'métiers-transition-énergétique',
 		level: 3,
 		categories: [Categories.Construct],
 		subcategory: Subcategories.Energy,
@@ -14,7 +14,7 @@ const energyActions = [
 		text: `Je me forme aux métiers de la transition énergétique`
 	},
 	{
-		slug: '',
+		slug: 'démarche-sobriété-efficacité-renouvelable',
 		level: 1,
 		categories: [Categories.Construct],
 		subcategory: Subcategories.Energy,
@@ -24,7 +24,7 @@ const energyActions = [
 		text: `Je découvre et diffuse la démarche «&nbsp;sobriété, efficacité, renouvelables&nbsp;»`
 	},
 	{
-		slug: '',
+		slug: 'production-énergie-renouvelable',
 		level: 2,
 		categories: [Categories.Construct],
 		subcategory: Subcategories.Energy,
@@ -34,7 +34,7 @@ const energyActions = [
 		text: `J'investis dans la production d'énergie renouvelable`
 	},
 	{
-		slug: '',
+		slug: 'achat-énergie-renouvelable',
 		level: 1,
 		categories: [Categories.Construct],
 		subcategory: Subcategories.Energy,
