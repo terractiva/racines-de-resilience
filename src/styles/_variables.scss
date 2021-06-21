@@ -1,7 +1,19 @@
 // Automatiquement importé dans tout le style
 
+// Couleurs
+$color-construct: #5c698c;
+$color-construct-regenerate: #619992;
+$color-regenerate: #4d6f45;
+$color-regenerate-intervene: #949465;
+$color-intervene: #7e7069;
+
 // Ombres
 $shadow: 0 0.25rem 1rem rgb(48 55 66 / 15%);
+
+// Polices
+$font-family-secondary: 'Caecilia LT Std', -apple-system, BlinkMacSystemFont, Avenir, 'Avenir Next',
+	'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+	sans-serif;
 
 // Tailles
 $header-height: 5rem;

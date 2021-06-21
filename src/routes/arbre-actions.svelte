@@ -1,5 +1,5 @@
 <script>
-	import ActionsTree from '$lib/components/Tree.svelte';
+	import Tree from '$lib/components/Tree.svelte';
 	import PageMeta from '$lib/components/PageMeta.svelte';
 	import { actionsTreePage } from '$lib/constants/pages';
 	import { onMount } from 'svelte';
@@ -23,4 +23,4 @@
 
 <svelte:window on:resize={setSize} />
 
-<ActionsTree {height} {width} />
+<Tree {height} {width} />

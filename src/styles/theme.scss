@@ -1,10 +1,11 @@
+@use 'src/styles/utilities.scss';
 @use 'node_modules/chota/dist/chota.min.css';
 
 @font-face {
 	font-family: 'Caecilia LT Std';
 	src: url('/fonts/caecilia-lt-std-heavy.woff2') format('woff2'),
 		url('/fonts/caecilia-lt-std-heavy.woff') format('woff');
-	font-weight: 700;
+	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
 }
@@ -28,8 +29,6 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 700;
-	font-family: 'Caecilia LT Std', -apple-system, BlinkMacSystemFont, Avenir, 'Avenir Next',
-		'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-		'Helvetica Neue', sans-serif;
+	font-weight: bold;
+	font-family: utilities.$font-family-secondary;
 }
