@@ -26,7 +26,7 @@
 	function initCanvas() {
 		fabricCanvas = new fabric.StaticCanvas(nativeCanvas, { selection: false });
 		fabricCanvas.setBackgroundColor('#ffffff');
-		fabricCanvas.setBackgroundImage('arbre.jpg', (_, isError) => {
+		fabricCanvas.setBackgroundImage('/arbre.jpg', (_, isError) => {
 			isBackgroundLoading = false;
 
 			if (isError) {

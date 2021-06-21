@@ -9,7 +9,7 @@
 
 <header>
 	<a href={homePage.path}>
-		<img alt="Racines de résilience" src="logo.png" />
+		<img alt="Racines de résilience" src="/logo.png" />
 	</a>
 </header>
 

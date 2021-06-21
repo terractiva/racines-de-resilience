@@ -1,4 +1,6 @@
 <script>
+	import { actionsTreePage } from '$lib/constants/pages';
+
 	export let action;
 	export let isDisabled;
 
@@ -9,7 +11,7 @@
 
 <li style="left: {action.position[0]}%; top: {action.position[1]}%; width: {2 * action.radius}%;">
 	<a
-		href={action.slug}
+		href="{actionsTreePage.path}/{action.slug}"
 		style="cursor: {isDisabled ? 'inherit' : ''};"
 		on:mousedown={(event) => {
 			event.preventDefault(); // Empêche le glisser-déposer de lien
