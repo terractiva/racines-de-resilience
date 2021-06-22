@@ -86,7 +86,7 @@
 
 <svelte:window on:mouseup={onMoveEnd} on:touchend={onMoveEnd} />
 
-<div
+<section
 	style="cursor: {cursor}; padding: {padding?.[1]}px {padding?.[0]}px; transform: {transform};"
 	on:mousedown={(event) => onMoveStart(event.clientX, event.clientY)}
 	on:touchstart={(event) => {
@@ -109,7 +109,8 @@
 	}}
 >
 	<slot {isDragging} />
-</div>
+</section>
+
 <TreeNavigatorAuthors />
 <TreeNavigatorZoom
 	{zoom}
@@ -118,7 +119,7 @@
 />
 
 <style lang="scss">
-	div {
+	section {
 		box-sizing: border-box;
 		cursor: grab;
 		height: 100%;
