@@ -29,45 +29,47 @@
 
 	html {
 		height: 100%;
-	}
 
-	body {
-		display: flex;
-		flex-direction: column;
-		margin: 0;
-		height: 100%;
-	}
-
-	header,
-	nav {
-		height: utilities.$header-height;
-		position: fixed;
-		top: 0;
-	}
-
-	header {
-		left: 0;
-	}
-
-	nav {
-		right: 0;
-	}
-
-	main {
-		flex: 1;
-
-		&.is-fullscreen {
+		body {
+			display: flex;
+			flex-direction: column;
+			margin: 0;
 			height: 100%;
-			overflow: hidden;
-			position: relative;
 
-			& + footer {
-				display: none;
+			& > {
+				header,
+				nav {
+					height: utilities.$header-height;
+					position: fixed;
+					top: 0;
+				}
+
+				header {
+					left: 0;
+				}
+
+				nav {
+					right: 0;
+				}
+
+				main {
+					flex: 1;
+
+					&.is-fullscreen {
+						height: 100%;
+						overflow: hidden;
+						position: relative;
+
+						& + footer {
+							display: none;
+						}
+					}
+					&:not(.is-fullscreen) {
+						margin-top: utilities.$header-height;
+						padding: 4rem 0;
+					}
+				}
 			}
-		}
-		&:not(.is-fullscreen) {
-			margin-top: utilities.$header-height;
-			padding: 4rem 0;
 		}
 	}
 </style>

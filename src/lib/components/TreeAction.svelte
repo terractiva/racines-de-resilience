@@ -6,7 +6,7 @@
 
 	let isNextClickDisabled = false;
 
-	$: categoryClasses = action.categories.join(' ');
+	$: textClasses = action.categories.map((category) => `text-${category}`).join(' ');
 </script>
 
 <li style="left: {action.position[0]}%; top: {action.position[1]}%; width: {2 * action.radius}%;">
@@ -28,7 +28,7 @@
 			}
 		}}
 	>
-		<p class="text">{@html action.text}</p>
+		<p>{@html action.text}</p>
 
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
 			><path
@@ -37,8 +37,10 @@
 			/></svg
 		>
 
-		<p class="sources {categoryClasses}">
-			{#each action.sources as source}<span>{source.name}</span>{/each}
+		<p class={textClasses}>
+			<b>
+				{#each action.sources as source}<span>{source.name}</span>{/each}
+			</b>
 		</p>
 	</a>
 </li>
@@ -69,43 +71,15 @@
 			width: 100%;
 
 			p {
+				font-weight: 600;
 				line-height: 1.2;
 				margin: 0;
 				text-align: center;
 
-				&.text {
-					font-weight: 600;
-				}
-
-				&.sources {
-					font-family: utilities.$font-family-secondary;
-					font-weight: bold;
-
-					&.construct:not(.regenerate) {
-						color: utilities.$color-construct;
-					}
-
-					&.construct.regenerate {
-						color: utilities.$color-construct-regenerate;
-					}
-
-					&.regenerate:not(.construct):not(.intervene) {
-						color: utilities.$color-regenerate;
-					}
-
-					&.regenerate.intervene {
-						color: utilities.$color-regenerate-intervene;
-					}
-
-					&.intervene:not(.regenerate) {
-						color: utilities.$color-intervene;
-					}
-
-					span {
-						&:not(:last-child) {
-							&::after {
-								content: ', ';
-							}
+				span {
+					&:not(:last-child) {
+						&::after {
+							content: ', ';
 						}
 					}
 				}

@@ -31,7 +31,9 @@ h4,
 h5,
 h6 {
 	font-weight: bold;
-	font-family: utilities.$font-family-secondary;
+	font-family: 'Caecilia LT Std', -apple-system, BlinkMacSystemFont, Avenir, 'Avenir Next',
+		'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+		'Helvetica Neue', sans-serif;
 }
 
 // Copié depuis https://kit.svelte.dev/
@@ -47,3 +49,37 @@ h6 {
 	white-space: nowrap;
 	width: 1px;
 }
+
+/* purgecss start ignore */
+.text-construct:not(.text-regenerate) {
+	color: utilities.$color-construct;
+}
+.text-construct.text-regenerate {
+	color: utilities.$color-construct-regenerate;
+}
+.text-regenerate:not(.text-construct):not(.text-intervene) {
+	color: utilities.$color-regenerate;
+}
+.text-regenerate.text-intervene {
+	color: utilities.$color-regenerate-intervene;
+}
+.text-intervene:not(.text-regenerate) {
+	color: utilities.$color-intervene;
+}
+
+.bd-construct:not(.bd-regenerate) {
+	border: 1px solid rgba(utilities.$color-construct, 0.5);
+}
+.bd-construct.bd-regenerate {
+	border: 1px solid rgba(utilities.$color-construct-regenerate, 0.5);
+}
+.bd-regenerate:not(.bd-construct):not(.bd-intervene) {
+	border: 1px solid rgba(utilities.$color-regenerate, 0.5);
+}
+.bd-regenerate.bd-intervene {
+	border: 1px solid rgba(utilities.$color-regenerate-intervene, 0.5);
+}
+.bd-intervene:not(.bd-regenerate) {
+	border: 1px solid rgba(utilities.$color-intervene, 0.5);
+}
+/* purgecss end ignore */
