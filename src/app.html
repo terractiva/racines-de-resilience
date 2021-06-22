@@ -10,10 +10,12 @@
 		%svelte.body%
 		<script>
 			// Voir `ThemeSwitcher`
+			const savedTheme = localStorage.getItem('theme');
+
 			if (
-				localStorage.getItem('color-scheme') === null
+				savedTheme === null
 					? window.matchMedia?.('(prefers-color-scheme: dark)').matches
-					: localStorage.getItem('color-scheme') === 'dark'
+					: savedTheme === 'dark'
 			) {
 				document.body.classList.add('dark');
 			}

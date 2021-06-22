@@ -1,3 +1,4 @@
 const layoutContext = {};
+const themeContext = {};
 
-export { layoutContext };
+export { layoutContext, themeContext };

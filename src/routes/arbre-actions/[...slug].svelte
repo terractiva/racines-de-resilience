@@ -34,7 +34,7 @@
 
 	function openActionModal(slug) {
 		if (slug) {
-			console.log(`TODO: ouvrir modal ${slug}`);
+			alert(`TODO: ouvrir modal ${slug}`);
 		}
 	}
 
