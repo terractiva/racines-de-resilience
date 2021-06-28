@@ -66,7 +66,20 @@ h6 {
 .text-intervene:not(.text-regenerate) {
 	color: utilities.$color-intervene;
 }
+/* purgecss end ignore */
 
+.bg-lines {
+	background-image: url('/fonds/lignes.png');
+	background-repeat: repeat;
+	background-size: 200px;
+}
+.bg-rounds {
+	background-image: url('/fonds/ronds.png');
+	background-repeat: repeat;
+	background-size: 200px;
+}
+
+/* purgecss start ignore */
 .bd-construct:not(.bd-regenerate) {
 	border: 1px solid utilities.$color-construct;
 }

@@ -17,7 +17,7 @@
 	</h1>
 </section>
 
-<section class="section-actions">
+<section class="section-actions bg-lines">
 	<div class="container">
 		<h2>Trouver ma prochaine action</h2>
 
@@ -25,7 +25,7 @@
 
 		<p>ou</p>
 
-		<a class="button primary" href={actionsTreePage.path}>Explorer l'arbre aux actions</a>
+		<a class="button dark" href={actionsTreePage.path}>Explorer l'arbre aux actions</a>
 	</div>
 </section>
 
@@ -105,7 +105,6 @@
 		}
 
 		&.section-actions {
-			background: var(--bg-secondary-color);
 			text-align: center;
 
 			h2 {
