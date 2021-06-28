@@ -68,18 +68,18 @@ h6 {
 }
 
 .bd-construct:not(.bd-regenerate) {
-	border: 1px solid rgba(utilities.$color-construct, 0.5);
+	border: 1px solid utilities.$color-construct;
 }
 .bd-construct.bd-regenerate {
-	border: 1px solid rgba(utilities.$color-construct-regenerate, 0.5);
+	border: 1px solid utilities.$color-construct-regenerate;
 }
 .bd-regenerate:not(.bd-construct):not(.bd-intervene) {
-	border: 1px solid rgba(utilities.$color-regenerate, 0.5);
+	border: 1px solid utilities.$color-regenerate;
 }
 .bd-regenerate.bd-intervene {
-	border: 1px solid rgba(utilities.$color-regenerate-intervene, 0.5);
+	border: 1px solid utilities.$color-regenerate-intervene;
 }
 .bd-intervene:not(.bd-regenerate) {
-	border: 1px solid rgba(utilities.$color-intervene, 0.5);
+	border: 1px solid utilities.$color-intervene;
 }
 /* purgecss end ignore */

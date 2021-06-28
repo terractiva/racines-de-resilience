@@ -8,26 +8,24 @@
 
 <article class={borderClasses}>
 	<header>
-		<p><b>{action.subcategory}</b></p>
-
-		<p>
+		<p class="action-level">
 			{#each levelArray as _}∎{/each}
 		</p>
+
+		<p class="action-text">{@html action.text}</p>
 	</header>
 
-	<p>{@html action.text}</p>
+	<p class="action-sources {textClasses}">
+		<b>
+			{#each action.sources as source, index}
+				<a href={source.link}>{source.name}</a>{#if index !== action.sources.length - 1}<span
+						>,
+					</span>{/if}
+			{/each}
+		</b>
+	</p>
 
-	<footer>
-		<p class={textClasses}>
-			<b>
-				{#each action.sources as source, index}
-					<a href={source.link}>{source.name}</a>{#if index !== action.sources.length - 1}<span
-							>,
-						</span>{/if}
-				{/each}
-			</b>
-		</p>
-	</footer>
+	<p class="action-subcategory"><span class="tag is-small"><b>{action.subcategory}</b></span></p>
 </article>
 
 <style lang="scss">
@@ -38,34 +36,26 @@
 		justify-content: space-between;
 		padding: 1rem 2rem;
 
-		header {
-			display: flex;
-
-			p {
-				margin: 0;
-
-				&:first-child {
-					flex: 1;
-				}
-
-				&:last-child {
-					user-select: none;
-				}
-			}
+		p {
+			margin-bottom: 0;
 		}
 
-		& > p {
+		.action-level {
+			float: right;
+			margin-left: 0.4rem;
+			user-select: none;
+		}
+
+		.action-sources {
 			margin: 0.5rem 0;
+
+			a {
+				color: inherit;
+			}
 		}
 
-		footer {
-			p {
-				margin: 0;
-
-				a {
-					color: inherit;
-				}
-			}
+		.action-subcategory {
+			display: flex; // Corrige un problème de taille
 		}
 	}
 </style>
