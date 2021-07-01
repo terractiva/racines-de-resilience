@@ -71,13 +71,14 @@ h6 {
 .bg-lines,
 .bg-rounds {
 	background-repeat: repeat;
-	background-size: 250px;
 }
 .bg-lines {
 	background-image: url('/fonds/lignes.png');
+	background-size: 250px auto;
 }
 .bg-rounds {
 	background-image: url('/fonds/ronds.png');
+	background-size: auto 250px;
 }
 
 /* purgecss start ignore */
