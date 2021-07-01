@@ -13,8 +13,9 @@
 	let cursor = 'grab';
 	let isDragging = false;
 	let isMouseDown = false;
-	let transform;
 	let zoom = 1;
+
+	$: transform = padding && null;
 
 	function checkAndApplyMovement() {
 		const vTransform = fabricCanvas.viewportTransform; // vTransform[4] = x, vTransform[5] = y
