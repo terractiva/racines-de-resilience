@@ -68,15 +68,16 @@ h6 {
 }
 /* purgecss end ignore */
 
+.bg-lines,
+.bg-rounds {
+	background-repeat: repeat;
+	background-size: 250px;
+}
 .bg-lines {
 	background-image: url('/fonds/lignes.png');
-	background-repeat: repeat;
-	background-size: 200px;
 }
 .bg-rounds {
 	background-image: url('/fonds/ronds.png');
-	background-repeat: repeat;
-	background-size: 200px;
 }
 
 /* purgecss start ignore */
