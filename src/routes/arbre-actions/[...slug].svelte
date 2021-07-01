@@ -12,6 +12,7 @@
 </script>
 
 <script>
+	import ActionModal from '$lib/components/ActionModal.svelte';
 	import PageMeta from '$lib/components/PageMeta.svelte';
 	import Tree from '$lib/components/Tree.svelte';
 	import { actionsTreePage } from '$lib/constants/pages';
@@ -24,19 +25,11 @@
 	let width;
 	const { setCurrentPage } = getContext(layoutContext);
 
-	$: openActionModal(slug);
-
 	setCurrentPage(actionsTreePage);
 
 	onMount(() => {
 		setSize();
 	});
-
-	function openActionModal(slug) {
-		if (slug) {
-			alert(`TODO: ouvrir modal ${slug}`);
-		}
-	}
 
 	function setSize() {
 		const main = document.getElementsByTagName('main')[0];
@@ -51,3 +44,4 @@
 <svelte:window on:resize={setSize} />
 
 <Tree {height} {width} />
+<ActionModal {slug} backLink={actionsTreePage.path} />

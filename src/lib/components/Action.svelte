@@ -30,6 +30,7 @@
 
 <style lang="scss">
 	article {
+		background: var(--bg-color);
 		display: flex;
 		flex-direction: column;
 		height: 100%;

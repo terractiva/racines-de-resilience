@@ -91,6 +91,7 @@
 		left: 50%;
 		margin-bottom: 0;
 		position: absolute;
+		text-align: center;
 		top: 50%;
 		transform: translate(-50%, -50%);
 	}
