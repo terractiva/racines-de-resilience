@@ -3,13 +3,12 @@
 
 	$: borderClasses = action.categories.map((category) => `bd-${category}`).join(' ');
 	$: textClasses = action.categories.map((category) => `text-${category}`).join(' ');
-	$: levelArray = new Array(action.level);
 </script>
 
 <article class={borderClasses}>
 	<header>
 		<p class="action-level">
-			{#each levelArray as _}∎{/each}
+			{#each { length: action.level } as _}∎{/each}
 		</p>
 
 		<p class="action-text">{@html action.text}</p>

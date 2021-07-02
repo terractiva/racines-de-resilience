@@ -8,7 +8,7 @@ const Sources = {
 	EnergiePartagee: { link: '', name: 'Énergie partagée' },
 	FNAUT: { link: '', name: 'FNAUT' },
 	FUB: { link: '', name: 'FUB' },
-	Greenpeace: { link: '', name: 'Greanpeace' },
+	Greenpeace: { link: '', name: 'Greenpeace' },
 	Humanum: { link: '', name: 'Humanum' },
 	IlEstEncoreTemps: { link: '', name: 'Il est encore temps' },
 	KelBillet: { link: '', name: 'KelBillet' },
