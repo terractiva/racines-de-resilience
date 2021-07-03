@@ -50,6 +50,12 @@ h6 {
 	width: 1px;
 }
 
+.bg-lines {
+	background-image: url('/fonds/lignes.png');
+	background-repeat: repeat;
+	background-size: 250px auto;
+}
+
 /* purgecss start ignore */
 .text-construct:not(.text-regenerate) {
 	color: utilities.$color-construct;
@@ -66,22 +72,7 @@ h6 {
 .text-intervene:not(.text-regenerate) {
 	color: utilities.$color-intervene;
 }
-/* purgecss end ignore */
 
-.bg-lines,
-.bg-rounds {
-	background-repeat: repeat;
-}
-.bg-lines {
-	background-image: url('/fonds/lignes.png');
-	background-size: 250px auto;
-}
-.bg-rounds {
-	background-image: url('/fonds/ronds.png');
-	background-size: auto 250px;
-}
-
-/* purgecss start ignore */
 .bd-construct:not(.bd-regenerate) {
 	border: 1px solid utilities.$color-construct;
 }
