@@ -2,6 +2,7 @@ import adapterStatic from '@sveltejs/adapter-static';
 import autoprefixer from 'autoprefixer';
 import purgecss from '@fullhuman/postcss-purgecss';
 import sveltePreprocess from 'svelte-preprocess';
+import actions from './src/lib/data/actions/index.js';
 
 const postcssPlugins = [autoprefixer()];
 const isProduction = process.env.NODE_ENV === 'production';
@@ -19,7 +20,10 @@ if (isProduction) {
 const config = {
 	kit: {
 		adapter: adapterStatic(),
-		target: '#svelte'
+		target: '#svelte',
+		prerender: {
+			pages: ['*', ...actions.map((action) => `/arbre-actions/${action.slug}`)]
+		}
 	},
 	preprocess: sveltePreprocess({
 		postcss: {

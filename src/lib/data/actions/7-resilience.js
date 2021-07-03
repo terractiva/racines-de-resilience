@@ -1,6 +1,6 @@
-import Categories from '../categories';
-import Sources from '../sources';
-import Subcategories from '../subcategories';
+import Categories from '../categories.js';
+import Sources from '../sources.js';
+import Subcategories from '../subcategories.js';
 
 const resilienceActions = [
 	{

@@ -1,6 +1,6 @@
-import Categories from '$lib/data/categories';
-import Sources from '$lib/data/sources';
-import Subcategories from '$lib/data/subcategories';
+import Categories from '../categories.js';
+import Sources from '../sources.js';
+import Subcategories from '../subcategories.js';
 
 const mobilityActions = [
 	{
