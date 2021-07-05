@@ -1,23 +1,16 @@
 <script>
 	import { aboutPage, actionsPage, homePage, supportUsPage } from '$lib/constants/pages';
-	import Themes from '$lib/constants/themes';
-	import { themeContext } from '$lib/contexts';
-	import { getContext } from 'svelte';
 	import ThemeSwitcher from './ThemeSwitcher.svelte';
 
 	export let currentPath;
+	export let isFullscreen;
 
-	const { currentTheme$ } = getContext(themeContext);
 	const pages = [actionsPage, supportUsPage, aboutPage];
 </script>
 
-<header>
+<header class:has-background={!isFullscreen}>
 	<a href={homePage.path}>
-		<img
-			alt="Racines de résilience"
-			class:light-logo={$currentTheme$ === Themes.Dark}
-			src="/logo.png"
-		/>
+		<img alt="Racines de résilience" src="/logo.png" />
 	</a>
 </header>
 
@@ -38,6 +31,10 @@
 	}
 
 	header {
+		&.has-background {
+			background: var(--bg-color);
+		}
+
 		a {
 			display: block;
 			height: 100%;
@@ -46,10 +43,6 @@
 			img {
 				height: 100%;
 				width: auto;
-
-				&.light-logo {
-					filter: brightness(100);
-				}
 			}
 		}
 	}

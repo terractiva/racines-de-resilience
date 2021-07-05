@@ -15,7 +15,7 @@
 </script>
 
 <ThemeContext {currentPage}>
-	<Header currentPath={currentPage?.path} />
+	<Header currentPath={currentPage?.path} isFullscreen={currentPage?.isFullscreen} />
 
 	<main class:is-fullscreen={currentPage?.isFullscreen}>
 		<slot />
