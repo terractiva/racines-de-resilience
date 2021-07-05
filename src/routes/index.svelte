@@ -18,11 +18,37 @@
 	</h1>
 </section>
 
-<section class="section bg-lines-1 text-center">
+<section class="section section-action bg-lines-1 text-center">
 	<div class="container">
 		<h2>Trouver ma prochaine action</h2>
 
-		<p>TODO: filtres</p>
+		<div>
+			<details class="dropdown">
+				<summary class="button">Niveau</summary>
+
+				<div class="card">
+					<p>TODO:</p>
+				</div>
+			</details>
+
+			<details class="dropdown">
+				<summary class="button">Catégorie</summary>
+
+				<div class="card">
+					<p>TODO:</p>
+				</div>
+			</details>
+
+			<details class="dropdown">
+				<summary class="button">Thématique</summary>
+
+				<div class="card">
+					<p>TODO:</p>
+				</div>
+			</details>
+
+			<button class="button icon-only dark">Chercher</button>
+		</div>
 
 		<p>ou</p>
 
@@ -78,6 +104,12 @@
 			h1 {
 				margin-bottom: 0;
 				text-align: center;
+			}
+		}
+
+		&.section-action {
+			& > div > div {
+				margin-bottom: 1.5rem;
 			}
 		}
 
