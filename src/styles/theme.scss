@@ -1,3 +1,4 @@
+@use 'src/styles/_helpers.scss';
 @use 'src/styles/utilities.scss';
 @use 'node_modules/chota/dist/chota.min.css';
 
@@ -50,52 +51,7 @@ h6 {
 	width: 1px;
 }
 
-.bg-lines-1,
-.bg-lines-2,
-.bg-spots {
-	background-repeat: repeat;
-	background-size: 250px auto;
+.section {
+	padding-bottom: 5rem;
+	padding-top: 5rem;
 }
-.bg-lines-1 {
-	background-image: url('/fonds/lignes1.png');
-}
-.bg-lines-2 {
-	background-image: url('/fonds/lignes2.png');
-}
-.bg-spots {
-	background-image: url('/fonds/marques.png');
-}
-
-/* purgecss start ignore */
-.text-construct:not(.text-regenerate) {
-	color: utilities.$color-construct;
-}
-.text-construct.text-regenerate {
-	color: utilities.$color-construct-regenerate;
-}
-.text-regenerate:not(.text-construct):not(.text-intervene) {
-	color: utilities.$color-regenerate;
-}
-.text-regenerate.text-intervene {
-	color: utilities.$color-regenerate-intervene;
-}
-.text-intervene:not(.text-regenerate) {
-	color: utilities.$color-intervene;
-}
-
-.bd-construct:not(.bd-regenerate) {
-	border: 1px solid utilities.$color-construct;
-}
-.bd-construct.bd-regenerate {
-	border: 1px solid utilities.$color-construct-regenerate;
-}
-.bd-regenerate:not(.bd-construct):not(.bd-intervene) {
-	border: 1px solid utilities.$color-regenerate;
-}
-.bd-regenerate.bd-intervene {
-	border: 1px solid utilities.$color-regenerate-intervene;
-}
-.bd-intervene:not(.bd-regenerate) {
-	border: 1px solid utilities.$color-intervene;
-}
-/* purgecss end ignore */

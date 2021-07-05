@@ -11,13 +11,13 @@
 
 <PageMeta page={homePage} />
 
-<section class="section-title container">
+<section class="section section-title container">
 	<h1>
 		Énergie, Climat, Effondrement, Résilience...<br />Une fois que tu sais, qu'est-ce qu'on fait ?
 	</h1>
 </section>
 
-<section class="section-actions bg-lines-1">
+<section class="section section-actions bg-lines-1">
 	<div class="container">
 		<h2>Trouver ma prochaine action</h2>
 
@@ -25,11 +25,11 @@
 
 		<p>ou</p>
 
-		<a class="button dark" href={actionsTreePage.path}>Explorer l'arbre aux actions</a>
+		<a class="button primary" href={actionsTreePage.path}>Explorer l'arbre aux actions</a>
 	</div>
 </section>
 
-<section class="section-news container">
+<section class="section section-news container">
 	<h2>Actualités</h2>
 
 	<ul>
@@ -51,8 +51,7 @@
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quam sapien, lobortis vitae
 					mauris ut, volutpat lobortis risus. Ut commodo euismod mauris, lacinia accumsan purus
-					iaculis et. Donec leo nisl, maximus sed sapien nec, euismod facilisis arcu. Nullam semper
-					suscipit condimentum.
+					iaculis et.
 				</p>
 			</div>
 			<a class="button outline" href={supportUsPage.path}>Bouton</a>
@@ -62,9 +61,7 @@
 				<h3>Programmer le film</h3>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quam sapien, lobortis vitae
-					mauris ut, volutpat lobortis risus. Ut commodo euismod mauris, lacinia accumsan purus
-					iaculis et. Donec leo nisl, maximus sed sapien nec, euismod facilisis arcu. Nullam semper
-					suscipit condimentum.
+					mauris ut, volutpat lobortis risus.
 				</p>
 			</div>
 			<a class="button outline" href={supportUsPage.path}>Bouton</a>
@@ -72,11 +69,8 @@
 	</ul>
 </section>
 
-<section class="section-supporters container">
-	<div class="section-header">
-		<h2>Ils nous soutiennent</h2>
-		<a class="button outline" href={supportUsPage.path}>Nous soutenir</a>
-	</div>
+<section class="section section-supporters container">
+	<h2>Racine de résilience existe grâce à nos mécènes et partenaires... merci à eux !</h2>
 
 	<div>
 		<div />
@@ -90,9 +84,6 @@
 
 <style lang="scss">
 	section {
-		padding-bottom: 5rem;
-		padding-top: 5rem;
-
 		&.section-title {
 			text-align: center;
 
@@ -125,8 +116,12 @@
 					display: flex;
 					flex-direction: column;
 
-					h3 {
-						margin-top: 0;
+					div {
+						flex: 1;
+
+						h3 {
+							margin-top: 0;
+						}
 					}
 
 					a {
@@ -145,23 +140,15 @@
 			}
 
 			& > div {
-				&.section-header {
-					align-items: flex-start;
-					display: flex;
-					justify-content: space-between;
-				}
+				@include utilities.responsive-grid(repeat(3, 1fr), repeat(6, 1fr), repeat(6, 1fr));
 
-				&:not(.section-header) {
-					@include utilities.responsive-grid(repeat(3, 1fr), repeat(6, 1fr), repeat(6, 1fr));
+				& > div {
+					background: var(--bg-secondary-color);
 
-					& > div {
-						background: var(--bg-secondary-color);
-
-						&::before {
-							content: '';
-							display: block;
-							padding-bottom: 100%;
-						}
+					&::before {
+						content: '';
+						display: block;
+						padding-bottom: 100%;
 					}
 				}
 			}
