@@ -39,7 +39,7 @@
 
 		<p class={textClasses}>
 			<b>
-				{#each action.sources as source}<span>{source.name}</span>{/each}
+				{#each action.sources as source}<span>{source.item.name}</span>{/each}
 			</b>
 		</p>
 	</a>

@@ -17,14 +17,16 @@
 	<p class="action-sources {textClasses}">
 		<b>
 			{#each action.sources as source, index}
-				<a href={source.link}>{source.name}</a>{#if index !== action.sources.length - 1}<span
+				<a href={source.link}>{source.item.name}</a>{#if index !== action.sources.length - 1}<span
 						>,
 					</span>{/if}
 			{/each}
 		</b>
 	</p>
 
-	<p class="action-subcategory"><span class="tag is-small"><b>{action.subcategory}</b></span></p>
+	<p class="action-subcategory">
+		<span class="tag is-small"><b>{action.subcategory.name}</b></span>
+	</p>
 </article>
 
 <style lang="scss">

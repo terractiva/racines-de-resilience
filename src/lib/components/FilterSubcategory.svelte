@@ -1,14 +1,14 @@
 <script>
 	import { filtersContext } from '$lib/contexts';
-	import Subcategories from '$lib/data/subcategories';
+	import subcategories from '$lib/data/subcategories';
 	import { getContext } from 'svelte';
 	import CheckboxGroup from './CheckboxGroup.svelte';
 
 	let group = [];
 	const { filterBySubcategory } = getContext(filtersContext);
-	const checkboxes = Object.values(Subcategories).map((subcategory) => ({
-		label: subcategory,
-		value: subcategory
+	const checkboxes = Object.values(subcategories).map((subcategory) => ({
+		label: subcategory.name,
+		value: subcategory.name
 	}));
 </script>
 

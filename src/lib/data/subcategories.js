@@ -1,10 +1,10 @@
-const Subcategories = {
-	Climaticide: `Bloquer les activités climaticides`,
-	Energy: `Produire d'autres énergies`,
-	Inequality: `Lutter contre les inégalités`,
-	Joy: `Cultiver la joie dans l'incertitude`,
-	Mobility: `Changer la mobilité`,
-	Resilience: `Renforcer la résilience locale`
+const subcategories = {
+	Climaticide: { name: `Bloquer les activités climaticides` },
+	Energy: { name: `Produire d'autres énergies` },
+	Inequality: { name: `Lutter contre les inégalités` },
+	Joy: { name: `Cultiver la joie dans l'incertitude` },
+	Mobility: { name: `Changer la mobilité` },
+	Resilience: { name: `Renforcer la résilience locale` }
 };
 
-export default Subcategories;
+export default subcategories;

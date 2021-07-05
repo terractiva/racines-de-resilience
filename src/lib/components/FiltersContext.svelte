@@ -15,7 +15,7 @@
 				: true;
 			const hasLevel = filters.level.length ? filters.level.includes(action.level) : true;
 			const hasSubcategory = filters.subcategory.length
-				? filters.subcategory.includes(action.subcategory)
+				? filters.subcategory.includes(action.subcategory.name)
 				: true;
 
 			if (!filters.category.length || !filters.subcategory.length) {

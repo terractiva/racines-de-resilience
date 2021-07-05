@@ -1,36 +1,44 @@
 import Categories from '../categories.js';
-import Sources from '../sources.js';
-import Subcategories from '../subcategories.js';
+import sources from '../sources.js';
+import subcategories from '../subcategories.js';
 
 const mobilityActions = [
 	{
 		slug: 'remplacement-voiture',
 		level: 3,
 		categories: [Categories.Construct],
-		subcategory: Subcategories.Mobility,
+		subcategory: subcategories.Mobility,
 		position: [13.13, 20.15],
 		radius: 2.2,
-		sources: [Sources.PlanVelo, Sources.FUB, Sources.TransBus, Sources.KelBillet],
+		sources: [
+			{ item: sources.PlanVelo, link: 'TODO:' },
+			{ item: sources.FUB, link: 'TODO:' },
+			{ item: sources.TransBus, link: 'TODO:' },
+			{ item: sources.KelBillet, link: 'TODO:' }
+		],
 		text: `Je remplace la voiture : vélo, transports, co-voiturage`
 	},
 	{
 		slug: 'entreprise-plan-mobilité',
 		level: 2,
 		categories: [Categories.Construct],
-		subcategory: Subcategories.Mobility,
+		subcategory: subcategories.Mobility,
 		position: [16.84, 22.75],
 		radius: 1.79,
-		sources: [Sources.ADEME],
+		sources: [{ item: sources.ADEME, link: 'TODO:' }],
 		text: `Je pousse mon entreprise à adopter un plan de mobilité`
 	},
 	{
 		slug: 'élu-politique-transport',
 		level: 1,
 		categories: [Categories.Construct],
-		subcategory: Subcategories.Mobility,
+		subcategory: subcategories.Mobility,
 		position: [19.4447, 25.4204],
 		radius: 2.0214,
-		sources: [Sources.FNAUT, Sources.CEREMA],
+		sources: [
+			{ item: sources.FNAUT, link: 'TODO:' },
+			{ item: sources.CEREMA, link: 'TODO:' }
+		],
 		text: `Élu·e, usagèr·e, je fais changer les politiques de transport`
 	}
 ];
