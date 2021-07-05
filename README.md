@@ -1,48 +1,27 @@
-# create-svelte
+# Racines de résilience
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+## Mise en ligne après un changement
 
-## Creating a project
+Les déploiements automatiques sont déclenchés lors d'une action sur la branche `site`, par exemple en faisant une pull request :
 
-If you're seeing this, you've probably already done this step. Congrats!
+- [Créer une pull request de `master` sur `site`](https://github.com/Terractiva/racines-de-resilience/compare/site...master)
+- Cliquer sur _Rebase and merge_
+- Suivre l'évolution du déploiement dans l'[onglet Actions](https://github.com/Terractiva/racines-de-resilience/actions)
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+## Liens
 
-# create a new project in my-app
-npm init svelte@next my-app
+Un lien interne doit toujours utiliser seulement l'attribut `href` et faire référence aux pages définies dans `src/constants/pages` (bien penser à l'importer dans la balise `script`), par exemple :
+
+```html
+<script>
+	import { homePage } from '$lib/constants/pages';
+</script>
+
+<a href="{homePage.path}" class="button">Revenir à l'accueil</a>
 ```
 
-> Note: the `@next` is temporary
+Un lien externe doit, en plus de `href`, doit utiliser l'attribut `rel` comme tel :
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```html
+<a href="https://tseignette.github.io/" rel="external" target="_blank">Thomas Seignette</a>
 ```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
-
-## Commit lint
-
-`commitlint` is used to lint commit messages. A commit message should have this format: `type(scope?): message`; rules being:
-
-- type must be one of [`Correction`, `Fonctionnalité`, `Factorisation`, `Tâche`]
-- scope is optional
-- message must be in sentence case
-
-e.g.: `Tâche: Ajout de commitlint` or `Fonctionnalité(arbre): Correction de la navigation`
