@@ -1,3 +1,20 @@
+@use 'src/styles/_variables.scss';
+
+@mixin responsive-grid($template-sm, $template-md, $template-lg) {
+	display: grid;
+	gap: var(--grid-gutter);
+
+	@media screen and (max-width: variables.$size-sm - 1) {
+		grid-template-columns: $template-sm;
+	}
+	@media screen and (min-width: variables.$size-sm) and (max-width: variables.$size-lg - 1) {
+		grid-template-columns: $template-md;
+	}
+	@media screen and (min-width: variables.$size-lg) {
+		grid-template-columns: $template-lg;
+	}
+}
+
 @mixin pill($is-vertical: false) {
 	background: var(--bg-color);
 	border-radius: 9999px;

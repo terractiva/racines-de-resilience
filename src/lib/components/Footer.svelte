@@ -67,9 +67,8 @@
 		padding-top: 4rem;
 
 		& > div {
-			display: grid;
-			gap: var(--grid-gutter);
-			grid-template-columns: repeat(3, 1fr);
+			@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(3, 1fr));
+
 			margin-bottom: 4rem;
 
 			a {

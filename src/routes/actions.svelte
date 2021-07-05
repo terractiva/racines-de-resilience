@@ -28,10 +28,9 @@
 
 <style lang="scss">
 	section {
+		@include utilities.responsive-grid(1fr, 1fr, 1fr 2fr);
+
 		align-items: start;
-		display: grid;
-		gap: var(--grid-gutter);
-		grid-template-columns: 1fr 2fr;
 
 		aside {
 			background: var(--bg-secondary-color);

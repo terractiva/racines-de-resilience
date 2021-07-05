@@ -29,9 +29,8 @@
 
 <style lang="scss">
 	ul {
-		display: grid;
-		gap: var(--grid-gutter);
-		grid-template-columns: repeat(2, 1fr);
+		@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(2, 1fr));
+
 		list-style: none;
 		margin: 0;
 		padding: 0;

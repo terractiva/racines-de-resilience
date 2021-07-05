@@ -1,6 +1,6 @@
 <script>
 	import PageMeta from '$lib/components/PageMeta.svelte';
-	import { aboutPage, actionsTreePage, homePage, supportUsPage } from '$lib/constants/pages';
+	import { actionsTreePage, homePage, supportUsPage } from '$lib/constants/pages';
 	import { layoutContext } from '$lib/contexts';
 	import { getContext } from 'svelte';
 
@@ -32,8 +32,8 @@
 <section class="section-news container">
 	<h2>Actualités</h2>
 
-	<div>
-		<div>
+	<ul>
+		<li>
 			<div class="card">
 				<h3>Programmer le film</h3>
 				<p>
@@ -44,8 +44,8 @@
 				</p>
 			</div>
 			<a class="button outline" href={supportUsPage.path}>Bouton</a>
-		</div>
-		<div>
+		</li>
+		<li>
 			<div class="card">
 				<h3>Programmer le film</h3>
 				<p>
@@ -56,8 +56,8 @@
 				</p>
 			</div>
 			<a class="button outline" href={supportUsPage.path}>Bouton</a>
-		</div>
-		<div>
+		</li>
+		<li>
 			<div class="card">
 				<h3>Programmer le film</h3>
 				<p>
@@ -68,13 +68,8 @@
 				</p>
 			</div>
 			<a class="button outline" href={supportUsPage.path}>Bouton</a>
-		</div>
-	</div>
-</section>
-
-<section class="section-origin container">
-	<h2>Les origines du projet</h2>
-	<a class="button outline primary" href={aboutPage.path}>En savoir +</a>
+		</li>
+	</ul>
 </section>
 
 <section class="section-supporters container">
@@ -89,12 +84,14 @@
 		<div />
 		<div />
 		<div />
+		<div />
 	</div>
 </section>
 
 <style lang="scss">
 	section {
-		padding: 5rem 0;
+		padding-bottom: 5rem;
+		padding-top: 5rem;
 
 		&.section-title {
 			text-align: center;
@@ -117,12 +114,14 @@
 				margin-top: 0;
 			}
 
-			& > div {
-				display: grid;
-				gap: var(--grid-gutter);
-				grid-template-columns: repeat(3, 1fr);
+			ul {
+				@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(3, 1fr));
 
-				& > div {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li {
 					display: flex;
 					flex-direction: column;
 
@@ -134,24 +133,6 @@
 						margin-top: 1rem;
 					}
 				}
-			}
-		}
-
-		&.section-origin {
-			align-items: center;
-			display: flex;
-			justify-content: center;
-			text-align: center;
-
-			h2 {
-				align-items: center;
-				display: flex;
-				justify-content: center;
-				margin: 0;
-			}
-
-			a {
-				margin-left: 2rem;
 			}
 		}
 
@@ -171,9 +152,7 @@
 				}
 
 				&:not(.section-header) {
-					display: grid;
-					gap: var(--grid-gutter);
-					grid-template-columns: repeat(6, 1fr);
+					@include utilities.responsive-grid(repeat(3, 1fr), repeat(6, 1fr), repeat(6, 1fr));
 
 					& > div {
 						background: var(--bg-secondary-color);
