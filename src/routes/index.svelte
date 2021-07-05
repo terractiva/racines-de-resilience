@@ -11,13 +11,13 @@
 
 <PageMeta page={homePage} />
 
-<section class="section section-title container">
+<section class="section section-intro container">
 	<h1>
 		Énergie, Climat, Effondrement, Résilience...<br />Une fois que tu sais, qu'est-ce qu'on fait ?
 	</h1>
 </section>
 
-<section class="section section-actions bg-lines-1">
+<section class="section bg-lines-1 text-center">
 	<div class="container">
 		<h2>Trouver ma prochaine action</h2>
 
@@ -84,27 +84,14 @@
 
 <style lang="scss">
 	section {
-		&.section-title {
-			text-align: center;
-
+		&.section-intro {
 			h1 {
-				margin: 0;
-			}
-		}
-
-		&.section-actions {
-			text-align: center;
-
-			h2 {
-				margin-top: 0;
+				margin-bottom: 0;
+				text-align: center;
 			}
 		}
 
 		&.section-news {
-			h2 {
-				margin-top: 0;
-			}
-
 			ul {
 				@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(3, 1fr));
 
@@ -136,7 +123,6 @@
 				align-items: center;
 				display: flex;
 				justify-content: space-between;
-				margin-top: 0;
 			}
 
 			& > div {
