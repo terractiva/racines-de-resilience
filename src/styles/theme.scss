@@ -50,10 +50,20 @@ h6 {
 	width: 1px;
 }
 
-.bg-lines {
-	background-image: url('/fonds/lignes.png');
+.bg-lines-1,
+.bg-lines-2,
+.bg-spots {
 	background-repeat: repeat;
 	background-size: 250px auto;
+}
+.bg-lines-1 {
+	background-image: url('/fonds/lignes1.png');
+}
+.bg-lines-2 {
+	background-image: url('/fonds/lignes2.png');
+}
+.bg-spots {
+	background-image: url('/fonds/marques.png');
 }
 
 /* purgecss start ignore */

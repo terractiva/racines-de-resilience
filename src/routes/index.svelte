@@ -17,7 +17,7 @@
 	</h1>
 </section>
 
-<section class="section-actions bg-lines">
+<section class="section-actions bg-lines-1">
 	<div class="container">
 		<h2>Trouver ma prochaine action</h2>
 
