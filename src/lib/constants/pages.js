@@ -39,6 +39,12 @@ const homePage = {
 	path: '/'
 };
 
+const notFoundPage = {
+	label: 'Page introuvable',
+	path: '/introuvable',
+	title: 'Page introuvable'
+};
+
 const supportUsPage = {
 	description: 'TODO:',
 	label: 'Nous soutenir',
@@ -46,4 +52,4 @@ const supportUsPage = {
 	title: 'Nous soutenir'
 };
 
-export { aboutPage, actionsPage, actionsTreePage, homePage, supportUsPage };
+export { aboutPage, actionsPage, actionsTreePage, homePage, notFoundPage, supportUsPage };

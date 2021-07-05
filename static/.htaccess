@@ -1,7 +1,12 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
-  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
-  RewriteRule ^ - [L]
-  RewriteRule ^ /index.html
+
+  # Redirection vers la version HTTPS avec www
+  # D'après https://www.infomaniak.com/fr/support/faq/1961/forcer-le-https-ssl-dans-lurl-affichee-dans-la-barre-dadresse-du-navigateur
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} !^www. [NC]
+  RewriteRule (.*) https://www.racinesderesilience.org/$1 [R=301,L]
+
+  # Page 404 personnalisée
+  ErrorDocument 404 /introuvable/index.html
 </IfModule>
