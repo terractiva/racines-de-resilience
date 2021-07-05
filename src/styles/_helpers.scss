@@ -1,5 +1,9 @@
 @use 'src/styles/_variables.scss';
 
+.mb-0 {
+	margin-bottom: 0;
+}
+
 .bg-lines-1,
 .bg-lines-2,
 .bg-spots {
