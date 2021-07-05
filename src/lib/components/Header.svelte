@@ -1,5 +1,11 @@
 <script>
-	import { aboutPage, actionsPage, homePage, supportUsPage } from '$lib/constants/pages';
+	import {
+		aboutPage,
+		actionsPage,
+		communityPage,
+		homePage,
+		supportUsPage
+	} from '$lib/constants/pages';
 	import Themes from '$lib/constants/themes';
 	import { themeContext } from '$lib/contexts';
 	import { getContext } from 'svelte';
@@ -9,7 +15,7 @@
 	export let isFullscreen;
 
 	const { currentTheme$ } = getContext(themeContext);
-	const pages = [actionsPage, supportUsPage, aboutPage];
+	const pages = [actionsPage, supportUsPage, communityPage, aboutPage];
 </script>
 
 <header class:has-background={!isFullscreen}>

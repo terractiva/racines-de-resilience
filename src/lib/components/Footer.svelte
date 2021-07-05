@@ -4,11 +4,12 @@
 		aboutPage,
 		actionsPage,
 		actionsTreePage,
+		communityPage,
 		homePage,
 		supportUsPage
 	} from '$lib/constants/pages';
 
-	const pages = [homePage, actionsPage, actionsTreePage, supportUsPage, aboutPage];
+	const pages = [homePage, actionsPage, actionsTreePage, supportUsPage, communityPage, aboutPage];
 </script>
 
 <footer>

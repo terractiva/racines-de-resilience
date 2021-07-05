@@ -32,6 +32,13 @@ const actionsTreePage = {
 	title: 'Arbre aux actions'
 };
 
+const communityPage = {
+	description: 'TODO:',
+	label: 'Communauté',
+	path: '/communaute',
+	title: 'Communauté'
+};
+
 // Pas de `title` exceptionnellement pour afficher seulement le nom du site
 const homePage = {
 	description: 'TODO:',
@@ -52,4 +59,12 @@ const supportUsPage = {
 	title: 'Nous soutenir'
 };
 
-export { aboutPage, actionsPage, actionsTreePage, homePage, notFoundPage, supportUsPage };
+export {
+	aboutPage,
+	actionsPage,
+	actionsTreePage,
+	communityPage,
+	homePage,
+	notFoundPage,
+	supportUsPage
+};
