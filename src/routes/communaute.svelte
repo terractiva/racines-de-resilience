@@ -2,6 +2,7 @@
 	import PageMeta from '$lib/components/PageMeta.svelte';
 	import { actionsPage, actionsTreePage, communityPage } from '$lib/constants/pages';
 	import { layoutContext } from '$lib/contexts';
+	import { joinLinkMail } from '$lib/constants/settings';
 	import { getContext } from 'svelte';
 
 	const { setCurrentPage } = getContext(layoutContext);
@@ -60,7 +61,7 @@
 	</ul>
 
 	<div class="text-center">
-		<a class="button primary" href="TODO:" rel="external" target="_blank"
+		<a class="button primary" href={joinLinkMail} rel="external" target="_blank"
 			>Rejoindre la communauté d'accompagnement du film</a
 		>
 	</div>
