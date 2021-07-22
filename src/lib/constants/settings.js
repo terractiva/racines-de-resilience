@@ -5,4 +5,4 @@ const nbFilterResultsShowed = 10;
 const zoomMax = 5;
 const zoomMin = 1;
 
-export { actionFontSize, contributeFormLink, nbFilterResultsShowed, zoomMax, zoomMin };
+export { actionFontSize, contributeFormLink, joinLinkMail, nbFilterResultsShowed, zoomMax, zoomMin };
