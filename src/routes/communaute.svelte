@@ -1,6 +1,7 @@
 <script>
 	import PageMeta from '$lib/components/PageMeta.svelte';
 	import { actionsPage, actionsTreePage, communityPage } from '$lib/constants/pages';
+	import { joinLinkMail } from '$lib/constants/settings';
 	import { layoutContext } from '$lib/contexts';
 	import { getContext } from 'svelte';
 
@@ -15,7 +16,7 @@
 	<p>
 		<i>
 			Notre démarche, c'est de sensibiliser avec le film Une fois que tu sais et faire du public une
-			communauté en mouvement. Vous aussi vous pouvez vous engager.
+			communauté en mouvement. Vous aussi vous pouvez faire partie de cette communauté.
 		</i>
 	</p>
 </section>
@@ -60,8 +61,8 @@
 	</ul>
 
 	<div class="text-center">
-		<a class="button primary" href="TODO:" rel="external" target="_blank"
-			>Rejoindre la communauté d'accompagnement du film</a
+		<a class="button primary" href={joinLinkMail} rel="external" target="_blank"
+			>Participer à cet accompagnement</a
 		>
 	</div>
 </section>
@@ -73,28 +74,33 @@
 		<div>
 			<div>
 				<p>
-					Toutes ces personnes constituent également une communauté de soutien mutuel autour des
-					sujets complexes du climat et de la résilience. Quand il n'est pas toujours facile de
-					garder espoir face à la situation, et de dépasser le désarroi ou le sentiment
-					d'impuissance, il est nécesaire de se soutenir mutuellement.<br />
-					Les outils du Travail Qui Relie nous donnent des ressources pour ouvrir la parole sur ces sujets
-					et avancer ensemble sur le chemin de la résilience individuelle et collective.<br />
-					La communauté en ligne organisée par thématique et par région permet de trouver des personnes
-					proches de soi du point de vue des thèmes de discussion ou bien des zones géographiques.
+					Vous vous sentez seul.e.s à avec ces prises de conscience et sur nos effondrement et nos
+					recherches de résilience ? Votre entourage n'est pas sensible à ces thématiques vous vous
+					sentez en décalage ? Vous êtes curieux d'échanger avec des personnes inspirantes qui
+					cherchent comment vivre dans ce monde en plein bouleversement ? La communauté des
+					spectateurs et soutiens du film se retrouve sur l'outil Discord où plusieurs espaces
+					d'échange sont proposés, organisés par thèmes ou par régions. Retrouvez ainsi des
+					personnes près de chez vous et s'intéresse à ce qui vous tient à coeur pour cheminer
+					ensemble.
 				</p>
 
-				<a class="button primary" href="TODO:" rel="external" target="_blank">Voir la carte</a>
+				<a class="button primary" href="TODO:" rel="external" target="_blank"
+					>Rencontrer la communauté</a
+				>
 			</div>
 
 			<div>
 				<p>
-					Envie d'aller plus loin ? Engagez-vous pour animer des temps d'échange avec le public du
-					film Une fois que tu sais grâce aux outils du Travail Qui Relie.
+					Pas toujours facile de franchir le pas ! Où que l'on soit sur son chemin de transition, on
+					peut faire face à des questionnements, du désarroi, ou un sentiment d'impuissance qui
+					freinent la mise en action. Et c'est le cas de nombre d'entre nous! Dans la catégorie
+					Régénérer, plusieurs actions peuvent vous soutenir. L'accompagnement du film Une fois que
+					tu sais s'appuie notamment sur le processus de l'écopsychologue Joanna Macy, le Travail
+					Qui Relie, qui accompagne les émotions difficiles liées aux prises de conscience
+					écologique pour les transformer en élan d'actions.
 				</p>
 
-				<a class="button primary" href="TODO:" rel="external" target="_blank"
-					>Se préparer à l'animation</a
-				>
+				<a class="button primary" href="TODO:" rel="external" target="_blank">Découvrir le TQR</a>
 			</div>
 		</div>
 	</div>
