@@ -15,8 +15,8 @@
 
 <PageMeta page={actionsPage} />
 
-<section class="section-intro container">
-	<p>
+<section class="container">
+	<p class="mb-0">
 		<i>
 			Toutes les pistes pour passer à l'action ont été rassemblées dans un grand arbre des actions
 			publié sous forme d'affiche. Racines de résilience est sa version en ligne, que l'on peut
@@ -27,6 +27,8 @@
 </section>
 
 <section class="section section-links container">
+	<img alt="" src="/illustrations/arbre.png" />
+
 	<div>
 		<p>
 			Alors qu'est-ce qu'on fait ? On retrouve dès maintenant ces centaines d'actions concrètes sur
@@ -81,16 +83,26 @@
 
 <style lang="scss">
 	section {
-		&.section-intro {
-			p {
-				margin-bottom: 0;
-			}
-		}
-
 		&.section-links {
-			@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(2, 30%));
+			@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(3, 30%));
 
 			justify-content: space-evenly;
+
+			img {
+				bottom: -10%;
+				height: 100%;
+				left: -10%;
+				object-fit: contain;
+				position: relative;
+				width: 100%;
+
+				@include utilities.media-sm {
+					display: none;
+				}
+				@include utilities.media-md {
+					display: none;
+				}
+			}
 
 			div {
 				display: flex;

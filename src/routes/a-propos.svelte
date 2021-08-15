@@ -11,8 +11,8 @@
 
 <PageMeta page={aboutPage} />
 
-<section class="section-intro container">
-	<p>
+<section class="container">
+	<p class="mb-0">
 		<i>
 			On cherche tou·te·s à construire une société plus résiliente face aux défis énergétiques,
 			climatiques et humains. Racines de résilience, c'est un point de convergence, un site
@@ -34,15 +34,19 @@
 		impactants auprès du grand public et soutenir un changement culturel à grande échelle.
 	</p>
 
-	<p>
-		A la demande du réalisateur Emmanuel, Terractiva a décidé d'accompagner le film. L'association a
-		fait appel à Brianne et Charlotte pour porter la campagne d'accompagnement Une fois que tu sais,
-		qu'est-ce qu'on fait ? Elles sont toutes deux facilitatrices formées au Travail Qui Relie, un
-		processus élaboré dans les années 1980 par l’écopsychologue Joanna Macy pour traverser les
-		émotions difficiles liées aux prises de conscience écologiques et les transformer en élans
-		d’actions. Elles ont développé pour cette campagne 3 outils d'accompagnement à la mise en action
-		:
-	</p>
+	<div>
+		<img alt="" src="/illustrations/castors.png" />
+
+		<p class="mb-0">
+			A la demande du réalisateur Emmanuel, Terractiva a décidé d'accompagner le film. L'association
+			a fait appel à Brianne et Charlotte pour porter la campagne d'accompagnement Une fois que tu
+			sais, qu'est-ce qu'on fait ? Elles sont toutes deux facilitatrices formées au Travail Qui
+			Relie, un processus élaboré dans les années 1980 par l’écopsychologue Joanna Macy pour
+			traverser les émotions difficiles liées aux prises de conscience écologiques et les
+			transformer en élans d’actions. Elles ont développé pour cette campagne 3 outils
+			d'accompagnement à la mise en action :
+		</p>
+	</div>
 
 	<ol>
 		<li>
@@ -162,10 +166,10 @@
 	</div>
 </section>
 
-<section class="section section-low-tech container">
+<section class="section container">
 	<h2>La démarche low-tech de Racines de résilience</h2>
 
-	<p>
+	<p class="mb-0">
 		<a href="https://tseignette.github.io/" rel="external" target="_blank">Thomas Seignette</a> est ingénieur
 		informatique et membre des 1% pour la planète. Partenaire de la campagne d'accompagnement du film,
 		il offre ses compétences de développeur Web pour réaliser ce site économe en énergie, pour permettre
@@ -175,13 +179,20 @@
 
 <style lang="scss">
 	section {
-		&.section-intro {
-			p {
-				margin-bottom: 0;
-			}
-		}
-
 		&.section-origins {
+			div {
+				@include utilities.responsive-grid(1fr, 1fr 1fr, 1fr 2fr);
+
+				align-items: center;
+				margin-bottom: 1.5rem;
+
+				img {
+					height: 90%;
+					object-fit: contain;
+					width: 90%;
+				}
+			}
+
 			ol {
 				@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(3, 1fr));
 
@@ -215,12 +226,6 @@
 				a {
 					color: var(--font-color);
 				}
-			}
-		}
-
-		&.section-low-tech {
-			p {
-				margin-bottom: 0;
 			}
 		}
 	}

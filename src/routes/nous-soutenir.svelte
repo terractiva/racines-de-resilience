@@ -12,8 +12,8 @@
 
 <PageMeta page={supportUsPage} />
 
-<section class="section-intro container">
-	<p>
+<section class="container">
+	<p class="mb-0">
 		<i
 			>L'association Terractiva porte le site collaboratif Racines de Résilience grâce à du mécénat
 			et du travail bénévole. Une communauté de volontaires, de soutiens et de partenaires se sont
@@ -24,6 +24,8 @@
 
 <section class="section section-support container">
 	<h2 class="text-center">Quatre manières de soutenir financièrement Racines de résilience</h2>
+
+	<img alt="" src="/illustrations/oiseaux1.png" />
 
 	<ul>
 		<li>
@@ -73,19 +75,44 @@
 			<a class="button primary" href="TODO:" rel="external" target="_blank">Devenir mécène</a>
 		</li>
 	</ul>
+
+	<img alt="" src="/illustrations/oiseaux2.png" />
 </section>
 
 <SupportersSection />
 
 <style lang="scss">
 	section {
-		.section-intro {
-			p {
-				margin-bottom: 0;
-			}
-		}
-
 		&.section-support {
+			position: relative;
+
+			img {
+				height: auto;
+				position: absolute;
+				z-index: -1;
+
+				@include utilities.media-sm {
+					display: none;
+				}
+				@include utilities.media-md {
+					display: none;
+				}
+
+				&:first-of-type {
+					left: 0;
+					top: 0;
+					transform: translate(-2rem, 2rem);
+					width: 15rem;
+				}
+
+				&:last-of-type {
+					bottom: 0;
+					right: 0;
+					transform: translate(2rem, 2rem);
+					width: 25rem;
+				}
+			}
+
 			ul {
 				@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(2, 30%));
 

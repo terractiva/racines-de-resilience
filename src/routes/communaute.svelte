@@ -13,12 +13,14 @@
 <PageMeta page={communityPage} />
 
 <section class="section-intro container">
-	<p>
+	<p class="mb-0">
 		<i>
 			Notre démarche, c'est de sensibiliser avec le film Une fois que tu sais et faire du public une
 			communauté en mouvement. Vous aussi vous pouvez faire partie de cette communauté.
 		</i>
 	</p>
+
+	<img alt="" src="/illustrations/elephant.png" />
 </section>
 
 <section class="section bg-lines-1">
@@ -106,33 +108,46 @@
 	</div>
 </section>
 
-<section class="section container">
-	<h2>
-		Racines de résilience cherche avant tout à valoriser et créer des synergies entre les acteurs
-		déjà mobilisés autour des thèmes climat et résilience
-	</h2>
+<section class="section section-highlight container">
+	<img alt="" src="/illustrations/singes.png" />
 
-	<p>
-		Pour rappel, une multitude de structures et de collectifs travaillent déjà sur ces thèmes, et
-		notre ambition c'est de rendre visible cet écosystèmes déjà fertile et large qui offre de
-		nombreuses possibilités de s'engager. Grâce au référencement constitué sur le site Racines de
-		résilience, vous pouvez entrer en contact avec les organisations qui vous inspirent, quelle que
-		soit votre sensibilité ou votre capacité d'engagement.
-	</p>
+	<div>
+		<h2>
+			Racines de résilience cherche avant tout à valoriser et créer des synergies entre les acteurs
+			déjà mobilisés autour des thèmes climat et résilience
+		</h2>
 
-	<div class="text-center">
-		<a class="button primary" href={actionsTreePage.path}>Découvrir l'arbre des actions</a>
-		<a class="button primary" href={actionsPage.path}>Explorer le référencement des actions</a>
+		<p>
+			Pour rappel, une multitude de structures et de collectifs travaillent déjà sur ces thèmes, et
+			notre ambition c'est de rendre visible cet écosystèmes déjà fertile et large qui offre de
+			nombreuses possibilités de s'engager. Grâce au référencement constitué sur le site Racines de
+			résilience, vous pouvez entrer en contact avec les organisations qui vous inspirent, quelle
+			que soit votre sensibilité ou votre capacité d'engagement.
+		</p>
+
+		<div class="text-center">
+			<a class="button primary" href={actionsTreePage.path}>Découvrir l'arbre des actions</a>
+			<a class="button primary" href={actionsPage.path}>Explorer le référencement des actions</a>
+		</div>
 	</div>
 </section>
 
 <style lang="scss">
 	section {
 		&.section-intro {
+			@include utilities.responsive-grid(1fr, 0.8fr 22rem, 0.6fr 22rem);
+
+			align-items: center;
+			justify-content: space-evenly;
 			margin-bottom: 4rem;
 
-			p {
-				margin-bottom: 0;
+			img {
+				height: auto;
+				width: 100%;
+
+				@include utilities.media-sm {
+					display: none;
+				}
 			}
 		}
 
@@ -149,6 +164,18 @@
 						flex: 1;
 					}
 				}
+			}
+		}
+
+		&.section-highlight {
+			@include utilities.responsive-grid(1fr, 1fr, auto 1fr);
+
+			justify-content: center;
+
+			img {
+				height: auto;
+				margin: 0 auto;
+				width: 22rem;
 			}
 		}
 	}

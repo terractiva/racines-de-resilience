@@ -1,16 +1,34 @@
 @use 'src/styles/_variables.scss';
 
+@mixin media-sm() {
+	@media screen and (max-width: variables.$size-sm - 1) {
+		@content;
+	}
+}
+
+@mixin media-md() {
+	@media screen and (min-width: variables.$size-sm) and (max-width: variables.$size-lg - 1) {
+		@content;
+	}
+}
+
+@mixin media-lg() {
+	@media screen and (min-width: variables.$size-lg) {
+		@content;
+	}
+}
+
 @mixin responsive-grid($template-sm, $template-md, $template-lg) {
 	display: grid;
 	gap: var(--grid-gutter);
 
-	@media screen and (max-width: variables.$size-sm - 1) {
+	@include media-sm {
 		grid-template-columns: $template-sm;
 	}
-	@media screen and (min-width: variables.$size-sm) and (max-width: variables.$size-lg - 1) {
+	@include media-md {
 		grid-template-columns: $template-md;
 	}
-	@media screen and (min-width: variables.$size-lg) {
+	@include media-lg {
 		grid-template-columns: $template-lg;
 	}
 }
