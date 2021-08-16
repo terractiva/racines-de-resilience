@@ -1,7 +1,9 @@
 <script>
 	import { actionsTreePage } from '$lib/constants/pages';
+	import { treeActionFontSize } from '$lib/constants/settings';
 
 	export let action;
+	export let backgroundHeight;
 	export let isDisabled;
 
 	let isNextClickDisabled = false;
@@ -9,7 +11,10 @@
 	$: textClasses = action.categories.map((category) => `text-${category}`).join(' ');
 </script>
 
-<li style="left: {action.position[0]}%; top: {action.position[1]}%; width: {2 * action.radius}%;">
+<li
+	style="font-size: {treeActionFontSize * backgroundHeight}px; left: {action
+		.position[0]}%; top: {action.position[1]}%; width: {2 * action.radius}%;"
+>
 	<a
 		href="{actionsTreePage.path}/{action.slug}"
 		style="cursor: {isDisabled ? 'inherit' : ''};"

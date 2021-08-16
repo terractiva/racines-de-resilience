@@ -7,7 +7,7 @@ const mobilityActions = [
 		slug: 'remplacement-voiture',
 		level: 3,
 		categories: [Categories.Construct],
-		subcategory: subcategories.Mobility,
+		subcategory: subcategories.mobility,
 		position: [13.13, 20.15],
 		radius: 2.2,
 		sources: [
@@ -22,7 +22,7 @@ const mobilityActions = [
 		slug: 'entreprise-plan-mobilité',
 		level: 2,
 		categories: [Categories.Construct],
-		subcategory: subcategories.Mobility,
+		subcategory: subcategories.mobility,
 		position: [16.84, 22.75],
 		radius: 1.79,
 		sources: [{ item: sources.ADEME, link: 'TODO:' }],
@@ -32,7 +32,7 @@ const mobilityActions = [
 		slug: 'élu-politique-transport',
 		level: 1,
 		categories: [Categories.Construct],
-		subcategory: subcategories.Mobility,
+		subcategory: subcategories.mobility,
 		position: [19.4447, 25.4204],
 		radius: 2.0214,
 		sources: [

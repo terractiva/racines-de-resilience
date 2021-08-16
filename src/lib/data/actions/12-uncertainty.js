@@ -7,7 +7,7 @@ const joyActions = [
 		slug: 'art-aller-essentiel',
 		level: 3,
 		categories: [Categories.Regenerate],
-		subcategory: subcategories.Joy,
+		subcategory: subcategories.uncertainty,
 		position: [56.1567, 72.633],
 		radius: 2.0881,
 		sources: [
@@ -20,7 +20,7 @@ const joyActions = [
 		slug: 'transition-intérieure',
 		level: 2,
 		categories: [Categories.Regenerate],
-		subcategory: subcategories.Joy,
+		subcategory: subcategories.uncertainty,
 		position: [54.0212, 76.9036],
 		radius: 1.9785,
 		sources: [{ item: sources.RéseauTransitionBelge, link: 'TODO:' }],

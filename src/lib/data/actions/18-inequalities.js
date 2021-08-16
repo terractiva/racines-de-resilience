@@ -7,7 +7,7 @@ const inequalityActions = [
 		slug: 'revenu-universel-base',
 		level: 3,
 		categories: [Categories.Regenerate, Categories.Intervene],
-		subcategory: subcategories.Inequality,
+		subcategory: subcategories.inequalities,
 		position: [75.7141, 43.9795],
 		radius: 1.7439,
 		sources: [{ item: sources.UBI, link: 'TODO:' }],
@@ -17,7 +17,7 @@ const inequalityActions = [
 		slug: 'élu-citoyenneté-universelle',
 		level: 3,
 		categories: [Categories.Regenerate, Categories.Intervene],
-		subcategory: subcategories.Inequality,
+		subcategory: subcategories.inequalities,
 		position: [78.811, 44.7716],
 		radius: 2.047,
 		sources: [

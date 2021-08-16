@@ -1,7 +1,7 @@
 <script>
 	import { fabric } from 'fabric';
 	import { onMount } from 'svelte';
-	import TreeActions from './TreeActions.svelte';
+	import TreeItems from './TreeItems.svelte';
 	import TreeNavigator from './TreeNavigator.svelte';
 
 	export let height;
@@ -82,7 +82,7 @@
 
 {#if showTree}
 	<TreeNavigator {fabricCanvas} padding={backgroundPadding} let:isDragging>
-		<TreeActions {isDragging} backgroundHeight={height - 2 * backgroundPadding[1]} />
+		<TreeItems {backgroundPadding} {height} {isDragging} />
 	</TreeNavigator>
 {/if}
 
