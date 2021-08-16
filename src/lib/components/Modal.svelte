@@ -55,11 +55,12 @@
 	}
 
 	div {
-		display: flex;
-		justify-content: center;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		width: auto;
+
+		@include utilities.media-md-lg {
+			width: auto;
+		}
 	}
 </style>

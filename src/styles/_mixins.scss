@@ -5,24 +5,29 @@
 		@content;
 	}
 }
-
 @mixin media-md() {
 	@media screen and (min-width: variables.$size-sm) and (max-width: variables.$size-lg - 1) {
 		@content;
 	}
 }
-
 @mixin media-lg() {
 	@media screen and (min-width: variables.$size-lg) {
 		@content;
 	}
 }
-
 @mixin media-sm-md() {
 	@include media-sm {
 		@content;
 	}
 	@include media-md {
+		@content;
+	}
+}
+@mixin media-md-lg() {
+	@include media-md {
+		@content;
+	}
+	@include media-lg {
 		@content;
 	}
 }
