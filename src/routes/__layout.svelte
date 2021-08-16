@@ -38,17 +38,23 @@
 
 			& > {
 				header,
-				nav {
+				nav.nav {
 					height: utilities.$header-height;
 					position: fixed;
 					top: 0;
+					z-index: utilities.$z-index-header;
+
+					@include utilities.media-sm {
+						height: utilities.$header-height-sm;
+						min-height: utilities.$header-height-sm;
+					}
 				}
 
 				header {
 					left: 0;
 				}
 
-				nav {
+				nav.nav {
 					right: 0;
 				}
 
@@ -67,6 +73,10 @@
 					&:not(.is-fullscreen) {
 						margin-top: utilities.$header-height;
 						padding: 4rem 0;
+
+						@include utilities.media-sm {
+							margin-top: utilities.$header-height-sm;
+						}
 					}
 				}
 			}

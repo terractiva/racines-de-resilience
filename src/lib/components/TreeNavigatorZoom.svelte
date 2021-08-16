@@ -32,6 +32,10 @@
 		right: 1rem;
 		top: utilities.$header-height + 1rem;
 
+		@include utilities.media-sm {
+			top: utilities.$header-height-sm + 1rem;
+		}
+
 		button {
 			border-radius: 50%;
 			padding: 0.4rem;

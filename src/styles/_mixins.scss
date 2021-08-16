@@ -18,6 +18,15 @@
 	}
 }
 
+@mixin media-sm-md() {
+	@include media-sm {
+		@content;
+	}
+	@include media-md {
+		@content;
+	}
+}
+
 @mixin responsive-grid($template-sm, $template-md, $template-lg) {
 	display: grid;
 	gap: var(--grid-gutter);
