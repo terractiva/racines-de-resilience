@@ -44,7 +44,7 @@
 
 		<p class={textClasses}>
 			<b>
-				{#each action.sources as source}<span>{source.item.name}</span>{/each}
+				{#each action.sources as source}<span>{source.name}</span>{/each}
 			</b>
 		</p>
 	</a>
@@ -52,9 +52,11 @@
 
 <style lang="scss">
 	li {
+		border-radius: 50%;
 		position: absolute;
 
 		&::before {
+			border-radius: 50%;
 			content: '';
 			display: block;
 			padding-bottom: 100%;

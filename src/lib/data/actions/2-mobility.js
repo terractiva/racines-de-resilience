@@ -1,45 +1,49 @@
 import Categories from '../categories.js';
-import sources from '../sources.js';
 import subcategories from '../subcategories.js';
 
 const mobilityActions = [
 	{
-		slug: 'remplacement-voiture',
+		slug: `alternatives-voiture`,
 		level: 3,
 		categories: [Categories.Construct],
 		subcategory: subcategories.mobility,
-		position: [13.13, 20.15],
+		position: [13.163, 20.185],
 		radius: 2.2,
+		text: `Je remplace la voiture : vélo, transports, co-voiturage`,
 		sources: [
-			{ item: sources.PlanVelo, link: 'TODO:' },
-			{ item: sources.FUB, link: 'TODO:' },
-			{ item: sources.TransBus, link: 'TODO:' },
-			{ item: sources.KelBillet, link: 'TODO:' }
-		],
-		text: `Je remplace la voiture : vélo, transports, co-voiturage`
+			{ name: `Plan Vélo`, link: `https://www.ecologie.gouv.fr/velo-et-marche` },
+			{ name: `FUB`, link: `https://www.fub.fr/` },
+			{ name: `TRANS'BUS`, link: `https://www.transbus.org/index.html` },
+			{ name: `KelBillet`, link: `https://www.kelbillet.com/covoiturage/` }
+		]
 	},
 	{
-		slug: 'entreprise-plan-mobilité',
+		slug: `entreprise-plan-mobilite`,
 		level: 2,
 		categories: [Categories.Construct],
 		subcategory: subcategories.mobility,
 		position: [16.84, 22.75],
-		radius: 1.79,
-		sources: [{ item: sources.ADEME, link: 'TODO:' }],
-		text: `Je pousse mon entreprise à adopter un plan de mobilité`
+		radius: 1.813,
+		text: `Je pousse mon entreprise à adopter un plan de mobilité`,
+		sources: [
+			{
+				name: `ADEME`,
+				link: `https://www.ademe.fr/entreprises-monde-agricole/reduire-impacts/optimiser-mobilite-salaries/dossier/plan-mobilite/plan-mobilite-quest-cest`
+			}
+		]
 	},
 	{
-		slug: 'élu-politique-transport',
+		slug: `changement-politiques-transport`,
 		level: 1,
 		categories: [Categories.Construct],
 		subcategory: subcategories.mobility,
 		position: [19.4447, 25.4204],
-		radius: 2.0214,
+		radius: 2.0514,
+		text: `Élu·e, usagèr·e, je fais changer les politiques de transport`,
 		sources: [
-			{ item: sources.FNAUT, link: 'TODO:' },
-			{ item: sources.CEREMA, link: 'TODO:' }
-		],
-		text: `Élu·e, usagèr·e, je fais changer les politiques de transport`
+			{ name: `FNAUT`, link: `https://www.fnaut.fr/` },
+			{ name: `CEREMA`, link: `https://www.cerema.fr/fr/cerema` }
+		]
 	}
 ];
 

@@ -17,9 +17,8 @@
 	<p class="action-sources {textClasses}">
 		<b>
 			{#each action.sources as source, index}
-				<a href={source.link}>{source.item.name}</a>{#if index !== action.sources.length - 1}<span
-						>,
-					</span>{/if}
+				{#if source.link}<a href={source.link} rel="external" target="_blank">{source.name}</a
+					>{:else}{source.name}{/if}{#if index !== action.sources.length - 1}<span>, </span>{/if}
 			{/each}
 		</b>
 	</p>
