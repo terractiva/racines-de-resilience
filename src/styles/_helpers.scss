@@ -22,19 +22,19 @@
 
 /* purgecss start ignore */
 .text-construct:not(.text-regenerate) {
-	color: variables.$color-construct;
+	color: variables.$color-construct-strong;
 }
 .text-construct.text-regenerate {
-	color: variables.$color-construct-regenerate;
+	color: variables.$color-construct-regenerate-strong;
 }
 .text-regenerate:not(.text-construct):not(.text-intervene) {
-	color: variables.$color-regenerate;
+	color: variables.$color-regenerate-strong;
 }
 .text-regenerate.text-intervene {
-	color: variables.$color-regenerate-intervene;
+	color: variables.$color-regenerate-intervene-strong;
 }
 .text-intervene:not(.text-regenerate) {
-	color: variables.$color-intervene;
+	color: variables.$color-intervene-strong;
 }
 
 .bd-construct:not(.bd-regenerate) {

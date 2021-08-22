@@ -1,7 +1,7 @@
 <script>
 	// Adaptation de http://fabricjs.com/fabric-intro-part-5#pan_zoom
 
-	import { zoomMax, zoomMin } from '$lib/constants/settings';
+	import { zoomIncrement, zoomMax, zoomMin } from '$lib/constants/settings';
 	import TreeNavigatorAuthors from './TreeNavigatorAuthors.svelte';
 	import TreeNavigatorZoom from './TreeNavigatorZoom.svelte';
 
@@ -115,8 +115,8 @@
 <TreeNavigatorAuthors />
 <TreeNavigatorZoom
 	{zoom}
-	zoomedIn={() => updateZoom(zoom + 0.2)}
-	zoomedOut={() => updateZoom(zoom - 0.2)}
+	zoomedIn={() => updateZoom(zoom + zoomIncrement)}
+	zoomedOut={() => updateZoom(zoom - zoomIncrement)}
 />
 
 <style lang="scss">
