@@ -10,21 +10,21 @@
 import Themes from '$lib/constants/themes';
 
 const aboutPage = {
-	description: 'TODO:',
+	description: '',
 	label: 'À propos',
 	path: '/a-propos',
 	title: 'À propos'
 };
 
 const actionsPage = {
-	description: 'TODO:',
+	description: '',
 	label: 'Actions',
 	path: '/actions',
 	title: 'Actions'
 };
 
 const actionsTreePage = {
-	description: 'TODO:',
+	description: '',
 	forceTheme: Themes.Light,
 	isFullscreen: true,
 	label: 'Arbre aux actions',
@@ -33,7 +33,7 @@ const actionsTreePage = {
 };
 
 const communityPage = {
-	description: 'TODO:',
+	description: '',
 	label: 'Communauté',
 	path: '/communaute',
 	title: 'Communauté'
@@ -41,7 +41,7 @@ const communityPage = {
 
 // Pas de `title` exceptionnellement pour afficher seulement le nom du site
 const homePage = {
-	description: 'TODO:',
+	description: '',
 	label: 'Accueil',
 	path: '/'
 };
@@ -53,7 +53,7 @@ const notFoundPage = {
 };
 
 const supportUsPage = {
-	description: 'TODO:',
+	description: '',
 	label: 'Nous soutenir',
 	path: '/nous-soutenir',
 	title: 'Nous soutenir'

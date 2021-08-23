@@ -9,12 +9,24 @@
 
 	<svelte:fragment slot="content">
 		<ul>
-			<li />
-			<li />
-			<li />
-			<li />
-			<li />
-			<li />
+			<li>
+				<a href="https://yggdrasil-mag.com/" rel="external" target="_blank">Yggdrasil</a>
+			</li>
+			<li>
+				<a href="https://www.leanature.com/" rel="external" target="_blank">Léa Nature</a>
+			</li>
+			<li>
+				<a href="https://www.infomaniak.com/fr" rel="external" target="_blank">Infomaniak</a>
+			</li>
+			<li>
+				<a href="https://tseignette.github.io/" rel="external" target="_blank">Thomas Seignette</a>
+			</li>
+			<li>
+				<a href="https://www.nourfilms.com/" rel="external" target="_blank">Nour Films</a>
+			</li>
+			<li>
+				<a href="https://pulp-films.fr/" rel="external" target="_blank">Pulp Films</a>
+			</li>
 		</ul>
 	</svelte:fragment>
 </Section>
@@ -28,12 +40,26 @@
 		padding: 0;
 
 		li {
-			background: var(--bg-secondary-color);
+			position: relative;
 
 			&::before {
 				content: '';
 				display: block;
 				padding-bottom: 100%;
+			}
+
+			a {
+				align-items: center;
+				background: var(--bg-secondary-color);
+				border-radius: 0.4rem;
+				bottom: 0;
+				display: flex;
+				height: 100%;
+				justify-content: center;
+				left: 0;
+				position: absolute;
+				text-align: center;
+				width: 100%;
 			}
 		}
 	}

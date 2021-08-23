@@ -6,5 +6,7 @@
 
 <svelte:head>
 	<title>{page.title ? `${page.title} • ${websiteName}` : websiteName}</title>
-	<meta name="description" content={page.description} />
+	{#if page.description}
+		<meta name="description" content={page.description} />
+	{/if}
 </svelte:head>

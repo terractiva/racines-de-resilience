@@ -53,7 +53,7 @@
 					</div>
 				</details>
 
-				<button class="button icon-only dark">Chercher</button>
+				<button disabled class="button icon-only dark">Chercher (bientôt disponible)</button>
 			</div>
 
 			<p class="filter-separator">ou</p>
@@ -68,13 +68,16 @@
 
 	<svelte:fragment slot="content">
 		<SectionContentList>
-			<SectionContentListItem isExternalLink link="https://www.onepercentfortheplanet.fr/">
+			<SectionContentListItem
+				isExternalLink
+				link="https://www.onepercentfortheplanet.fr/les-projets-2021/"
+			>
 				<svelte:fragment slot="title">1% for the Planet</svelte:fragment>
 				<svelte:fragment slot="content">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quam sapien, lobortis vitae
-					mauris ut, volutpat lobortis risus. Ut commodo euismod mauris, lacinia accumsan purus
-					iaculis et. Donec leo nisl, maximus sed sapien nec, euismod facilisis arcu. Nullam semper
-					suscipit condimentum.
+					Le réseau <i>1% for the Planet</i>, partenaire de notre campagne, vient de sélectionner 40
+					associations pour qui il <strong>doublera le montant des dons</strong> individuels reçus. Pour
+					découvrir ces initiatives dont plusieurs sont déjà à retrouver dans notre guide d'actions,
+					c'est par ici :
 				</svelte:fragment>
 				<svelte:fragment slot="link">En savoir plus</svelte:fragment>
 			</SectionContentListItem>
@@ -112,6 +115,24 @@
 <SectionSupporters />
 
 <style lang="scss">
+	div {
+		margin: -0.25rem;
+
+		details,
+		button {
+			margin: 0.25rem;
+		}
+
+		details {
+			cursor: not-allowed;
+			opacity: 0.4;
+
+			summary {
+				pointer-events: none;
+			}
+		}
+	}
+
 	.filter-separator {
 		margin: 1.5rem 0;
 	}
