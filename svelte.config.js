@@ -11,7 +11,8 @@ const isProduction = process.env.NODE_ENV === 'production';
 if (isProduction) {
 	postcssPlugins.push(
 		purgecss({
-			content: ['./src/**/*.html', './src/**/*.svelte']
+			content: ['./src/**/*.html', './src/**/*.svelte'],
+			safelist: ['bg-lines', 'bg-marks', 'bg-strokes']
 		})
 	);
 }

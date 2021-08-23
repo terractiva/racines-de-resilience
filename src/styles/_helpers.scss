@@ -3,24 +3,15 @@
 .mb-0 {
 	margin-bottom: 0;
 }
-
-.bg-lines-1,
-.bg-lines-2,
-.bg-spots {
-	background-repeat: repeat;
-	background-size: 250px auto;
+.w-100 {
+	width: 100%;
 }
-.bg-lines-1 {
-	background-image: url('/fonds/lignes1.png');
-}
-.bg-lines-2 {
-	background-image: url('/fonds/lignes2.png');
-}
-.bg-spots {
-	background-image: url('/fonds/marques.png');
+.floating-image {
+	user-select: none;
+	pointer-events: none;
 }
 
-/* purgecss start ignore */
+/*! purgecss start ignore */
 .text-construct:not(.text-regenerate) {
 	color: variables.$color-construct-strong;
 }
@@ -52,4 +43,4 @@
 .bd-intervene:not(.bd-regenerate) {
 	border: 1px solid variables.$color-intervene;
 }
-/* purgecss end ignore */
+/*! purgecss end ignore */

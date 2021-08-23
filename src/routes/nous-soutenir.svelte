@@ -1,9 +1,16 @@
 <script>
+	import SectionIntroduction from '$lib/components/SectionIntroduction.svelte';
 	import PageMeta from '$lib/components/PageMeta.svelte';
-	import SupportersSection from '$lib/components/SupportersSection.svelte';
-	import { supportUsPage } from '$lib/constants/pages';
+	import SectionBackground from '$lib/components/SectionBackground.svelte';
+	import SectionSupporters from '$lib/components/SectionSupporters.svelte';
+	import Backgrounds from '$lib/constants/backgrounds';
+	import { communityPage, supportUsPage } from '$lib/constants/pages';
 	import { layoutContext } from '$lib/contexts';
 	import { getContext } from 'svelte';
+	import Section from '$lib/components/Section.svelte';
+	import SectionContentList from '$lib/components/SectionContentList.svelte';
+	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
+	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
 
 	const { setCurrentPage } = getContext(layoutContext);
 
@@ -12,124 +19,113 @@
 
 <PageMeta page={supportUsPage} />
 
-<section class="container">
-	<p class="mb-0">
-		<i
-			>L'association Terractiva porte le site collaboratif Racines de Résilience grâce à du mécénat
-			et du travail bénévole. Une communauté de volontaires, de soutiens et de partenaires se sont
-			déjà engagés.<br />Devenez vous aussi soutien de ce projet collectif !</i
-		>
-	</p>
-</section>
+<SectionBackground background={Backgrounds.Lines}>
+	<SectionIntroduction>
+		Nous avons besoin de vous<br /> pour continuer à exister
+	</SectionIntroduction>
+</SectionBackground>
 
-<section class="section section-support container">
-	<h2 class="text-center">Quatre manières de soutenir financièrement Racines de résilience</h2>
+<Section>
+	<svelte:fragment slot="title"
+		>Quatre manières de soutenir financièrement <i>Racines de résilience</i></svelte:fragment
+	>
+	<svelte:fragment slot="content">
+		<h3 class="text-center">(se) Faire plaisir avec du beau</h3>
+		<SectionContentList nbItemsByLine={2}>
+			<SectionContentListItem hasReducedWidth isExternalLink link="TODO:" linkStyle="primary">
+				<svelte:fragment slot="content">
+					Pour soutenir l'accompagnement du film, des artistes ont produit des <strong
+						>affiches collector <i>Une fois que tu sais</i></strong
+					>.<br /> Choisissez une affiche illustrée imprimée en risographie (technique d'impression mécanique
+					artisanale) et faites-vous un cadeau en soutenant Racines de résilience !
+				</svelte:fragment>
+				<svelte:fragment slot="link">Acheter une affiche collector</svelte:fragment>
+			</SectionContentListItem>
 
-	<img alt="" src="/illustrations/oiseaux1.png" />
+			<SectionContentListItem hasReducedWidth isExternalLink link="TODO:" linkStyle="primary">
+				<svelte:fragment slot="content">
+					Maxime Steiner, le compositeur de la musique du film <strong
+						><i>Une fois que tu sais</i> a lui aussi choisi de soutenir <i>Racines de résilience</i>
+						avec son travail</strong
+					>.<br /> Redécouvrez le film en immersion auditive, avec les dialogues les plus impactants
+					du films montés sur la musique orignale.
+				</svelte:fragment>
+				<svelte:fragment slot="link">Acheter la bande-son / podcast</svelte:fragment>
+			</SectionContentListItem>
+		</SectionContentList>
 
-	<ul>
-		<li>
-			<p>
-				Pour soutenir l'accompagnement du film, des artistes ont produit des affiches collector du
-				film Une fois que tu sais.<br />
-				Choisissez une affiche illustrée imprimée en risographie (technique d'impression mécanique artisanale)
-				et faites-vous un cadeau en soutenant Racines de Résilience !
-			</p>
-
-			<a class="button primary" href="TODO:" rel="external" target="_blank"
-				>Acheter une affiche collector</a
+		<h3 class="text-center">Faire un don, juste pour le geste !</h3>
+		<SectionContentList nbItemsByLine={2}>
+			<SectionContentListItem
+				hasReducedWidth
+				isExternalLink
+				link="https://www.helloasso.com/associations/terractiva/formulaires/1"
+				linkStyle="primary"
 			>
-		</li>
+				<svelte:fragment slot="content">
+					Un <strong>financement participatif</strong> a été mis en place pour permettre à qui veut
+					de soutenir la campagne d'accompagnement du film (animations, guide, site internet, ...).<br
+					/>
+					Structures, individus, <strong>tout le monde peut donner à sa hauteur</strong> pour
+					soutenir le projet !<br /> Si votre structure figure sur le site, merci de considérer de
+					soutenir <i>Racines de résilience</i> :)
+				</svelte:fragment>
+				<svelte:fragment slot="link">Contribuer au financement participatif</svelte:fragment>
+			</SectionContentListItem>
 
-		<li>
-			<p>
-				Maxime Steiner, le compositeur de la musique du film Une fois que tu sais a lui aussi choisi
-				de soutenir la Campagne d'accompagnement avec son travail.
+			<SectionContentListItem hasReducedWidth isExternalLink link="TODO:" linkStyle="primary">
+				<svelte:fragment slot="content">
+					Si vous souhaitez <strong>devenir mécène du projet</strong>, par un don conséquent ou en
+					proposant vos compétences pour faire vivre le projet, nous serions très heureux·se·s
+					d'échanger avec vous !
+				</svelte:fragment>
+				<svelte:fragment slot="link">Devenir mécène</svelte:fragment>
+			</SectionContentListItem>
+		</SectionContentList>
+
+		<img alt="" class="floating-image" src="/illustrations/oiseaux-1.png" />
+		<img alt="" class="floating-image" src="/illustrations/oiseaux-2.png" />
+	</svelte:fragment>
+</Section>
+
+<SectionBackground background={Backgrounds.Marks}>
+	<SectionSupporters />
+</SectionBackground>
+
+<Section>
+	<svelte:fragment slot="title">Rejoindre la communauté</svelte:fragment>
+	<svelte:fragment slot="content">
+		<SectionContentTwoThirds>
+			<p class="text-justify w-100 mb-0">
+				Vous souhaitez <strong>faire partie de la communauté</strong> d'accompagnement du film ?<br
+				/> Rejoignez la communauté pour diffuser ses messages au plus grand nombre, organiser des séances-débats,
+				pour vous former à l'animation, ou pour contribuer à la vie du site !
 			</p>
-
-			<a class="button primary" href="TODO:" rel="external" target="_blank"
-				>Acheter la bande son podcast</a
-			>
-		</li>
-
-		<li>
-			<p>
-				Un financement participatif a été mis en place pour permettre à quiconque de soutenir la
-				campagne d'impact du film. Structures, individus, tout le monde peut donner à sa hauteur
-				pour soutenir le projet.<br />
-				Si votre structure figure sur le site, merci de considérer de soutenir Racines de Résilience
-				:)
-			</p>
-
-			<a class="button primary" href="TODO:" rel="external" target="_blank"
-				>Contribuer au financement participatif</a
-			>
-		</li>
-
-		<li>
-			<p>
-				Vous ou votre structure pouvez aussi devenir mécènes en faisant des dons ou du mécénat de
-				compétences pour faire vivre le projet.
-			</p>
-
-			<a class="button primary" href="TODO:" rel="external" target="_blank">Devenir mécène</a>
-		</li>
-	</ul>
-
-	<img alt="" src="/illustrations/oiseaux2.png" />
-</section>
-
-<SupportersSection />
+			<a class="button primary" href={communityPage.path}>En savoir plus</a>
+		</SectionContentTwoThirds>
+	</svelte:fragment>
+</Section>
 
 <style lang="scss">
-	section {
-		&.section-support {
-			position: relative;
+	h3:not(:first-of-type) {
+		margin-top: 6rem;
+	}
 
-			img {
-				height: auto;
-				position: absolute;
-				z-index: -1;
+	img {
+		height: auto;
+		position: absolute;
+		z-index: -1;
 
-				@include utilities.media-sm {
-					display: none;
-				}
-				@include utilities.media-md {
-					display: none;
-				}
+		&:first-of-type {
+			top: -2%;
+			right: 0;
+			width: 12rem;
+		}
 
-				&:first-of-type {
-					left: 0;
-					top: 0;
-					transform: translate(-2rem, 2rem);
-					width: 15rem;
-				}
-
-				&:last-of-type {
-					bottom: 0;
-					right: 0;
-					transform: translate(2rem, 2rem);
-					width: 25rem;
-				}
-			}
-
-			ul {
-				@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(2, 30%));
-
-				justify-content: space-evenly;
-				list-style: none;
-				margin: 0;
-				padding: 0;
-
-				li {
-					display: flex;
-					flex-direction: column;
-
-					p {
-						flex: 1;
-					}
-				}
-			}
+		&:last-of-type {
+			bottom: -2%;
+			left: 0;
+			width: 24rem;
 		}
 	}
 </style>

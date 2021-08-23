@@ -29,7 +29,7 @@
 
 <style lang="scss">
 	ul {
-		@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(2, 1fr));
+		@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(2, 1fr), 1);
 
 		list-style: none;
 		margin: 0;

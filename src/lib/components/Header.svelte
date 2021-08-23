@@ -23,18 +23,14 @@
 	<a href={homePage.path}>
 		<img
 			alt="Racines de résilience"
-			class:is-light={$currentTheme$ === Themes.Dark}
+			class:is-dark={$currentTheme$ === Themes.Dark}
 			src="/logo.png"
 		/>
 	</a>
 </header>
 
 <nav class="nav">
-	<button
-		class="button outline icon-only"
-		type="button"
-		on:click={() => (isMenuOpen = !isMenuOpen)}
-	>
+	<button class="button icon-only" type="button" on:click={() => (isMenuOpen = !isMenuOpen)}>
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
 			><path
 				d="M2 6a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1zM2 12.032a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1zM3 17.064a1 1 0 1 0 0 2h18a1 1 0 0 0 0-2H3z"
@@ -43,13 +39,14 @@
 		>
 	</button>
 
-	<div class:is-open={isMenuOpen}>
-		<div class="tabs">
-			{#each pages as page}
-				<a class:active={page.path === currentPath} href={page.path}>{page.label}</a>
-			{/each}
-		</div>
-
+	<div class="tabs" class:is-open={isMenuOpen}>
+		{#each pages as page}
+			<a
+				class:active={page.path === currentPath}
+				href={page.path}
+				on:click={() => (isMenuOpen = false)}>{page.label}</a
+			>
+		{/each}
 		<ThemeSwitcher />
 	</div>
 </nav>
@@ -69,7 +66,7 @@
 				height: 100%;
 				width: auto;
 
-				&.is-light {
+				&.is-dark {
 					filter: brightness(100);
 				}
 			}
@@ -79,7 +76,11 @@
 	nav {
 		button {
 			@include utilities.media-sm {
+				margin: auto 0.2rem;
 				padding: 0.5rem;
+			}
+			@include utilities.media-md {
+				margin: auto 0.4rem;
 			}
 			@include utilities.media-lg {
 				display: none;
@@ -92,7 +93,9 @@
 			}
 		}
 
-		& > div {
+		.tabs {
+			background: var(--bg-color);
+			box-shadow: utilities.$shadow;
 			display: flex;
 
 			@include utilities.media-sm-md {
@@ -106,20 +109,10 @@
 					display: none;
 				}
 
-				.tabs {
-					flex-direction: column;
-					margin-top: 1rem;
-					order: 1;
-
-					a {
-						text-align: initial;
-					}
+				a {
+					text-align: initial;
+					width: 100%;
 				}
-			}
-
-			.tabs {
-				background: var(--bg-color);
-				box-shadow: utilities.$shadow;
 			}
 		}
 	}

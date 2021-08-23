@@ -72,7 +72,6 @@
 					}
 					&:not(.is-fullscreen) {
 						margin-top: utilities.$header-height;
-						padding: 4rem 0;
 
 						@include utilities.media-sm {
 							margin-top: utilities.$header-height-sm;

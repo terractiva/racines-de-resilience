@@ -1,9 +1,16 @@
 <script>
+	import SectionIntroduction from '$lib/components/SectionIntroduction.svelte';
 	import PageMeta from '$lib/components/PageMeta.svelte';
-	import SupportersSection from '$lib/components/SupportersSection.svelte';
-	import { actionsTreePage, homePage, supportUsPage } from '$lib/constants/pages';
+	import SectionBackground from '$lib/components/SectionBackground.svelte';
+	import SectionLowTech from '$lib/components/SectionLowTech.svelte';
+	import SectionSupporters from '$lib/components/SectionSupporters.svelte';
+	import Backgrounds from '$lib/constants/backgrounds';
+	import { actionsTreePage, communityPage, homePage, supportUsPage } from '$lib/constants/pages';
 	import { layoutContext } from '$lib/contexts';
 	import { getContext } from 'svelte';
+	import Section from '$lib/components/Section.svelte';
+	import SectionContentList from '$lib/components/SectionContentList.svelte';
+	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
 
 	const { setCurrentPage } = getContext(layoutContext);
 
@@ -12,132 +19,100 @@
 
 <PageMeta page={homePage} />
 
-<section class="section section-intro container">
-	<h1>
-		Énergie, Climat, Effondrement, Résilience...<br />Une fois que tu sais, qu'est-ce qu'on fait ?
-	</h1>
-</section>
+<SectionIntroduction>
+	Energie, Climat, Effondrement, Résilience...<br /> On fait quoi maintenant ?
+</SectionIntroduction>
 
-<section class="section section-action bg-lines-1 text-center">
-	<div class="container">
-		<h2>Trouver ma prochaine action</h2>
+<SectionBackground background={Backgrounds.Lines}>
+	<Section isCentered>
+		<svelte:fragment slot="title">Trouver ma prochaine action</svelte:fragment>
 
-		<div>
-			<details class="dropdown">
-				<summary class="button">Niveau</summary>
+		<svelte:fragment slot="content">
+			<div>
+				<details class="dropdown">
+					<summary class="button">Niveau</summary>
 
-				<div class="card">
-					<p>TODO:</p>
-				</div>
-			</details>
+					<div class="card">
+						<p>TODO:</p>
+					</div>
+				</details>
 
-			<details class="dropdown">
-				<summary class="button">Catégorie</summary>
+				<details class="dropdown">
+					<summary class="button">Catégorie</summary>
 
-				<div class="card">
-					<p>TODO:</p>
-				</div>
-			</details>
+					<div class="card">
+						<p>TODO:</p>
+					</div>
+				</details>
 
-			<details class="dropdown">
-				<summary class="button">Thématique</summary>
+				<details class="dropdown">
+					<summary class="button">Thématique</summary>
 
-				<div class="card">
-					<p>TODO:</p>
-				</div>
-			</details>
+					<div class="card">
+						<p>TODO:</p>
+					</div>
+				</details>
 
-			<button class="button icon-only dark">Chercher</button>
-		</div>
+				<button class="button icon-only dark">Chercher</button>
+			</div>
 
-		<p>ou</p>
+			<p class="filter-separator">ou</p>
 
-		<a class="button primary" href={actionsTreePage.path}>Explorer l'arbre aux actions</a>
-	</div>
-</section>
+			<a class="button primary" href={actionsTreePage.path}>Explorer l'arbre aux actions</a>
+		</svelte:fragment>
+	</Section>
+</SectionBackground>
 
-<section class="section section-news container">
-	<h2>Actualités</h2>
+<Section>
+	<svelte:fragment slot="title">Actualités</svelte:fragment>
 
-	<ul>
-		<li>
-			<div class="card">
-				<h3>Programmer le film</h3>
-				<p>
+	<svelte:fragment slot="content">
+		<SectionContentList>
+			<SectionContentListItem isExternalLink link="https://www.onepercentfortheplanet.fr/">
+				<svelte:fragment slot="title">1% for the Planet</svelte:fragment>
+				<svelte:fragment slot="content">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quam sapien, lobortis vitae
 					mauris ut, volutpat lobortis risus. Ut commodo euismod mauris, lacinia accumsan purus
 					iaculis et. Donec leo nisl, maximus sed sapien nec, euismod facilisis arcu. Nullam semper
 					suscipit condimentum.
-				</p>
-			</div>
-			<a class="button outline" href={supportUsPage.path}>Bouton</a>
-		</li>
-		<li>
-			<div class="card">
-				<h3>Programmer le film</h3>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quam sapien, lobortis vitae
-					mauris ut, volutpat lobortis risus. Ut commodo euismod mauris, lacinia accumsan purus
-					iaculis et.
-				</p>
-			</div>
-			<a class="button outline" href={supportUsPage.path}>Bouton</a>
-		</li>
-		<li>
-			<div class="card">
-				<h3>Programmer le film</h3>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quam sapien, lobortis vitae
-					mauris ut, volutpat lobortis risus.
-				</p>
-			</div>
-			<a class="button outline" href={supportUsPage.path}>Bouton</a>
-		</li>
-	</ul>
-</section>
+				</svelte:fragment>
+				<svelte:fragment slot="link">En savoir plus</svelte:fragment>
+			</SectionContentListItem>
 
-<SupportersSection />
+			<SectionContentListItem link={supportUsPage.path}>
+				<svelte:fragment slot="title">Se soutenir</svelte:fragment>
+				<svelte:fragment slot="content">
+					Ce projet est majoritairement bénévole.<br /> Si vous souhaitez
+					<strong>nous aider</strong>
+					dans cette démarche de convergence, pour que
+					<strong>tout le monde puisse passer à l'action</strong> vers une société qui se régénère, vous
+					pouvez nous soutenir !
+				</svelte:fragment>
+				<svelte:fragment slot="link">Découvrir comment</svelte:fragment>
+			</SectionContentListItem>
+
+			<SectionContentListItem link={communityPage.path}>
+				<svelte:fragment slot="title">Des séances-évenements</svelte:fragment>
+				<svelte:fragment slot="content">
+					Vous souhaitez <strong>organiser</strong> des séances-évenements près de chez vous,
+					<strong>faire connaitre les enjeux climatiques</strong>
+					et d'effondrements au plus grand nombre, être accompagné·e·s ou
+					<strong>accompagner</strong> vous-mêmes le film ?
+				</svelte:fragment>
+				<svelte:fragment slot="link">En savoir plus</svelte:fragment>
+			</SectionContentListItem>
+		</SectionContentList>
+	</svelte:fragment>
+</Section>
+
+<SectionBackground background={Backgrounds.Marks}>
+	<SectionLowTech />
+</SectionBackground>
+
+<SectionSupporters />
 
 <style lang="scss">
-	section {
-		&.section-intro {
-			h1 {
-				margin-bottom: 0;
-				text-align: center;
-			}
-		}
-
-		&.section-action {
-			& > div > div {
-				margin-bottom: 1.5rem;
-			}
-		}
-
-		&.section-news {
-			ul {
-				@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(3, 1fr));
-
-				list-style: none;
-				margin: 0;
-				padding: 0;
-
-				li {
-					display: flex;
-					flex-direction: column;
-
-					div {
-						flex: 1;
-
-						h3 {
-							margin-top: 0;
-						}
-					}
-
-					a {
-						margin-top: 1rem;
-					}
-				}
-			}
-		}
+	.filter-separator {
+		margin: 1.5rem 0;
 	}
 </style>

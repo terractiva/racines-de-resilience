@@ -1,181 +1,223 @@
 <script>
+	import SectionIntroduction from '$lib/components/SectionIntroduction.svelte';
 	import PageMeta from '$lib/components/PageMeta.svelte';
+	import SectionBackground from '$lib/components/SectionBackground.svelte';
+	import Backgrounds from '$lib/constants/backgrounds';
 	import { actionsPage, actionsTreePage, communityPage } from '$lib/constants/pages';
-	import { joinLinkMail } from '$lib/constants/settings';
 	import { layoutContext } from '$lib/contexts';
 	import { getContext } from 'svelte';
+	import Section from '$lib/components/Section.svelte';
+	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
+	import SectionContentList from '$lib/components/SectionContentList.svelte';
+	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
 
 	const { setCurrentPage } = getContext(layoutContext);
 
 	setCurrentPage(communityPage);
+
+	const joinLink = 'https://colibris.link/OS02e';
 </script>
 
 <PageMeta page={communityPage} />
 
-<section class="section-intro container">
-	<p class="mb-0">
-		<i>
-			Notre démarche, c'est de sensibiliser avec le film Une fois que tu sais et faire du public une
-			communauté en mouvement. Vous aussi vous pouvez faire partie de cette communauté.
-		</i>
-	</p>
+<SectionBackground background={Backgrounds.Lines}>
+	<SectionIntroduction>Être ensemble une<br /> communauté en mouvement</SectionIntroduction>
+</SectionBackground>
 
-	<img alt="" src="/illustrations/elephant.png" />
-</section>
+<Section>
+	<svelte:fragment slot="title">Une communauté autour d'un film</svelte:fragment>
+	<svelte:fragment slot="content">
+		<SectionContentTwoThirds>
+			<p class="text-justify w-100 mb-0">
+				<i>Une fois que tu sais</i> est un documentaire qui offre une
+				<strong>plongée dans les bouleversements du monde</strong>, et dans notre propre désarroi.
+				Fortement touchées par le message du film, son public s'est mobilisé, et des dizaines de
+				personnes se sont préparées pour proposer des temps d’échange inspirées du Travail Qui Relie
+				dans les cinémas, faire connaitre le guide d’actions et le site
+				<i>Racines de résilience</i> ! Vous aussi vous pouvez rejoindre cette communauté.
+			</p>
+			<div class="image-one-wrapper">
+				<img alt="" class="floating-image" src="/illustrations/elephant.png" />
+			</div>
+		</SectionContentTwoThirds>
+	</svelte:fragment>
+</Section>
 
-<section class="section bg-lines-1">
-	<div class="container">
-		<h2>
-			Une fois que tu sais, qu'est-ce qu'on fait ? Une communauté en mouvement autour d'un film
-		</h2>
-
-		<p class="mb-0">
-			Ce documentaire offre une plongée dans les bouleversements du monde, et dans notre propre
-			désarroi. Fortement touchées par le message du film, son public s'est mobilisé, et des
-			dizaines de personnes se sont préparées pour proposer des temps d’échange inspirées du Travail
-			Qui Relie dans les cinémas, faire connaitre le guide d’actions et le site Racine de
-			résilience ! Vous aussi vous pouvez rejoindre cete communauté bénévole.
-		</p>
-	</div>
-</section>
-
-<section class="section container">
-	<h2>Participer à l'accompagnement du film</h2>
-
-	<p>
-		Si le film vous touche et que vous souhaitez vous impliquer dans son accompagnement, vous pouvez
-		prendre plusieurs rôles :
-	</p>
-
-	<ul>
-		<li>
-			faire parler d'UNE FOIS QUE TU SAIS dans vos réseaux et au-delà pour ouvrir la parole sur ces
-			sujets
-		</li>
-		<li>
-			organiser une projection avec une animation inspirée du Travail Qui Relie dans un cinéma ou un
-			lieu qui pourrait l'acceuillir
-		</li>
-		<li>
-			rejoindre l'équipe bénévole pour soutenir la vie de la communauté (déployer l'outil de travail
-			collectif en ligne dédié à la communauté)
-		</li>
-	</ul>
-
-	<div class="text-center">
-		<a class="button primary" href={joinLinkMail} rel="external" target="_blank"
-			>Participer à cet accompagnement</a
-		>
-	</div>
-</section>
-
-<section class="section section-get-involved bg-spots">
-	<div class="container">
-		<h2>S'engager dans une démarche de soutien mutuel</h2>
-
-		<div>
-			<div>
-				<p>
-					Vous vous sentez seul.e.s à avec ces prises de conscience et sur nos effondrement et nos
-					recherches de résilience ? Votre entourage n'est pas sensible à ces thématiques vous vous
-					sentez en décalage ? Vous êtes curieux d'échanger avec des personnes inspirantes qui
-					cherchent comment vivre dans ce monde en plein bouleversement ? La communauté des
-					spectateurs et soutiens du film se retrouve sur l'outil Discord où plusieurs espaces
-					d'échange sont proposés, organisés par thèmes ou par régions. Retrouvez ainsi des
-					personnes près de chez vous et s'intéresse à ce qui vous tient à coeur pour cheminer
-					ensemble.
-				</p>
-
-				<a class="button primary" href="TODO:" rel="external" target="_blank"
-					>Rencontrer la communauté</a
+<SectionBackground background={Backgrounds.Marks}>
+	<Section>
+		<svelte:fragment slot="title">Participer à l'accompagnement du film</svelte:fragment>
+		<svelte:fragment slot="content">
+			<p class="text-justify">
+				Si le film vous touche et que vous souhaitez <strong
+					>vous impliquer dans son accompagnement</strong
+				>, vous pouvez prendre plusieurs rôles :
+			</p>
+			<ul>
+				<li class="text-justify">
+					<strong>Faire connaître</strong> <i>Une fois que tu sais</i> et son accompagnement dans vos
+					réseaux (et au-delà!) pour ouvrir la parole sur ces sujets,
+				</li>
+				<li class="text-justify">
+					<strong>Organiser une projection</strong> avec l'animation que nous avons créée (inspirée du
+					Travail Qui Relie) dans un cinéma ou un lieu qui pourrait l'acceuillir,
+				</li>
+				<li class="text-justify">
+					<strong>Rejoindre la communauté</strong> pour échanger, se rencontrer, se soutenir.
+				</li>
+			</ul>
+			<div class="text-center">
+				<a class="button primary" href={joinLink} rel="external" target="_blank"
+					>Je veux participer !</a
 				>
 			</div>
+		</svelte:fragment>
+	</Section>
+</SectionBackground>
 
-			<div>
-				<p>
-					Pas toujours facile de franchir le pas ! Où que l'on soit sur son chemin de transition, on
-					peut faire face à des questionnements, du désarroi, ou un sentiment d'impuissance qui
-					freinent la mise en action. Et c'est le cas de nombre d'entre nous! Dans la catégorie
-					Régénérer, plusieurs actions peuvent vous soutenir. L'accompagnement du film Une fois que
-					tu sais s'appuie notamment sur le processus de l'écopsychologue Joanna Macy, le Travail
-					Qui Relie, qui accompagne les émotions difficiles liées aux prises de conscience
-					écologique pour les transformer en élan d'actions.
-				</p>
+<Section>
+	<svelte:fragment slot="title">S'engager dans une démarche de soutien mutuel</svelte:fragment>
+	<svelte:fragment slot="content">
+		<SectionContentList nbItemsByLine={2}>
+			<SectionContentListItem isExternalLink link={joinLink}>
+				<svelte:fragment slot="content">
+					Vous vous sentez seul·e·s à avec ces <strong>prises de conscience</strong> sur nos
+					effondrements et nos recherches de résilience ?<br /> Votre entourage n'est pas sensible à
+					ces thématiques vous vous sentez en décalage ?<br /> Vous êtes
+					<strong>curieux d'échanger</strong>
+					avec des personnes inspirantes qui cherchent comment vivre mieux dans ce monde en plein bouleversement
+					?<br /> La <strong>communauté des spectateurs et soutiens du film</strong> se retrouve sur
+					son serveur Discord où plusieurs espaces d'échange sont proposés, organisés par thèmes ou par
+					régions. Retrouvez ainsi des personnes près de chez vous qui s'intéressent à ce qui vous tient
+					à coeur pour cheminer et agir ensemble.
+				</svelte:fragment>
+				<svelte:fragment slot="link">Rencontrer la communauté</svelte:fragment>
+			</SectionContentListItem>
 
-				<a class="button primary" href="TODO:" rel="external" target="_blank">Découvrir le TQR</a>
-			</div>
-		</div>
-	</div>
-</section>
+			<SectionContentListItem isExternalLink link="https://ateliersdetravailquirelie.sitew.fr/">
+				<svelte:fragment slot="content">
+					Pas toujours facile de <strong>franchir le pas</strong>...<br /> Où que l'on soit sur son
+					chemin de transition, on peut faire face à des questionnements, du désarroi, ou un
+					sentiment d'impuissance qui freinent la mise en action. Et c'est le cas de nombre d'entre
+					nous !<br /> Dans la catégorie <i>Régénérer</i> de la page
+					<a href={actionsPage.path}>Actions</a>, vous pourrez trouver plusieurs actions pour
+					<strong>vous soutenir face à ces bouleversements</strong>.<br />
+					L'accompagnement du film <i>Une fois que tu sais</i> s'appuie notamment sur le processus
+					de l'écopsychologue Joanna Macy, le <i>Travail Qui Relie</i>, qui
+					<strong>soutient la traversée des émotions difficiles</strong> liées à l'état du monde, pour
+					les transformer en élan d'actions.
+				</svelte:fragment>
+				<svelte:fragment slot="link">Découvrir le TQR</svelte:fragment>
+			</SectionContentListItem>
+		</SectionContentList>
+	</svelte:fragment>
+</Section>
 
-<section class="section section-highlight container">
-	<img alt="" src="/illustrations/singes.png" />
-
-	<div>
-		<h2>
-			Racines de résilience cherche avant tout à valoriser et créer des synergies entre les acteurs
-			déjà mobilisés autour des thèmes climat et résilience
-		</h2>
-
-		<p>
-			Pour rappel, une multitude de structures et de collectifs travaillent déjà sur ces thèmes, et
-			notre ambition c'est de rendre visible cet écosystèmes déjà fertile et large qui offre de
-			nombreuses possibilités de s'engager. Grâce au référencement constitué sur le site Racines de
-			résilience, vous pouvez entrer en contact avec les organisations qui vous inspirent, quelle
-			que soit votre sensibilité ou votre capacité d'engagement.
-		</p>
-
-		<div class="text-center">
-			<a class="button primary" href={actionsTreePage.path}>Découvrir l'arbre des actions</a>
-			<a class="button primary" href={actionsPage.path}>Explorer le référencement des actions</a>
-		</div>
-	</div>
-</section>
+<SectionBackground background={Backgrounds.Strokes}>
+	<Section>
+		<svelte:fragment slot="title"
+			>Créons des synergies entre les acteurs mobilisés existants !</svelte:fragment
+		>
+		<svelte:fragment slot="content">
+			<SectionContentTwoThirds isReversed>
+				<div class="image-two-wrapper">
+					<img alt="" class="floating-image" src="/illustrations/singes.png" />
+				</div>
+				<div>
+					<p class="text-justify w-100">
+						Pour rappel, une <strong>multitude de structures et de collectifs</strong> travaillent
+						déjà sur ces thèmes, et notre ambition c'est de rendre visible cet écosystème déjà
+						fertile et large qui offre de nombreuses possibilités de s'engager. Grâce au
+						référencement constitué sur le site <i>Racines de résilience</i>, vous pouvez
+						<strong>entrer en contact avec les organisations</strong> qui vous inspirent, quelle que
+						soit votre sensibilité ou votre capacité d'engagement.
+					</p>
+					<div class="links-wrapper">
+						<a class="button primary" href={actionsTreePage.path}>Arbre des actions</a>
+						<a class="button primary" href={actionsPage.path}>Toutes les actions</a>
+					</div>
+				</div>
+			</SectionContentTwoThirds>
+		</svelte:fragment>
+	</Section>
+</SectionBackground>
 
 <style lang="scss">
-	section {
-		&.section-intro {
-			@include utilities.responsive-grid(1fr, 0.8fr 22rem, 0.6fr 22rem);
+	.image-one-wrapper {
+		align-self: stretch;
+		justify-self: stretch;
+		position: relative;
 
-			align-items: center;
-			justify-content: space-evenly;
-			margin-bottom: 4rem;
+		@include utilities.media-sm {
+			order: -1;
+			text-align: center;
+		}
 
-			img {
+		img {
+			height: auto;
+
+			@include utilities.media-sm {
+				width: 50%;
+			}
+			@include utilities.media-md {
+				bottom: 50%;
+				left: -1.5rem;
+				transform: translateY(50%);
+				width: 125%;
+			}
+			@include utilities.media-md-lg {
+				max-width: initial;
+				position: absolute;
+			}
+			@include utilities.media-lg {
+				bottom: 0;
+				left: 0;
+				width: 115%;
+			}
+		}
+	}
+
+	.image-two-wrapper {
+		align-self: stretch;
+		justify-self: stretch;
+		position: relative;
+
+		@include utilities.media-sm {
+			text-align: center;
+		}
+
+		img {
+			@include utilities.media-sm {
 				height: auto;
+				width: 50%;
+			}
+			@include utilities.media-md-lg {
+				bottom: 0;
+				height: 100%;
+				left: 0;
+				max-width: initial;
+				object-fit: contain;
+				position: absolute;
 				width: 100%;
-
-				@include utilities.media-sm {
-					display: none;
-				}
 			}
 		}
+	}
 
-		&.section-get-involved {
-			& > div > div {
-				@include utilities.responsive-grid(1fr, 2fr 1fr, 2fr 1fr);
+	.links-wrapper {
+		display: flex;
+		justify-content: space-around;
 
-				& > div {
-					align-items: center;
-					display: flex;
-					flex-direction: column;
-
-					p {
-						flex: 1;
-					}
-				}
-			}
+		@include utilities.media-sm {
+			align-items: center;
+			flex-direction: column;
 		}
 
-		&.section-highlight {
-			@include utilities.responsive-grid(1fr, 1fr, auto 1fr);
+		a {
+			margin: 0;
 
-			justify-content: center;
-
-			img {
-				height: auto;
-				margin: 0 auto;
-				width: 22rem;
+			@include utilities.media-sm {
+				&:first-child {
+					margin-bottom: 1rem;
+				}
 			}
 		}
 	}

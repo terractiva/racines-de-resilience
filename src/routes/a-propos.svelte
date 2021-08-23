@@ -1,8 +1,16 @@
 <script>
+	import SectionIntroduction from '$lib/components/SectionIntroduction.svelte';
 	import PageMeta from '$lib/components/PageMeta.svelte';
-	import { aboutPage, actionsPage, communityPage } from '$lib/constants/pages';
+	import SectionBackground from '$lib/components/SectionBackground.svelte';
+	import SectionLowTech from '$lib/components/SectionLowTech.svelte';
+	import Backgrounds from '$lib/constants/backgrounds';
+	import { aboutPage, actionsPage, communityPage, supportUsPage } from '$lib/constants/pages';
 	import { layoutContext } from '$lib/contexts';
 	import { getContext } from 'svelte';
+	import Section from '$lib/components/Section.svelte';
+	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
+	import SectionContentList from '$lib/components/SectionContentList.svelte';
+	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
 
 	const { setCurrentPage } = getContext(layoutContext);
 
@@ -11,222 +19,227 @@
 
 <PageMeta page={aboutPage} />
 
-<section class="container">
-	<p class="mb-0">
-		<i>
-			On cherche tou·te·s à construire une société plus résiliente face aux défis énergétiques,
-			climatiques et humains. Racines de résilience, c'est un point de convergence, un site
-			collaboratif qui réunit des pistes dans tous les domaines de la vie pour passer à l'action
-			pour créer ensemble un futur souhaitable.
-		</i>
-	</p>
-</section>
+<SectionBackground background={Backgrounds.Lines}>
+	<SectionIntroduction>
+		Réunir et relier les idées, pour<br /> une société qui soutient la vie
+	</SectionIntroduction>
+</SectionBackground>
 
-<section class="section section-origins container">
-	<h2>Racines de résilience, d'où ça vient et qu'est-ce que c'est ?</h2>
-
-	<p>
-		Le site Racines de résilience est une des facettes de la campagne d'accompagnement du film Une
-		fois que tu sais, écrit et réalisé par Emmanuel Cappellin, en collaboration avec Anne-Marie
-		Sangla. Cette campagne, intitulée "Une fois que tu sais, qu'est-ce qu'on fait ?", est portée par
-		l'association Terractiva créée en 2019 pour défendre une adaptation globale face aux processus
-		d'effondrements en cours. Sa mission : accompagner des objets artistiques particulièrements
-		impactants auprès du grand public et soutenir un changement culturel à grande échelle.
-	</p>
-
-	<div>
-		<img alt="" src="/illustrations/castors.png" />
-
-		<p class="mb-0">
-			A la demande du réalisateur Emmanuel, Terractiva a décidé d'accompagner le film. L'association
-			a fait appel à Brianne et Charlotte pour porter la campagne d'accompagnement Une fois que tu
-			sais, qu'est-ce qu'on fait ? Elles sont toutes deux facilitatrices formées au Travail Qui
-			Relie, un processus élaboré dans les années 1980 par l’écopsychologue Joanna Macy pour
-			traverser les émotions difficiles liées aux prises de conscience écologiques et les
-			transformer en élans d’actions. Elles ont développé pour cette campagne 3 outils
-			d'accompagnement à la mise en action :
+<Section>
+	<svelte:fragment slot="title"><i>Racines de résilience</i>, c'est quoi ?</svelte:fragment>
+	<svelte:fragment slot="content">
+		<p class="text-justify">
+			Le site <i>Racines de résilience</i> est une des facettes de la
+			<strong>campagne d'accompagnement du film <i>Une fois que tu sais</i></strong>, écrit et
+			réalisé par Emmanuel Cappellin, en collaboration avec Anne-Marie Sangla. Cette campagne est
+			<strong>portée par l'association <i>Terractiva</i></strong>, créée en 2019 pour défendre une
+			adaptation globale face aux processus d'effondrements en cours. Sa mission : accompagner des
+			objets artistiques particulièrements impactants auprès du grand public et soutenir un
+			changement culturel à grande échelle.
 		</p>
-	</div>
-
-	<ol>
-		<li>
-			<i>
-				1. Une communauté d'accompagnateurices qui proposent des temps d'échanges après la
-				projection du film Une fois que tu sais
-			</i>
-		</li>
-
-		<li>
-			<i>
-				2. Un guide d'action (version papier) qui propose un panorama des manières concretes d'agir
-				aujourd'hui
-			</i>
-		</li>
-
-		<li>
-			<i>3. Le site Racines de résilience sur lequel vous êtes !</i>
-		</li>
-	</ol>
-</section>
-
-<section class="section bg-spots">
-	<div class="container">
-		<h2>Racines de résilience, à quoi ça sert ?</h2>
-
-		<p>
-			L'ambition de la campagne d'accompagnement du film, c'est d'aider le public à devenir une
-			communauté en mouvement et d'encourager des passages à l'action à la hauteur des enjeux
-			climatiques. Touchées par son message, plusieurs milliers de personnes se sont mobilisées pour
-			financer le film, accompagner sa diffusion par des temps d'échange post-projection et
-			distribuer un guide d'actions qui offre de nombreuses pistes concrêtes pour s'engager. Ce site
-			internet est un prolongement en ligne du guide d'actions, un prolongement collaboratif qui
-			permet de rassembler un maximum de façons d'agir sur les thèmes climat/énergie et
-			effondrement/résilience.
-		</p>
-
-		<div class="text-center">
-			<a class="button primary" href={actionsPage.path}>Les actions</a>
-			<a class="button primary" href={communityPage.path}>La communauté</a>
-		</div>
-	</div>
-</section>
-
-<section class="section section-film container">
-	<h2>En savoir plus sur le film documentaire Une fois que tu sais</h2>
-
-	<ul>
-		<li>
-			<p>
-				UNE FOIS QUE TU SAIS est produit par Pulp Films, une jeune société basée dans la Drôme et à
-				Paris qui se veut au plus près des thématiques et des questions contemporaines qui
-				bousculent nos visions du monde.
+		<SectionContentTwoThirds isReversed style="margin-bottom: 1.5rem;">
+			<div class="image-wrapper">
+				<img alt="" class="floating-image" src="/illustrations/castors.png" />
+			</div>
+			<p class="text-justify w-100 mb-0">
+				A l'initiative du réalisateur Emmanuel, <i>Terractiva</i> a décidé d'accompagner le film.
+				L'association a fait appel à Brianne Parquier et Charlotte Ogier pour porter cette campagne
+				d'accompagnement. Elles sont toutes deux facilitatrices de
+				<i>Travail Qui Relie</i>, un processus élaboré dans les années 1980 par l’écopsychologue
+				Joanna Macy. Ce processus permet de <strong>traverser les émotions difficiles</strong>
+				liées aux prises de conscience écologiques et de les
+				<strong>transformer en élans d’actions</strong>. <br />Elles ont développé pour cette
+				campagne 3 outils d'accompagnement à la mise en action :
 			</p>
-
-			<a class="button primary" href="https://pulp-films.fr/" rel="external" target="_blank"
-				>PULP Films</a
-			>
-		</li>
-
-		<li>
-			<p>
-				UNE FOIS QUE TU SAIS est distribué par Nour Films, société fondée en 2008 par Patrick
-				Sibourd. Nour films distribue des longs-métrages de toutes nationalités et soutient des
-				films indépendants et engagés.
-			</p>
-
-			<a
-				class="button primary"
-				href="https://www.nourfilms.com/cinema-independant/une-fois-que-tu-sais/"
-				rel="external"
-				target="_blank">Programmer le film</a
-			>
-		</li>
-
-		<li>
-			<p>
-				Le film Une fois que tu sais propose un face à face poétique et bouleversant avec le défi
-				climatique.
-			</p>
-
-			<a
-				class="button primary"
-				href="https://www.onceyouknow-thefilm.com/"
-				rel="external"
-				target="_blank">Site officiel du film</a
-			>
-		</li>
-	</ul>
-</section>
-
-<section class="section section-creators bg-lines-2">
-	<div class="container">
-		<h2>Les artisans derrière ce site</h2>
-
-		<ul>
-			<li>
-				<a href="https://tseignette.github.io/" rel="external" target="_blank">Thomas Seignette</a> :
-				développeur web
+		</SectionContentTwoThirds>
+		<SectionContentList>
+			<li class="tool-item">
+				<p class="mb-0">
+					Une <strong>communauté d'accompagnateurices</strong> pour animer des temps d'échanges
+					après la projection du film <i>Une fois que tu sais</i>.
+				</p>
 			</li>
-			<li>
-				<a href="https://www.theotimenoel.com/" rel="external" target="_blank">Théotime Noël</a> : illustrateur
-				(l'arbre des actions de ce site)
+			<li class="tool-item">
+				<p class="mb-0">
+					Un <strong>guide d'action</strong> dépliant en affiche, qui propose un panorama des manières
+					concrètes d'agir aujourd'hui.
+				</p>
 			</li>
-			<li>
-				<a href="https://elypss.fr/" rel="external" target="_blank">Loïc Cimelière</a> : graphiste (l'arbre
-				des actions de ce site)
+			<li class="tool-item">
+				<p class="mb-0">
+					Le <strong>site collaboratif</strong> <i>Racines de Résilience</i>, sur lequel vous êtes,
+					pour que ce panorama s'enrichisse jour après jour !
+				</p>
 			</li>
-			<li>Charlotte Ogier : textes</li>
-			<li>Brianne Parquier : architecture et textes</li>
-			<li>Clarisse Barreau et Emmanuel Cappelin : relecture, consultant et projet</li>
-		</ul>
+		</SectionContentList>
+	</svelte:fragment>
+</Section>
 
-		<div class="text-center">
-			<a class="button primary" href="TODO:" rel="external" target="_blank">Soutenir le projet</a>
-		</div>
-	</div>
-</section>
+<SectionBackground background={Backgrounds.Marks}>
+	<Section>
+		<svelte:fragment slot="title"><i>Racines de résilience</i>, à quoi ça sert ?</svelte:fragment>
+		<svelte:fragment slot="content">
+			<SectionContentTwoThirds>
+				<p class="text-justify w-100 mb-0">
+					L'ambition de la campagne d'accompagnement du film, c'est d'aider le public à devenir une
+					<strong>communauté en mouvement</strong> et d'<strong
+						>encourager des passages à l'action</strong
+					> à la hauteur des enjeux climatiques. Touchées par son message, plusieurs milliers de personnes
+					se sont mobilisées pour financer le film, accompagner sa diffusion par des temps d'échange
+					post-projection et distribuer le guide d'actions qui offre de nombreuses pistes concrètes pour
+					s'engager. Ce site internet est un prolongement en ligne du guide d'actions, un prolongement
+					collaboratif et vivant, qui permet de rassembler et d'actualiser un maximum de façons d'agir
+					sur les thèmes du climat, de l'énergie, de l'effondrement et de la résilience.
+				</p>
+				<div class="links-wrapper text-center">
+					<a class="button primary" href={actionsPage.path}>Les actions</a>
+					<a class="button primary" href={communityPage.path}>La communauté</a>
+				</div>
+			</SectionContentTwoThirds>
+		</svelte:fragment>
+	</Section>
+</SectionBackground>
 
-<section class="section container">
-	<h2>La démarche low-tech de Racines de résilience</h2>
+<Section>
+	<svelte:fragment slot="title"
+		>A propos d'<i>Une fois que tu sais</i>, le film-documentaire</svelte:fragment
+	>
 
-	<p class="mb-0">
-		<a href="https://tseignette.github.io/" rel="external" target="_blank">Thomas Seignette</a> est ingénieur
-		informatique et membre des 1% pour la planète. Partenaire de la campagne d'accompagnement du film,
-		il offre ses compétences de développeur Web pour réaliser ce site économe en énergie, pour permettre
-		une cohérence globale entre le projets et sa mise en oeuvre.
-	</p>
-</section>
+	<svelte:fragment slot="content">
+		<SectionContentList>
+			<SectionContentListItem isExternalLink link="https://pulp-films.fr/">
+				<svelte:fragment slot="content">
+					<i>Une fois que tu sais</i> est <strong>produit par <i>Pulp Films</i></strong>, une jeune
+					société basée dans la Drôme et à Paris qui se veut au plus près des thématiques et des
+					questions contemporaines qui <strong>bousculent nos visions du monde</strong>.
+				</svelte:fragment>
+				<svelte:fragment slot="link">Découvrir <i>Pulp Films</i></svelte:fragment>
+			</SectionContentListItem>
+
+			<SectionContentListItem
+				isExternalLink
+				link="https://www.nourfilms.com/cinema-independant/une-fois-que-tu-sais/"
+			>
+				<svelte:fragment slot="content">
+					<i>Une fois que tu sais</i> est <strong>distribué par <i>Nour Films</i></strong>, société
+					fondée en 2008 par Patrick Sibourd. <i>Nour Films</i> distribue des longs-métrages de
+					toutes nationalités et <strong>soutient des films indépendants et engagés</strong>.
+				</svelte:fragment>
+				<svelte:fragment slot="link">Programmer le film</svelte:fragment>
+			</SectionContentListItem>
+
+			<SectionContentListItem isExternalLink link="https://www.onceyouknow-thefilm.com/">
+				<svelte:fragment slot="content">
+					Le film <i>Une fois que tu sais</i> propose un face à face
+					<strong>poétique et bouleversant</strong> avec le défi climatique. On y chemine aux côtés d'Emmanuel,
+					à la rencontre de lui-même et face à des experts du climat.
+				</svelte:fragment>
+				<svelte:fragment slot="link">Site officiel du film</svelte:fragment>
+			</SectionContentListItem>
+		</SectionContentList>
+	</svelte:fragment>
+</Section>
+
+<SectionBackground background={Backgrounds.Strokes}>
+	<Section>
+		<svelte:fragment slot="title">Les artisans derrière ce site</svelte:fragment>
+		<svelte:fragment slot="content">
+			<SectionContentTwoThirds>
+				<ul class="w-100">
+					<li>
+						<a href="https://tseignette.github.io/" rel="external" target="_blank"
+							>Thomas Seignette</a
+						> : développeur Web, amateur de low-tech
+					</li>
+					<li>
+						<a href="https://www.theotimenoel.com/" rel="external" target="_blank">Théotime Noël</a>
+						: illustrateur émérite, fondu de nature et très fort en jeu de mots
+					</li>
+					<li>
+						<a href="https://elypss.fr/" rel="external" target="_blank">Loïc Cimelière</a> : graphiste
+						de l'Arbre aux actions, détenteur d'un diplôme de patience
+					</li>
+					<li>Charlotte Ogier : rédactrice de textes, coordinatrice des logiques</li>
+					<li>Brianne Parquier : designeuse improvisée, relectrice pointilleuse</li>
+					<li>
+						Clarisse Barreau et Emmanuel Cappelin : relecteurs et consultants, coachs de qualité
+					</li>
+				</ul>
+				<a class="button primary" href={supportUsPage.path}>Soutenir le projet</a>
+			</SectionContentTwoThirds>
+		</svelte:fragment>
+	</Section>
+</SectionBackground>
+
+<SectionLowTech />
 
 <style lang="scss">
-	section {
-		&.section-origins {
-			div {
-				@include utilities.responsive-grid(1fr, 1fr 1fr, 1fr 2fr);
+	.image-wrapper {
+		align-self: stretch;
+		justify-self: stretch;
 
-				align-items: center;
-				margin-bottom: 1.5rem;
-
-				img {
-					height: 90%;
-					object-fit: contain;
-					width: 90%;
-				}
-			}
-
-			ol {
-				@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(3, 1fr));
-
-				list-style: none;
-				margin: 0;
-				padding: 0;
-			}
+		@include utilities.media-sm {
+			text-align: center;
 		}
 
-		&.section-film {
-			ul {
-				@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(3, 1fr));
+		img {
+			height: 100%;
+			object-fit: contain;
+			width: 100%;
 
-				list-style: none;
-				margin: 0;
-				padding: 0;
-
-				li {
-					display: flex;
-					flex-direction: column;
-
-					p {
-						flex: 1;
-					}
-				}
+			@include utilities.media-sm {
+				height: auto;
+				width: 50%;
 			}
 		}
+	}
 
-		&.section-creators {
-			ul {
-				a {
-					color: var(--font-color);
-				}
+	li.tool-item {
+		display: flex;
+		font-style: italic;
+
+		&:first-child::before {
+			content: '1';
+		}
+		&:nth-child(2)::before {
+			content: '2';
+		}
+		&:nth-child(3)::before {
+			content: '3';
+		}
+
+		&::before {
+			font-family: utilities.$font-family-secondary;
+			font-size: 8rem;
+			font-style: normal;
+			font-weight: bold;
+			line-height: 8rem;
+			margin-right: 1rem;
+			position: relative;
+			top: 0.4rem;
+		}
+
+		i {
+			font-style: normal;
+		}
+	}
+
+	.links-wrapper {
+		a {
+			margin: 0;
+			width: 80%;
+
+			@include utilities.media-md {
+				width: 100%;
+			}
+
+			&:first-child {
+				margin-bottom: 1rem;
 			}
 		}
+	}
+
+	ul {
+		margin: 0;
 	}
 </style>

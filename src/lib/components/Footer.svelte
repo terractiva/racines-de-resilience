@@ -8,6 +8,7 @@
 		homePage,
 		supportUsPage
 	} from '$lib/constants/pages';
+	import { gitHubLink } from '$lib/constants/settings';
 
 	const pages = [homePage, actionsPage, actionsTreePage, supportUsPage, communityPage, aboutPage];
 </script>
@@ -31,10 +32,8 @@
 				>.
 			</p>
 			<p>
-				Le code source est disponible sur <a
-					href="https://github.com/Terractiva/racines-de-resilience"
-					rel="external"
-					target="_blank">GitHub</a
+				Le code source est disponible sur <a href={gitHubLink} rel="external" target="_blank"
+					>GitHub</a
 				>. Toute contribution est bienvenue.
 			</p>
 		</div>

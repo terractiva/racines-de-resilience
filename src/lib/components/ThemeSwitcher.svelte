@@ -7,15 +7,21 @@
 </script>
 
 <button
-	class="button icon-only"
-	class:dark={$currentTheme$ === Themes.Light}
+	class="button clear icon-only"
 	disabled={$isThemeDisabled$}
 	type="button"
 	on:click={toggleTheme}>{$currentTheme$ === Themes.Dark ? '☀️' : '🌙'}</button
 >
 
 <style lang="scss">
-	button {
-		border-radius: 50%;
+	button.button {
+		border-radius: 0;
+		margin: 0;
+		min-width: utilities.$header-height;
+
+		@include utilities.media-sm-md {
+			height: 4.4rem;
+			width: 100%;
+		}
 	}
 </style>

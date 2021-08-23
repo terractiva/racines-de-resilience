@@ -32,9 +32,9 @@
 	}
 }
 
-@mixin responsive-grid($template-sm, $template-md, $template-lg) {
+@mixin responsive-grid($template-sm, $template-md, $template-lg, $gutter-size: 2) {
 	display: grid;
-	gap: var(--grid-gutter);
+	gap: calc(#{$gutter-size} * var(--grid-gutter));
 
 	@include media-sm {
 		grid-template-columns: $template-sm;

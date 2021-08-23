@@ -32,14 +32,12 @@ h4,
 h5,
 h6 {
 	font-weight: bold;
-	font-family: 'Caecilia LT Std', -apple-system, BlinkMacSystemFont, Avenir, 'Avenir Next',
-		'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-		'Helvetica Neue', sans-serif;
+	font-family: utilities.$font-family-secondary;
 }
 
 // Copié depuis https://kit.svelte.dev/
 #svelte-announcer {
-	/* purgecss ignore current */
+	/*! purgecss ignore current */
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
 	height: 1px;
@@ -49,14 +47,4 @@ h6 {
 	top: 0;
 	white-space: nowrap;
 	width: 1px;
-}
-
-.section {
-	padding-bottom: 5rem;
-	padding-top: 5rem;
-
-	h1,
-	h2 {
-		margin-top: 0;
-	}
 }

@@ -2,11 +2,17 @@
 	import Filters from '$lib/components/Filters.svelte';
 	import FiltersContext from '$lib/components/FiltersContext.svelte';
 	import FiltersResults from '$lib/components/FiltersResults.svelte';
+	import SectionIntroduction from '$lib/components/SectionIntroduction.svelte';
 	import PageMeta from '$lib/components/PageMeta.svelte';
+	import SectionBackground from '$lib/components/SectionBackground.svelte';
+	import Backgrounds from '$lib/constants/backgrounds';
 	import { actionsPage, actionsTreePage, communityPage } from '$lib/constants/pages';
-	import { contributeFormLink } from '$lib/constants/settings';
 	import { layoutContext } from '$lib/contexts';
 	import { getContext } from 'svelte';
+	import Section from '$lib/components/Section.svelte';
+	import SectionContentList from '$lib/components/SectionContentList.svelte';
+	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
+	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
 
 	const { setCurrentPage } = getContext(layoutContext);
 
@@ -15,46 +21,48 @@
 
 <PageMeta page={actionsPage} />
 
+<SectionBackground background={Backgrounds.Lines}>
+	<SectionIntroduction>
+		Passer à l'action ensemble,<br /> s'inspirer les un·e·s des autres
+	</SectionIntroduction>
+</SectionBackground>
+
+<Section>
+	<svelte:fragment slot="content">
+		<SectionContentList>
+			<li>
+				<img alt="" class="floating-image" src="/illustrations/arbre.png" />
+			</li>
+
+			<SectionContentListItem link={actionsTreePage.path} linkStyle="primary">
+				<svelte:fragment slot="title">L'illustration numérique</svelte:fragment>
+				<svelte:fragment slot="content">
+					Retrouve ou découvre la <strong>version interactive</strong> de l'affiche du grand arbre
+					aux actions. Plus de <strong>150 actions concrètes</strong> sur les thèmes de l'énergie,
+					du climat, de l'effondrement et de la résilience, organisées par thématique, comme les
+					racines d'un arbre des possibles.<br /> Chaque action est associée à au moins une
+					structure de référence (organisation, asso, collectif...) pour
+					<strong>nous aider à nous mettre en mouvement</strong>, collectivement.
+				</svelte:fragment>
+				<svelte:fragment slot="link">L'arbre aux actions</svelte:fragment>
+			</SectionContentListItem>
+
+			<SectionContentListItem isExternalLink link="TODO:" linkStyle="primary">
+				<svelte:fragment slot="title">Collaborons !</svelte:fragment>
+				<svelte:fragment slot="content">
+					La sélection des actions de l'arbre n'est <strong>pas exhaustive</strong> ! C'est une
+					porte d'entrée à explorer ensemble.<br /> Ce site est collaboratif, bienvenue à vos idées
+					pour <strong>compléter cette liste</strong> avec des actions et structures.<br /> C'est
+					important de rendre visible le magnifique
+					<strong>écosystème déjà bien vivant, évolutif</strong> au gré de nos élans d'actions.
+				</svelte:fragment>
+				<svelte:fragment slot="link">Faire grandir l'arbre</svelte:fragment>
+			</SectionContentListItem>
+		</SectionContentList>
+	</svelte:fragment>
+</Section>
+
 <section class="container">
-	<p class="mb-0">
-		<i>
-			Toutes les pistes pour passer à l'action ont été rassemblées dans un grand arbre des actions
-			publié sous forme d'affiche. Racines de résilience est sa version en ligne, que l'on peut
-			faire évoluer au gré de nos élans d'actions.<br />
-			Ce site ne souhaite pas réinventer mais rendre visible le magnifique écosystème déjà bien vivant.
-		</i>
-	</p>
-</section>
-
-<section class="section section-links container">
-	<img alt="" src="/illustrations/arbre.png" />
-
-	<div>
-		<p>
-			Alors qu'est-ce qu'on fait ? On retrouve dès maintenant ces centaines d'actions concrètes sur
-			les thèmes énergie/climat et effonrement/résilience, organisées selon différentes thématiques,
-			comme les racines d'un grand arbre. Chaque action est associée à au moins une structure de
-			référence (organisation, asso, collectif...) pour nous aider à entrer dans le vif du sujet.
-		</p>
-
-		<a class="button primary" href={actionsTreePage.path}>Voir l'arbre</a>
-	</div>
-
-	<div>
-		<p>
-			La sélection des actions de l'arbre n'est pas exhaustive ! C'est une porte d'entrée à explorer
-			ensemble. C'est pour ça qu'on a imaginé un site collaboratif! On est tous invités à compléter
-			cette liste avec des actions et strutures, toujours sur les thèmes énergie/climat et
-			effonrement/résilience.
-		</p>
-
-		<a class="button primary" href={contributeFormLink} rel="external" target="_blank"
-			>Faire grandir l'arbre</a
-		>
-	</div>
-</section>
-
-<section class="section section-filters container">
 	<FiltersContext let:results>
 		<aside>
 			<Filters />
@@ -66,63 +74,56 @@
 	</FiltersContext>
 </section>
 
-<section class="section bg-spots">
-	<div class="container text-center">
-		<p class="text-left">
-			Pas toujours facile de franchir le pas ? Où que l'on soit sur son chemin de transition, on
-			peut faire face à des questionnements, du désarroi, ou un sentiment d'impuissance qui freinent
-			la mise en action. Et c'est le cas de nombre d'entre nous !<br />
-			Retrouvons nous au sein de la communauté de soutien d'Une fois que tu sais, pour échanger autour
-			du film en ligne, accompagner des projections, faire connaissance avec un groupe local de sa région,
-			ou rejoindre des groupes de discussion selon les thèmes qui nous intéressent.
-		</p>
-
-		<a class="button primary" href={communityPage.path}>La communauté</a>
-	</div>
-</section>
+<SectionBackground background={Backgrounds.Marks}>
+	<Section>
+		<svelte:fragment slot="title">Soutenons-nous !</svelte:fragment>
+		<svelte:fragment slot="content">
+			<SectionContentTwoThirds>
+				<p class="text-justify w-100 mb-0">
+					Ce n'est pas parce que l'on sait ce qu'on voudrait faire qu'il est facile de le mettre en
+					oeuvre.<br /> La communauté de Racines de Résilience est aussi là pour ça !
+				</p>
+				<a class="button primary" href={communityPage.path}>La communauté</a>
+			</SectionContentTwoThirds>
+		</svelte:fragment>
+	</Section>
+</SectionBackground>
 
 <style lang="scss">
-	section {
-		&.section-links {
-			@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(3, 30%));
+	li {
+		@include utilities.media-sm-md {
+			text-align: center;
+		}
+		@include utilities.media-md {
+			grid-column: 1 / 3;
+		}
+		img {
+			height: 100%;
+			object-fit: cover;
 
-			justify-content: space-evenly;
-
-			img {
-				bottom: -10%;
-				height: 100%;
-				left: -10%;
-				object-fit: contain;
+			@include utilities.media-sm {
+				width: 50%;
+			}
+			@include utilities.media-md {
+				width: 40%;
+			}
+			@include utilities.media-lg {
+				bottom: -8%;
+				left: -8%;
 				position: relative;
 				width: 100%;
-
-				@include utilities.media-sm {
-					display: none;
-				}
-				@include utilities.media-md {
-					display: none;
-				}
-			}
-
-			div {
-				display: flex;
-				flex-direction: column;
-
-				p {
-					flex: 1;
-				}
 			}
 		}
+	}
+	section {
+		@include utilities.responsive-grid(1fr, 1fr, 1fr 2fr);
 
-		&.section-filters {
-			@include utilities.responsive-grid(1fr, 1fr, 1fr 2fr);
+		align-items: start;
+		padding-bottom: 8rem;
 
-			align-items: start;
-
-			aside {
-				background: var(--bg-secondary-color);
-				padding: 1rem 2rem;
-			}
+		aside {
+			background: var(--bg-secondary-color);
+			padding: 1rem 2rem;
 		}
 	}
 </style>
