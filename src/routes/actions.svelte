@@ -3,12 +3,21 @@
 	 * @type {import('@sveltejs/kit').Load}
 	 */
 	export async function load({ page }) {
+		/**
+		 * Permet :
+		 * 	- lors du pré-rendu : d'afficher des résultats (qui ne vont pas être en raccord avec les filtres)
+		 * 	- lors de l'affichage sur le client : de recharger les résultats (pour être raccord avec les filtres)
+		 * Avec du pré-rendu statique on ne peut pas faire autrement.
+		 */
+		const query = browser ? new URL(window.location).searchParams : page.query;
+
 		return {
 			props: {
+				_: page.query, // Svelte n'appelle pas `load` si il n'y a pas de référence à `query`
 				filterValues: {
-					category: getFilterValueFromUrl(page.query, 'categorie'),
-					level: getFilterValueFromUrl(page.query, 'niveau').map((level) => parseInt(level)),
-					subcategory: getFilterValueFromUrl(page.query, 'thematique')
+					category: getFilterValueFromQuery(query, 'categorie'),
+					level: getFilterValueFromQuery(query, 'niveau').map((level) => parseInt(level)),
+					subcategory: getFilterValueFromQuery(query, 'thematique')
 				}
 			}
 		};
@@ -29,7 +38,8 @@
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
 	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
-	import { getFilterValueFromUrl, getResults } from '$lib/utils/filters';
+	import { getFilterValueFromQuery, getResults } from '$lib/utils/filters';
+	import { browser } from '$app/env';
 
 	export let filterValues;
 

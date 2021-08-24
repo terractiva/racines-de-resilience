@@ -1,6 +1,6 @@
 import actions from '$lib/data/actions';
 
-function getFilterValueFromUrl(query, filterName) {
+function getFilterValueFromQuery(query, filterName) {
 	const filterValue = query.get(filterName);
 
 	return filterValue ? filterValue.split(',') : [];
@@ -32,4 +32,4 @@ function updateQueryWithFilterValue(query, filterName, filterValue) {
 	}
 }
 
-export { getFilterValueFromUrl, getResults, updateQueryWithFilterValue };
+export { getFilterValueFromQuery, getResults, updateQueryWithFilterValue };
