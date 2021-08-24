@@ -94,7 +94,7 @@
 				<svelte:fragment slot="link">Découvrir comment</svelte:fragment>
 			</SectionContentListItem>
 
-			<SectionContentListItem link={communityPage.path}>
+			<SectionContentListItem link="{communityPage.path}#{communityPage.anchors.assistFilm}">
 				<svelte:fragment slot="title">Des séances-évenements</svelte:fragment>
 				<svelte:fragment slot="content">
 					Vous souhaitez <strong>organiser</strong> des séances-évenements près de chez vous,
