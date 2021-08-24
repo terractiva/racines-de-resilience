@@ -72,12 +72,12 @@
 				isExternalLink
 				link="https://www.onepercentfortheplanet.fr/les-projets-2021/"
 			>
-				<svelte:fragment slot="title">1% for the Planet</svelte:fragment>
+				<svelte:fragment slot="title"><i>1% pour la planète</i></svelte:fragment>
 				<svelte:fragment slot="content">
-					Le réseau <i>1% for the Planet</i>, partenaire de notre campagne, vient de sélectionner 40
-					associations pour qui il <strong>doublera le montant des dons</strong> individuels reçus. Pour
-					découvrir ces initiatives dont plusieurs sont déjà à retrouver dans notre guide d'actions,
-					c'est par ici :
+					<i>1% pour la planète</i> est partenaire de notre projet. Le mouvement a sélectionné 40
+					associations environnementales qui appellent le grand public à un soutien financier et
+					pour lesquelles il <strong>doublera le montant des dons reçus</strong> (jusqu'à 2500€). Découvrez
+					ces initiatives dont plusieurs sont déjà dans notre guide d'actions !
 				</svelte:fragment>
 				<svelte:fragment slot="link">En savoir plus</svelte:fragment>
 			</SectionContentListItem>
