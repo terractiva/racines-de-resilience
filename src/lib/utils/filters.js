@@ -1,4 +1,3 @@
-import { goto } from '$app/navigation';
 import actions from '$lib/data/actions';
 
 function getFilterValueFromUrl(query, filterName) {
@@ -25,16 +24,12 @@ function getResults(filterValues) {
 	});
 }
 
-function setFilterValue(filterName, filterValue) {
-	const url = new URL(window.location);
-
+function updateQueryWithFilterValue(query, filterName, filterValue) {
 	if (filterValue.length) {
-		url.searchParams.set(filterName, filterValue.toString());
+		query.set(filterName, filterValue.toString());
 	} else {
-		url.searchParams.delete(filterName);
+		query.delete(filterName);
 	}
-
-	goto(url, { keepfocus: true, noscroll: true, replaceState: true });
 }
 
-export { getFilterValueFromUrl, getResults, setFilterValue };
+export { getFilterValueFromUrl, getResults, updateQueryWithFilterValue };

@@ -5,12 +5,13 @@
 	import SectionLowTech from '$lib/components/SectionLowTech.svelte';
 	import SectionSupporters from '$lib/components/SectionSupporters.svelte';
 	import Backgrounds from '$lib/constants/backgrounds';
-	import { actionsTreePage, communityPage, homePage, supportUsPage } from '$lib/constants/pages';
+	import { communityPage, homePage, supportUsPage } from '$lib/constants/pages';
 	import { layoutContext } from '$lib/contexts';
 	import { getContext } from 'svelte';
 	import Section from '$lib/components/Section.svelte';
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
+	import SectionFilters from '$lib/components/SectionFilters.svelte';
 
 	const { setCurrentPage } = getContext(layoutContext);
 
@@ -24,43 +25,7 @@
 </SectionIntroduction>
 
 <SectionBackground background={Backgrounds.Lines}>
-	<Section isCentered>
-		<svelte:fragment slot="title">Trouver ma prochaine action</svelte:fragment>
-
-		<svelte:fragment slot="content">
-			<div>
-				<details class="dropdown">
-					<summary class="button">Niveau</summary>
-
-					<div class="card">
-						<p>TODO:</p>
-					</div>
-				</details>
-
-				<details class="dropdown">
-					<summary class="button">Catégorie</summary>
-
-					<div class="card">
-						<p>TODO:</p>
-					</div>
-				</details>
-
-				<details class="dropdown">
-					<summary class="button">Thématique</summary>
-
-					<div class="card">
-						<p>TODO:</p>
-					</div>
-				</details>
-
-				<button disabled class="button icon-only dark">Chercher (bientôt disponible)</button>
-			</div>
-
-			<p class="filter-separator">ou</p>
-
-			<a class="button primary" href={actionsTreePage.path}>Explorer l'arbre aux actions</a>
-		</svelte:fragment>
-	</Section>
+	<SectionFilters />
 </SectionBackground>
 
 <Section>
@@ -113,27 +78,3 @@
 </SectionBackground>
 
 <SectionSupporters />
-
-<style lang="scss">
-	div {
-		margin: -0.25rem;
-
-		details,
-		button {
-			margin: 0.25rem;
-		}
-
-		details {
-			cursor: not-allowed;
-			opacity: 0.4;
-
-			summary {
-				pointer-events: none;
-			}
-		}
-	}
-
-	.filter-separator {
-		margin: 1.5rem 0;
-	}
-</style>

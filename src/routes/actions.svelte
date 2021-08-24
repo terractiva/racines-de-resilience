@@ -33,9 +33,9 @@
 
 	export let filterValues;
 
-	$: results = getResults(filterValues);
-
 	const { setCurrentPage } = getContext(layoutContext);
+
+	$: results = getResults(filterValues);
 
 	setCurrentPage(actionsPage);
 </script>

@@ -1,8 +1,7 @@
 <script>
-	import { setFilterValue } from '$lib/utils/filters';
 	import CheckboxGroup from './CheckboxGroup.svelte';
 
-	export let value;
+	export let value = [];
 </script>
 
 <CheckboxGroup
@@ -13,5 +12,5 @@
 		{ label: 'Grand', value: 3 }
 	]}
 	id="level"
-	on:updated={() => setFilterValue('niveau', value)}
+	on:updated
 />

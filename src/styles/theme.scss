@@ -35,6 +35,17 @@ h6 {
 	font-family: utilities.$font-family-secondary;
 }
 
+details.dropdown {
+	summary.button {
+		display: list-item;
+	}
+
+	.card {
+		margin-top: 0.5rem;
+		z-index: utilities.$z-index-dropdown-card;
+	}
+}
+
 // Copié depuis https://kit.svelte.dev/
 #svelte-announcer {
 	/*! purgecss ignore current */
