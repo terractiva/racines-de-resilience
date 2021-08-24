@@ -3,10 +3,11 @@
 	import TreeSubcategory from './TreeSubcategory.svelte';
 
 	export let backgroundHeight;
+	export let isDragging;
 
 	const subcategoriesArray = Object.values(subcategories);
 </script>
 
 {#each subcategoriesArray as subcategory}
-	<TreeSubcategory {backgroundHeight} {subcategory} />
+	<TreeSubcategory {backgroundHeight} {subcategory} isDisabled={isDragging} />
 {/each}

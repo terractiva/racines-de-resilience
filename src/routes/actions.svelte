@@ -83,7 +83,7 @@
 	</svelte:fragment>
 </Section>
 
-<section class="container">
+<section class="container" id={actionsPage.anchors.filters}>
 	<aside>
 		<Filters values={filterValues} />
 	</aside>
@@ -139,6 +139,11 @@
 
 		align-items: start;
 		padding-bottom: 8rem;
+		padding-top: utilities.$header-height;
+
+		@include utilities.media-sm {
+			padding-top: utilities.$header-height-sm;
+		}
 
 		aside {
 			background: var(--bg-secondary-color);

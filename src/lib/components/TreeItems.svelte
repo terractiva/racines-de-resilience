@@ -11,7 +11,7 @@
 </script>
 
 <ul>
-	<TreeSubcategories {backgroundHeight} />
+	<TreeSubcategories {backgroundHeight} {isDragging} />
 	<TreeActions {backgroundHeight} {isDragging} />
 </ul>
 

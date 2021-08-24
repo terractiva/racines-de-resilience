@@ -1,8 +1,12 @@
 <script>
+	import { actionsPage } from '$lib/constants/pages';
 	import { treeSubcategoryFontSize } from '$lib/constants/settings';
 
 	export let backgroundHeight;
+	export let isDisabled;
 	export let subcategory;
+
+	let isNextClickDisabled = false;
 </script>
 
 <li
@@ -10,11 +14,27 @@
 		.position[0]}%; top: {subcategory
 		.position[1]}%; width: {subcategory.width}%; height: {subcategory.height}%;"
 >
-	<p class="mb-0">
+	<a
+		href="{actionsPage.path}?thematique={subcategory.slug}#{actionsPage.anchors.filters}"
+		on:mousedown={(event) => {
+			event.preventDefault(); // Empêche le glisser-déposer de lien
+		}}
+		on:mouseup={() => {
+			if (isDisabled) {
+				isNextClickDisabled = true;
+			}
+		}}
+		on:click={(event) => {
+			if (isNextClickDisabled) {
+				event.preventDefault();
+				isNextClickDisabled = false;
+			}
+		}}
+	>
 		<b>
 			{subcategory.name}
 		</b>
-	</p>
+	</a>
 </li>
 
 <style lang="scss">
@@ -25,7 +45,8 @@
 		position: absolute;
 		text-align: center;
 
-		p {
+		a {
+			color: var(--font-color);
 			line-height: 1.1;
 		}
 	}

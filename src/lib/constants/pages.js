@@ -20,7 +20,10 @@ const actionsPage = {
 	description: '',
 	label: 'Actions',
 	path: '/actions',
-	title: 'Actions'
+	title: 'Actions',
+	anchors: {
+		filters: 'filtres'
+	}
 };
 
 const actionsTreePage = {
