@@ -1,6 +1,22 @@
+<script context="module">
+	/**
+	 * @type {import('@sveltejs/kit').Load}
+	 */
+	export async function load({ page }) {
+		return {
+			props: {
+				filterValues: {
+					category: getFilterValueFromUrl(page.query, 'categorie'),
+					level: getFilterValueFromUrl(page.query, 'niveau').map((level) => parseInt(level)),
+					subcategory: getFilterValueFromUrl(page.query, 'thematique')
+				}
+			}
+		};
+	}
+</script>
+
 <script>
 	import Filters from '$lib/components/Filters.svelte';
-	import FiltersContext from '$lib/components/FiltersContext.svelte';
 	import FiltersResults from '$lib/components/FiltersResults.svelte';
 	import SectionIntroduction from '$lib/components/SectionIntroduction.svelte';
 	import PageMeta from '$lib/components/PageMeta.svelte';
@@ -13,6 +29,11 @@
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
 	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
+	import { getFilterValueFromUrl, getResults } from '$lib/utils/filters';
+
+	export let filterValues;
+
+	$: results = getResults(filterValues);
 
 	const { setCurrentPage } = getContext(layoutContext);
 
@@ -63,15 +84,13 @@
 </Section>
 
 <section class="container">
-	<FiltersContext let:results>
-		<aside>
-			<Filters />
-		</aside>
+	<aside>
+		<Filters values={filterValues} />
+	</aside>
 
-		<div>
-			<FiltersResults {results} />
-		</div>
-	</FiltersContext>
+	<div>
+		<FiltersResults {results} />
+	</div>
 </section>
 
 <SectionBackground background={Backgrounds.Marks}>

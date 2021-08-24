@@ -12,35 +12,35 @@
 }
 
 /*! purgecss start ignore */
-.text-construct:not(.text-regenerate) {
+.text-construire:not(.text-regenerer) {
 	color: variables.$color-construct-strong;
 }
-.text-construct.text-regenerate {
+.text-construire.text-regenerer {
 	color: variables.$color-construct-regenerate-strong;
 }
-.text-regenerate:not(.text-construct):not(.text-intervene) {
+.text-regenerer:not(.text-construire):not(.text-interposer) {
 	color: variables.$color-regenerate-strong;
 }
-.text-regenerate.text-intervene {
+.text-regenerer.text-interposer {
 	color: variables.$color-regenerate-intervene-strong;
 }
-.text-intervene:not(.text-regenerate) {
+.text-interposer:not(.text-regenerer) {
 	color: variables.$color-intervene-strong;
 }
 
-.bd-construct:not(.bd-regenerate) {
+.bd-construire:not(.bd-regenerer) {
 	border: 1px solid variables.$color-construct;
 }
-.bd-construct.bd-regenerate {
+.bd-construire.bd-regenerer {
 	border: 1px solid variables.$color-construct-regenerate;
 }
-.bd-regenerate:not(.bd-construct):not(.bd-intervene) {
+.bd-regenerer:not(.bd-construire):not(.bd-interposer) {
 	border: 1px solid variables.$color-regenerate;
 }
-.bd-regenerate.bd-intervene {
+.bd-regenerer.bd-interposer {
 	border: 1px solid variables.$color-regenerate-intervene;
 }
-.bd-intervene:not(.bd-regenerate) {
+.bd-interposer:not(.bd-regenerer) {
 	border: 1px solid variables.$color-intervene;
 }
 /*! purgecss end ignore */

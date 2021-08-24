@@ -1,7 +1,7 @@
 const Categories = {
-	Construct: 'construct',
-	Intervene: 'intervene',
-	Regenerate: 'regenerate'
+	Construct: 'construire',
+	Intervene: 'interposer',
+	Regenerate: 'regenerer'
 };
 
 export default Categories;

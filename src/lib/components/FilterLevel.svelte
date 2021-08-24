@@ -1,19 +1,17 @@
 <script>
-	import { filtersContext } from '$lib/contexts';
-	import { getContext } from 'svelte';
+	import { setFilterValue } from '$lib/utils/filters';
 	import CheckboxGroup from './CheckboxGroup.svelte';
 
-	let group = [];
-	const { filterByLevel } = getContext(filtersContext);
+	export let value;
 </script>
 
 <CheckboxGroup
-	bind:group
+	bind:group={value}
 	checkboxes={[
 		{ label: 'Petit', value: 1 },
 		{ label: 'Moyen', value: 2 },
 		{ label: 'Grand', value: 3 }
 	]}
 	id="level"
-	on:updated={() => filterByLevel(group)}
+	on:updated={() => setFilterValue('niveau', value)}
 />

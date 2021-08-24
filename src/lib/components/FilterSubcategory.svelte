@@ -1,15 +1,18 @@
 <script>
-	import { filtersContext } from '$lib/contexts';
 	import subcategories from '$lib/data/subcategories';
-	import { getContext } from 'svelte';
+	import { setFilterValue } from '$lib/utils/filters';
 	import CheckboxGroup from './CheckboxGroup.svelte';
 
-	let group = [];
-	const { filterBySubcategory } = getContext(filtersContext);
+	export let value;
 	const checkboxes = Object.values(subcategories).map((subcategory) => ({
 		label: subcategory.name,
-		value: subcategory.name
+		value: subcategory.slug
 	}));
 </script>
 
-<CheckboxGroup bind:group {checkboxes} id="level" on:updated={() => filterBySubcategory(group)} />
+<CheckboxGroup
+	bind:group={value}
+	{checkboxes}
+	id="level"
+	on:updated={() => setFilterValue('thematique', value)}
+/>

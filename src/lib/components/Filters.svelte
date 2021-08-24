@@ -2,22 +2,24 @@
 	import FilterCategory from './FilterCategory.svelte';
 	import FilterLevel from './FilterLevel.svelte';
 	import FilterSubcategory from './FilterSubcategory.svelte';
+
+	export let values;
 </script>
 
 <aside>
 	<details open>
 		<summary><b>Niveau d'engagement</b></summary>
-		<FilterLevel />
+		<FilterLevel value={values.level} />
 	</details>
 
 	<details open>
 		<summary><b>Catégorie</b></summary>
-		<FilterCategory />
+		<FilterCategory value={values.category} />
 	</details>
 
 	<details open>
 		<summary><b>Thématique</b></summary>
-		<FilterSubcategory />
+		<FilterSubcategory value={values.subcategory} />
 	</details>
 </aside>
 
