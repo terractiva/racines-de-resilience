@@ -9,15 +9,27 @@
 		 * 	- lors de l'affichage sur le client : de recharger les résultats (pour être raccord avec les filtres)
 		 * Avec du pré-rendu statique on ne peut pas faire autrement.
 		 */
-		const query = browser ? new URL(window.location).searchParams : page.query;
+		if (browser) {
+			const query = new URL(window.location).searchParams;
+
+			return {
+				props: {
+					_: page.query, // Svelte n'appelle pas `load` si il n'y a pas de référence à `query`
+					filterValues: {
+						category: getFilterValueFromQuery(query, 'categorie'),
+						level: getFilterValueFromQuery(query, 'niveau').map((level) => parseInt(level)),
+						subcategory: getFilterValueFromQuery(query, 'thematique')
+					}
+				}
+			};
+		}
 
 		return {
 			props: {
-				_: page.query, // Svelte n'appelle pas `load` si il n'y a pas de référence à `query`
 				filterValues: {
-					category: getFilterValueFromQuery(query, 'categorie'),
-					level: getFilterValueFromQuery(query, 'niveau').map((level) => parseInt(level)),
-					subcategory: getFilterValueFromQuery(query, 'thematique')
+					category: [],
+					level: [],
+					subcategory: []
 				}
 			}
 		};
