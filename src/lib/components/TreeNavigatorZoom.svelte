@@ -30,10 +30,12 @@
 		box-shadow: utilities.$shadow;
 		position: fixed;
 		right: 1rem;
-		top: utilities.$header-height + 1rem;
 
 		@include utilities.media-sm {
-			top: utilities.$header-height-sm + 1rem;
+			bottom: 1rem;
+		}
+		@include utilities.media-md-lg {
+			top: utilities.$header-height + 1rem;
 		}
 
 		button {
