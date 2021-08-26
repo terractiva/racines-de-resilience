@@ -13,9 +13,16 @@
 	let cursor = 'grab';
 	let isDragging = false;
 	let isMouseDown = false;
-	let zoom = 1;
+	let transform = null;
+	let zoom = null;
 
-	$: transform = padding && null;
+	// Permet de réinitialiser lors d'un redimensionnement de fenêtre
+	$: {
+		if (padding) {
+			zoom = 1;
+			checkAndApplyMovement();
+		}
+	}
 
 	function checkAndApplyMovement() {
 		const vTransform = fabricCanvas.viewportTransform; // vTransform[4] = x, vTransform[5] = y
@@ -33,7 +40,7 @@
 			vTransform[5] = yMax;
 		}
 
-		transform = `translate(${vTransform[4]}px, ${vTransform[5]}px) scale(${zoom})`;
+		transform = `translate(${vTransform[4]}px, ${vTransform[5]}px) scale(${zoom / zoomMax})`;
 	}
 
 	function onMoveEnd() {
@@ -88,7 +95,8 @@
 <svelte:window on:mouseup={onMoveEnd} on:touchend={onMoveEnd} />
 
 <section
-	style="cursor: {cursor}; padding: {padding?.[1]}px {padding?.[0]}px; transform: {transform};"
+	style="cursor: {cursor}; height: {zoomMax * 100}%; padding: {zoomMax * padding?.[1]}px {zoomMax *
+		padding?.[0]}px; transform: {transform}; width: {zoomMax * 100}%;"
 	on:mousedown={(event) => onMoveStart(event.clientX, event.clientY)}
 	on:touchstart={(event) => {
 		if (event.touches.length === 1) {
@@ -123,12 +131,10 @@
 	section {
 		box-sizing: border-box;
 		cursor: grab;
-		height: 100%;
 		left: 0;
 		position: absolute;
 		top: 0;
 		touch-action: none; // Empêche le zoom par pincement sur mobile
 		transform-origin: top left;
-		width: 100%;
 	}
 </style>

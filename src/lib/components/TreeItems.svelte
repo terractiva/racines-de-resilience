@@ -1,4 +1,6 @@
 <script>
+	import { zoomMax } from '$lib/constants/settings';
+
 	import TreeActions from './TreeActions.svelte';
 
 	import TreeSubcategories from './TreeSubcategories.svelte';
@@ -7,7 +9,7 @@
 	export let height;
 	export let isDragging;
 
-	$: backgroundHeight = height - 2 * backgroundPadding[1];
+	$: backgroundHeight = zoomMax * (height - 2 * backgroundPadding[1]);
 </script>
 
 <ul>
