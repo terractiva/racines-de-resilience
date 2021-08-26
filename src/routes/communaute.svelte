@@ -32,7 +32,8 @@
 				<i>Une fois que tu sais</i> est un documentaire qui offre une
 				<strong>plongée dans les bouleversements du monde</strong>, et dans notre propre désarroi.
 				Fortement touchées par le message du film, son public s'est mobilisé, et des dizaines de
-				personnes se sont préparées pour proposer des temps d’échange inspirées du Travail Qui Relie
+				personnes se sont préparées pour proposer des temps d’échange inspirées du
+				<i>Travail Qui Relie</i>
 				dans les cinémas, faire connaitre le guide d’actions et le site
 				<i>Racines de résilience</i> ! Vous aussi vous pouvez rejoindre cette communauté.
 			</p>
@@ -58,8 +59,9 @@
 					réseaux (et au-delà!) pour ouvrir la parole sur ces sujets,
 				</li>
 				<li class="text-justify">
-					<strong>Organiser une projection</strong> avec l'animation que nous avons créée (inspirée du
-					Travail Qui Relie) dans un cinéma ou un lieu qui pourrait l'acceuillir,
+					<strong>Organiser une projection</strong> avec l'animation que nous avons créée (inspirée
+					du
+					<i>Travail Qui Relie</i>) dans un cinéma ou un lieu qui pourrait l'acceuillir,
 				</li>
 				<li class="text-justify">
 					<strong>Rejoindre la communauté</strong> pour échanger, se rencontrer, se soutenir.

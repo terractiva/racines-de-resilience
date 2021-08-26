@@ -70,12 +70,6 @@
 				background: var(--color-lightGrey);
 			}
 		}
-		&:not(.is-dark) li {
-			& > a,
-			& > img {
-				background: var(--bg-secondary-color);
-			}
-		}
 
 		li {
 			position: relative;

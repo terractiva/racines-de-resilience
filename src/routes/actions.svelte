@@ -110,7 +110,7 @@
 			<SectionContentTwoThirds>
 				<p class="text-justify w-100 mb-0">
 					Ce n'est pas parce que l'on sait ce qu'on voudrait faire qu'il est facile de le mettre en
-					oeuvre.<br /> La communauté de Racines de Résilience est aussi là pour ça !
+					oeuvre.<br /> La communauté de <i>Racines de Résilience</i> est aussi là pour ça !
 				</p>
 				<a class="button primary" href={communityPage.path}>La communauté</a>
 			</SectionContentTwoThirds>

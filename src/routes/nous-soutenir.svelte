@@ -36,8 +36,8 @@
 				<svelte:fragment slot="content">
 					Pour soutenir l'accompagnement du film, des artistes ont produit des <strong
 						>affiches collector <i>Une fois que tu sais</i></strong
-					>.<br /> Choisissez une affiche illustrée imprimée en risographie (technique d'impression mécanique
-					artisanale) et faites-vous un cadeau en soutenant Racines de résilience !
+					>.<br /> Choisissez une affiche illustrée imprimée en risographie (technique d'impression
+					mécanique artisanale) et faites-vous un cadeau en soutenant <i>Racines de résilience</i> !
 				</svelte:fragment>
 				<svelte:fragment slot="link">Acheter une affiche collector</svelte:fragment>
 			</SectionContentListItem>
