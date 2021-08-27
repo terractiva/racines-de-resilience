@@ -1,5 +1,6 @@
 <script>
 	import GlobalLibraryLoader from './GlobalLibraryLoader.svelte';
+	import TreeAuthors from './TreeAuthors.svelte';
 	import TreeItems from './TreeItems.svelte';
 	import TreeNavigator from './TreeNavigator.svelte';
 
@@ -95,6 +96,7 @@
 	<TreeNavigator {fabricCanvas} padding={backgroundPadding} let:isDragging>
 		<TreeItems {backgroundPadding} {height} {isDragging} />
 	</TreeNavigator>
+	<TreeAuthors />
 {/if}
 
 <style lang="scss">

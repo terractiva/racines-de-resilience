@@ -34,7 +34,8 @@ const actionsTreePage = {
 	path: '/arbre-actions',
 	title: 'Arbre aux actions',
 	children: {
-		authors: 'credits'
+		authors: 'credits',
+		help: 'aide'
 	}
 };
 

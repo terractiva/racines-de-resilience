@@ -20,7 +20,7 @@
 	<svelte:fragment slot="title">Trouver ma prochaine action</svelte:fragment>
 
 	<svelte:fragment slot="content">
-		<div class="dropdowns-container">
+		<div class="dropdowns-wrapper">
 			<details class="dropdown">
 				<summary class="button">Niveau</summary>
 
@@ -58,7 +58,7 @@
 </Section>
 
 <style lang="scss">
-	.dropdowns-container {
+	.dropdowns-wrapper {
 		@include utilities.responsive-grid(1fr, repeat(3, 1fr), repeat(4, max-content), 0.5);
 
 		justify-content: center;

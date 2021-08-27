@@ -1,12 +1,11 @@
 <script>
 	export let action;
-	export let hasShadow = false;
 
 	$: borderClasses = action.categories.map((category) => `bd-${category}`).join(' ');
 	$: textClasses = action.categories.map((category) => `text-${category}`).join(' ');
 </script>
 
-<article class={borderClasses} class:has-shadow={hasShadow}>
+<article class={borderClasses}>
 	<header>
 		<p class="action-level">
 			{#each { length: action.level } as _}∎{/each}
@@ -31,16 +30,11 @@
 
 <style lang="scss">
 	article {
-		background: var(--bg-color);
 		display: flex;
 		flex-direction: column;
 		height: 100%;
 		justify-content: space-between;
 		padding: 1rem 2rem;
-
-		&.has-shadow {
-			box-shadow: utilities.$shadow;
-		}
 
 		p {
 			margin-bottom: 0;

@@ -9,9 +9,9 @@
 	$: action = actions.find((action) => action.slug === slug);
 </script>
 
-<Modal {backLink} isOpen={!!slug}>
+<Modal {backLink} hasPadding={false} isOpen={!!slug}>
 	{#if action}
-		<Action hasShadow {action} />
+		<Action {action} />
 	{:else}
 		<p>Oups, cette action est introuvable...</p>
 	{/if}

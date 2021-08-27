@@ -1,8 +1,6 @@
 <script>
 	import { zoomMax } from '$lib/constants/settings';
-
 	import TreeActions from './TreeActions.svelte';
-
 	import TreeSubcategories from './TreeSubcategories.svelte';
 
 	export let backgroundPadding;

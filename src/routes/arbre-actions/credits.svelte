@@ -4,7 +4,7 @@
 </script>
 
 <Modal backLink={actionsTreePage.path} isOpen={true}>
-	<ul class="card">
+	<ul>
 		<li>
 			<strong>Illustration</strong>
 			<a href="https://www.theotimenoel.com/" rel="external" target="_blank">Théotime Noël</a>
@@ -24,5 +24,6 @@
 	ul {
 		list-style: none;
 		margin: 0;
+		padding: 0;
 	}
 </style>

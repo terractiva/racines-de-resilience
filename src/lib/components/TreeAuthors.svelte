@@ -14,10 +14,16 @@
 		bottom: 1rem;
 		color: var(--font-color);
 		line-height: $height;
-		left: 1rem;
 		margin: 0;
 		padding-right: 1rem;
 		position: fixed;
+
+		@include utilities.media-sm {
+			left: 1rem;
+		}
+		@include utilities.media-md-lg {
+			right: 1rem;
+		}
 
 		span {
 			font-size: 2.2rem;
