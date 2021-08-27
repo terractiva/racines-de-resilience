@@ -98,24 +98,19 @@
 	style="cursor: {cursor}; height: {zoomMax * 100}%; padding: {zoomMax * padding?.[1]}px {zoomMax *
 		padding?.[0]}px; transform: {transform}; width: {zoomMax * 100}%;"
 	on:mousedown={(event) => onMoveStart(event.clientX, event.clientY)}
-	on:touchstart={(event) => {
+	on:touchstart|passive={(event) => {
 		if (event.touches.length === 1) {
 			onMoveStart(event.touches[0].clientX, event.touches[0].clientY);
 		}
 	}}
 	on:mousemove={(event) => onMoveInProgress(event.clientX, event.clientY)}
-	on:touchmove={(event) => {
+	on:touchmove|nonpassive|preventDefault|stopPropagation={(event) => {
 		if (event.touches.length === 1) {
 			onMoveInProgress(event.touches[0].clientX, event.touches[0].clientY);
-			event.preventDefault();
-			event.stopPropagation();
 		}
 	}}
-	on:wheel={(event) => {
-		onScroll(event.deltaY, event.pageX, event.pageY);
-		event.preventDefault();
-		event.stopPropagation();
-	}}
+	on:wheel|nonpassive|preventDefault|stopPropagation={(event) =>
+		onScroll(event.deltaY, event.pageX, event.pageY)}
 >
 	<slot {isDragging} />
 </section>
