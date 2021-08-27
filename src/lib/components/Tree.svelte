@@ -1,6 +1,5 @@
 <script>
-	import { fabric } from 'fabric';
-	import { onMount } from 'svelte';
+	import GlobalLibraryLoader from './GlobalLibraryLoader.svelte';
 	import TreeItems from './TreeItems.svelte';
 	import TreeNavigator from './TreeNavigator.svelte';
 
@@ -10,21 +9,22 @@
 	/** @type import('@types/fabric').fabric.StaticCanvas */
 	let fabricCanvas;
 	let isBackgroundError = false;
-	let isBackgroundLoading = true;
+	let isBackgroundLoading = false;
+	let isFabricError = false;
+	let isFabricLoading = true;
 	/** @type HTMLCanvasElement */
 	let nativeCanvas;
 	/** @type [x: number, y: number] */
 	let backgroundPadding; // Espace à rajouter de chaque côté de l'arrière-plan pour qu'il prenne toute la place disponible
 
-	$: showTree = !isBackgroundError && !isBackgroundLoading;
-	$: resizeCanvas(width, height);
-
-	onMount(() => {
-		initCanvas();
-	});
+	$: isError = isBackgroundError || isFabricError;
+	$: isLoading = isBackgroundLoading || isFabricLoading;
+	$: showTree = !isError && !isLoading;
+	$: fabricCanvas && resizeCanvas(width, height);
 
 	function initCanvas() {
-		fabricCanvas = new fabric.StaticCanvas(nativeCanvas, { selection: false });
+		isBackgroundLoading = true;
+		fabricCanvas = new window.fabric.StaticCanvas(nativeCanvas, { selection: false });
 		fabricCanvas.setBackgroundColor('#ffffff');
 		fabricCanvas.setBackgroundImage('/arbre.jpg', (_, isError) => {
 			isBackgroundLoading = false;
@@ -43,8 +43,6 @@
 	}
 
 	function resizeCanvas() {
-		if (!fabricCanvas) return;
-
 		resetCanvasPosition();
 		fabricCanvas.setDimensions({ height, width });
 		resizeCanvasBackground(width, height);
@@ -71,12 +69,25 @@
 	}
 </script>
 
+<GlobalLibraryLoader
+	globalObjectName="fabric"
+	src="/fabric.min.js"
+	on:failed={() => {
+		isFabricLoading = false;
+		isFabricError = true;
+	}}
+	on:loaded={() => {
+		isFabricLoading = false;
+		initCanvas();
+	}}
+/>
+
 <canvas bind:this={nativeCanvas} style="opacity: {showTree ? 1 : 0};" />
 
-{#if isBackgroundError}
+{#if isError}
 	<p class="text-error">Oups, il y a eu une erreur...</p>
 {/if}
-{#if isBackgroundLoading}
+{#if isLoading}
 	<p>Chargement de l'arbre...</p>
 {/if}
 
