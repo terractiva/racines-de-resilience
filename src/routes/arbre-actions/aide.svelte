@@ -8,7 +8,8 @@
 		<a class="button primary" href="{actionsPage.path}#{actionsPage.anchors.filters}"
 			>Découvrir plus d'actions</a
 		>
-		<a class="button primary" href="TODO:">Faire grandir l'arbre</a>
+		<!-- TODO: -->
+		<button disabled class="button primary" type="button">Faire grandir l'arbre (à venir)</button>
 	</div>
 
 	<p><b>Par où commencer ?</b></p>

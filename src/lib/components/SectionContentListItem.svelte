@@ -1,6 +1,7 @@
 <script>
 	export let hasReducedWidth = false;
 	export let isExternalLink = false;
+	export let isLinkDisabled = false;
 	export let link;
 	export let linkStyle = '';
 
@@ -12,7 +13,12 @@
 		<h3><slot name="title" /></h3>
 	{/if}
 	<p><slot name="content" /></p>
-	<a {...linkProps} class="button {linkStyle}" href={link}><slot name="link" /></a>
+	{#if isLinkDisabled}
+		<button disabled class="button {linkStyle}" type="button"><slot name="link" /> (à venir)</button
+		>
+	{:else}
+		<a {...linkProps} class="button {linkStyle}" href={link}><slot name="link" /></a>
+	{/if}
 </li>
 
 <style lang="scss">
@@ -40,7 +46,8 @@
 			}
 		}
 
-		a {
+		a,
+		button {
 			margin-top: auto;
 		}
 	}

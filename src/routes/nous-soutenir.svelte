@@ -32,7 +32,12 @@
 	<svelte:fragment slot="content">
 		<h3 class="text-center">(se) Faire plaisir avec du beau</h3>
 		<SectionContentList nbItemsByLine={2}>
-			<SectionContentListItem hasReducedWidth isExternalLink link="TODO:" linkStyle="primary">
+			<SectionContentListItem
+				hasReducedWidth
+				isExternalLink
+				link="https://framaforms.org/formulaire-de-pre-commande-affiche-et-bande-originale-une-fois-que-tu-sais-1630080026"
+				linkStyle="primary"
+			>
 				<svelte:fragment slot="content">
 					Pour soutenir l'accompagnement du film, des artistes ont produit des <strong
 						>affiches collector <i>Une fois que tu sais</i></strong
@@ -42,7 +47,12 @@
 				<svelte:fragment slot="link">Acheter une affiche collector</svelte:fragment>
 			</SectionContentListItem>
 
-			<SectionContentListItem hasReducedWidth isExternalLink link="TODO:" linkStyle="primary">
+			<SectionContentListItem
+				hasReducedWidth
+				isExternalLink
+				link="https://framaforms.org/formulaire-de-pre-commande-affiche-et-bande-originale-une-fois-que-tu-sais-1630080026"
+				linkStyle="primary"
+			>
 				<svelte:fragment slot="content">
 					Maxime Steiner, le compositeur de la musique du film <strong
 						><i>Une fois que tu sais</i> a lui aussi choisi de soutenir <i>Racines de résilience</i>
@@ -73,7 +83,13 @@
 				<svelte:fragment slot="link">Contribuer au financement participatif</svelte:fragment>
 			</SectionContentListItem>
 
-			<SectionContentListItem hasReducedWidth isExternalLink link="TODO:" linkStyle="primary">
+			<SectionContentListItem
+				hasReducedWidth
+				isExternalLink
+				isLinkDisabled
+				link="TODO:"
+				linkStyle="primary"
+			>
 				<svelte:fragment slot="content">
 					Si vous souhaitez <strong>devenir mécène du projet</strong>, par un don conséquent ou en
 					proposant vos compétences pour faire vivre le projet, nous serions très heureux·se·s

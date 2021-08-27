@@ -90,7 +90,7 @@
 				<svelte:fragment slot="link">L'arbre aux actions</svelte:fragment>
 			</SectionContentListItem>
 
-			<SectionContentListItem isExternalLink link="TODO:" linkStyle="primary">
+			<SectionContentListItem isExternalLink isLinkDisabled link="TODO:" linkStyle="primary">
 				<svelte:fragment slot="title">Collaborons !</svelte:fragment>
 				<svelte:fragment slot="content">
 					La sélection des actions de l'arbre n'est <strong>pas exhaustive</strong> ! C'est une
