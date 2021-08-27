@@ -27,7 +27,6 @@
 	div {
 		@include utilities.pill(true);
 
-		box-shadow: utilities.$shadow;
 		position: fixed;
 		right: 1rem;
 

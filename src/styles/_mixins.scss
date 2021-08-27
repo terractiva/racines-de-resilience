@@ -50,6 +50,7 @@
 @mixin pill($is-vertical: false) {
 	background: var(--bg-color);
 	border-radius: 9999px;
+	box-shadow: variables.$shadow;
 	display: flex;
 	padding: 0.5rem;
 

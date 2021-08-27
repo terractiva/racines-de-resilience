@@ -1,14 +1,18 @@
-<p><span>©</span> Crédits</p>
+<script>
+	import { actionsTreePage } from '$lib/constants/pages';
+</script>
+
+<a href="{actionsTreePage.path}/{actionsTreePage.children.authors}"><span>©</span> Crédits</a>
 
 <style lang="scss">
 	$height: 2rem;
 
-	p {
+	a {
 		@include utilities.pill();
 
 		align-items: center;
 		bottom: 1rem;
-		box-shadow: utilities.$shadow;
+		color: var(--font-color);
 		line-height: $height;
 		left: 1rem;
 		margin: 0;

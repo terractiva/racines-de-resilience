@@ -35,6 +35,11 @@ h6 {
 	font-family: utilities.$font-family-secondary;
 }
 
+.card {
+	box-shadow: utilities.$shadow;
+	border-radius: 0;
+}
+
 details.dropdown {
 	summary.button {
 		display: list-item;

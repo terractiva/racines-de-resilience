@@ -32,7 +32,10 @@ const actionsTreePage = {
 	isFullscreen: true,
 	label: 'Arbre aux actions',
 	path: '/arbre-actions',
-	title: 'Arbre aux actions'
+	title: 'Arbre aux actions',
+	children: {
+		authors: 'credits'
+	}
 };
 
 const communityPage = {

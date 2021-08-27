@@ -11,7 +11,7 @@
 
 <Modal {backLink} isOpen={!!slug}>
 	{#if action}
-		<Action {action} />
+		<Action hasShadow {action} />
 	{:else}
 		<p>Oups, cette action est introuvable...</p>
 	{/if}
