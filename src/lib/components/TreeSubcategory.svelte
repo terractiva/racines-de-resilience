@@ -16,6 +16,7 @@
 >
 	<a
 		href="{actionsPage.path}?thematique={subcategory.slug}#{actionsPage.anchors.filters}"
+		target="_blank"
 		on:mousedown={(event) => {
 			event.preventDefault(); // Empêche le glisser-déposer de lien
 		}}
