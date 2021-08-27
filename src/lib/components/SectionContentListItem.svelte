@@ -12,7 +12,12 @@
 	{#if $$slots.title}
 		<h3><slot name="title" /></h3>
 	{/if}
-	<p><slot name="content" /></p>
+	{#if $$slots.text}
+		<p><slot name="text" /></p>
+	{/if}
+	{#if $$slots.content}
+		<div><slot name="content" /></div>
+	{/if}
 	{#if isLinkDisabled}
 		<button disabled class="button {linkStyle}" type="button"><slot name="link" /> (à venir)</button
 		>
@@ -29,7 +34,10 @@
 
 		&.has-reduced-width {
 			margin: 0 auto;
-			width: 75%;
+
+			@include utilities.media-lg {
+				width: 75%;
+			}
 		}
 
 		h3 {
@@ -37,13 +45,17 @@
 			text-align: center;
 		}
 
-		p {
+		p,
+		div {
 			margin-bottom: 3rem;
-			text-align: justify;
 
 			@include utilities.media-sm {
 				margin-bottom: 2rem;
 			}
+		}
+
+		p {
+			text-align: justify;
 		}
 
 		a,

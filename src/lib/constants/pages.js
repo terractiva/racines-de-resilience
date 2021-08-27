@@ -13,7 +13,10 @@ const aboutPage = {
 	description: '',
 	label: 'À propos',
 	path: '/a-propos',
-	title: 'À propos'
+	title: 'À propos',
+	anchors: {
+		explanation: 'explication'
+	}
 };
 
 const actionsPage = {

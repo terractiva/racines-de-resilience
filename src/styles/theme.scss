@@ -48,6 +48,11 @@ details.dropdown {
 	.card {
 		margin-top: 0.5rem;
 		z-index: utilities.$z-index-dropdown-card;
+
+		&.right {
+			left: initial;
+			right: 0;
+		}
 	}
 }
 

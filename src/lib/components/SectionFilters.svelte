@@ -5,6 +5,8 @@
 	import FilterLevel from './FilterLevel.svelte';
 	import FilterSubcategory from './FilterSubcategory.svelte';
 	import Section from './Section.svelte';
+	import SectionContentList from './SectionContentList.svelte';
+	import SectionContentListItem from './SectionContentListItem.svelte';
 
 	let actionsQueryString = '';
 	const actionsQuery = new URLSearchParams();
@@ -17,76 +19,72 @@
 </script>
 
 <Section isCentered>
-	<svelte:fragment slot="title">Trouver ma prochaine action</svelte:fragment>
-
+	<svelte:fragment slot="title">Deux façons de trouver nos prochaines actions</svelte:fragment>
 	<svelte:fragment slot="content">
-		<div class="dropdowns-wrapper">
-			<details class="dropdown">
-				<summary class="button">Niveau</summary>
+		<SectionContentList nbItemsByLine={2}>
+			<SectionContentListItem link={actionsTreePage.path} linkStyle="primary">
+				<svelte:fragment slot="title">Découvrir l'arbre interactif</svelte:fragment>
+				<svelte:fragment slot="link">Explorer l'arbre aux actions</svelte:fragment>
+			</SectionContentListItem>
 
-				<div class="card">
-					<FilterLevel on:updated={(event) => updateUrl('niveau', event.detail)} />
-				</div>
-			</details>
-
-			<details class="dropdown">
-				<summary class="button">Catégorie</summary>
-
-				<div class="card">
-					<FilterCategory on:updated={(event) => updateUrl('categorie', event.detail)} />
-				</div>
-			</details>
-
-			<details class="dropdown">
-				<summary class="button">Thématique</summary>
-
-				<div class="card">
-					<FilterSubcategory on:updated={(event) => updateUrl('thematique', event.detail)} />
-				</div>
-			</details>
-
-			<a
-				class="button icon-only dark"
-				href="{actionsPage.path}?{actionsQueryString}#{actionsPage.anchors.filters}">Chercher</a
+			<SectionContentListItem
+				link="{actionsPage.path}?{actionsQueryString}#{actionsPage.anchors.filters}"
+				linkStyle="primary"
 			>
-		</div>
+				<svelte:fragment slot="title">Rechercher selon mes critères</svelte:fragment>
+				<svelte:fragment slot="content">
+					<div class="dropdowns-wrapper">
+						<details class="dropdown">
+							<summary class="button">Niveau</summary>
 
-		<p>ou</p>
+							<div class="card right">
+								<FilterLevel on:updated={(event) => updateUrl('niveau', event.detail)} />
+							</div>
+						</details>
 
-		<a class="button primary" href={actionsTreePage.path}>Explorer l'arbre aux actions</a>
+						<details class="dropdown">
+							<summary class="button">Catégorie</summary>
+
+							<div class="card right">
+								<FilterCategory on:updated={(event) => updateUrl('categorie', event.detail)} />
+							</div>
+						</details>
+
+						<details class="dropdown">
+							<summary class="button">Thématique</summary>
+
+							<div class="card right">
+								<FilterSubcategory on:updated={(event) => updateUrl('thematique', event.detail)} />
+							</div>
+						</details>
+					</div>
+				</svelte:fragment>
+				<svelte:fragment slot="link">Go !</svelte:fragment>
+			</SectionContentListItem>
+		</SectionContentList>
 	</svelte:fragment>
 </Section>
 
 <style lang="scss">
 	.dropdowns-wrapper {
-		@include utilities.responsive-grid(1fr, repeat(3, 1fr), repeat(4, max-content), 0.5);
+		@include utilities.responsive-grid(1fr, auto, repeat(3, max-content), 0.5);
 
 		justify-content: center;
 
-		details {
-			summary {
-				box-sizing: border-box;
-				width: 100%;
-			}
+		@include utilities.media-sm {
+			details {
+				position: initial;
 
-			.card {
-				@include utilities.media-sm-md {
+				.card {
 					box-sizing: border-box;
+					left: 50%;
+					max-width: calc(100% - var(--grid-gutter));
 					text-align: left;
+					transform: translateX(-50%);
 					white-space: initial;
-					width: 100%;
+					width: fit-content;
 				}
 			}
 		}
-
-		a {
-			@include utilities.media-md {
-				grid-column: 1 / 4;
-			}
-		}
-	}
-
-	p {
-		margin: 1.5rem 0;
 	}
 </style>

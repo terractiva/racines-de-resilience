@@ -32,9 +32,9 @@
 		position: relative;
 
 		/* Ne pas oublier de mettre à jour l'option `safelist` de `purgecss` dans `svelte.config.js` */
-		@include background-variant('lines', 'lignes.png', 0.15, 0.4);
-		@include background-variant('marks', 'marques.png', 0.15, 0.6);
-		@include background-variant('strokes', 'traits.png', 0.1, 0.5);
+		@include background-variant('lines', 'lignes.png', 0.3, 0.6);
+		@include background-variant('marks', 'marques.png', 0.2, 0.9);
+		@include background-variant('strokes', 'traits.png', 0.15, 0.7);
 
 		&::before {
 			background-repeat: repeat;

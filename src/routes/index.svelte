@@ -21,7 +21,7 @@
 <PageMeta page={homePage} />
 
 <SectionIntroduction>
-	Energie, Climat, Effondrement, Résilience...<br /> On fait quoi maintenant ?
+	Energie, climat, effondrement, résilience...<br /> On fait quoi maintenant ?
 </SectionIntroduction>
 
 <SectionBackground background={Backgrounds.Lines}>
@@ -37,31 +37,31 @@
 				isExternalLink
 				link="https://www.onepercentfortheplanet.fr/les-projets-2021/"
 			>
-				<svelte:fragment slot="title"><i>1% pour la planète</i></svelte:fragment>
-				<svelte:fragment slot="content">
-					<i>1% pour la planète</i> est partenaire de notre projet. Le mouvement a sélectionné 40
-					associations environnementales qui appellent le grand public à un soutien financier et
-					pour lesquelles il <strong>doublera le montant des dons reçus</strong> (jusqu'à 2500€). Découvrez
-					ces initiatives dont plusieurs sont déjà dans notre guide d'actions !
+				<svelte:fragment slot="title"><i>1% Pour la Planète</i></svelte:fragment>
+				<svelte:fragment slot="text">
+					<strong>Notre partenaire</strong> <i>1% Pour la Planète</i> a sélectionné 40 associations
+					environnementales qui appellent le grand public à un soutien financier et pour lesquelles
+					<strong>il doublera le montant des dons reçus</strong> (jusqu'à 2500€). Découvrez ces initiatives
+					dont plusieurs sont déjà dans notre guide d'actions !
 				</svelte:fragment>
 				<svelte:fragment slot="link">En savoir plus</svelte:fragment>
 			</SectionContentListItem>
 
 			<SectionContentListItem link={supportUsPage.path}>
 				<svelte:fragment slot="title">Se soutenir</svelte:fragment>
-				<svelte:fragment slot="content">
+				<svelte:fragment slot="text">
 					Ce projet est majoritairement bénévole.<br /> Si vous souhaitez
 					<strong>nous aider</strong>
 					dans cette démarche de convergence, pour que
 					<strong>tout le monde puisse passer à l'action</strong> vers une société qui se régénère, vous
-					pouvez nous soutenir !
+					pouvez nous soutenir, notamment avec l'achat d'oeuvres auditives et visuelles !
 				</svelte:fragment>
 				<svelte:fragment slot="link">Découvrir comment</svelte:fragment>
 			</SectionContentListItem>
 
 			<SectionContentListItem link="{communityPage.path}#{communityPage.anchors.assistFilm}">
 				<svelte:fragment slot="title">Des séances-évenements</svelte:fragment>
-				<svelte:fragment slot="content">
+				<svelte:fragment slot="text">
 					Vous souhaitez <strong>organiser</strong> des séances-évenements près de chez vous,
 					<strong>faire connaitre les enjeux climatiques</strong>
 					et d'effondrements au plus grand nombre, être accompagné·e·s ou

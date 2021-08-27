@@ -43,7 +43,7 @@
 	import PageMeta from '$lib/components/PageMeta.svelte';
 	import SectionBackground from '$lib/components/SectionBackground.svelte';
 	import Backgrounds from '$lib/constants/backgrounds';
-	import { actionsPage, actionsTreePage, communityPage } from '$lib/constants/pages';
+	import { aboutPage, actionsPage, actionsTreePage, communityPage } from '$lib/constants/pages';
 	import { layoutContext } from '$lib/contexts';
 	import { getContext } from 'svelte';
 	import Section from '$lib/components/Section.svelte';
@@ -66,7 +66,7 @@
 
 <SectionBackground background={Backgrounds.Lines}>
 	<SectionIntroduction>
-		Passer à l'action ensemble,<br /> s'inspirer les un·e·s des autres
+		S'inspirer de l'écosystème des possibles<br /> pour passer à l'action, ensemble
 	</SectionIntroduction>
 </SectionBackground>
 
@@ -78,21 +78,22 @@
 			</li>
 
 			<SectionContentListItem link={actionsTreePage.path} linkStyle="primary">
-				<svelte:fragment slot="title">L'illustration numérique</svelte:fragment>
-				<svelte:fragment slot="content">
-					Retrouve ou découvre la <strong>version interactive</strong> de l'affiche du grand arbre
-					aux actions. Plus de <strong>150 actions concrètes</strong> sur les thèmes de l'énergie,
-					du climat, de l'effondrement et de la résilience, organisées par thématique, comme les
-					racines d'un arbre des possibles.<br /> Chaque action est associée à au moins une
-					structure de référence (organisation, asso, collectif...) pour
+				<svelte:fragment slot="title">L'arbre interactif</svelte:fragment>
+				<svelte:fragment slot="text">
+					Retrouve ou découvre la <strong>version interactive</strong> de l'affiche du
+					<a href="{aboutPage.path}#{aboutPage.anchors.explanation}">guide papier</a>. Plus de
+					<strong>150 actions concrètes</strong>
+					sur les thèmes de l'énergie, du climat, de l'effondrement et de la résilience, organisées par
+					thématique, comme les racines d'un arbre des possibles.<br /> Chaque action est associée à
+					au moins une structure de référence (organisation, asso, collectif...) pour
 					<strong>nous aider à nous mettre en mouvement</strong>, collectivement.
 				</svelte:fragment>
-				<svelte:fragment slot="link">L'arbre aux actions</svelte:fragment>
+				<svelte:fragment slot="link">Explorer l'arbre</svelte:fragment>
 			</SectionContentListItem>
 
 			<SectionContentListItem isExternalLink isLinkDisabled link="TODO:" linkStyle="primary">
-				<svelte:fragment slot="title">Collaborons !</svelte:fragment>
-				<svelte:fragment slot="content">
+				<svelte:fragment slot="title">Un site collaboratif</svelte:fragment>
+				<svelte:fragment slot="text">
 					La sélection des actions de l'arbre n'est <strong>pas exhaustive</strong> ! C'est une
 					porte d'entrée à explorer ensemble.<br /> Ce site est collaboratif, bienvenue à vos idées
 					pour <strong>compléter cette liste</strong> avec des actions et structures.<br /> C'est

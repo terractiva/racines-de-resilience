@@ -25,7 +25,7 @@
 	</SectionIntroduction>
 </SectionBackground>
 
-<Section>
+<Section id={aboutPage.anchors.explanation}>
 	<svelte:fragment slot="title"><i>Racines de résilience</i>, c'est quoi ?</svelte:fragment>
 	<svelte:fragment slot="content">
 		<p class="text-justify">
@@ -102,13 +102,13 @@
 
 <Section>
 	<svelte:fragment slot="title"
-		>A propos d'<i>Une fois que tu sais</i>, le film-documentaire</svelte:fragment
+		>A propos d'<i>Une fois que tu sais</i>, le film documentaire</svelte:fragment
 	>
 
 	<svelte:fragment slot="content">
 		<SectionContentList>
 			<SectionContentListItem isExternalLink link="https://pulp-films.fr/">
-				<svelte:fragment slot="content">
+				<svelte:fragment slot="text">
 					<i>Une fois que tu sais</i> est <strong>produit par <i>Pulp Films</i></strong>, une jeune
 					société basée dans la Drôme et à Paris qui se veut au plus près des thématiques et des
 					questions contemporaines qui <strong>bousculent nos visions du monde</strong>.
@@ -120,7 +120,7 @@
 				isExternalLink
 				link="https://www.nourfilms.com/cinema-independant/une-fois-que-tu-sais/"
 			>
-				<svelte:fragment slot="content">
+				<svelte:fragment slot="text">
 					<i>Une fois que tu sais</i> est <strong>distribué par <i>Nour Films</i></strong>, société
 					fondée en 2008 par Patrick Sibourd. <i>Nour Films</i> distribue des longs-métrages de
 					toutes nationalités et <strong>soutient des films indépendants et engagés</strong>.
@@ -129,7 +129,7 @@
 			</SectionContentListItem>
 
 			<SectionContentListItem isExternalLink link="https://www.onceyouknow-thefilm.com/">
-				<svelte:fragment slot="content">
+				<svelte:fragment slot="text">
 					Le film <i>Une fois que tu sais</i> propose un face à face
 					<strong>poétique et bouleversant</strong> avec le défi climatique. On y chemine aux côtés d'Emmanuel,
 					à la rencontre de lui-même et face à des experts du climat.
@@ -162,7 +162,7 @@
 					<li>Charlotte Ogier : rédactrice de textes, coordinatrice des logiques</li>
 					<li>Brianne Parquier : designeuse improvisée, relectrice pointilleuse</li>
 					<li>
-						Clarisse Barreau et Emmanuel Cappelin : relecteurs et consultants, coachs de qualité
+						Clarisse Barreau et Emmanuel Cappellin : relecteurs et consultants, coachs de qualité
 					</li>
 				</ul>
 				<a class="button primary" href={supportUsPage.path}>Soutenir le projet</a>

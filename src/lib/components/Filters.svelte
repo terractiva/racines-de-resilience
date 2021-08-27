@@ -16,7 +16,7 @@
 </script>
 
 <aside>
-	<details open>
+	<details>
 		<summary><b>Niveau d'engagement</b></summary>
 		<FilterLevel
 			value={values.level}
@@ -24,7 +24,7 @@
 		/>
 	</details>
 
-	<details open>
+	<details>
 		<summary><b>Catégorie</b></summary>
 		<FilterCategory
 			value={values.category}
@@ -32,7 +32,7 @@
 		/>
 	</details>
 
-	<details open>
+	<details>
 		<summary><b>Thématique</b></summary>
 		<FilterSubcategory
 			value={values.subcategory}

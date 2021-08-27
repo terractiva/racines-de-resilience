@@ -10,6 +10,7 @@
 	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
+	import Categories from '$lib/data/categories';
 
 	const { setCurrentPage } = getContext(layoutContext);
 
@@ -81,7 +82,7 @@
 	<svelte:fragment slot="content">
 		<SectionContentList nbItemsByLine={2}>
 			<SectionContentListItem isExternalLink link={joinLink}>
-				<svelte:fragment slot="content">
+				<svelte:fragment slot="text">
 					Vous vous sentez seul·e·s à avec ces <strong>prises de conscience</strong> sur nos
 					effondrements et nos recherches de résilience ?<br /> Votre entourage n'est pas sensible à
 					ces thématiques vous vous sentez en décalage ?<br /> Vous êtes
@@ -96,19 +97,22 @@
 			</SectionContentListItem>
 
 			<SectionContentListItem isExternalLink link="https://ateliersdetravailquirelie.sitew.fr/">
-				<svelte:fragment slot="content">
+				<svelte:fragment slot="text">
 					Pas toujours facile de <strong>franchir le pas</strong>...<br /> Où que l'on soit sur son
 					chemin de transition, on peut faire face à des questionnements, du désarroi, ou un
 					sentiment d'impuissance qui freinent la mise en action. Et c'est le cas de nombre d'entre
 					nous !<br /> Dans la catégorie <i>Régénérer</i> de la page
-					<a href={actionsPage.path}>Actions</a>, vous pourrez trouver plusieurs actions pour
+					<a
+						href="{actionsPage.path}?categorie={Categories.Regenerate}#{actionsPage.anchors
+							.filters}">Actions</a
+					>, vous pourrez trouver plusieurs actions pour
 					<strong>vous soutenir face à ces bouleversements</strong>.<br />
 					L'accompagnement du film <i>Une fois que tu sais</i> s'appuie notamment sur le processus
 					de l'écopsychologue Joanna Macy, le <i>Travail Qui Relie</i>, qui
 					<strong>soutient la traversée des émotions difficiles</strong> liées à l'état du monde, pour
 					les transformer en élan d'actions.
 				</svelte:fragment>
-				<svelte:fragment slot="link">Découvrir le TQR</svelte:fragment>
+				<svelte:fragment slot="link">Découvrir le <i>Travail Qui Relie</i></svelte:fragment>
 			</SectionContentListItem>
 		</SectionContentList>
 	</svelte:fragment>
@@ -126,10 +130,10 @@
 				</div>
 				<div>
 					<p class="text-justify w-100">
-						Pour rappel, une <strong>multitude de structures et de collectifs</strong> travaillent
-						déjà sur ces thèmes, et notre ambition c'est de rendre visible cet écosystème déjà
-						fertile et large qui offre de nombreuses possibilités de s'engager. Grâce au
-						référencement constitué sur le site <i>Racines de résilience</i>, vous pouvez
+						Une <strong>multitude de structures et de collectifs</strong> travaillent déjà sur ces
+						thèmes, et notre ambition c'est de rendre visible cet écosystème déjà fertile et large
+						qui offre de nombreuses possibilités de s'engager. Grâce au référencement constitué sur
+						le site <i>Racines de résilience</i>, vous pouvez
 						<strong>entrer en contact avec les organisations</strong> qui vous inspirent, quelle que
 						soit votre sensibilité ou votre capacité d'engagement.
 					</p>
