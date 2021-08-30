@@ -25,7 +25,10 @@ const experimentationActions = [
 		radius: 2.2663,
 		text: `Je rejoins des squats autogérés : Maisons du Peuple/Maisons de l’Écologie et des Résistances`,
 		sources: [
-			{ name: `Archipel du Vivant`, link: `archipelduvivant.org/ressources/annuaires/zad-mdp-mer/` }
+			{
+				name: `Archipel du Vivant`,
+				link: `https://archipelduvivant.org/ressources/annuaires/zad-mdp-mer/`
+			}
 		]
 	},
 	{

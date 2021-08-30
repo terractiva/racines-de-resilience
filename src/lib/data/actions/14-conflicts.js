@@ -10,7 +10,7 @@ const conflictsActions = [
 		position: [83.553, 78.2446],
 		radius: 2.2161,
 		text: `Je m'engage pour la coexistence des pratiques et croyances religieuses`,
-		sources: [{ name: `Coexister`, link: ` https://www.coexister.fr/que-faisons-nous/` }]
+		sources: [{ name: `Coexister`, link: `https://www.coexister.fr/que-faisons-nous/` }]
 	},
 	{
 		slug: `formation-gouvernance-partagee`,
@@ -32,7 +32,7 @@ const conflictsActions = [
 		text: `Je me forme à la non-violence et à la gestion des conflits`,
 		sources: [
 			{ name: `MAN`, link: `https://nonviolence.fr/` },
-			{ name: `AFFCNV`, link: `www.cnvformations.fr` },
+			{ name: `AFFCNV`, link: `https://www.cnvformations.fr/` },
 			{ name: `EDUlib`, link: `https://mooc-francophone.com/cours/mooc-gestion-des-conflits/` }
 		]
 	},
