@@ -7,6 +7,7 @@
 	import Section from './Section.svelte';
 	import SectionContentList from './SectionContentList.svelte';
 	import SectionContentListItem from './SectionContentListItem.svelte';
+	import SectionFiltersDropdown from './SectionFiltersDropdown.svelte';
 
 	let actionsQueryString = '';
 	const actionsQuery = new URLSearchParams();
@@ -34,29 +35,26 @@
 				<svelte:fragment slot="title">Rechercher selon mes critères</svelte:fragment>
 				<svelte:fragment slot="content">
 					<div class="dropdowns-wrapper">
-						<details class="dropdown">
-							<summary class="button">Niveau</summary>
-
-							<div class="card right">
+						<SectionFiltersDropdown>
+							<svelte:fragment slot="summary">Niveau</svelte:fragment>
+							<svelte:fragment slot="card">
 								<FilterLevel on:updated={(event) => updateUrl('niveau', event.detail)} />
-							</div>
-						</details>
+							</svelte:fragment>
+						</SectionFiltersDropdown>
 
-						<details class="dropdown">
-							<summary class="button">Catégorie</summary>
-
-							<div class="card right">
+						<SectionFiltersDropdown>
+							<svelte:fragment slot="summary">Catégorie</svelte:fragment>
+							<svelte:fragment slot="card">
 								<FilterCategory on:updated={(event) => updateUrl('categorie', event.detail)} />
-							</div>
-						</details>
+							</svelte:fragment>
+						</SectionFiltersDropdown>
 
-						<details class="dropdown">
-							<summary class="button">Thématique</summary>
-
-							<div class="card right">
+						<SectionFiltersDropdown>
+							<svelte:fragment slot="summary">Thématique</svelte:fragment>
+							<svelte:fragment slot="card">
 								<FilterSubcategory on:updated={(event) => updateUrl('thematique', event.detail)} />
-							</div>
-						</details>
+							</svelte:fragment>
+						</SectionFiltersDropdown>
 					</div>
 				</svelte:fragment>
 				<svelte:fragment slot="link">Go !</svelte:fragment>
@@ -70,21 +68,5 @@
 		@include utilities.responsive-grid(1fr, auto, repeat(3, max-content), 0.5);
 
 		justify-content: center;
-
-		@include utilities.media-sm {
-			details {
-				position: initial;
-
-				.card {
-					box-sizing: border-box;
-					left: 50%;
-					max-width: calc(100% - var(--grid-gutter));
-					text-align: left;
-					transform: translateX(-50%);
-					white-space: initial;
-					width: fit-content;
-				}
-			}
-		}
 	}
 </style>
