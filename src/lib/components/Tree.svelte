@@ -12,14 +12,16 @@
 	let isBackgroundError = false;
 	let isBackgroundLoading = false;
 	let isFabricError = false;
+	let isHammerLoading = true;
+	let isHammerError = false;
 	let isFabricLoading = true;
 	/** @type HTMLCanvasElement */
 	let nativeCanvas;
 	/** @type [x: number, y: number] */
 	let backgroundPadding; // Espace à rajouter de chaque côté de l'arrière-plan pour qu'il prenne toute la place disponible
 
-	$: isError = isBackgroundError || isFabricError;
-	$: isLoading = isBackgroundLoading || isFabricLoading;
+	$: isError = isBackgroundError || isFabricError || isHammerError;
+	$: isLoading = isBackgroundLoading || isFabricLoading || isHammerLoading;
 	$: showTree = !isError && !isLoading;
 	$: fabricCanvas && resizeCanvas(width, height);
 
@@ -80,6 +82,17 @@
 	on:loaded={() => {
 		isFabricLoading = false;
 		initCanvas();
+	}}
+/>
+<GlobalLibraryLoader
+	globalObjectName="Hammer"
+	src="/hammer.min.js"
+	on:failed={() => {
+		isHammerLoading = false;
+		isHammerError = true;
+	}}
+	on:loaded={() => {
+		isHammerLoading = false;
 	}}
 />
 

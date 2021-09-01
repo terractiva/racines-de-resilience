@@ -1,5 +1,6 @@
 <script>
 	import { actionsTreePage } from '$lib/constants/pages';
+	import { zoomMax, zoomMin } from '$lib/constants/settings';
 
 	export let zoom;
 	export let zoomedIn;
@@ -10,7 +11,7 @@
 
 <div class="wrapper">
 	<div>
-		<button class="button icon-only" type="button" on:click={zoomedIn}>
+		<button class="button icon-only" disabled={zoom === zoomMax} type="button" on:click={zoomedIn}>
 			<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
 				><path
 					d="M12 4a1 1 0 00-1 1v6H5a1 1 0 100 2h6v6a1 1 0 102 0v-6h6a1 1 0 100-2h-6V5a1 1 0 00-1-1z"
@@ -21,7 +22,7 @@
 
 		<p>x{zoomLabel}</p>
 
-		<button class="button icon-only" type="button" on:click={zoomedOut}>
+		<button class="button icon-only" disabled={zoom === zoomMin} type="button" on:click={zoomedOut}>
 			<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
 				><path d="M4 12a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z" fill="currentColor" /></svg
 			>

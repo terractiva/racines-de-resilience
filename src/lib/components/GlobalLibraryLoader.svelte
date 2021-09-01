@@ -1,8 +1,9 @@
 <script>
 	/**
 	 * Inspiré de https://stackoverflow.com/questions/59629947/how-do-i-load-an-external-js-library-in-svelte-sapper
-	 * On a besoin de ce composant pour importer le build personnalisé de `Fabric.js` qui ne peut pas
-	 * s'importer avec `import`
+	 * On a besoin de ce composant pour :
+	 * - importer le build personnalisé de `Fabric.js` qui ne peut pas s'importer avec `import`
+	 * - importer Hammer.js qui pose des problèmes en SSR
 	 */
 
 	import { browser } from '$app/env';

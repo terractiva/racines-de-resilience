@@ -3,6 +3,7 @@
 
 	import { zoomIncrement, zoomMax, zoomMin } from '$lib/constants/settings';
 	import TreeNavigatorButtons from './TreeNavigatorButtons.svelte';
+	import { onMount } from 'svelte';
 
 	/** @type import('@types/fabric').fabric.StaticCanvas */
 	export let fabricCanvas;
@@ -12,8 +13,10 @@
 	let cursor = 'grab';
 	let isDragging = false;
 	let isMouseDown = false;
+	let nativeSection;
 	let transform = null;
 	let zoom = null;
+	let zoomOnPinchStart;
 
 	// Permet de réinitialiser lors d'un redimensionnement de fenêtre
 	$: {
@@ -22,6 +25,21 @@
 			checkAndApplyMovement();
 		}
 	}
+
+	onMount(() => {
+		const manager = new window.Hammer.Manager(nativeSection);
+		const pinch = new window.Hammer.Pinch();
+
+		manager.add(pinch);
+		manager.on('pinchstart', () => (zoomOnPinchStart = zoom));
+		manager.on('pinch', (e) => updateZoom(zoomOnPinchStart * e.scale, e.center));
+
+		return () => {
+			manager.off('pinchstart');
+			manager.off('pinch');
+			manager.destroy();
+		};
+	});
 
 	function checkAndApplyMovement() {
 		const vTransform = fabricCanvas.viewportTransform; // vTransform[4] = x, vTransform[5] = y
@@ -94,6 +112,7 @@
 <svelte:window on:mouseup={onMoveEnd} on:touchend={onMoveEnd} />
 
 <section
+	bind:this={nativeSection}
 	style="cursor: {cursor}; height: {zoomMax * 100}%; padding: {zoomMax * padding?.[1]}px {zoomMax *
 		padding?.[0]}px; transform: {transform}; width: {zoomMax * 100}%;"
 	on:mousedown={(event) => onMoveStart(event.clientX, event.clientY)}
