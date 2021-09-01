@@ -69,7 +69,10 @@ const supportUsPage = {
 	description: '',
 	label: 'Nous soutenir',
 	path: '/nous-soutenir',
-	title: 'Nous soutenir'
+	title: 'Nous soutenir',
+	anchors: {
+		paperGuide: 'guide-papier'
+	}
 };
 
 export {

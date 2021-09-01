@@ -1,5 +1,6 @@
 <script>
 	export let hasReducedWidth = false;
+	export let id = null;
 	export let isExternalLink = false;
 	export let isLinkDisabled = false;
 	export let link;
@@ -8,7 +9,7 @@
 	$: linkProps = isExternalLink ? { rel: 'external', target: '_blank' } : {};
 </script>
 
-<li class:has-reduced-width={hasReducedWidth}>
+<li {id} class:has-reduced-width={hasReducedWidth}>
 	{#if $$slots.title}
 		<h3><slot name="title" /></h3>
 	{/if}

@@ -74,7 +74,40 @@
 </Section>
 
 <SectionBackground background={Backgrounds.Marks}>
-	<SectionLowTech />
+	<SectionLowTech>
+		<svelte:fragment slot="title">Vous êtes sur un site low-tech !</svelte:fragment>
+		<svelte:fragment slot="right-content">
+			<div class="image-wrapper">
+				<img alt="" class="floating-image" src="/illustrations/oiseaux-1.png" />
+			</div>
+		</svelte:fragment>
+	</SectionLowTech>
 </SectionBackground>
 
 <SectionSupporters />
+
+<style lang="scss">
+	.image-wrapper {
+		@include utilities.media-sm {
+			display: none;
+		}
+
+		img {
+			@include utilities.media-md-lg {
+				bottom: 50%;
+				right: 0;
+				max-width: initial;
+				object-fit: contain;
+				position: absolute;
+				transform: translateY(50%);
+				width: auto;
+			}
+			@include utilities.media-md {
+				height: 60%;
+			}
+			@include utilities.media-lg {
+				height: 75%;
+			}
+		}
+	}
+</style>

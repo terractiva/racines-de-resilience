@@ -11,6 +11,7 @@
 	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
+	import { gitHubLink } from '$lib/constants/settings';
 
 	const { setCurrentPage } = getContext(layoutContext);
 
@@ -61,8 +62,9 @@
 			</li>
 			<li class="tool-item">
 				<p class="mb-0">
-					Un <strong>guide d'action</strong> dépliant en affiche, qui propose un panorama des manières
-					concrètes d'agir aujourd'hui.
+					Un <a href="{supportUsPage.path}#{supportUsPage.anchors.paperGuide}"
+						><strong>guide d'action</strong></a
+					> dépliant en affiche, qui propose un panorama des manières concrètes d'agir aujourd'hui.
 				</p>
 			</li>
 			<li class="tool-item">
@@ -171,7 +173,14 @@
 	</Section>
 </SectionBackground>
 
-<SectionLowTech />
+<SectionLowTech>
+	<svelte:fragment slot="title"
+		>La démarche low-tech de <i>Racines de résilience</i></svelte:fragment
+	>
+	<svelte:fragment slot="right-content">
+		<a class="button primary" href={gitHubLink} rel="external" target="_blank">En savoir plus</a>
+	</svelte:fragment>
+</SectionLowTech>
 
 <style lang="scss">
 	.image-wrapper {

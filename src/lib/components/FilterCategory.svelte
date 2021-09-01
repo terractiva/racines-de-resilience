@@ -12,6 +12,6 @@
 		{ label: 'Régénérer', value: Categories.Regenerate },
 		{ label: `S'interposer`, value: Categories.Intervene }
 	]}
-	id="level"
+	id="category"
 	on:updated
 />

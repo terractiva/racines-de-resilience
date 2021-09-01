@@ -63,6 +63,7 @@
 
 			<SectionContentListItem
 				isExternalLink
+				id={supportUsPage.anchors.paperGuide}
 				link="https://framaforms.org/formulaire-de-pre-commande-affiche-et-bande-originale-une-fois-que-tu-sais-1630080026"
 				linkStyle="primary"
 			>
@@ -78,6 +79,14 @@
 				<svelte:fragment slot="link">Acheter le poster de l'arbre aux actions</svelte:fragment>
 			</SectionContentListItem>
 		</SectionContentList>
+
+		<ul>
+			<li><img src="/affiches/affiche-1.jpg" alt="" /></li>
+			<li><img src="/affiches/affiche-2.jpg" alt="" /></li>
+			<li><img src="/affiches/affiche-3.jpg" alt="" /></li>
+			<li><img src="/affiches/affiche-4.jpg" alt="" /></li>
+			<li><img src="/affiches/affiche-5.jpg" alt="" /></li>
+		</ul>
 
 		<h3 class="text-center">Faire un don</h3>
 		<SectionContentList nbItemsByLine={2}>
@@ -114,9 +123,6 @@
 				<svelte:fragment slot="link">Devenir mécène</svelte:fragment>
 			</SectionContentListItem>
 		</SectionContentList>
-
-		<img alt="" class="floating-image" src="/illustrations/oiseaux-1.png" />
-		<img alt="" class="floating-image" src="/illustrations/oiseaux-2.png" />
 	</svelte:fragment>
 </Section>
 
@@ -139,25 +145,34 @@
 </Section>
 
 <style lang="scss">
-	h3:not(:first-of-type) {
-		margin-top: 6rem;
+	h3 {
+		margin-top: 0;
 	}
 
-	img {
-		height: auto;
-		position: absolute;
-		z-index: -1;
+	ul {
+		@include utilities.responsive-grid(repeat(3, 1fr), repeat(5, 1fr), repeat(5, 1fr), 1);
 
-		&:first-of-type {
-			top: -2%;
-			right: 0;
-			width: 12rem;
-		}
+		list-style: none;
+		margin: 6rem 0;
+		padding: 0;
 
-		&:last-of-type {
-			bottom: -2%;
-			left: 0;
-			width: 24rem;
+		li {
+			position: relative;
+
+			&::before {
+				content: '';
+				display: block;
+				padding-bottom: 120%;
+				width: 100%;
+			}
+
+			img {
+				height: 100%;
+				left: 50%;
+				position: absolute;
+				top: 0;
+				transform: translateX(-50%);
+			}
 		}
 	}
 </style>

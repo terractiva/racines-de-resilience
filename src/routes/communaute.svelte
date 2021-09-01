@@ -39,7 +39,7 @@
 				<i>Racines de résilience</i> ! Vous aussi vous pouvez rejoindre cette communauté.
 			</p>
 			<div class="image-one-wrapper">
-				<img alt="" class="floating-image" src="/illustrations/elephant.png" />
+				<img alt="" class="floating-image" src="/illustrations/oiseaux-2.png" />
 			</div>
 		</SectionContentTwoThirds>
 	</svelte:fragment>
@@ -164,20 +164,19 @@
 			@include utilities.media-sm {
 				width: 50%;
 			}
-			@include utilities.media-md {
-				bottom: 50%;
-				left: -1.5rem;
-				transform: translateY(50%);
-				width: 125%;
-			}
 			@include utilities.media-md-lg {
+				bottom: 50%;
 				max-width: initial;
 				position: absolute;
+				transform: translateY(50%);
+			}
+			@include utilities.media-md {
+				left: -1.5rem;
+				width: 120%;
 			}
 			@include utilities.media-lg {
-				bottom: 0;
 				left: 0;
-				width: 115%;
+				width: 100%;
 			}
 		}
 	}
