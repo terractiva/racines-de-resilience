@@ -28,6 +28,22 @@
 	color: variables.$color-intervene-strong;
 }
 
+.bg-construire:not(.bg-regenerer) {
+	background: variables.$color-construct-light;
+}
+.bg-construire.bg-regenerer {
+	background: variables.$color-construct-regenerate-light;
+}
+.bg-regenerer:not(.bg-construire):not(.bg-interposer) {
+	background: variables.$color-regenerate-light;
+}
+.bg-regenerer.bg-interposer {
+	background: variables.$color-regenerate-intervene-light;
+}
+.bg-interposer:not(.bg-regenerer) {
+	background: variables.$color-intervene-light;
+}
+
 .bd-construire:not(.bd-regenerer) {
 	border: 1px solid variables.$color-construct;
 }

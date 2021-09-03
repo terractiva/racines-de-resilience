@@ -1,6 +1,7 @@
 <script>
 	import { zoomMax } from '$lib/constants/settings';
 	import TreeActions from './TreeActions.svelte';
+	import TreeBibliography from './TreeBibliography.svelte';
 	import TreeSubcategories from './TreeSubcategories.svelte';
 
 	export let backgroundPadding;
@@ -12,6 +13,7 @@
 
 <ul>
 	<TreeSubcategories {backgroundHeight} {isDragging} />
+	<TreeBibliography {backgroundHeight} />
 	<TreeActions {backgroundHeight} {isDragging} />
 </ul>
 

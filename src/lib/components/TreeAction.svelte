@@ -1,6 +1,6 @@
 <script>
 	import { actionsTreePage } from '$lib/constants/pages';
-	import { treeActionFontSize } from '$lib/constants/settings';
+	import { treeFontSize } from '$lib/constants/settings';
 
 	export let action;
 	export let backgroundHeight;
@@ -12,8 +12,8 @@
 </script>
 
 <li
-	style="font-size: {treeActionFontSize * backgroundHeight}px; left: {action
-		.position[0]}%; top: {action.position[1]}%; width: {2 * action.radius}%;"
+	style="font-size: {treeFontSize * backgroundHeight}px; left: {action.position[0]}%; top: {action
+		.position[1]}%; width: {2 * action.radius}%;"
 >
 	<a
 		href="{actionsTreePage.path}/{action.slug}"
