@@ -8,8 +8,12 @@
 		<a class="button primary" href="{actionsPage.path}#{actionsPage.anchors.filters}"
 			>Découvrir plus d'actions</a
 		>
-		<!-- TODO: -->
-		<button disabled class="button primary" type="button">Faire grandir l'arbre (à venir)</button>
+		<a
+			class="button primary"
+			href="https://framaforms.org/faire-grandir-larbre-1631182360"
+			rel="external"
+			target="_blank">Faire grandir l'arbre</a
+		>
 	</div>
 
 	<p><b>Par où commencer ?</b></p>

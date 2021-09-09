@@ -91,7 +91,11 @@
 				<svelte:fragment slot="link">Explorer l'arbre</svelte:fragment>
 			</SectionContentListItem>
 
-			<SectionContentListItem isExternalLink isLinkDisabled link="TODO:" linkStyle="primary">
+			<SectionContentListItem
+				isExternalLink
+				link="https://framaforms.org/faire-grandir-larbre-1631182360"
+				linkStyle="primary"
+			>
 				<svelte:fragment slot="title">Un site collaboratif</svelte:fragment>
 				<svelte:fragment slot="text">
 					La sélection des actions de l'arbre n'est <strong>pas exhaustive</strong> ! C'est une
