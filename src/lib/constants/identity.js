@@ -1,4 +1,4 @@
-const ownerMail = 'terractiva.art@gmail.com';
+const ownerMail = 'contact@racinesderesilience.org';
 const ownerName = 'Terractiva';
 const websiteName = 'Racines de résilience';
 
