@@ -46,10 +46,7 @@ const communityPage = {
 	description: '',
 	label: 'Communauté',
 	path: '/communaute',
-	title: 'Communauté',
-	anchors: {
-		assistFilm: 'accompagnement-film'
-	}
+	title: 'Communauté'
 };
 
 // Pas de `title` exceptionnellement pour afficher seulement le nom du site

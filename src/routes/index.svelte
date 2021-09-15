@@ -47,27 +47,45 @@
 				<svelte:fragment slot="link">En savoir plus</svelte:fragment>
 			</SectionContentListItem>
 
-			<SectionContentListItem link={supportUsPage.path}>
-				<svelte:fragment slot="title">Se soutenir</svelte:fragment>
+			<SectionContentListItem
+				isExternalLink
+				link="https://us06web.zoom.us/webinar/register/WN_O-BYQo70RK2tvDPcZZjJxQ"
+			>
+				<svelte:fragment slot="title"><i>MyCO2</i> vous accompagne</svelte:fragment>
 				<svelte:fragment slot="text">
-					Ce projet est majoritairement bénévole.<br /> Si vous souhaitez
-					<strong>nous aider</strong>
-					dans cette démarche de convergence, pour que
-					<strong>tout le monde puisse passer à l'action</strong> vers une société qui se régénère, vous
-					pouvez nous soutenir, notamment avec l'achat d'oeuvres auditives et visuelles !
+					<i>MyCO2</i>, une des structures présentes sur le site, propose pour les spectateur·ice·s
+					d’<i>Une fois que tu sais</i> une
+					<strong>conférence ludique, collective et gratuite</strong>
+					pour réaliser son bilan carbone personnel et trouver des clés pour agir. RDV le
+					<strong>12 octobre de 18h à 19h30</strong>.
 				</svelte:fragment>
-				<svelte:fragment slot="link">Découvrir comment</svelte:fragment>
+				<svelte:fragment slot="link">Je m'inscris !</svelte:fragment>
 			</SectionContentListItem>
 
-			<SectionContentListItem link="{communityPage.path}#{communityPage.anchors.assistFilm}">
-				<svelte:fragment slot="title">Des séances-évenements</svelte:fragment>
+			<SectionContentListItem
+				isExternalLink
+				link="https://www.google.com/maps/d/u/0/viewer?mid=1zvkq6whArE18g8hDYtY9WRNqVJAarAi9&ll=47.57131510877113%2C1.8868901783442826&z=7"
+			>
+				<svelte:fragment slot="title">Où voir <i>Une fois que tu sais</i> ?</svelte:fragment>
 				<svelte:fragment slot="text">
-					Vous souhaitez <strong>organiser</strong> des séances-évenements près de chez vous,
-					<strong>faire connaitre les enjeux climatiques</strong>
-					et d'effondrements au plus grand nombre, être accompagné·e·s ou
-					<strong>accompagner</strong> vous-mêmes le film ?
+					Les <strong>séances-évenements</strong> avant et après la
+					<strong>sortie le 22 septembre</strong>
+					au cinéma du film <i>Une fois que tu sais</i> peuvent permettre aux enjeux climatiques de
+					passer sur le devant de la scène ! Voici une <strong>carte pour découvrir</strong> les séances
+					près de chez vous.
 				</svelte:fragment>
-				<svelte:fragment slot="link">En savoir plus</svelte:fragment>
+				<svelte:fragment slot="link">Trouver une séance</svelte:fragment>
+			</SectionContentListItem>
+
+			<SectionContentListItem isExternalLink link="https://mapetiteplanete.org/">
+				<svelte:fragment slot="title">Des défis avec <i>Ma Petite Planète</i></svelte:fragment>
+				<svelte:fragment slot="text">
+					En organisant des compétitions déjantées de défis écolos, <i>Ma Petite Planète</i> aide
+					petits et grands à participer à la <strong>protection de l’environnement</strong>. A jouer
+					entre amis, en famille, entre collègues...
+					<strong>top départ le 27 septembre prochain</strong> !
+				</svelte:fragment>
+				<svelte:fragment slot="link">Je veux participer</svelte:fragment>
 			</SectionContentListItem>
 		</SectionContentList>
 	</svelte:fragment>

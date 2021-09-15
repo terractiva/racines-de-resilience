@@ -46,7 +46,7 @@
 </Section>
 
 <SectionBackground background={Backgrounds.Marks}>
-	<Section id={communityPage.anchors.assistFilm}>
+	<Section>
 		<svelte:fragment slot="title">Participer à l'accompagnement du film</svelte:fragment>
 		<svelte:fragment slot="content">
 			<p class="text-justify">
