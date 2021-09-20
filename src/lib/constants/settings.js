@@ -1,4 +1,5 @@
 export const actionsUrl = 'https://www.racinesderesilience.org/api/actions.php';
+export const headerHeight = 50;
 export const gitHubLink = 'https://github.com/Terractiva/racines-de-resilience';
 export const nbFilterResultsShowed = 6;
 export const treeFontSize = 0.004; // Taille du texte en % de la hauteur de l'arrière plan

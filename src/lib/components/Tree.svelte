@@ -1,4 +1,5 @@
 <script>
+	import { headerHeight } from '$lib/constants/settings';
 	import GlobalLibraryLoader from './GlobalLibraryLoader.svelte';
 	import TreeAuthors from './TreeAuthors.svelte';
 	import TreeItems from './TreeItems.svelte';
@@ -57,15 +58,17 @@
 		if (!background) return;
 
 		const backgroundRatio = background.width / background.height;
-		const canvasRatio = width / height;
+		const canvasRatio = width / (height - headerHeight);
 
 		if (backgroundRatio < canvasRatio) {
-			background.scaleToHeight(height);
+			background.scaleToHeight(height - headerHeight);
 			backgroundPadding = [(width - background.getScaledWidth()) / 2, 0];
 		} else if (backgroundRatio > canvasRatio) {
 			background.scaleToWidth(width);
-			backgroundPadding = [0, (height - background.getScaledHeight()) / 2];
+			backgroundPadding = [0, (height - headerHeight - background.getScaledHeight()) / 2];
 		}
+
+		fabricCanvas.viewportTransform[5] = headerHeight / 2;
 
 		background.center();
 		fabricCanvas.renderAll();

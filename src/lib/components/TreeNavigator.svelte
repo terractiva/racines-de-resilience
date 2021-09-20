@@ -1,7 +1,7 @@
 <script>
 	// Adaptation de http://fabricjs.com/fabric-intro-part-5#pan_zoom
 
-	import { zoomIncrement, zoomMax, zoomMin } from '$lib/constants/settings';
+	import { headerHeight, zoomIncrement, zoomMax, zoomMin } from '$lib/constants/settings';
 	import TreeNavigatorButtons from './TreeNavigatorButtons.svelte';
 	import { onMount } from 'svelte';
 
@@ -44,20 +44,21 @@
 	function checkAndApplyMovement() {
 		const vTransform = fabricCanvas.viewportTransform; // vTransform[4] = x, vTransform[5] = y
 		const xMax = fabricCanvas.getWidth() * (1 - zoom);
-		const yMax = fabricCanvas.getHeight() * (1 - zoom);
+		const yMin = headerHeight / 2;
+		const yMax = (fabricCanvas.getHeight() - headerHeight) * (1 - zoom) + headerHeight / 2;
 
 		if (vTransform[4] >= 0) {
 			vTransform[4] = 0;
 		} else if (vTransform[4] < xMax) {
 			vTransform[4] = xMax;
 		}
-		if (vTransform[5] >= 0) {
-			vTransform[5] = 0;
+		if (vTransform[5] >= yMin) {
+			vTransform[5] = yMin;
 		} else if (vTransform[5] < yMax) {
 			vTransform[5] = yMax;
 		}
 
-		transform = `translate(${vTransform[4]}px, ${vTransform[5]}px) scale(${zoom / zoomMax})`;
+		transform = `translate(${vTransform[4]}px, ${vTransform[5] - zoom * headerHeight / 2}px) scale(${zoom / zoomMax})`;
 	}
 
 	function onMoveEnd() {
@@ -113,8 +114,14 @@
 
 <section
 	bind:this={nativeSection}
-	style="cursor: {cursor}; height: {zoomMax * 100}%; padding: {zoomMax * padding?.[1]}px {zoomMax *
-		padding?.[0]}px; transform: {transform}; width: {zoomMax * 100}%;"
+	style="
+		cursor: {cursor};
+		height: {zoomMax * 100}%;
+		padding: {zoomMax * padding?.[1]}px {zoomMax * padding?.[0]}px;
+		padding-top: {zoomMax * (padding?.[1] + headerHeight)}px;
+		transform: {transform};
+		width: {zoomMax * 100}%;
+	"
 	on:mousedown={(event) => onMoveStart(event.clientX, event.clientY)}
 	on:touchstart|passive={(event) => {
 		if (event.touches.length === 1) {
