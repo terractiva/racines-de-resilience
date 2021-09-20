@@ -1,12 +1,11 @@
 <script>
+	import handleDraggedLink from '$lib/actions/handleDraggedLink';
 	import { actionsTreePage } from '$lib/constants/pages';
 	import { treeFontSize } from '$lib/constants/settings';
 
 	export let action;
 	export let backgroundHeight;
 	export let isDisabled;
-
-	let isNextClickDisabled = false;
 
 	$: textClasses = action.categories.map((category) => `text-${category}`).join(' ');
 </script>
@@ -16,22 +15,8 @@
 		.position[1]}%; width: {2 * action.radius}%;"
 >
 	<a
+		use:handleDraggedLink={isDisabled}
 		href="{actionsTreePage.path}/{action.slug}"
-		style="cursor: {isDisabled ? 'inherit' : ''};"
-		on:mousedown={(event) => {
-			event.preventDefault(); // Empêche le glisser-déposer de lien
-		}}
-		on:mouseup={() => {
-			if (isDisabled) {
-				isNextClickDisabled = true;
-			}
-		}}
-		on:click={(event) => {
-			if (isNextClickDisabled) {
-				event.preventDefault();
-				isNextClickDisabled = false;
-			}
-		}}
 	>
 		<p>{@html action.text}</p>
 
