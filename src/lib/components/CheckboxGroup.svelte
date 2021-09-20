@@ -7,6 +7,7 @@
 	export let checkboxes;
 	export let group;
 	export let id;
+	export let name;
 
 	const dispatch = createEventDispatcher();
 </script>
@@ -15,6 +16,7 @@
 	<label for="{id}-{checkbox.value}">
 		<input
 			bind:group
+			{name}
 			id="{id}-{checkbox.value}"
 			type="checkbox"
 			value={checkbox.value}

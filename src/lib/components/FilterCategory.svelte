@@ -13,5 +13,6 @@
 		{ label: `S'interposer`, value: Categories.Intervene }
 	]}
 	id="category"
+	name="categorie"
 	on:updated
 />

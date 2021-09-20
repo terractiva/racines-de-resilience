@@ -1,60 +1,69 @@
 <script>
-	import { goto } from '$app/navigation';
-	import { updateQueryWithFilterValue } from '$lib/utils/filters';
+	import formGoto from '$lib/actions/formGoTo';
+	import { actionsPage } from '$lib/constants/pages';
 	import FilterCategory from './FilterCategory.svelte';
 	import FilterLevel from './FilterLevel.svelte';
 	import FilterSubcategory from './FilterSubcategory.svelte';
 
 	export let values;
-
-	function updateUrlAndGo(filterName, filterValue) {
-		const url = new URL(window.location);
-
-		updateQueryWithFilterValue(url.searchParams, filterName, filterValue);
-		goto(url, { keepfocus: true, noscroll: true, replaceState: true });
-	}
 </script>
 
 <aside>
-	<details>
-		<summary><b>Niveau d'engagement</b></summary>
-		<FilterLevel
-			value={values.level}
-			on:updated={(event) => updateUrlAndGo('niveau', event.detail)}
-		/>
-	</details>
+	<form
+		use:formGoto={{ keepfocus: true, noscroll: true, replaceState: true }}
+		action="{actionsPage.path}"
+		method="GET"
+	>
+		<details>
+			<summary><b>Niveau d'engagement</b></summary>
+			<FilterLevel value={values.level} />
+		</details>
 
-	<details>
-		<summary><b>Catégorie</b></summary>
-		<FilterCategory
-			value={values.category}
-			on:updated={(event) => updateUrlAndGo('categorie', event.detail)}
-		/>
-	</details>
+		<details>
+			<summary><b>Catégorie</b></summary>
+			<FilterCategory value={values.category} />
+		</details>
 
-	<details>
-		<summary><b>Thématique</b></summary>
-		<FilterSubcategory
-			value={values.subcategory}
-			on:updated={(event) => updateUrlAndGo('thematique', event.detail)}
-		/>
-	</details>
+		<details>
+			<summary><b>Thématique</b></summary>
+			<FilterSubcategory value={values.subcategory} />
+		</details>
+
+		<button class="button secondary" type="submit">Filtrer</button>
+	</form>
 </aside>
 
 <style lang="scss">
-	details {
-		&[open] {
-			summary {
-				margin-bottom: 0.5rem;
+	form {
+		display: flex;
+		flex-direction: column;
+
+		button {
+			width: 100%;
+
+			@include utilities.media-sm-md {
+				margin-top: 2rem;
+			}
+			@include utilities.media-lg {
+				order: -1;
+				margin-bottom: 2rem;
 			}
 		}
 
-		&:not(:last-child) {
-			margin-bottom: 2rem;
-		}
+		details {
+			&[open] {
+				summary {
+					margin-bottom: 0.5rem;
+				}
+			}
 
-		summary {
-			cursor: pointer;
+			&:not(:last-of-type) {
+				margin-bottom: 2rem;
+			}
+
+			summary {
+				cursor: pointer;
+			}
 		}
 	}
 </style>

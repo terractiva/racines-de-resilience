@@ -10,4 +10,4 @@
 	}));
 </script>
 
-<CheckboxGroup bind:group={value} {checkboxes} id="level" on:updated />
+<CheckboxGroup bind:group={value} {checkboxes} id="level" name="thematique" on:updated />

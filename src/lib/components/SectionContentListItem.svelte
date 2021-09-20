@@ -3,7 +3,7 @@
 	export let id = null;
 	export let isExternalLink = false;
 	export let isLinkDisabled = false;
-	export let link;
+	export let link = null;
 	export let linkStyle = '';
 
 	$: linkProps = isExternalLink ? { rel: 'external', target: '_blank' } : {};
@@ -19,11 +19,13 @@
 	{#if $$slots.content}
 		<div><slot name="content" /></div>
 	{/if}
-	{#if isLinkDisabled}
-		<button disabled class="button {linkStyle}" type="button"><slot name="link" /> (à venir)</button
-		>
-	{:else}
-		<a {...linkProps} class="button {linkStyle}" href={link}><slot name="link" /></a>
+	{#if $$slots.link}
+		{#if isLinkDisabled}
+			<button disabled class="button {linkStyle}" type="button"><slot name="link" /> (à venir)</button
+			>
+		{:else}
+			<a {...linkProps} class="button {linkStyle}" href={link}><slot name="link" /></a>
+		{/if}
 	{/if}
 </li>
 
@@ -48,10 +50,12 @@
 
 		p,
 		div {
-			margin-bottom: 3rem;
+			&:not(:last-child) {
+				margin-bottom: 3rem;
 
-			@include utilities.media-sm {
-				margin-bottom: 2rem;
+				@include utilities.media-sm {
+					margin-bottom: 2rem;
+				}
 			}
 		}
 

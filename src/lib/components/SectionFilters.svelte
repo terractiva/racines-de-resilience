@@ -1,6 +1,6 @@
 <script>
+	import formGoto from '$lib/actions/formGoTo';
 	import { actionsPage, actionsTreePage } from '$lib/constants/pages';
-	import { updateQueryWithFilterValue } from '$lib/utils/filters';
 	import FilterCategory from './FilterCategory.svelte';
 	import FilterLevel from './FilterLevel.svelte';
 	import FilterSubcategory from './FilterSubcategory.svelte';
@@ -8,15 +8,6 @@
 	import SectionContentList from './SectionContentList.svelte';
 	import SectionContentListItem from './SectionContentListItem.svelte';
 	import SectionFiltersDropdown from './SectionFiltersDropdown.svelte';
-
-	let actionsQueryString = '';
-	const actionsQuery = new URLSearchParams();
-
-	function updateUrl(filterName, filterValue) {
-		updateQueryWithFilterValue(actionsQuery, filterName, filterValue);
-
-		actionsQueryString = actionsQuery.toString();
-	}
 </script>
 
 <Section isCentered>
@@ -28,45 +19,46 @@
 				<svelte:fragment slot="link">Explorer l'arbre aux actions</svelte:fragment>
 			</SectionContentListItem>
 
-			<SectionContentListItem
-				link="{actionsPage.path}?{actionsQueryString}#{actionsPage.anchors.filters}"
-				linkStyle="primary"
-			>
+			<SectionContentListItem>
 				<svelte:fragment slot="title">Rechercher selon mes critères</svelte:fragment>
 				<svelte:fragment slot="content">
-					<div class="dropdowns-wrapper">
-						<SectionFiltersDropdown>
-							<svelte:fragment slot="summary">Niveau</svelte:fragment>
-							<svelte:fragment slot="card">
-								<FilterLevel on:updated={(event) => updateUrl('niveau', event.detail)} />
-							</svelte:fragment>
-						</SectionFiltersDropdown>
+					<form use:formGoto action="{actionsPage.path}#{actionsPage.anchors.filters}" method="GET">
+						<div>
+							<SectionFiltersDropdown>
+								<svelte:fragment slot="summary">Niveau</svelte:fragment>
+								<svelte:fragment slot="card">
+									<FilterLevel />
+								</svelte:fragment>
+							</SectionFiltersDropdown>
 
-						<SectionFiltersDropdown>
-							<svelte:fragment slot="summary">Catégorie</svelte:fragment>
-							<svelte:fragment slot="card">
-								<FilterCategory on:updated={(event) => updateUrl('categorie', event.detail)} />
-							</svelte:fragment>
-						</SectionFiltersDropdown>
+							<SectionFiltersDropdown>
+								<svelte:fragment slot="summary">Catégorie</svelte:fragment>
+								<svelte:fragment slot="card">
+									<FilterCategory />
+								</svelte:fragment>
+							</SectionFiltersDropdown>
 
-						<SectionFiltersDropdown>
-							<svelte:fragment slot="summary">Thématique</svelte:fragment>
-							<svelte:fragment slot="card">
-								<FilterSubcategory on:updated={(event) => updateUrl('thematique', event.detail)} />
-							</svelte:fragment>
-						</SectionFiltersDropdown>
-					</div>
+							<SectionFiltersDropdown>
+								<svelte:fragment slot="summary">Thématique</svelte:fragment>
+								<svelte:fragment slot="card">
+									<FilterSubcategory />
+								</svelte:fragment>
+							</SectionFiltersDropdown>
+						</div>
+
+						<button class="button primary" type="submit">Go !</button>
+					</form>
 				</svelte:fragment>
-				<svelte:fragment slot="link">Go !</svelte:fragment>
 			</SectionContentListItem>
 		</SectionContentList>
 	</svelte:fragment>
 </Section>
 
 <style lang="scss">
-	.dropdowns-wrapper {
+	form div {
 		@include utilities.responsive-grid(1fr, auto, repeat(3, max-content), 0.5);
 
 		justify-content: center;
+		margin-bottom: 3rem;
 	}
 </style>

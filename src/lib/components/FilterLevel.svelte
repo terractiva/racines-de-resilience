@@ -12,5 +12,6 @@
 		{ label: 'Grand saut', value: 3 }
 	]}
 	id="level"
+	name="niveau"
 	on:updated
 />

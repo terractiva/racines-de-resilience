@@ -23,11 +23,3 @@ export function getResults(filterValues) {
 		return hasCategory && hasLevel && hasSubcategory;
 	});
 }
-
-export function updateQueryWithFilterValue(query, filterName, filterValue) {
-	if (filterValue.length) {
-		query.set(filterName, filterValue.toString());
-	} else {
-		query.delete(filterName);
-	}
-}
