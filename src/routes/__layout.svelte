@@ -1,5 +1,4 @@
 <script>
-	import { dev } from '$app/env';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import ThemeContext from '$lib/components/ThemeContext.svelte';
@@ -14,18 +13,6 @@
 		currentPage = newCurrentPage;
 	}
 </script>
-
-<svelte:head>
-	{#if !dev}
-		<script
-			data-host="https://microanalytics.io"
-			data-dnt="false"
-			src="https://microanalytics.io/js/script.js"
-			id="ZwSg9rf6GA"
-			async
-			defer></script>
-	{/if}
-</svelte:head>
 
 <ThemeContext {currentPage}>
 	<Header currentPath={currentPage?.path} isFullscreen={currentPage?.isFullscreen} />
