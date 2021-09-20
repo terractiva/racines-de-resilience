@@ -14,17 +14,17 @@
 		action="{actionsPage.path}"
 		method="GET"
 	>
-		<details>
+		<details open={!!values.level.length}>
 			<summary><b>Niveau d'engagement</b></summary>
 			<FilterLevel value={values.level} />
 		</details>
 
-		<details>
+		<details open={!!values.category.length}>
 			<summary><b>Catégorie</b></summary>
 			<FilterCategory value={values.category} />
 		</details>
 
-		<details>
+		<details open={!!values.subcategory.length}>
 			<summary><b>Thématique</b></summary>
 			<FilterSubcategory value={values.subcategory} />
 		</details>
