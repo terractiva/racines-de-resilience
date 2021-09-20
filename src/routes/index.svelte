@@ -64,7 +64,7 @@
 
 			<SectionContentListItem
 				isExternalLink
-				link="https://www.google.com/maps/d/u/0/viewer?mid=1zvkq6whArE18g8hDYtY9WRNqVJAarAi9&ll=47.57131510877113%2C1.8868901783442826&z=7"
+				link="https://www.google.com/maps/d/viewer?mid=1zvkq6whArE18g8hDYtY9WRNqVJAarAi9&hl=fr&usp=sharing"
 			>
 				<svelte:fragment slot="title">Où voir <i>Une fois que tu sais</i> ?</svelte:fragment>
 				<svelte:fragment slot="text">
