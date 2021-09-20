@@ -1,0 +1,37 @@
+name: Déploiement de l'API
+
+on:
+  push:
+    branches: [site]
+    paths:
+      - '.github/workflows/deploy-api.yml'
+      - 'src/api/actions.php'
+  pull_request:
+    branches: [site]
+    paths:
+      - '.github/workflows/deploy-api.yml'
+      - 'src/api/actions.php'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Configuration Airtable
+        uses: cschleiden/replace-tokens@v1
+        with:
+          files: '["src/api/actions.php"]'
+        env:
+          BASE: ${{ secrets.airtable_base }}
+          TABLE: ${{ secrets.airtable_table }}
+          KEY: ${{ secrets.airtable_key }}
+
+      - name: Déploiement
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.ftp_server }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          local-dir: src/api/
+          server-dir: api/
