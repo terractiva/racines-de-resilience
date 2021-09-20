@@ -2,14 +2,13 @@
 	import PageMeta from '$lib/components/PageMeta.svelte';
 	import Tree from '$lib/components/Tree.svelte';
 	import { actionsTreePage } from '$lib/constants/pages';
-	import { layoutContext } from '$lib/contexts';
-	import { getContext, onMount } from 'svelte';
+	import currentPage from '$lib/stores/currentPage';
+	import { onMount } from 'svelte';
 
 	let height;
 	let width;
-	const { setCurrentPage } = getContext(layoutContext);
 
-	setCurrentPage(actionsTreePage);
+	currentPage.set(actionsTreePage);
 
 	onMount(() => {
 		setSize();

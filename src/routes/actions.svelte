@@ -47,8 +47,6 @@
 	import SectionBackground from '$lib/components/SectionBackground.svelte';
 	import Backgrounds from '$lib/constants/backgrounds';
 	import { aboutPage, actionsPage, actionsTreePage, communityPage } from '$lib/constants/pages';
-	import { layoutContext } from '$lib/contexts';
-	import { getContext } from 'svelte';
 	import Section from '$lib/components/Section.svelte';
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
@@ -56,15 +54,14 @@
 	import { getFilterValueFromQuery, getResults } from '$lib/utils/filters';
 	import { browser } from '$app/env';
 	import { actionsUrl } from '$lib/constants/settings';
+	import currentPage from '$lib/stores/currentPage';
 
 	export let filterValues;
 	export let otherResults;
 
-	const { setCurrentPage } = getContext(layoutContext);
-
 	$: treeResults = getResults(filterValues);
 
-	setCurrentPage(actionsPage);
+	currentPage.set(actionsPage);
 </script>
 
 <PageMeta page={actionsPage} />

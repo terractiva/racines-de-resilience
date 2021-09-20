@@ -7,15 +7,13 @@
 		supportUsPage
 	} from '$lib/constants/pages';
 	import Themes from '$lib/constants/themes';
-	import { themeContext } from '$lib/contexts';
-	import { getContext } from 'svelte';
+	import theme from '$lib/stores/theme';
 	import ThemeSwitcher from './ThemeSwitcher.svelte';
 
 	export let currentPath;
 	export let isFullscreen;
 
 	let isMenuOpen = false;
-	const { currentTheme$ } = getContext(themeContext);
 	const pages = [actionsPage, supportUsPage, communityPage, aboutPage];
 </script>
 
@@ -23,7 +21,7 @@
 	<a href={homePage.path}>
 		<img
 			alt="Racines de résilience"
-			class:is-dark={$currentTheme$ === Themes.Dark}
+			class:is-dark={$theme.value === Themes.Dark}
 			src="/logo.png"
 		/>
 	</a>

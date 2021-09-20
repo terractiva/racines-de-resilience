@@ -4,19 +4,16 @@
 	import SectionBackground from '$lib/components/SectionBackground.svelte';
 	import Backgrounds from '$lib/constants/backgrounds';
 	import { actionsPage, actionsTreePage, communityPage } from '$lib/constants/pages';
-	import { layoutContext } from '$lib/contexts';
-	import { getContext } from 'svelte';
 	import Section from '$lib/components/Section.svelte';
 	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
 	import Categories from '$lib/data/categories';
-
-	const { setCurrentPage } = getContext(layoutContext);
-
-	setCurrentPage(communityPage);
+	import currentPage from '$lib/stores/currentPage';
 
 	const joinLink = 'https://colibris.link/OS02e';
+
+	currentPage.set(communityPage);
 </script>
 
 <PageMeta page={communityPage} />

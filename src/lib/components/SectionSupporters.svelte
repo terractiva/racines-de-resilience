@@ -1,10 +1,7 @@
 <script>
 	import Themes from '$lib/constants/themes';
-	import { themeContext } from '$lib/contexts';
-	import { getContext } from 'svelte';
+	import theme from '$lib/stores/theme';
 	import Section from './Section.svelte';
-
-	const { currentTheme$ } = getContext(themeContext);
 </script>
 
 <Section>
@@ -13,7 +10,7 @@
 	>
 
 	<svelte:fragment slot="content">
-		<ul class:is-dark={$currentTheme$ === Themes.Dark}>
+		<ul class:is-dark={$theme.value === Themes.Dark}>
 			<li>
 				<a href="https://yggdrasil-mag.com/" rel="external" target="_blank">
 					<img alt="Yggdrasil" src="/partenaires/yggdrasil.svg" />

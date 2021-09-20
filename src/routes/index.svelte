@@ -5,17 +5,14 @@
 	import SectionLowTech from '$lib/components/SectionLowTech.svelte';
 	import SectionSupporters from '$lib/components/SectionSupporters.svelte';
 	import Backgrounds from '$lib/constants/backgrounds';
-	import { communityPage, homePage, supportUsPage } from '$lib/constants/pages';
-	import { layoutContext } from '$lib/contexts';
-	import { getContext } from 'svelte';
+	import { homePage } from '$lib/constants/pages';
 	import Section from '$lib/components/Section.svelte';
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
 	import SectionFilters from '$lib/components/SectionFilters.svelte';
+	import currentPage from '$lib/stores/currentPage';
 
-	const { setCurrentPage } = getContext(layoutContext);
-
-	setCurrentPage(homePage);
+	currentPage.set(homePage);
 </script>
 
 <PageMeta page={homePage} />

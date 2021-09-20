@@ -2,12 +2,9 @@
 	import ErrorPage from '$lib/components/ErrorPage.svelte';
 	import PageMeta from '$lib/components/PageMeta.svelte';
 	import { notFoundPage } from '$lib/constants/pages';
-	import { layoutContext } from '$lib/contexts';
-	import { getContext } from 'svelte';
+	import currentPage from '$lib/stores/currentPage';
 
-	const { setCurrentPage } = getContext(layoutContext);
-
-	setCurrentPage(notFoundPage);
+	currentPage.set(notFoundPage);
 </script>
 
 <PageMeta page={notFoundPage} />

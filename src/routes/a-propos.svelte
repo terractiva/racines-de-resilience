@@ -5,17 +5,14 @@
 	import SectionLowTech from '$lib/components/SectionLowTech.svelte';
 	import Backgrounds from '$lib/constants/backgrounds';
 	import { aboutPage, actionsPage, communityPage, supportUsPage } from '$lib/constants/pages';
-	import { layoutContext } from '$lib/contexts';
-	import { getContext } from 'svelte';
 	import Section from '$lib/components/Section.svelte';
 	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
 	import { gitHubLink } from '$lib/constants/settings';
+	import currentPage from '$lib/stores/currentPage';
 
-	const { setCurrentPage } = getContext(layoutContext);
-
-	setCurrentPage(aboutPage);
+	currentPage.set(aboutPage);
 </script>
 
 <PageMeta page={aboutPage} />

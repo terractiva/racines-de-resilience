@@ -1,28 +1,16 @@
 <script>
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import ThemeContext from '$lib/components/ThemeContext.svelte';
-	import { layoutContext } from '$lib/contexts';
-	import { setContext } from 'svelte';
-
-	let currentPage;
-
-	setContext(layoutContext, { setCurrentPage });
-
-	function setCurrentPage(newCurrentPage) {
-		currentPage = newCurrentPage;
-	}
+	import currentPage from '$lib/stores/currentPage';
 </script>
 
-<ThemeContext {currentPage}>
-	<Header currentPath={currentPage?.path} isFullscreen={currentPage?.isFullscreen} />
+<Header currentPath={$currentPage?.path} isFullscreen={$currentPage?.isFullscreen} />
 
-	<main class:is-fullscreen={currentPage?.isFullscreen}>
-		<slot />
-	</main>
+<main class:is-fullscreen={$currentPage?.isFullscreen}>
+	<slot />
+</main>
 
-	<Footer />
-</ThemeContext>
+<Footer />
 
 <style global lang="scss">
 	@use 'src/styles/theme.scss';

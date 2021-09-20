@@ -5,16 +5,13 @@
 	import SectionSupporters from '$lib/components/SectionSupporters.svelte';
 	import Backgrounds from '$lib/constants/backgrounds';
 	import { communityPage, supportUsPage } from '$lib/constants/pages';
-	import { layoutContext } from '$lib/contexts';
-	import { getContext } from 'svelte';
 	import Section from '$lib/components/Section.svelte';
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
 	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
+	import currentPage from '$lib/stores/currentPage';
 
-	const { setCurrentPage } = getContext(layoutContext);
-
-	setCurrentPage(supportUsPage);
+	currentPage.set(supportUsPage);
 </script>
 
 <PageMeta page={supportUsPage} />

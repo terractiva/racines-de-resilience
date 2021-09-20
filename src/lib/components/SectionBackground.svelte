@@ -1,14 +1,11 @@
 <script>
 	import Themes from '$lib/constants/themes';
-	import { themeContext } from '$lib/contexts';
-	import { getContext } from 'svelte';
+	import theme from '$lib/stores/theme';
 
 	export let background;
-
-	const { currentTheme$ } = getContext(themeContext);
 </script>
 
-<div class={`bg-${background}`} class:is-dark={$currentTheme$ === Themes.Dark}>
+<div class={`bg-${background}`} class:is-dark={$theme.value === Themes.Dark}>
 	<slot />
 </div>
 

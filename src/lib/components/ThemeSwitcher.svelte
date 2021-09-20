@@ -1,16 +1,13 @@
 <script>
 	import Themes from '$lib/constants/themes';
-	import { themeContext } from '$lib/contexts';
-	import { getContext } from 'svelte';
-
-	const { currentTheme$, isThemeDisabled$, toggleTheme } = getContext(themeContext);
+	import theme from '$lib/stores/theme';
 </script>
 
 <button
 	class="button clear icon-only"
-	disabled={$isThemeDisabled$}
+	disabled={$theme.isDisabled}
 	type="button"
-	on:click={toggleTheme}>{$currentTheme$ === Themes.Dark ? '☀️' : '🌙'}</button
+	on:click={theme.toggle}>{$theme.value === Themes.Dark ? '☀️' : '🌙'}</button
 >
 
 <style lang="scss">
