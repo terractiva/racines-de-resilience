@@ -17,6 +17,11 @@
 				</a>
 			</li>
 			<li>
+				<a href="https://www.nutergia.com/" rel="external" target="_blank">
+					<img alt="Nutergia" src="/partenaires/nutergia.png" />
+				</a>
+			</li>
+			<li>
 				<a href="https://www.leanature.com/" rel="external" target="_blank">
 					<img alt="Léa Nature" src="/partenaires/lea-nature.png" />
 				</a>
@@ -55,7 +60,7 @@
 
 <style lang="scss">
 	ul {
-		@include utilities.responsive-grid(repeat(3, 1fr), repeat(5, 1fr), repeat(8, 1fr), 1);
+		@include utilities.responsive-grid(repeat(3, 1fr), repeat(5, 1fr), repeat(7, 1fr), 1);
 
 		list-style: none;
 		margin: 0;
