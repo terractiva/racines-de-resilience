@@ -3,6 +3,7 @@
 	import Action from './Action.svelte';
 
 	export let results;
+	export let titleSuffix;
 
 	let showAllChoice = false;
 
@@ -11,10 +12,10 @@
 	$: nbResultsShowed = showAll ? results.length : nbFilterResultsShowed;
 </script>
 
-<p><b>{results.length} résultat(s)</b></p>
+<p><b>{results.length} résultat(s) {titleSuffix}</b></p>
 
 <ul>
-	{#each { length: nbResultsShowed } as _, i (results[i].slug)}
+	{#each { length: nbResultsShowed } as _, i (results[i].slug || results[i].id)}
 		<li>
 			<Action action={results[i]} />
 		</li>

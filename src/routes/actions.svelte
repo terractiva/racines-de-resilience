@@ -2,7 +2,7 @@
 	/**
 	 * @type {import('@sveltejs/kit').Load}
 	 */
-	export async function load({ page }) {
+	export async function load({ fetch, page }) {
 		/**
 		 * Permet :
 		 * 	- lors du pré-rendu : d'afficher des résultats (qui ne vont pas être en raccord avec les filtres)
@@ -11,10 +11,12 @@
 		 */
 		if (browser) {
 			const query = new URL(window.location).searchParams;
+			const otherResults = await fetch(`${actionsUrl}?${query}`);
 
 			return {
 				props: {
 					_: page.query, // Svelte n'appelle pas `load` si il n'y a pas de référence à `query`
+					otherResults: otherResults?.ok ? await otherResults.json() : [],
 					filterValues: {
 						category: getFilterValueFromQuery(query, 'categorie'),
 						level: getFilterValueFromQuery(query, 'niveau').map((level) => parseInt(level)),
@@ -26,6 +28,7 @@
 
 		return {
 			props: {
+				otherResults: [],
 				filterValues: {
 					category: [],
 					level: [],
@@ -52,12 +55,14 @@
 	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
 	import { getFilterValueFromQuery, getResults } from '$lib/utils/filters';
 	import { browser } from '$app/env';
+	import { actionsUrl } from '$lib/constants/settings';
 
 	export let filterValues;
+	export let otherResults;
 
 	const { setCurrentPage } = getContext(layoutContext);
 
-	$: results = getResults(filterValues);
+	$: treeResults = getResults(filterValues);
 
 	setCurrentPage(actionsPage);
 </script>
@@ -93,7 +98,7 @@
 
 			<SectionContentListItem
 				isExternalLink
-				link="https://framaforms.org/faire-grandir-larbre-1631182360"
+				link="https://airtable.com/shrlqNJvuiem0iFkA"
 				linkStyle="primary"
 			>
 				<svelte:fragment slot="title">Un site collaboratif</svelte:fragment>
@@ -116,7 +121,9 @@
 	</aside>
 
 	<div>
-		<FiltersResults {results} />
+		<FiltersResults results={treeResults} titleSuffix="dans l'arbre" />
+		<hr>
+		<FiltersResults results={otherResults} titleSuffix="dans les actions de la communauté" />
 	</div>
 </section>
 
@@ -175,6 +182,10 @@
 		aside {
 			background: var(--bg-secondary-color);
 			padding: 1rem 2rem;
+		}
+
+		div hr {
+			margin: 2rem 0;
 		}
 	}
 </style>

@@ -1,12 +1,12 @@
 import actions from '$lib/data/actions';
 
-function getFilterValueFromQuery(query, filterName) {
+export function getFilterValueFromQuery(query, filterName) {
 	const filterValue = query.get(filterName);
 
 	return filterValue ? filterValue.split(',') : [];
 }
 
-function getResults(filterValues) {
+export function getResults(filterValues) {
 	return actions.filter((action) => {
 		const hasCategory = filterValues.category.length
 			? action.categories.some((category) => filterValues.category.includes(category))
@@ -16,20 +16,18 @@ function getResults(filterValues) {
 			? filterValues.subcategory.includes(action.subcategory.slug)
 			: true;
 
-		if (!filterValues.category.length || !filterValues.subcategory.length) {
-			return hasCategory && hasLevel && hasSubcategory;
+		if (filterValues.category.length && filterValues.subcategory.length) {
+			return hasLevel && (hasCategory || hasSubcategory);
 		}
 
-		return hasLevel && (hasCategory || hasSubcategory);
+		return hasCategory && hasLevel && hasSubcategory;
 	});
 }
 
-function updateQueryWithFilterValue(query, filterName, filterValue) {
+export function updateQueryWithFilterValue(query, filterName, filterValue) {
 	if (filterValue.length) {
 		query.set(filterName, filterValue.toString());
 	} else {
 		query.delete(filterName);
 	}
 }
-
-export { getFilterValueFromQuery, getResults, updateQueryWithFilterValue };
