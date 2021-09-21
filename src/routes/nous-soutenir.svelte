@@ -83,6 +83,7 @@
 			<li><img src="/affiches/affiche-3.jpg" alt="" /></li>
 			<li><img src="/affiches/affiche-4.jpg" alt="" /></li>
 			<li><img src="/affiches/affiche-5.jpg" alt="" /></li>
+			<li><img src="/affiches/affiche-6.jpg" alt="" /></li>
 		</ul>
 
 		<h3 class="text-center">Faire un don</h3>
@@ -147,7 +148,7 @@
 	}
 
 	ul {
-		@include utilities.responsive-grid(repeat(3, 1fr), repeat(5, 1fr), repeat(5, 1fr), 1);
+		@include utilities.responsive-grid(repeat(3, 1fr), repeat(4, 1fr), repeat(6, 1fr), 1);
 
 		list-style: none;
 		margin: 6rem 0;
