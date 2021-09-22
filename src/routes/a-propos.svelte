@@ -9,7 +9,6 @@
 	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
-	import { gitHubLink } from '$lib/constants/settings';
 	import currentPage from '$lib/stores/currentPage';
 
 	currentPage.set(aboutPage);
@@ -178,7 +177,12 @@
 		>La démarche low-tech de <i>Racines de résilience</i></svelte:fragment
 	>
 	<svelte:fragment slot="right-content">
-		<a class="button primary" href={gitHubLink} rel="external" target="_blank">En savoir plus</a>
+		<a
+			class="button primary"
+			href="https://github.com/Terractiva/racines-de-resilience#conception-low-tech"
+			rel="external"
+			target="_blank">En savoir plus</a
+		>
 	</svelte:fragment>
 </SectionLowTech>
 
