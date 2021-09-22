@@ -41,9 +41,9 @@ const subcategories = {
 		width: 3.566,
 		height: 2.5092
 	},
-	resilience: {
+	local: {
 		name: `Renforcer la résilience locale`,
-		slug: `resilience`,
+		slug: `local`,
 		position: [26.8263, 58.3923],
 		width: 4.0512,
 		height: 2.4686

@@ -21,7 +21,7 @@ import housingActions from './3-housing.js';
 import wasteActions from './4-waste.js';
 import decarbonizeActions from './5-decarbonize.js';
 import agricultureActions from './6-agriculture.js';
-import resilienceActions from './7-resilience.js';
+import localActions from './7-local.js';
 import complexityActions from './8-complexity.js';
 import childrenActions from './9-children.js';
 
@@ -32,7 +32,7 @@ const actions = [
 	...wasteActions,
 	...decarbonizeActions,
 	...agricultureActions,
-	...resilienceActions,
+	...localActions,
 	...complexityActions,
 	...childrenActions,
 	...artActions,
