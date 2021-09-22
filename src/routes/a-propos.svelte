@@ -127,13 +127,16 @@
 				<svelte:fragment slot="link">Programmer le film</svelte:fragment>
 			</SectionContentListItem>
 
-			<SectionContentListItem isExternalLink link="https://www.onceyouknow-thefilm.com/">
+			<SectionContentListItem
+				isExternalLink
+				link="https://encours3.pulp-films.fr/project/une-fois-que-tu-sais/"
+			>
 				<svelte:fragment slot="text">
 					Le film <i>Une fois que tu sais</i> propose un face à face
 					<strong>poétique et bouleversant</strong> avec le défi climatique. On y chemine aux côtés d'Emmanuel,
 					à la rencontre de lui-même et face à des experts du climat.
 				</svelte:fragment>
-				<svelte:fragment slot="link">Site officiel du film</svelte:fragment>
+				<svelte:fragment slot="link">Page officielle du film</svelte:fragment>
 			</SectionContentListItem>
 		</SectionContentList>
 	</svelte:fragment>
