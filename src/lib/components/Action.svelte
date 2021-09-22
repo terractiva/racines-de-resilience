@@ -34,9 +34,11 @@
 		</p>
 	{/if}
 
-	<p class="action-subcategory">
-		<span class="tag is-small"><b>{action.subcategory.name}</b></span>
-	</p>
+	{#if action.subcategory.name}
+		<p class="action-subcategory">
+			<span class="tag is-small"><b>{action.subcategory.name}</b></span>
+		</p>
+	{/if}
 </article>
 
 <style lang="scss">
