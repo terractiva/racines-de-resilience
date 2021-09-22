@@ -32,7 +32,7 @@
 			réalisé par Emmanuel Cappellin, en collaboration avec Anne-Marie Sangla. Cette campagne est
 			<strong>portée par l'association <i>Terractiva</i></strong>, créée en 2019 pour défendre une
 			adaptation globale face aux processus d'effondrements en cours. Sa mission : accompagner des
-			objets artistiques particulièrements impactants auprès du grand public et soutenir un
+			objets artistiques particulièrement impactants auprès du grand public et soutenir un
 			changement culturel à grande échelle.
 		</p>
 		<SectionContentTwoThirds isReversed style="margin-bottom: 1.5rem;">
