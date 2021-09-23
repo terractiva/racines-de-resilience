@@ -31,7 +31,7 @@
 		<SectionContentList>
 			<SectionContentListItem
 				isExternalLink
-				link="https://framaforms.org/formulaire-de-pre-commande-affiche-et-bande-originale-une-fois-que-tu-sais-1630080026"
+				link="https://www.boutique.racinesderesilience.org/"
 				linkStyle="primary"
 			>
 				<svelte:fragment slot="text">
@@ -45,7 +45,7 @@
 
 			<SectionContentListItem
 				isExternalLink
-				link="https://framaforms.org/formulaire-de-pre-commande-affiche-et-bande-originale-une-fois-que-tu-sais-1630080026"
+				link="https://www.boutique.racinesderesilience.org/index.php/produit/frune-fois-que-tu-sais-podcast-bande-originale/"
 				linkStyle="primary"
 			>
 				<svelte:fragment slot="text">
@@ -53,7 +53,7 @@
 						><i>Une fois que tu sais</i> a lui aussi choisi de soutenir <i>Racines de résilience</i>
 						avec son travail</strong
 					>.<br /> Redécouvrez le film en immersion auditive, avec les dialogues les plus impactants
-					du films montés sur la musique orignale.
+					du films montés sur la musique originale.
 				</svelte:fragment>
 				<svelte:fragment slot="link">Acheter la bande-son / podcast</svelte:fragment>
 			</SectionContentListItem>
@@ -61,7 +61,7 @@
 			<SectionContentListItem
 				isExternalLink
 				id={supportUsPage.anchors.paperGuide}
-				link="https://framaforms.org/formulaire-de-pre-commande-affiche-et-bande-originale-une-fois-que-tu-sais-1630080026"
+				link="https://www.boutique.racinesderesilience.org/index.php/produit/frune-fois-que-tu-sais-guide-daction/"
 				linkStyle="primary"
 			>
 				<svelte:fragment slot="text">
@@ -70,7 +70,7 @@
 					>
 					a été distribué pour continuer le mouvement.<br /> C'est la
 					<strong>version papier de l'arbre aux actions</strong>. Si vous souhaitez vous procurer ce
-					poster A1, en souvenir du film ou pour l'affichez chez vous, signifiez-nous votre interet
+					poster A1, en souvenir du film ou pour l'affichez chez vous, signifiez-nous votre intérêt
 					ci-dessous !
 				</svelte:fragment>
 				<svelte:fragment slot="link">Acheter le poster de l'arbre aux actions</svelte:fragment>
