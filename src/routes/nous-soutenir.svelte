@@ -45,7 +45,7 @@
 
 			<SectionContentListItem
 				isExternalLink
-				link="https://www.boutique.racinesderesilience.org/index.php/produit/frune-fois-que-tu-sais-podcast-bande-originale/"
+				link="https://unefoisquetusais.bandcamp.com/"
 				linkStyle="primary"
 			>
 				<svelte:fragment slot="text">
