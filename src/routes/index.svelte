@@ -46,21 +46,6 @@
 
 			<SectionContentListItem
 				isExternalLink
-				link="https://us06web.zoom.us/webinar/register/WN_O-BYQo70RK2tvDPcZZjJxQ"
-			>
-				<svelte:fragment slot="title"><i>MyCO2</i> vous accompagne</svelte:fragment>
-				<svelte:fragment slot="text">
-					<i>MyCO2</i>, une des structures présentes sur le site, propose pour les spectateur·ice·s
-					d’<i>Une fois que tu sais</i> une
-					<strong>conférence ludique, collective et gratuite</strong>
-					pour réaliser son bilan carbone personnel et trouver des clés pour agir. RDV le
-					<strong>12 octobre de 18h à 19h30</strong>.
-				</svelte:fragment>
-				<svelte:fragment slot="link">Je m'inscris !</svelte:fragment>
-			</SectionContentListItem>
-
-			<SectionContentListItem
-				isExternalLink
 				link="https://www.google.com/maps/d/viewer?mid=1zvkq6whArE18g8hDYtY9WRNqVJAarAi9&hl=fr&usp=sharing"
 			>
 				<svelte:fragment slot="title">Où voir <i>Une fois que tu sais</i> ?</svelte:fragment>
