@@ -4,6 +4,7 @@
 	import TreeAuthors from './TreeAuthors.svelte';
 	import TreeItems from './TreeItems.svelte';
 	import TreeNavigator from './TreeNavigator.svelte';
+	import TreePaperVersion from './TreePaperVersion.svelte';
 
 	export let height;
 	export let width;
@@ -113,6 +114,7 @@
 		<TreeItems {backgroundPadding} {height} {isDragging} />
 	</TreeNavigator>
 	<TreeAuthors />
+	<TreePaperVersion />
 {/if}
 
 <style lang="scss">
