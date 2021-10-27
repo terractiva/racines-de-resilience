@@ -1,16 +1,24 @@
 <script>
+	let isDetailsClick = false;
 	let isOpen = false;
 	let nativeDetails;
 </script>
 
 <svelte:body
-	on:click={(e) => {
-		if (!e.path.includes(nativeDetails)) {
+	on:click={() => {
+		if (isDetailsClick) {
+			isDetailsClick = false;
+		} else {
 			isOpen = false;
 		}
 	}} />
 
-<details bind:open={isOpen} bind:this={nativeDetails} class="dropdown">
+<details
+	bind:open={isOpen}
+	bind:this={nativeDetails}
+	class="dropdown"
+	on:click={() => (isDetailsClick = true)}
+>
 	<summary class="button"><slot name="summary" /></summary>
 
 	<div class="card right">
