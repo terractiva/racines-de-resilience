@@ -53,7 +53,7 @@ curl_setopt($request, CURLOPT_HTTPGET, 1);
 curl_setopt($request, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($request, CURLOPT_TIMEOUT, 10);
 curl_setopt($request, CURLOPT_HTTPHEADER, array('Authorization: Bearer #{KEY}#'));
-curl_setopt($request, CURLOPT_URL, 'https://api.airtable.com/v0/#{BASE}#/#{TABLE}#?filterByFormula=' . $filter);
+curl_setopt($request, CURLOPT_URL, 'https://api.airtable.com/v0/#{BASE}#/#{TABLE}#?view=#{VIEW}#&filterByFormula=' . $filter);
 $data = json_decode(curl_exec($request), TRUE);
 curl_close($request);
 

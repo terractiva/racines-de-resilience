@@ -25,6 +25,7 @@ jobs:
         env:
           BASE: ${{ secrets.airtable_base }}
           TABLE: ${{ secrets.airtable_table }}
+          VIEW: ${{ secrets.airtable_view }}
           KEY: ${{ secrets.airtable_key }}
 
       - name: Déploiement
