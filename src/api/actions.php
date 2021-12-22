@@ -14,16 +14,12 @@ if ($_GET) {
   $termFilter = NULL;
 
   if ($_GET['categorie']) {
-    $categories = explode(',', $_GET['categorie']);
-    
-    foreach ($categories as $category) {
+    foreach ($_GET['categorie'] as $category) {
       $categoriesFilter[] = 'SEARCH("' . transformCategoryBack($category) . '", ARRAYJOIN({Catégories}))';
     }
   }
   if ($_GET['niveau']) {
-    $levels = explode(',', $_GET['niveau']);
-    
-    foreach ($levels as $level) {
+    foreach ($_GET['niveau'] as $level) {
       $levelsFilter[] = '{Niveau}="' . transformLevelBack($level) . '"';
     }
   }
@@ -31,9 +27,7 @@ if ($_GET) {
     $termFilter = 'REGEX_MATCH({Nom}, "(?i)' . $_GET['terme'] . '")';
   }
   if ($_GET['thematique']) {
-    $subcategories = explode(',', $_GET['thematique']);
-    
-    foreach ($subcategories as $subcategory) {
+    foreach ($_GET['thematique'] as $subcategory) {
       $categoriesFilter[] = '{Thématique - ID}="' . $subcategory . '"';
     }
   }

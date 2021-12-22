@@ -4,34 +4,18 @@ export default function formGoto(node, options) {
 	function onSubmit(event) {
 		event.preventDefault();
 
-    const splittedAction = node.action.split('#');
-		const values = [];
+		const [actionHref, actionAnchor] = node.action.split('#');
+		const query = new URLSearchParams(new FormData(node)).toString();
+		let href = actionHref;
 
-		new FormData(node).forEach((value, key) => {
-      const existing = values.find(item => item[0] === key);
+		if (query) {
+			href += `?${query}`;
+		}
+		if (actionAnchor) {
+			href += `#${actionAnchor}`;
+		}
 
-      if (existing) {
-        if (existing[1] instanceof Array) {
-          existing[1].push(value);
-        } else {
-          existing[1] = [existing[1], value];
-        }
-      } else {
-        values.push([key, value.toString()]);
-      }
-		});
-
-    let link = splittedAction[0];
-		const searchParams = new URLSearchParams(values);
-
-    if (values.length) {
-      link += `?${searchParams}`;
-    }
-    if (splittedAction[1]) {
-      link += `#${splittedAction[1]}`;
-    }
-
-		goto(link, options);
+		goto(href, options);
 	}
 
 	node.addEventListener('submit', onSubmit);

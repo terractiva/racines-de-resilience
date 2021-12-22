@@ -10,6 +10,7 @@
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
 	import Categories from '$lib/data/categories';
 	import currentPage from '$lib/stores/currentPage';
+	import InputNames from '$lib/constants/input-names';
 
 	const joinLink = 'https://colibris.link/OS02e';
 
@@ -100,8 +101,8 @@
 					sentiment d'impuissance qui freinent la mise en action. Et c'est le cas de nombre d'entre
 					nous !<br /> Dans la catégorie <i>Régénérer</i> de la page
 					<a
-						href="{actionsPage.path}?categorie={Categories.Regenerate}#{actionsPage.anchors
-							.filters}">Actions</a
+						href="{actionsPage.path}?{InputNames.category}={Categories.Regenerate}#{actionsPage
+							.anchors.filters}">Actions</a
 					>, vous pourrez trouver plusieurs actions pour
 					<strong>vous soutenir face à ces bouleversements</strong>.<br />
 					L'accompagnement du film <i>Une fois que tu sais</i> s'appuie notamment sur le processus

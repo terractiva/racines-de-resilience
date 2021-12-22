@@ -1,6 +1,7 @@
 <script>
 	import handleDraggedLink from '$lib/actions/handleDraggedLink';
-import { actionsPage } from '$lib/constants/pages';
+	import InputNames from '$lib/constants/input-names';
+	import { actionsPage } from '$lib/constants/pages';
 	import { treeSubcategoryFontSize } from '$lib/constants/settings';
 
 	export let backgroundHeight;
@@ -15,7 +16,8 @@ import { actionsPage } from '$lib/constants/pages';
 >
 	<a
 		use:handleDraggedLink={isDisabled}
-		href="{actionsPage.path}?thematique={subcategory.slug}#{actionsPage.anchors.filters}"
+		href="{actionsPage.path}?{InputNames.subcategory}={subcategory.slug}#{actionsPage.anchors
+			.filters}"
 		target="_blank"
 	>
 		<b>

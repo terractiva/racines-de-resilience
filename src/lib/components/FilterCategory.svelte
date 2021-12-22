@@ -1,4 +1,5 @@
 <script>
+	import InputNames from '$lib/constants/input-names';
 	import Categories from '$lib/data/categories';
 	import CheckboxGroup from './CheckboxGroup.svelte';
 
@@ -13,6 +14,6 @@
 		{ label: `S'interposer`, value: Categories.Intervene }
 	]}
 	id="category"
-	name="categorie"
+	name={InputNames.category}
 	on:updated
 />

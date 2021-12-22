@@ -1,5 +1,6 @@
 <script>
 	import formGoto from '$lib/actions/formGoTo';
+	import InputNames from '$lib/constants/input-names';
 	import { actionsPage } from '$lib/constants/pages';
 	import FilterCategory from './FilterCategory.svelte';
 	import FilterLevel from './FilterLevel.svelte';
@@ -14,7 +15,12 @@
 		action={actionsPage.path}
 		method="GET"
 	>
-		<input name="terme" placeholder="Rechercher une action" type="text" value={values.term} />
+		<input
+			name={InputNames.term}
+			placeholder="Rechercher une action"
+			type="text"
+			value={values.term}
+		/>
 
 		<details open={!!values.level.length}>
 			<summary><b>Niveau d'engagement</b></summary>

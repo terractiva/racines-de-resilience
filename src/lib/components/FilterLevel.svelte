@@ -1,4 +1,5 @@
 <script>
+	import InputNames from '$lib/constants/input-names';
 	import CheckboxGroup from './CheckboxGroup.svelte';
 
 	export let value = [];
@@ -12,6 +13,6 @@
 		{ label: 'Grand saut', value: 3 }
 	]}
 	id="level"
-	name="niveau"
+	name={InputNames.level}
 	on:updated
 />

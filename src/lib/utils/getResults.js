@@ -1,12 +1,6 @@
 import actions from '$lib/data/actions';
 
-export function getFilterValueFromQuery(query, filterName) {
-	const filterValue = query.get(filterName);
-
-	return filterValue ? filterValue.split(',') : [];
-}
-
-export function getResults(filterValues) {
+export default function getResults(filterValues) {
 	const termRegexp = new RegExp(filterValues.term, 'i');
 
 	return actions.filter((action) => {

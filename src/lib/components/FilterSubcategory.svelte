@@ -1,4 +1,5 @@
 <script>
+	import InputNames from '$lib/constants/input-names';
 	import subcategories from '$lib/data/subcategories';
 	import CheckboxGroup from './CheckboxGroup.svelte';
 
@@ -10,4 +11,10 @@
 	}));
 </script>
 
-<CheckboxGroup bind:group={value} {checkboxes} id="level" name="thematique" on:updated />
+<CheckboxGroup
+	bind:group={value}
+	{checkboxes}
+	id="level"
+	name={InputNames.subcategory}
+	on:updated
+/>

@@ -13,10 +13,10 @@
 			return {
 				props: {
 					filterValues: {
-						category: getFilterValueFromQuery(query, 'categorie'),
-						level: getFilterValueFromQuery(query, 'niveau').map((level) => parseInt(level)),
-						subcategory: getFilterValueFromQuery(query, 'thematique'),
-						term: query.get('terme')
+						category: query.getAll(InputNames.category),
+						level: query.getAll(InputNames.level).map((level) => parseInt(level, 10)),
+						subcategory: query.getAll(InputNames.subcategory),
+						term: query.get(InputNames.term)
 					}
 				}
 			};
@@ -47,10 +47,11 @@
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
 	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
-	import { getFilterValueFromQuery, getResults } from '$lib/utils/filters';
 	import currentPage from '$lib/stores/currentPage';
 	import FiltersDatabaseResults from '$lib/components/FiltersDatabaseResults.svelte';
 	import { browser } from '$app/env';
+	import getResults from '$lib/utils/getResults';
+	import InputNames from '$lib/constants/input-names';
 
 	export let filterValues;
 
