@@ -7,25 +7,30 @@
 
 	let showAllChoice = false;
 
+	$: hasResults = results.length;
 	$: showAllForced = results.length <= nbFilterResultsShowed;
 	$: showAll = showAllChoice || showAllForced;
 	$: nbResultsShowed = showAll ? results.length : nbFilterResultsShowed;
 </script>
 
-<p><b>{results.length} résultat{results.length === 1 ? '' : 's'} {titleSuffix}</b></p>
+<p class:mb-0={!hasResults}>
+	<b>{results.length} résultat{results.length === 1 ? '' : 's'} {titleSuffix}</b>
+</p>
 
-<ul>
-	{#each { length: nbResultsShowed } as _, i (results[i].slug || results[i].id)}
-		<li>
-			<Action action={results[i]} />
-		</li>
-	{/each}
-</ul>
+{#if hasResults}
+	<ul>
+		{#each { length: nbResultsShowed } as _, i (results[i].slug || results[i].id)}
+			<li>
+				<Action action={results[i]} />
+			</li>
+		{/each}
+	</ul>
 
-{#if !showAll}
-	<div>
-		<button class="button" on:click={() => (showAllChoice = true)}>Tout afficher</button>
-	</div>
+	{#if !showAll}
+		<div>
+			<button class="button" on:click={() => (showAllChoice = true)}>Tout afficher</button>
+		</div>
+	{/if}
 {/if}
 
 <style lang="scss">
