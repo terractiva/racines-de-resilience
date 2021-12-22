@@ -11,6 +11,7 @@ $filter = '';
 if ($_GET) {
   $categoriesFilter = array();
   $levelsFilter = array();
+  $termFilter = NULL;
 
   if ($_GET['categorie']) {
     $categories = explode(',', $_GET['categorie']);
@@ -19,7 +20,6 @@ if ($_GET) {
       $categoriesFilter[] = 'SEARCH("' . transformCategoryBack($category) . '", ARRAYJOIN({Catégories}))';
     }
   }
-
   if ($_GET['niveau']) {
     $levels = explode(',', $_GET['niveau']);
     
@@ -27,7 +27,9 @@ if ($_GET) {
       $levelsFilter[] = '{Niveau}="' . transformLevelBack($level) . '"';
     }
   }
-
+  if ($_GET['terme']) {
+    $termFilter = 'REGEX_MATCH({Nom}, "(?i)' . $_GET['terme'] . '")';
+  }
   if ($_GET['thematique']) {
     $subcategories = explode(',', $_GET['thematique']);
     
@@ -36,14 +38,20 @@ if ($_GET) {
     }
   }
 
+  $filters = array();
+
+  if (count($categoriesFilter)) {
+    $filters[] = 'OR(' . urlencode(implode(',', $categoriesFilter)) . ')';
+  }
   if (count($levelsFilter)) {
-    if (count($categoriesFilter)) {
-      $filter = 'AND(OR(' . urlencode(implode(',', $levelsFilter)) . '),OR(' . urlencode(implode(',', $categoriesFilter)) . '))';
-    } else {
-      $filter = 'OR(' . urlencode(implode(',', $levelsFilter)) . ')';
-    }
-  } else {
-    $filter = 'OR(' . urlencode(implode(',', $categoriesFilter)) . ')';
+    $filters[] = 'OR(' . urlencode(implode(',', $levelsFilter)) . ')';
+  }
+  if ($termFilter) {
+    $filters[] = urlencode($termFilter);
+  }
+
+  if (count($filters)) {
+    $filter = 'AND(' . implode(',', $filters) . ')';
   }
 }
 

@@ -11,9 +11,11 @@
 <aside>
 	<form
 		use:formGoto={{ keepfocus: true, noscroll: true, replaceState: true }}
-		action="{actionsPage.path}"
+		action={actionsPage.path}
 		method="GET"
 	>
+		<input name="terme" placeholder="Rechercher une action" type="text" value={values.term} />
+
 		<details open={!!values.level.length}>
 			<summary><b>Niveau d'engagement</b></summary>
 			<FilterLevel value={values.level} />
@@ -37,6 +39,10 @@
 	form {
 		display: flex;
 		flex-direction: column;
+
+		input {
+			margin-bottom: 2rem;
+		}
 
 		button {
 			width: 100%;

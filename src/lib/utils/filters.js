@@ -7,6 +7,8 @@ export function getFilterValueFromQuery(query, filterName) {
 }
 
 export function getResults(filterValues) {
+	const termRegexp = new RegExp(filterValues.term, 'i');
+
 	return actions.filter((action) => {
 		const hasCategory = filterValues.category.length
 			? action.categories.some((category) => filterValues.category.includes(category))
@@ -15,11 +17,12 @@ export function getResults(filterValues) {
 		const hasSubcategory = filterValues.subcategory.length
 			? filterValues.subcategory.includes(action.subcategory.slug)
 			: true;
+		const hasTerm = filterValues.term ? action.text.match(termRegexp) : true;
 
 		if (filterValues.category.length && filterValues.subcategory.length) {
-			return hasLevel && (hasCategory || hasSubcategory);
+			return hasLevel && hasTerm && (hasCategory || hasSubcategory);
 		}
 
-		return hasCategory && hasLevel && hasSubcategory;
+		return hasCategory && hasLevel && hasSubcategory && hasTerm;
 	});
 }

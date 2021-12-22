@@ -2,7 +2,7 @@
 	/**
 	 * @type {import('@sveltejs/kit').Load}
 	 */
-	export async function load({ page }) {
+	export async function load({ page: { query } }) {
 		/**
 		 * Permet :
 		 * 	- lors du pré-rendu : d'afficher des résultats (qui ne vont pas être en raccord avec les filtres)
@@ -13,9 +13,10 @@
 			return {
 				props: {
 					filterValues: {
-						category: getFilterValueFromQuery(page.query, 'categorie'),
-						level: getFilterValueFromQuery(page.query, 'niveau').map((level) => parseInt(level)),
-						subcategory: getFilterValueFromQuery(page.query, 'thematique')
+						category: getFilterValueFromQuery(query, 'categorie'),
+						level: getFilterValueFromQuery(query, 'niveau').map((level) => parseInt(level)),
+						subcategory: getFilterValueFromQuery(query, 'thematique'),
+						term: query.get('terme')
 					}
 				}
 			};
@@ -26,7 +27,8 @@
 				filterValues: {
 					category: [],
 					level: [],
-					subcategory: []
+					subcategory: [],
+					term: ''
 				}
 			}
 		};
