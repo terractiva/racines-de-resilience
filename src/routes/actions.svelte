@@ -2,7 +2,7 @@
 	/**
 	 * @type {import('@sveltejs/kit').Load}
 	 */
-	export async function load({ fetch, page }) {
+	export async function load({ page }) {
 		/**
 		 * Permet :
 		 * 	- lors du pré-rendu : d'afficher des résultats (qui ne vont pas être en raccord avec les filtres)
@@ -10,17 +10,12 @@
 		 * Avec du pré-rendu statique on ne peut pas faire autrement.
 		 */
 		if (browser) {
-			const query = new URL(window.location).searchParams;
-			const otherResults = await fetch(`${actionsUrl}?${query}`);
-
 			return {
 				props: {
-					_: page.query, // Svelte n'appelle pas `load` si il n'y a pas de référence à `query`
-					otherResults: otherResults?.ok ? await otherResults.json() : [],
 					filterValues: {
-						category: getFilterValueFromQuery(query, 'categorie'),
-						level: getFilterValueFromQuery(query, 'niveau').map((level) => parseInt(level)),
-						subcategory: getFilterValueFromQuery(query, 'thematique')
+						category: getFilterValueFromQuery(page.query, 'categorie'),
+						level: getFilterValueFromQuery(page.query, 'niveau').map((level) => parseInt(level)),
+						subcategory: getFilterValueFromQuery(page.query, 'thematique')
 					}
 				}
 			};
@@ -28,7 +23,6 @@
 
 		return {
 			props: {
-				otherResults: [],
 				filterValues: {
 					category: [],
 					level: [],
@@ -52,12 +46,11 @@
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
 	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
 	import { getFilterValueFromQuery, getResults } from '$lib/utils/filters';
-	import { browser } from '$app/env';
-	import { actionsUrl } from '$lib/constants/settings';
 	import currentPage from '$lib/stores/currentPage';
+	import FiltersDatabaseResults from '$lib/components/FiltersDatabaseResults.svelte';
+	import { browser } from '$app/env';
 
 	export let filterValues;
-	export let otherResults;
 
 	$: treeResults = getResults(filterValues);
 
@@ -119,8 +112,11 @@
 
 	<div>
 		<FiltersResults results={treeResults} titleSuffix="dans l'arbre" />
-		<hr>
-		<FiltersResults results={otherResults} titleSuffix="dans les actions de la communauté" />
+
+		{#if browser}
+			<hr />
+			<FiltersDatabaseResults />
+		{/if}
 	</div>
 </section>
 

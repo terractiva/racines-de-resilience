@@ -12,7 +12,7 @@
 	$: nbResultsShowed = showAll ? results.length : nbFilterResultsShowed;
 </script>
 
-<p><b>{results.length} résultat(s) {titleSuffix}</b></p>
+<p><b>{results.length} résultat{results.length === 1 ? '' : 's'} {titleSuffix}</b></p>
 
 <ul>
 	{#each { length: nbResultsShowed } as _, i (results[i].slug || results[i].id)}
