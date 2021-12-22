@@ -67,7 +67,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 // On retourne les données transformées ou une erreur
 if (isset($data['error'])) {
   header('HTTP/1.1 400 Bad Request');
-  echo json_encode($data);
+  echo json_encode($data['error']);
 } else {
   $response = array_map('transformAction', $data['records']);
 
