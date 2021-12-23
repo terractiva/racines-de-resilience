@@ -10,13 +10,16 @@
 		 * Avec du pré-rendu statique on ne peut pas faire autrement.
 		 */
 		if (browser) {
+			const query = new URL(window.location).searchParams;
+
 			return {
 				props: {
+					_: page.query, // Svelte n'appelle pas `load` si il n'y a pas de référence à `query`
 					filterValues: {
-						category: page.query.getAll(InputNames.category),
-						level: page.query.getAll(InputNames.level).map((level) => parseInt(level, 10)),
-						subcategory: page.query.getAll(InputNames.subcategory),
-						term: page.query.get(InputNames.term)
+						category: query.getAll(InputNames.category),
+						level: query.getAll(InputNames.level).map((level) => parseInt(level, 10)),
+						subcategory: query.getAll(InputNames.subcategory),
+						term: query.get(InputNames.term)
 					}
 				}
 			};
