@@ -36,7 +36,12 @@
 		</p>
 		<SectionContentTwoThirds isReversed style="margin-bottom: 1.5rem;">
 			<div class="image-wrapper">
-				<img alt="" class="floating-image" src="/illustrations/castors.png" />
+				<img
+					alt=""
+					class="floating-image"
+					src="/illustrations/castors.png"
+					srcset="/illustrations/castors.png 1x, /illustrations/castors-2x.png 2x"
+				/>
 			</div>
 			<p class="text-justify w-100 mb-0">
 				A l'initiative du réalisateur Emmanuel, <i>Terractiva</i> a décidé d'accompagner le film.

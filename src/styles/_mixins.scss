@@ -1,5 +1,11 @@
 @use 'src/styles/_variables.scss';
 
+@mixin media-2x() {
+	@media screen and (min-resolution: 2dppx) {
+		@content;
+	}
+}
+
 @mixin media-sm() {
 	@media screen and (max-width: variables.$size-sm - 1) {
 		@content;

@@ -72,7 +72,12 @@
 	<svelte:fragment slot="content">
 		<SectionContentList>
 			<li>
-				<img alt="" class="floating-image" src="/illustrations/arbre.png" />
+				<img
+					alt=""
+					class="floating-image"
+					src="/illustrations/arbre.png"
+					srcset="/illustrations/arbre.png 1x, /illustrations/arbre-2x.png 2x"
+				/>
 			</li>
 
 			<SectionContentListItem link={actionsTreePage.path} linkStyle="primary">

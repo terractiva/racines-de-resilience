@@ -37,7 +37,12 @@
 				<i>Racines de résilience</i> ! Vous aussi vous pouvez rejoindre cette communauté.
 			</p>
 			<div class="image-one-wrapper">
-				<img alt="" class="floating-image" src="/illustrations/oiseaux-2.png" />
+				<img
+					alt=""
+					class="floating-image"
+					src="/illustrations/oiseaux-2.png"
+					srcset="/illustrations/oiseaux-2.png 1x, /illustrations/oiseaux-2-2x.png 2x"
+				/>
 			</div>
 		</SectionContentTwoThirds>
 	</svelte:fragment>
@@ -124,7 +129,12 @@
 		<svelte:fragment slot="content">
 			<SectionContentTwoThirds isReversed>
 				<div class="image-two-wrapper">
-					<img alt="" class="floating-image" src="/illustrations/singes.png" />
+					<img
+						alt=""
+						class="floating-image"
+						src="/illustrations/singes.png"
+						srcset="/illustrations/singes.png 1x, /illustrations/singes-2x.png 2x"
+					/>
 				</div>
 				<div>
 					<p class="text-justify w-100">

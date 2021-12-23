@@ -31,15 +31,18 @@
 		isBackgroundLoading = true;
 		fabricCanvas = new window.fabric.StaticCanvas(nativeCanvas, { selection: false });
 		fabricCanvas.setBackgroundColor('#ffffff');
-		fabricCanvas.setBackgroundImage('/arbre.jpg', (_, isError) => {
-			isBackgroundLoading = false;
+		fabricCanvas.setBackgroundImage(
+			window.devicePixelRatio >= 2 ? '/arbre-2x.jpg' : '/arbre.jpg',
+			(_, isError) => {
+				isBackgroundLoading = false;
 
-			if (isError) {
-				isBackgroundError = true;
-			} else {
-				resizeCanvasBackground(width, height);
+				if (isError) {
+					isBackgroundError = true;
+				} else {
+					resizeCanvasBackground(width, height);
+				}
 			}
-		});
+		);
 	}
 
 	// Réinitialise le zoom et le déplacement

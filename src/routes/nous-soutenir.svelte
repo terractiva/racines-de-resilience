@@ -78,12 +78,48 @@
 		</SectionContentList>
 
 		<ul>
-			<li><img src="/affiches/affiche-1.jpg" alt="" /></li>
-			<li><img src="/affiches/affiche-2.jpg" alt="" /></li>
-			<li><img src="/affiches/affiche-3.jpg" alt="" /></li>
-			<li><img src="/affiches/affiche-4.jpg" alt="" /></li>
-			<li><img src="/affiches/affiche-5.jpg" alt="" /></li>
-			<li><img src="/affiches/affiche-6.jpg" alt="" /></li>
+			<li>
+				<img
+					alt=""
+					src="/affiches/affiche-1.jpg"
+					srcset="/affiches/affiche-1.jpg 1x, /affiches/affiche-1-2x.jpg 2x"
+				/>
+			</li>
+			<li>
+				<img
+					alt=""
+					src="/affiches/affiche-2.jpg"
+					srcset="/affiches/affiche-2.jpg 1x, /affiches/affiche-2-2x.jpg 2x"
+				/>
+			</li>
+			<li>
+				<img
+					alt=""
+					src="/affiches/affiche-3.jpg"
+					srcset="/affiches/affiche-3.jpg 1x, /affiches/affiche-3-2x.jpg 2x"
+				/>
+			</li>
+			<li>
+				<img
+					alt=""
+					src="/affiches/affiche-4.jpg"
+					srcset="/affiches/affiche-4.jpg 1x, /affiches/affiche-4-2x.jpg 2x"
+				/>
+			</li>
+			<li>
+				<img
+					alt=""
+					src="/affiches/affiche-5.jpg"
+					srcset="/affiches/affiche-5.jpg 1x, /affiches/affiche-5-2x.jpg 2x"
+				/>
+			</li>
+			<li>
+				<img
+					alt=""
+					src="/affiches/affiche-6.jpg"
+					srcset="/affiches/affiche-6.jpg 1x, /affiches/affiche-6-2x.jpg 2x"
+				/>
+			</li>
 		</ul>
 
 		<h3 class="text-center">Faire un don</h3>

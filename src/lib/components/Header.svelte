@@ -23,6 +23,7 @@
 			alt="Racines de résilience"
 			class:is-dark={$theme.value === Themes.Dark}
 			src="/logo.png"
+			srcset="/logo.png 1x, /logo-2x.png 2x"
 		/>
 	</a>
 </header>

@@ -18,12 +18,20 @@
 			</li>
 			<li>
 				<a href="https://www.nutergia.com/" rel="external" target="_blank">
-					<img alt="Nutergia" src="/partenaires/nutergia.png" />
+					<img
+						alt="Nutergia"
+						src="/partenaires/nutergia.png"
+						srcset="/partenaires/nutergia.png 1x, /partenaires/nutergia-2x.png 2x"
+					/>
 				</a>
 			</li>
 			<li>
 				<a href="https://www.leanature.com/" rel="external" target="_blank">
-					<img alt="Léa Nature" src="/partenaires/lea-nature.png" />
+					<img
+						alt="Léa Nature"
+						src="/partenaires/lea-nature.png"
+						srcset="/partenaires/lea-nature.png 1x, /partenaires/lea-nature-2x.png 2x"
+					/>
 				</a>
 			</li>
 			<li>
@@ -33,12 +41,20 @@
 			</li>
 			<li>
 				<a href="https://www.onepercentfortheplanet.fr/" rel="external" target="_blank">
-					<img alt="1% pour la planète" src="/partenaires/one-percent-for-the-planet.png" />
+					<img
+						alt="1% pour la planète"
+						src="/partenaires/one-percent-for-the-planet.png"
+						srcset="/partenaires/one-percent-for-the-planet.png 1x, /partenaires/one-percent-for-the-planet-2x.png 2x"
+					/>
 				</a>
 			</li>
 			<li>
 				<a href="https://www.nourfilms.com/" rel="external" target="_blank">
-					<img alt="Nour films" src="/partenaires/nour-films.png" />
+					<img
+						alt="Nour films"
+						src="/partenaires/nour-films.png"
+						srcset="/partenaires/nour-films.png 1x, /partenaires/nour-films-2x.png 2x"
+					/>
 				</a>
 			</li>
 			<li>
@@ -48,7 +64,11 @@
 			</li>
 			<li>
 				<a href="http://pulp-films.fr/" rel="external" target="_blank">
-					<img alt="Pulp Films" src="/partenaires/pulp-films.png" />
+					<img
+						alt="Pulp Films"
+						src="/partenaires/pulp-films.png"
+						srcset="/partenaires/pulp-films.png 1x, /partenaires/pulp-films-2x.png 2x"
+					/>
 				</a>
 			</li>
 			<li>
