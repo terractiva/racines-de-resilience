@@ -16,8 +16,9 @@
 >
 	<a
 		use:handleDraggedLink={isDisabled}
-		href="{actionsPage.path}?{InputNames.subcategory}={subcategory.slug}#{actionsPage.anchors
-			.filters}"
+		href="{actionsPage.path}?{encodeURIComponent(
+			InputNames.subcategory
+		)}={subcategory.slug}#{actionsPage.anchors.filters}"
 		target="_blank"
 	>
 		<b>
