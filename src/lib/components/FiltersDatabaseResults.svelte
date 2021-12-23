@@ -1,9 +1,10 @@
 <script>
-	import { page } from '$app/stores';
 	import { actionsUrl } from '$lib/constants/settings';
 	import FiltersResults from './FiltersResults.svelte';
 
-	$: resultsPromise = fetch(`${actionsUrl}?${$page.query}`).then(async (response) => {
+	export let query;
+
+	$: resultsPromise = fetch(`${actionsUrl}?${query}`).then(async (response) => {
 		const json = await response.json();
 
 		if (response.ok) {

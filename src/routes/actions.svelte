@@ -10,7 +10,7 @@
 		 * Avec du pré-rendu statique on ne peut pas faire autrement.
 		 */
 		if (browser) {
-			const query = new URL(window.location).searchParams;
+			const query = new URL(window.location).searchParams; // La variable `page.query` initiale n'est pas à jour
 
 			return {
 				props: {
@@ -20,7 +20,8 @@
 						level: query.getAll(InputNames.level).map((level) => parseInt(level, 10)),
 						subcategory: query.getAll(InputNames.subcategory),
 						term: query.get(InputNames.term)
-					}
+					},
+					query
 				}
 			};
 		}
@@ -57,6 +58,7 @@
 	import InputNames from '$lib/constants/input-names';
 
 	export let filterValues;
+	export let query;
 
 	$: treeResults = getResults(filterValues);
 
@@ -126,7 +128,7 @@
 
 		{#if browser}
 			<hr />
-			<FiltersDatabaseResults />
+			<FiltersDatabaseResults {query} />
 		{/if}
 	</div>
 </section>
