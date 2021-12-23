@@ -9,6 +9,10 @@ module.exports = {
 	rules: {
 		'subject-case': [2, 'always', 'sentence-case'],
 		'subject-max-length': [2, 'always', 72], // Longueur max conseillée dans GitKraken
-		'type-enum': [2, 'always', ['correction', 'fonctionnalité', 'factorisation', 'tâche']]
+		'type-enum': [
+			2,
+			'always',
+			['amélioration', 'correction', 'factorisation', 'fonctionnalité', 'tâche']
+		]
 	}
 };
