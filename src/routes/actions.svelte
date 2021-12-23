@@ -2,7 +2,7 @@
 	/**
 	 * @type {import('@sveltejs/kit').Load}
 	 */
-	export async function load({ page: { query } }) {
+	export async function load({ page }) {
 		/**
 		 * Permet :
 		 * 	- lors du pré-rendu : d'afficher des résultats (qui ne vont pas être en raccord avec les filtres)
@@ -13,10 +13,10 @@
 			return {
 				props: {
 					filterValues: {
-						category: query.getAll(InputNames.category),
-						level: query.getAll(InputNames.level).map((level) => parseInt(level, 10)),
-						subcategory: query.getAll(InputNames.subcategory),
-						term: query.get(InputNames.term)
+						category: page.query.getAll(InputNames.category),
+						level: page.query.getAll(InputNames.level).map((level) => parseInt(level, 10)),
+						subcategory: page.query.getAll(InputNames.subcategory),
+						term: page.query.get(InputNames.term)
 					}
 				}
 			};
