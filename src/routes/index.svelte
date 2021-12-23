@@ -103,10 +103,10 @@
 				width: auto;
 			}
 			@include utilities.media-md {
-				height: 60%;
+				height: 40%;
 			}
 			@include utilities.media-lg {
-				height: 75%;
+				height: 70%;
 			}
 		}
 	}

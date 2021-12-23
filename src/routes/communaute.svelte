@@ -33,8 +33,8 @@
 				Fortement touchées par le message du film, son public s'est mobilisé, et des dizaines de
 				personnes se sont préparées pour proposer des temps d’échange inspirées du
 				<i>Travail Qui Relie</i>
-				dans les cinémas, faire connaitre le guide d’actions et le site
-				<i>Racines de résilience</i> ! Vous aussi vous pouvez rejoindre cette communauté.
+				dans les cinémas, faire connaître le guide d’actions et le site
+				<i>Racines de résilience</i> ! Vous aussi vous pouvez rejoindre cette communauté.
 			</p>
 			<div class="image-one-wrapper">
 				<img
@@ -65,7 +65,7 @@
 				<li class="text-justify">
 					<strong>Organiser une projection</strong> avec l'animation que nous avons créée (inspirée
 					du
-					<i>Travail Qui Relie</i>) dans un cinéma ou un lieu qui pourrait l'acceuillir,
+					<i>Travail Qui Relie</i>) dans un cinéma ou un lieu qui pourrait l'accueillir,
 				</li>
 				<li class="text-justify">
 					<strong>Rejoindre la communauté</strong> pour échanger, se rencontrer, se soutenir.
@@ -94,7 +94,7 @@
 					?<br /> La <strong>communauté des spectateurs et soutiens du film</strong> se retrouve sur
 					son serveur Discord où plusieurs espaces d'échange sont proposés, organisés par thèmes ou par
 					régions. Retrouvez ainsi des personnes près de chez vous qui s'intéressent à ce qui vous tient
-					à coeur pour cheminer et agir ensemble.
+					à cœur pour cheminer et agir ensemble.
 				</svelte:fragment>
 				<svelte:fragment slot="link">Rencontrer la communauté</svelte:fragment>
 			</SectionContentListItem>

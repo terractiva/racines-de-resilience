@@ -7,12 +7,12 @@
 }
 
 @mixin media-sm() {
-	@media screen and (max-width: variables.$size-sm - 1) {
+	@media screen and (max-width: #{variables.$size-sm - 1}) {
 		@content;
 	}
 }
 @mixin media-md() {
-	@media screen and (min-width: variables.$size-sm) and (max-width: variables.$size-lg - 1) {
+	@media screen and (min-width: variables.$size-sm) and (max-width: #{variables.$size-lg - 1}) {
 		@content;
 	}
 }
