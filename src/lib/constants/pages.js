@@ -57,6 +57,7 @@ const homePage = {
 };
 
 const notFoundPage = {
+	description: '',
 	label: 'Page introuvable',
 	path: '/introuvable',
 	title: 'Page introuvable'
@@ -72,6 +73,13 @@ const supportUsPage = {
 	}
 };
 
+const quizPage = {
+	description: '',
+	label: 'Quiz',
+	path: '/quiz',
+	title: 'Quiz'
+};
+
 export {
 	aboutPage,
 	actionsPage,
@@ -79,5 +87,6 @@ export {
 	communityPage,
 	homePage,
 	notFoundPage,
-	supportUsPage
+	supportUsPage,
+	quizPage
 };

@@ -3,39 +3,26 @@
 	 * @type {import('@sveltejs/kit').Load}
 	 */
 	export async function load({ page }) {
-		/**
-		 * Permet :
-		 * 	- lors du pré-rendu : d'afficher des résultats (qui ne vont pas être en raccord avec les filtres)
-		 * 	- lors de l'affichage sur le client : de recharger les résultats (pour être raccord avec les filtres)
-		 * Avec du pré-rendu statique on ne peut pas faire autrement.
-		 */
-		if (browser) {
-			const query = new URL(window.location).searchParams; // La variable `page.query` initiale n'est pas à jour
-
-			return {
-				props: {
-					_: page.query, // Svelte n'appelle pas `load` si il n'y a pas de référence à `query`
-					filterValues: {
-						category: query.getAll(InputNames.category),
-						level: query.getAll(InputNames.level).map((level) => parseInt(level, 10)),
-						subcategory: query.getAll(InputNames.subcategory),
-						term: query.get(InputNames.term)
-					},
-					query
-				}
-			};
-		}
-
-		return {
-			props: {
+		return handleLoadQuery(
+			browser && page.query,
+			{
 				filterValues: {
 					category: [],
 					level: [],
 					subcategory: [],
 					term: ''
 				}
-			}
-		};
+			},
+			(query) => ({
+				filterValues: {
+					category: query.getAll(InputNames.category),
+					level: query.getAll(InputNames.level).map((level) => parseInt(level, 10)),
+					subcategory: query.getAll(InputNames.subcategory),
+					term: query.get(InputNames.term)
+				},
+				query
+			})
+		);
 	}
 </script>
 
@@ -56,6 +43,7 @@
 	import { browser } from '$app/env';
 	import getResults from '$lib/utils/getResults';
 	import InputNames from '$lib/constants/input-names';
+	import handleLoadQuery from '$lib/utils/handleLoadQuery';
 
 	export let filterValues;
 	export let query;
