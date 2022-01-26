@@ -12,7 +12,5 @@
 		{ label: 'Bon intermédiaire', value: 2 },
 		{ label: 'Grand saut', value: 3 }
 	]}
-	id="level"
 	name={InputNames.level}
-	on:updated
 />

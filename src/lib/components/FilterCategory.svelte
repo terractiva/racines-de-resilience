@@ -13,7 +13,5 @@
 		{ label: 'Régénérer', value: Categories.Regenerate },
 		{ label: `S'interposer`, value: Categories.Intervene }
 	]}
-	id="category"
 	name={InputNames.category}
-	on:updated
 />

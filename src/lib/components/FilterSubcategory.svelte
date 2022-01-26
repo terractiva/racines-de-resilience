@@ -13,10 +13,4 @@
 		.sort((a, b) => a.label.localeCompare(b.label));
 </script>
 
-<CheckboxGroup
-	bind:group={value}
-	{checkboxes}
-	id="level"
-	name={InputNames.subcategory}
-	on:updated
-/>
+<CheckboxGroup bind:group={value} {checkboxes} name={InputNames.subcategory} />

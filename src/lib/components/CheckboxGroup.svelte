@@ -1,27 +1,15 @@
 <script>
 	// Obligé de créer un composant de liste à cause de ce problème : https://github.com/sveltejs/svelte/issues/2308
 
-	import { createEventDispatcher } from 'svelte';
-
 	/** @type [{label: string, value: number|string}] */
 	export let checkboxes;
 	export let group;
-	export let id;
 	export let name;
-
-	const dispatch = createEventDispatcher();
 </script>
 
 {#each checkboxes as checkbox}
-	<label for="{id}-{checkbox.value}">
-		<input
-			bind:group
-			{name}
-			id="{id}-{checkbox.value}"
-			type="checkbox"
-			value={checkbox.value}
-			on:change={() => dispatch('updated', group)}
-		/>
+	<label>
+		<input bind:group {name} type="checkbox" value={checkbox.value} />
 		{checkbox.label}
 	</label>
 {/each}
@@ -37,6 +25,7 @@
 		}
 
 		input {
+			cursor: pointer;
 			flex-shrink: 0;
 			margin: 0;
 			margin-right: 0.5rem;
