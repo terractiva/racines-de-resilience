@@ -3,6 +3,7 @@ import autoprefixer from 'autoprefixer';
 import purgecss from '@fullhuman/postcss-purgecss';
 import sveltePreprocess from 'svelte-preprocess';
 import actions from './src/lib/data/actions/index.js';
+import quizSteps from './src/lib/data/quiz-steps.js';
 
 const postcssPlugins = [autoprefixer()];
 const isProduction = process.env.NODE_ENV === 'production';
@@ -23,7 +24,11 @@ const config = {
 		adapter: adapterStatic(),
 		target: '#svelte',
 		prerender: {
-			pages: ['*', ...actions.map((action) => `/arbre-actions/${action.slug}`)]
+			pages: [
+				'*',
+				...actions.map((action) => `/arbre-actions/${action.slug}`),
+				...quizSteps.map((_, index) => `/quiz/${index + 1}`)
+			]
 		}
 	},
 	preprocess: sveltePreprocess({
