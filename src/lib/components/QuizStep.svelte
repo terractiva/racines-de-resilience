@@ -33,8 +33,8 @@
 	<legend>{index + 1} / {quizSteps.length} {step.title}</legend>
 
 	{#each options as option}
-		<label on:click>
-			<input bind:group name={index + 1} type="radio" value={option.category} />
+		<label>
+			<input bind:group name={index + 1} type="radio" value={option.category} on:click />
 			<QuizIcon category={option.category} />
 			&nbsp;{option.label}
 		</label>
