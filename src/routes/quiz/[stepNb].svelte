@@ -25,6 +25,7 @@
 	export let query;
 	export let stepNb;
 
+	/** @type {HTMLFormElement} */
 	let nativeForm;
 
 	$: action =
@@ -59,7 +60,9 @@
 				{index}
 				{step}
 				isCurrentStep={currentStepNb === index + 1}
-				on:click={() => nativeForm.requestSubmit()}
+				on:click={() => {
+					nativeForm.dispatchEvent(new Event('submit', { cancelable: true }));
+				}}
 			/>
 		{/each}
 
