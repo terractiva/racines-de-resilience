@@ -6,11 +6,20 @@
 		actionsTreePage,
 		communityPage,
 		homePage,
+		quizPage,
 		supportUsPage
 	} from '$lib/constants/pages';
 	import { gitHubLink } from '$lib/constants/settings';
 
-	const pages = [homePage, actionsPage, actionsTreePage, supportUsPage, communityPage, aboutPage];
+	const pages = [
+		homePage,
+		quizPage,
+		actionsPage,
+		actionsTreePage,
+		supportUsPage,
+		communityPage,
+		aboutPage
+	];
 </script>
 
 <footer>

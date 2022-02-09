@@ -1,7 +1,6 @@
 <script>
 	import Categories from '$lib/data/categories';
 	import quizSteps from '$lib/data/quiz-steps';
-	import QuizIcon from './QuizIcon.svelte';
 
 	export let group;
 	export let index;
@@ -20,7 +19,7 @@
 	// Merci https://javascript.info/task/shuffle
 	function shuffle(array) {
 		for (let i = array.length - 1; i > 0; i--) {
-			let j = Math.floor(Math.random() * (i + 1));
+			const j = Math.floor(Math.random() * (i + 1));
 
 			[array[i], array[j]] = [array[j], array[i]];
 		}
@@ -30,13 +29,16 @@
 </script>
 
 <fieldset class:is-current-step={isCurrentStep}>
-	<legend>{index + 1} / {quizSteps.length} {step.title}</legend>
+	<legend
+		><strong>
+			{index + 1} / {quizSteps.length} • <span class="text-primary">{step.title}</span>
+		</strong></legend
+	>
 
 	{#each options as option}
 		<label>
 			<input bind:group name={index + 1} type="radio" value={option.category} on:click />
-			<QuizIcon category={option.category} />
-			&nbsp;{option.label}
+			{option.label}
 		</label>
 	{/each}
 </fieldset>
