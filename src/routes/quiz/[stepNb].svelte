@@ -61,7 +61,15 @@
 				{step}
 				isCurrentStep={currentStepNb === index + 1}
 				on:click={() => {
-					nativeForm.dispatchEvent(new Event('submit', { cancelable: true }));
+					try {
+						nativeForm.dispatchEvent(new window.SubmitEvent('submit', { cancelable: true }));
+					} catch (error) {
+						// Pour les vieux navigateurs
+						const event = window.document.createEvent('SubmitEvent');
+
+						event.initEvent('submit', false, true);
+						nativeForm.dispatchEvent(event);
+					}
 				}}
 			/>
 		{/each}
