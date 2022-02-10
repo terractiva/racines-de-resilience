@@ -55,7 +55,7 @@
 	}
 </script>
 
-<Section>
+<Section isCentered={!browser || !results.length}>
 	<svelte:fragment slot="content">
 		{#if browser}
 			{#if results.length}
@@ -99,14 +99,9 @@
 		margin-top: 0;
 	}
 
-	:global(section) {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-	}
-
 	.buttons {
 		display: flex;
+		justify-content: center;
 		margin-bottom: 3rem;
 
 		button,
