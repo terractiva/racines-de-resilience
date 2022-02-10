@@ -41,14 +41,14 @@
 	import currentPage from '$lib/stores/currentPage';
 	import FiltersDatabaseResults from '$lib/components/FiltersDatabaseResults.svelte';
 	import { browser } from '$app/env';
-	import getResults from '$lib/utils/getResults';
+	import getActionResults from '$lib/utils/getActionResults';
 	import InputNames from '$lib/constants/input-names';
 	import handleLoadQuery from '$lib/utils/handleLoadQuery';
 
 	export let filterValues;
 	export let query;
 
-	$: treeResults = getResults(filterValues);
+	$: treeResults = getActionResults(filterValues);
 
 	currentPage.set(actionsPage);
 </script>
@@ -112,7 +112,7 @@
 	</aside>
 
 	<div>
-		<FiltersResults results={treeResults} titleSuffix="dans l'arbre" />
+		<FiltersResults results={treeResults} title="{treeResults.length} résultat(s) dans l'arbre" />
 
 		{#if browser}
 			<hr />

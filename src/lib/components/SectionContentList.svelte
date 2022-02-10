@@ -11,6 +11,7 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		width: 100%;
 
 		&.two-items {
 			@include utilities.responsive-grid(1fr, repeat(2, 1fr), repeat(2, 1fr), 2, true);

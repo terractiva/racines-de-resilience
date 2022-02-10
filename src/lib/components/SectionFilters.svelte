@@ -55,10 +55,14 @@
 </Section>
 
 <style lang="scss">
-	form div {
-		@include utilities.responsive-grid(1fr, auto, repeat(3, max-content), 0.5);
+	form {
+		text-align: center;
 
-		justify-content: center;
-		margin-bottom: 3rem;
+		div {
+			@include utilities.responsive-grid(1fr, auto, repeat(3, max-content), 0.5);
+
+			justify-content: center;
+			margin-bottom: 3rem;
+		}
 	}
 </style>

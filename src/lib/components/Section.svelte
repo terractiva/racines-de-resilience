@@ -3,9 +3,9 @@
 	export let isCentered = false;
 </script>
 
-<section {id} class="container" class:text-center={isCentered}>
+<section {id} class="container" class:is-centered={isCentered}>
 	{#if $$slots.title}
-		<h2><slot name="title" /></h2>
+		<h2 class:text-center={isCentered}><slot name="title" /></h2>
 	{/if}
 
 	<slot name="content" />
@@ -13,9 +13,15 @@
 
 <style lang="scss">
 	section {
+		display: flex;
+		flex-direction: column;
 		padding-bottom: 8rem;
 		padding-top: 8rem;
 		position: relative;
+
+		&.is-centered {
+			align-items: center;
+		}
 
 		h2 {
 			margin-top: 0;

@@ -3,7 +3,7 @@
 	import Action from './Action.svelte';
 
 	export let results;
-	export let titleSuffix;
+	export let title;
 
 	let showAllChoice = false;
 
@@ -14,7 +14,7 @@
 </script>
 
 <p class:mb-0={!hasResults}>
-	<b>{results.length} résultat{results.length === 1 ? '' : 's'} {titleSuffix}</b>
+	<b>{title}</b>
 </p>
 
 {#if hasResults}

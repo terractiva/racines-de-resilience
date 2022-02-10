@@ -52,7 +52,7 @@
 	<Section>
 		<svelte:fragment slot="title">Participer à l'accompagnement du film</svelte:fragment>
 		<svelte:fragment slot="content">
-			<p class="text-justify">
+			<p class="text-justify mb-0">
 				Si le film vous touche et que vous souhaitez <strong
 					>vous impliquer dans son accompagnement</strong
 				>, vous pouvez prendre plusieurs rôles :

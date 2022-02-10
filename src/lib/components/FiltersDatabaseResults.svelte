@@ -18,7 +18,10 @@
 {#await resultsPromise}
 	<p class="mb-0">Chargement des actions de la communauté...</p>
 {:then results}
-	<FiltersResults {results} titleSuffix="dans les actions de la communauté" />
+	<FiltersResults
+		{results}
+		title="{results.length} résultat(s) dans les actions de la communauté"
+	/>
 {:catch}
 	<p class="mb-0">Oups, il y a eu une erreur...</p>
 {/await}
