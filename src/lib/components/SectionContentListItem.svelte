@@ -2,6 +2,7 @@
 	export let hasReducedWidth = false;
 	export let id = null;
 	export let isExternalLink = false;
+	export let isFullColumn = false;
 	export let isLinkDisabled = false;
 	export let link = null;
 	export let linkStyle = '';
@@ -9,7 +10,7 @@
 	$: linkProps = isExternalLink ? { rel: 'external', target: '_blank' } : {};
 </script>
 
-<li {id} class:has-reduced-width={hasReducedWidth}>
+<li {id} class:has-reduced-width={hasReducedWidth} class:is-full-column={isFullColumn}>
 	{#if $$slots.title}
 		<h3><slot name="title" /></h3>
 	{/if}
@@ -21,7 +22,8 @@
 	{/if}
 	{#if $$slots.link}
 		{#if isLinkDisabled}
-			<button disabled class="button {linkStyle}" type="button"><slot name="link" /> (à venir)</button
+			<button disabled class="button {linkStyle}" type="button"
+				><slot name="link" /> (à venir)</button
 			>
 		{:else}
 			<a {...linkProps} class="button {linkStyle}" href={link}><slot name="link" /></a>
@@ -40,6 +42,11 @@
 
 			@include utilities.media-lg {
 				width: 75%;
+			}
+		}
+		&.is-full-column {
+			@include utilities.media-md-lg {
+				grid-column: 1/3;
 			}
 		}
 

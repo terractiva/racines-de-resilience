@@ -1,6 +1,6 @@
 <script>
 	import formGoto from '$lib/actions/formGoTo';
-	import { actionsPage, actionsTreePage } from '$lib/constants/pages';
+	import { actionsPage, actionsTreePage, quizPage } from '$lib/constants/pages';
 	import FilterCategory from './FilterCategory.svelte';
 	import FilterLevel from './FilterLevel.svelte';
 	import FilterSubcategory from './FilterSubcategory.svelte';
@@ -11,7 +11,7 @@
 </script>
 
 <Section isCentered>
-	<svelte:fragment slot="title">Deux façons de trouver nos prochaines actions</svelte:fragment>
+	<svelte:fragment slot="title">Trois façons de trouver nos prochaines actions</svelte:fragment>
 	<svelte:fragment slot="content">
 		<SectionContentList nbItemsByLine={2}>
 			<SectionContentListItem link={actionsTreePage.path} linkStyle="primary">
@@ -19,7 +19,12 @@
 				<svelte:fragment slot="link">Explorer l'arbre aux actions</svelte:fragment>
 			</SectionContentListItem>
 
-			<SectionContentListItem>
+			<SectionContentListItem link={quizPage.path} linkStyle="primary">
+				<svelte:fragment slot="title">Le dernier test avant la fin du monde</svelte:fragment>
+				<svelte:fragment slot="link">Faire le quiz</svelte:fragment>
+			</SectionContentListItem>
+
+			<SectionContentListItem isFullColumn>
 				<svelte:fragment slot="title">Rechercher selon mes critères</svelte:fragment>
 				<svelte:fragment slot="content">
 					<form use:formGoto action="{actionsPage.path}#{actionsPage.anchors.filters}" method="GET">

@@ -50,7 +50,7 @@
 			>
 				<svelte:fragment slot="title">Où voir <i>Une fois que tu sais</i> ?</svelte:fragment>
 				<svelte:fragment slot="text">
-					Les <strong>séances-évenements</strong> avant et après la
+					Les <strong>séances-événements</strong> avant et après la
 					<strong>sortie le 22 septembre</strong>
 					au cinéma du film <i>Une fois que tu sais</i> peuvent permettre aux enjeux climatiques de
 					passer sur le devant de la scène ! Voici une <strong>carte pour découvrir</strong> les séances
