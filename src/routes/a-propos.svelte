@@ -163,7 +163,7 @@
 					</li>
 					<li>
 						<a href="https://elypss.fr/" rel="external" target="_blank">Loïc Cimelière</a> : graphiste
-						de l'Arbre aux actions, détenteur d'un diplôme de patience
+						de l'arbre aux actions, détenteur d'un diplôme de patience
 					</li>
 					<li>Charlotte Ogier : rédactrice de textes, coordinatrice des logiques</li>
 					<li>Brianne Parquier : designeuse improvisée, relectrice pointilleuse</li>

@@ -50,7 +50,7 @@
 		<div class="footer-contact">
 			<p><b>Contact</b></p>
 
-			<a href={`mailto:${ownerMail}`} rel="external">{ownerMail}</a>
+			<a href="mailto:{ownerMail}" rel="external">{ownerMail}</a>
 		</div>
 
 		<div class="footer-map">

@@ -11,6 +11,7 @@
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
 	import SectionFilters from '$lib/components/SectionFilters.svelte';
 	import currentPage from '$lib/stores/currentPage';
+	import { ownerMail } from '$lib/constants/identity';
 
 	currentPage.set(homePage);
 </script>
@@ -32,20 +33,6 @@
 		<SectionContentList>
 			<SectionContentListItem
 				isExternalLink
-				link="https://www.onepercentfortheplanet.fr/les-projets-2021/"
-			>
-				<svelte:fragment slot="title"><i>1% Pour la Planète</i></svelte:fragment>
-				<svelte:fragment slot="text">
-					<strong>Notre partenaire</strong> <i>1% Pour la Planète</i> a sélectionné 40 associations
-					environnementales qui appellent le grand public à un soutien financier et pour lesquelles
-					<strong>il doublera le montant des dons reçus</strong> (jusqu'à 2500€). Découvrez ces initiatives
-					dont plusieurs sont déjà dans notre guide d'actions !
-				</svelte:fragment>
-				<svelte:fragment slot="link">En savoir plus</svelte:fragment>
-			</SectionContentListItem>
-
-			<SectionContentListItem
-				isExternalLink
 				link="https://www.google.com/maps/d/viewer?mid=1zvkq6whArE18g8hDYtY9WRNqVJAarAi9&hl=fr&usp=sharing"
 			>
 				<svelte:fragment slot="title">Où voir <i>Une fois que tu sais</i> ?</svelte:fragment>
@@ -59,15 +46,87 @@
 				<svelte:fragment slot="link">Trouver une séance</svelte:fragment>
 			</SectionContentListItem>
 
-			<SectionContentListItem isExternalLink link="https://mapetiteplanete.org/">
-				<svelte:fragment slot="title">Des défis avec <i>Ma Petite Planète</i></svelte:fragment>
+			<SectionContentListItem isExternalLink link="mailto:{ownerMail}">
+				<svelte:fragment slot="title">Merci et bravo au film et sa communauté</svelte:fragment>
 				<svelte:fragment slot="text">
-					En organisant des compétitions déjantées de défis écolos, <i>Ma Petite Planète</i> aide
-					petits et grands à participer à la <strong>protection de l’environnement</strong>. A jouer
-					entre amis, en famille, entre collègues...
-					<strong>top départ le 27 septembre prochain</strong> !
+					<strong>15 000 spectateur·ice·s</strong> d’<i>Une fois que tu sais</i> en salle de cinéma,
+					<strong>90 séances-événements</strong>
+					avec animations, <strong>15 000 guides</strong> distribués au public et plus de
+					<strong>50 000 visites</strong> sur ce site en 5 mois ! Ce n’est que le début, le film continue
+					de rencontrer le public dans les salles de cinéma ou ailleurs. Associations, entreprises, collectivités,
+					écoles... vous voulez organiser une projection ?
 				</svelte:fragment>
-				<svelte:fragment slot="link">Je veux participer</svelte:fragment>
+				<svelte:fragment slot="link">Contactez-nous</svelte:fragment>
+			</SectionContentListItem>
+
+			<SectionContentListItem
+				isExternalLink
+				link="https://www.boutique.racinesderesilience.org/index.php/produit/frune-fois-que-tu-sais-guide-daction/"
+			>
+				<svelte:fragment slot="title">15 000 guides distribués, 15 000 réédités</svelte:fragment>
+				<svelte:fragment slot="text">
+					Avec <strong>10 000 guides</strong> donnés aux spectateur·ice·s d’<i
+						>Une fois que tu sais</i
+					>
+					et <strong>5 000 guides</strong>
+					offerts aux abonnés de notre partenaire <i>Yggdrasil</i> avec leur triple et ultime numéro
+					le
+					<a
+						href="https://yggdrasil-mag.com/magazine/yggdrasil-numero-10-11-diouze"
+						rel="external"
+						target="_blank">10-11-12</a
+					>... L’arbre aux actions de <i>Racines de Résilience</i> a rencontré un franc succès ! Nous
+					avons donc lancé une réédition pour que les racines grandissent !
+				</svelte:fragment>
+				<svelte:fragment slot="link">Commander mon guide</svelte:fragment>
+			</SectionContentListItem>
+
+			<SectionContentListItem isExternalLink link="https://www.boutique.racinesderesilience.org/">
+				<svelte:fragment slot="title"
+					>Des cadeaux ? Affiches collectors, bandes sonores</svelte:fragment
+				>
+				<svelte:fragment slot="text">
+					Pour soutenir notre démarche, des artistes ont créé des <strong>affiches collector</strong
+					>
+					et le compositeur de la musique a monté une <strong>bande originale</strong> et un
+					<strong>podcast</strong>
+					d’<i>Une fois que tu sais</i>. Pour nous soutenir vous aussi et faire parler du film,
+					offrez autour de vous de belles reproductions artisanales et écologiques en risographie et
+					des bandes sonores en numérique.
+				</svelte:fragment>
+				<svelte:fragment slot="link">Découvrir les œuvres</svelte:fragment>
+			</SectionContentListItem>
+
+			<SectionContentListItem
+				isExternalLink
+				link="https://www.facebook.com/UneFoisQueTuSais/videos/267364971934339/"
+			>
+				<svelte:fragment slot="title">Avec animation, ça change tout !</svelte:fragment>
+				<svelte:fragment slot="text">
+					Si vous n’avez pas pu goûter à l’ambiance des salles, découvrez les réactions du public
+					lors d’un événement en octobre dernier à l’espace Saint-Michel à Paris. Et pour les
+					curieux·ses, vous pouvez même trouver <a
+						href="https://tube.nocturlab.fr/videos/watch/c0749df2-fcfa-4a3e-b4ab-c5e8bae9a6a7"
+						rel="external"
+						target="_blank">ici la vidéo complète</a
+					>
+					de l’animation donnée par <strong>Brianne Parquier</strong> en présence d’<strong
+						>Emmanuel Cappellin</strong
+					>, <strong>Anne-Marie Sangla</strong>
+					et <strong>Jean-Marc Jancovici</strong> !
+				</svelte:fragment>
+				<svelte:fragment slot="link">Teaser de l’animation</svelte:fragment>
+			</SectionContentListItem>
+
+			<SectionContentListItem isExternalLink link="https://www.facebook.com/UneFoisQueTuSais/">
+				<svelte:fragment slot="title">Sortie VOD, DVD</svelte:fragment>
+				<svelte:fragment slot="text">
+					Vous voulez voir <i>Une fois que tu sais</i> chez vous? Le film sera disponible en
+					<strong>Vidéo à la Demande (VOD) le 28 février 2022</strong>, et en
+					<strong>DVD le 19 avril 2022</strong> ! Abonnez-vous à la page Facebook du film pour avoir
+					les détails en temps et en heure.
+				</svelte:fragment>
+				<svelte:fragment slot="link">Facebook <i>Une fois que tu sais</i></svelte:fragment>
 			</SectionContentListItem>
 		</SectionContentList>
 	</svelte:fragment>
