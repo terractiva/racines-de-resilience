@@ -9,10 +9,14 @@
 $filter = '';
 
 if ($_GET) {
+  $actionTermFilter = NULL;
   $categoriesFilter = array();
   $levelsFilter = array();
-  $termFilter = NULL;
+  $sourceTermFilter = NULL;
 
+  if ($_GET['action']) {
+    $actionTermFilter = 'REGEX_MATCH({Nom}, "(?i)' . $_GET['action'] . '")';
+  }
   if ($_GET['categorie']) {
     foreach ($_GET['categorie'] as $category) {
       $categoriesFilter[] = 'SEARCH("' . transformCategoryBack($category) . '", ARRAYJOIN({Catégories}))';
@@ -23,8 +27,8 @@ if ($_GET) {
       $levelsFilter[] = '{Niveau}="' . transformLevelBack($level) . '"';
     }
   }
-  if ($_GET['terme']) {
-    $termFilter = 'REGEX_MATCH({Nom}, "(?i)' . $_GET['terme'] . '")';
+  if ($_GET['structure']) {
+    $sourceTermFilter = 'REGEX_MATCH({Source - Nom}, "(?i)' . $_GET['structure'] . '")';
   }
   if ($_GET['thematique']) {
     foreach ($_GET['thematique'] as $subcategory) {
@@ -34,14 +38,17 @@ if ($_GET) {
 
   $filters = array();
 
+  if ($actionTermFilter) {
+    $filters[] = urlencode($actionTermFilter);
+  }
   if (count($categoriesFilter)) {
     $filters[] = 'OR(' . urlencode(implode(',', $categoriesFilter)) . ')';
   }
   if (count($levelsFilter)) {
     $filters[] = 'OR(' . urlencode(implode(',', $levelsFilter)) . ')';
   }
-  if ($termFilter) {
-    $filters[] = urlencode($termFilter);
+  if ($sourceTermFilter) {
+    $filters[] = urlencode($sourceTermFilter);
   }
 
   if (count($filters)) {

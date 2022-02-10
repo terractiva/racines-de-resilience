@@ -1,8 +1,9 @@
 const InputNames = {
+	action: 'action',
 	category: 'categorie[]',
 	level: 'niveau[]',
-	term: 'terme',
-	subcategory: 'thematique[]'
+	subcategory: 'thematique[]',
+	source: 'structure'
 };
 
 export default InputNames;

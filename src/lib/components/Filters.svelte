@@ -16,10 +16,17 @@
 		method="GET"
 	>
 		<input
-			name={InputNames.term}
+			name={InputNames.action}
 			placeholder="Rechercher une action"
 			type="text"
-			value={values.term}
+			value={values.action}
+		/>
+
+		<input
+			name={InputNames.source}
+			placeholder="Rechercher une structure/organisation/initiative"
+			type="text"
+			value={values.source}
 		/>
 
 		<details open={!!values.level.length}>

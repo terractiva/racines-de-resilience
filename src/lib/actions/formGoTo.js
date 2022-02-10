@@ -4,7 +4,7 @@ export default function formGoto(node, options) {
 	function onSubmit(event) {
 		event.preventDefault();
 
-		const [actionHref, actionAnchor] = node.action.split('#');
+		const [actionHref, actionAnchor] = node.getAttribute('action').split('#');
 		const query = new URLSearchParams(new FormData(node)).toString();
 		let href = actionHref;
 

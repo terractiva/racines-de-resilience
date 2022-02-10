@@ -1,22 +1,32 @@
 import actions from '$lib/data/actions';
 
-export default function getActionResults({ category = [], level = [], subcategory = [], term }) {
-	const termRegexp = new RegExp(term, 'i');
+export default function getActionResults({
+	action,
+	category = [],
+	level = [],
+	subcategory = [],
+	source
+}) {
+	const actionTermRegexp = new RegExp(action, 'i');
+	const sourceTermRegexp = new RegExp(source, 'i');
 
 	return actions.filter((action) => {
+		const hasActionTerm = action ? action.text.match(actionTermRegexp) : true;
 		const hasCategory = category.length
 			? action.categories.some((actionCategory) => category.includes(actionCategory))
 			: true;
 		const hasLevel = level.length ? level.includes(action.level) : true;
+		const hasSourceTerm = source
+			? action.sources.some((source) => source.name.match(sourceTermRegexp))
+			: true;
 		const hasSubcategory = subcategory.length
 			? subcategory.includes(action.subcategory.slug)
 			: true;
-		const hasTerm = term ? action.text.match(termRegexp) : true;
 
 		if (category.length && subcategory.length) {
-			return hasLevel && hasTerm && (hasCategory || hasSubcategory);
+			return hasActionTerm && hasLevel && hasSourceTerm && (hasCategory || hasSubcategory);
 		}
 
-		return hasCategory && hasLevel && hasSubcategory && hasTerm;
+		return hasActionTerm && hasCategory && hasLevel && hasSourceTerm && hasSubcategory;
 	});
 }
