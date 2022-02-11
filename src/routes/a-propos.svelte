@@ -166,7 +166,11 @@
 						de l'arbre aux actions, détenteur d'un diplôme de patience
 					</li>
 					<li>Charlotte Ogier : rédactrice de textes, coordinatrice des logiques</li>
-					<li>Brianne Parquier : designeuse improvisée, relectrice pointilleuse</li>
+					<li>
+						<a href="https://brianneparquier.fr/" rel="external" target="_blank">Brianne Parquier</a
+						>
+						: designeuse improvisée, relectrice pointilleuse
+					</li>
 					<li>
 						Clarisse Barreau et Emmanuel Cappellin : relecteurs et consultants, coachs de qualité
 					</li>
