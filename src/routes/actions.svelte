@@ -9,7 +9,10 @@
 				filterValues: {
 					actionTerm: '',
 					category: [],
+					country: [],
+					department: [],
 					level: [],
+					region: [],
 					subcategory: [],
 					sourceTerm: ''
 				}
@@ -18,7 +21,10 @@
 				filterValues: {
 					actionTerm: query.get(InputNames.action),
 					category: query.getAll(InputNames.category),
+					country: query.getAll(InputNames.country),
+					department: query.getAll(InputNames.department),
 					level: query.getAll(InputNames.level).map((level) => parseInt(level, 10)),
+					region: query.getAll(InputNames.region),
 					subcategory: query.getAll(InputNames.subcategory),
 					sourceTerm: query.get(InputNames.source)
 				},

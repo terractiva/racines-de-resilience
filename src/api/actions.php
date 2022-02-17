@@ -11,7 +11,10 @@ $filter = '';
 if ($_GET) {
   $actionTermFilter = NULL;
   $categoriesFilter = array();
+  $countriesFilter = array();
+  $departmentsFilter = array();
   $levelsFilter = array();
+  $regionsFilter = array();
   $sourceTermFilter = NULL;
 
   if ($_GET['action']) {
@@ -22,9 +25,24 @@ if ($_GET) {
       $categoriesFilter[] = 'SEARCH("' . transformCategoryBack($category) . '", ARRAYJOIN({Catégories}))';
     }
   }
+  if ($_GET['departement']) {
+    foreach ($_GET['departement'] as $department) {
+      $departmentsFilter[] = '{Département - ID}="' . $department . '"';
+    }
+  }
   if ($_GET['niveau']) {
     foreach ($_GET['niveau'] as $level) {
       $levelsFilter[] = '{Niveau}="' . transformLevelBack($level) . '"';
+    }
+  }
+  if ($_GET['pays']) {
+    foreach ($_GET['pays'] as $country) {
+      $countriesFilter[] = '{Pays - ID}="' . $country . '"';
+    }
+  }
+  if ($_GET['region']) {
+    foreach ($_GET['region'] as $region) {
+      $regionsFilter[] = '{Région - ID}="' . $region . '"';
     }
   }
   if ($_GET['structure']) {
@@ -44,8 +62,17 @@ if ($_GET) {
   if (count($categoriesFilter)) {
     $filters[] = 'OR(' . urlencode(implode(',', $categoriesFilter)) . ')';
   }
+  if (count($countriesFilter)) {
+    $filters[] = 'OR(' . urlencode(implode(',', $countriesFilter)) . ')';
+  }
+  if (count($departmentsFilter)) {
+    $filters[] = 'OR(' . urlencode(implode(',', $departmentsFilter)) . ')';
+  }
   if (count($levelsFilter)) {
     $filters[] = 'OR(' . urlencode(implode(',', $levelsFilter)) . ')';
+  }
+  if (count($regionsFilter)) {
+    $filters[] = 'OR(' . urlencode(implode(',', $regionsFilter)) . ')';
   }
   if ($sourceTermFilter) {
     $filters[] = urlencode($sourceTermFilter);

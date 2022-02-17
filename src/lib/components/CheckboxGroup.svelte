@@ -3,13 +3,14 @@
 
 	/** @type [{label: string, value: number|string}] */
 	export let checkboxes;
+	export let disabled = false;
 	export let group;
 	export let name;
 </script>
 
 {#each checkboxes as checkbox}
 	<label>
-		<input bind:group {name} type="checkbox" value={checkbox.value} />
+		<input bind:group {disabled} {name} type="checkbox" value={checkbox.value} />
 		{checkbox.label}
 	</label>
 {/each}

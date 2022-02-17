@@ -5,8 +5,35 @@
 	import FilterCategory from './FilterCategory.svelte';
 	import FilterLevel from './FilterLevel.svelte';
 	import FilterSubcategory from './FilterSubcategory.svelte';
+	import FilterCountry from './FilterCountry.svelte';
+	import FilterDepartment from './FilterDepartment.svelte';
+	import { countryFrance } from '$lib/data/countries';
+	import FilterRegion from './FilterRegion.svelte';
 
 	export let values;
+
+	const isOpen = Object.entries(values).reduce((result, [inputName, value]) => {
+		if (Array.isArray(value)) {
+			return {
+				...result,
+				[inputName]: !!value.length
+			};
+		}
+
+		return result;
+	}, {});
+	let countryValue;
+	let regionValue;
+
+	$: onValuesChange(values);
+	$: isFranceSelected = countryValue.includes(countryFrance.slug);
+	$: showDepartment = isFranceSelected && !!regionValue.length;
+	$: showRegion = isFranceSelected;
+
+	function onValuesChange(values) {
+		countryValue = values.country;
+		regionValue = values.region;
+	}
 </script>
 
 <aside>
@@ -29,19 +56,46 @@
 			value={values.sourceTerm}
 		/>
 
-		<details open={!!values.level.length}>
+		<details open={isOpen.level}>
 			<summary><b>Niveau d'engagement</b></summary>
-			<FilterLevel value={values.level} />
+			<div>
+				<FilterLevel value={values.level} />
+			</div>
 		</details>
 
-		<details open={!!values.category.length}>
+		<details open={isOpen.category}>
 			<summary><b>Catégorie</b></summary>
-			<FilterCategory value={values.category} />
+			<div>
+				<FilterCategory value={values.category} />
+			</div>
 		</details>
 
-		<details open={!!values.subcategory.length}>
+		<details open={isOpen.subcategory}>
 			<summary><b>Thématique</b></summary>
-			<FilterSubcategory value={values.subcategory} />
+			<div>
+				<FilterSubcategory value={values.subcategory} />
+			</div>
+		</details>
+
+		<details open={isOpen.country}>
+			<summary><b>Pays</b></summary>
+			<div>
+				<FilterCountry bind:value={countryValue} />
+			</div>
+		</details>
+
+		<details class:is-hidden={!showRegion} open={isOpen.region}>
+			<summary><b>Région</b></summary>
+			<div>
+				<FilterRegion bind:value={regionValue} disabled={!showRegion} />
+			</div>
+		</details>
+
+		<details class:is-hidden={!showDepartment} open={isOpen.department}>
+			<summary><b>Département</b></summary>
+			<div>
+				<FilterDepartment disabled={!showDepartment} value={values.department} />
+			</div>
 		</details>
 
 		<button class="button secondary" type="submit">Filtrer</button>
@@ -54,7 +108,7 @@
 		flex-direction: column;
 
 		input {
-			margin-bottom: 2rem;
+			margin-bottom: 1rem;
 		}
 
 		button {
@@ -77,11 +131,16 @@
 			}
 
 			&:not(:last-of-type) {
-				margin-bottom: 2rem;
+				margin-bottom: 1rem;
 			}
 
 			summary {
 				cursor: pointer;
+			}
+
+			div {
+				max-height: 160px;
+				overflow: auto;
 			}
 		}
 	}

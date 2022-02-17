@@ -1,7 +1,6 @@
 <script>
 	let isDetailsClick = false;
 	let isOpen = false;
-	let nativeDetails;
 </script>
 
 <svelte:body
@@ -13,12 +12,7 @@
 		}
 	}} />
 
-<details
-	bind:open={isOpen}
-	bind:this={nativeDetails}
-	class="dropdown"
-	on:click={() => (isDetailsClick = true)}
->
+<details bind:open={isOpen} class="dropdown" on:click={() => (isDetailsClick = true)}>
 	<summary class="button"><slot name="summary" /></summary>
 
 	<div class="card right">
