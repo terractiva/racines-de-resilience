@@ -19,14 +19,14 @@
 			name={InputNames.action}
 			placeholder="Rechercher une action"
 			type="text"
-			value={values.action}
+			value={values.actionTerm}
 		/>
 
 		<input
 			name={InputNames.source}
 			placeholder="Rechercher une structure/organisation/initiative"
 			type="text"
-			value={values.source}
+			value={values.sourceTerm}
 		/>
 
 		<details open={!!values.level.length}>

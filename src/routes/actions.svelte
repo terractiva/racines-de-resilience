@@ -7,20 +7,20 @@
 			browser && page.query,
 			{
 				filterValues: {
-					action: '',
+					actionTerm: '',
 					category: [],
 					level: [],
 					subcategory: [],
-					source: ''
+					sourceTerm: ''
 				}
 			},
 			(query) => ({
 				filterValues: {
-					action: query.get(InputNames.action),
+					actionTerm: query.get(InputNames.action),
 					category: query.getAll(InputNames.category),
 					level: query.getAll(InputNames.level).map((level) => parseInt(level, 10)),
 					subcategory: query.getAll(InputNames.subcategory),
-					source: query.get(InputNames.source)
+					sourceTerm: query.get(InputNames.source)
 				},
 				query
 			})
