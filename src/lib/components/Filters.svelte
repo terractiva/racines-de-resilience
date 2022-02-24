@@ -98,7 +98,7 @@
 			</div>
 		</details>
 
-		<button class="button secondary" type="submit">Filtrer</button>
+		<button class="button primary" type="submit">Filtrer</button>
 	</form>
 </aside>
 
@@ -113,25 +113,15 @@
 
 		button {
 			width: 100%;
-
-			@include utilities.media-sm-md {
-				margin-top: 2rem;
-			}
-			@include utilities.media-lg {
-				order: -1;
-				margin-bottom: 2rem;
-			}
 		}
 
 		details {
+			margin-bottom: 1rem;
+
 			&[open] {
 				summary {
 					margin-bottom: 0.5rem;
 				}
-			}
-
-			&:not(:last-of-type) {
-				margin-bottom: 1rem;
 			}
 
 			summary {
