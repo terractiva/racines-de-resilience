@@ -11,7 +11,7 @@
 </script>
 
 <Section isCentered>
-	<svelte:fragment slot="title">Trois façons de trouver nos prochaines actions</svelte:fragment>
+	<svelte:fragment slot="title">Trois façons de passer à l'action !</svelte:fragment>
 	<svelte:fragment slot="content">
 		<SectionContentList nbItemsByLine={2}>
 			<SectionContentListItem link={actionsTreePage.path} linkStyle="primary">
@@ -20,7 +20,7 @@
 			</SectionContentListItem>
 
 			<SectionContentListItem link={quizPage.path} linkStyle="primary">
-				<svelte:fragment slot="title">Le dernier test avant la fin du monde</svelte:fragment>
+				<svelte:fragment slot="title">Découvrir mon profil privilégié</svelte:fragment>
 				<svelte:fragment slot="link">Faire le quiz</svelte:fragment>
 			</SectionContentListItem>
 

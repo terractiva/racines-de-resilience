@@ -10,6 +10,7 @@
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
 	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
 	import currentPage from '$lib/stores/currentPage';
+	import { ownerMail } from '$lib/constants/identity';
 
 	currentPage.set(supportUsPage);
 </script>
@@ -144,8 +145,7 @@
 			<SectionContentListItem
 				hasReducedWidth
 				isExternalLink
-				isLinkDisabled
-				link="TODO:"
+				link="mailto:{ownerMail}"
 				linkStyle="primary"
 			>
 				<svelte:fragment slot="text">

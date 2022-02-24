@@ -35,7 +35,7 @@
 				isExternalLink
 				link="https://www.google.com/maps/d/viewer?mid=1zvkq6whArE18g8hDYtY9WRNqVJAarAi9&hl=fr&usp=sharing"
 			>
-				<svelte:fragment slot="title">Où voir <i>Une fois que tu sais</i> ?</svelte:fragment>
+				<svelte:fragment slot="title">Où voir<br /> <i>Une fois que tu sais</i> ?</svelte:fragment>
 				<svelte:fragment slot="text">
 					Les <strong>séances-événements</strong> avant et après la
 					<strong>sortie le 22 septembre</strong>
@@ -46,15 +46,33 @@
 				<svelte:fragment slot="link">Trouver une séance</svelte:fragment>
 			</SectionContentListItem>
 
+			<SectionContentListItem isExternalLink link="https://bit.ly/3AMlMOK">
+				<svelte:fragment slot="title">La sortie internationale a démarré !</svelte:fragment>
+				<svelte:fragment slot="text">
+					Ça y est, <i>Once You Know</i>, la version anglaise du film <i>Une fois que tu sais</i>,
+					est disponible ! Pour marquer le coup, des séances-événements auront lieu dans le monde
+					entier <strong>le vendredi 22 avril</strong>, Jour de la Terre, avec la participation des
+					protagonistes du film. Mobilisez votre réseau à l'étranger pour donnez envie à vos
+					ami·e·s, familles, connaissances qui vivent en Afrique, Asie, Europe... d'organiser des
+					projections dans leur cinéma de quartier, festival ou association. Partagez avec eux
+					<a href="https://bit.ly/3AMlMOK" rel="external">cette publication</a>
+					et donnez-leur le contact du distributeur international :
+					<a href="mailto:sales@pulp-films.fr" rel="external">sales@pulp-films.fr</a>. Merci à
+					toutes et à tous !
+				</svelte:fragment>
+				<svelte:fragment slot="link">Partager la publication</svelte:fragment>
+			</SectionContentListItem>
+
 			<SectionContentListItem isExternalLink link="mailto:{ownerMail}">
 				<svelte:fragment slot="title">Merci et bravo au film et sa communauté</svelte:fragment>
 				<svelte:fragment slot="text">
-					<strong>15 000 spectateur·ice·s</strong> d’<i>Une fois que tu sais</i> en salle de cinéma,
+					<strong>15&nbsp;000 spectateur·ice·s</strong> d’<i>Une fois que tu sais</i> en salle de
+					cinéma,
 					<strong>90 séances-événements</strong>
-					avec animations, <strong>15 000 guides</strong> distribués au public et plus de
-					<strong>50 000 visites</strong> sur ce site en 5 mois ! Ce n’est que le début, le film continue
-					de rencontrer le public dans les salles de cinéma ou ailleurs. Associations, entreprises, collectivités,
-					écoles... vous voulez organiser une projection ?
+					avec animations, <strong>15&nbsp;000 guides</strong> distribués au public et plus de
+					<strong>50&nbsp;000 visites</strong> sur ce site en 5 mois ! Ce n’est que le début, le film
+					continue de rencontrer le public dans les salles de cinéma ou ailleurs. Associations, entreprises,
+					collectivités, écoles... vous voulez organiser une projection ?
 				</svelte:fragment>
 				<svelte:fragment slot="link">Contactez-nous</svelte:fragment>
 			</SectionContentListItem>
@@ -63,12 +81,14 @@
 				isExternalLink
 				link="https://www.boutique.racinesderesilience.org/index.php/produit/frune-fois-que-tu-sais-guide-daction/"
 			>
-				<svelte:fragment slot="title">15 000 guides distribués, 15 000 réédités</svelte:fragment>
+				<svelte:fragment slot="title"
+					>15&nbsp;000 guides distribués,<br /> 15&nbsp;000 réédités</svelte:fragment
+				>
 				<svelte:fragment slot="text">
-					Avec <strong>10 000 guides</strong> donnés aux spectateur·ice·s d’<i
+					Avec <strong>10&nbsp;000 guides</strong> donnés aux spectateur·ice·s d’<i
 						>Une fois que tu sais</i
 					>
-					et <strong>5 000 guides</strong>
+					et <strong>5&nbsp;000 guides</strong>
 					offerts aux abonnés de notre partenaire <i>Yggdrasil</i> avec leur triple et ultime numéro
 					le
 					<a
@@ -101,7 +121,7 @@
 				isExternalLink
 				link="https://www.facebook.com/UneFoisQueTuSais/videos/267364971934339/"
 			>
-				<svelte:fragment slot="title">Avec animation, ça change tout !</svelte:fragment>
+				<svelte:fragment slot="title">Avec animation,<br /> ça change tout !</svelte:fragment>
 				<svelte:fragment slot="text">
 					Si vous n’avez pas pu goûter à l’ambiance des salles, découvrez les réactions du public
 					lors d’un événement en octobre dernier à l’espace Saint-Michel à Paris. Et pour les
@@ -119,7 +139,7 @@
 			</SectionContentListItem>
 
 			<SectionContentListItem isExternalLink link="https://www.facebook.com/UneFoisQueTuSais/">
-				<svelte:fragment slot="title">Sortie VOD, DVD</svelte:fragment>
+				<svelte:fragment slot="title">Sortie du film<br /> en VOD et DVD</svelte:fragment>
 				<svelte:fragment slot="text">
 					Vous voulez voir <i>Une fois que tu sais</i> chez vous? Le film sera disponible en
 					<strong>Vidéo à la Demande (VOD) le 28 février 2022</strong>, et en

@@ -3,7 +3,6 @@
 	export let id = null;
 	export let isExternalLink = false;
 	export let isFullColumn = false;
-	export let isLinkDisabled = false;
 	export let link = null;
 	export let linkStyle = '';
 
@@ -21,13 +20,7 @@
 		<div><slot name="content" /></div>
 	{/if}
 	{#if $$slots.link}
-		{#if isLinkDisabled}
-			<button disabled class="button {linkStyle}" type="button"
-				><slot name="link" /> (à venir)</button
-			>
-		{:else}
-			<a {...linkProps} class="button {linkStyle}" href={link}><slot name="link" /></a>
-		{/if}
+		<a {...linkProps} class="button {linkStyle}" href={link}><slot name="link" /></a>
 	{/if}
 </li>
 
@@ -70,8 +63,7 @@
 			text-align: justify;
 		}
 
-		a,
-		button {
+		a {
 			margin-top: auto;
 		}
 	}
