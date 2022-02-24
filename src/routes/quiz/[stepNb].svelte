@@ -30,7 +30,7 @@
 
 	$: action =
 		currentStepNb === quizSteps.length
-			? quizPage.subpages.result
+			? quizPage.subPages.result
 			: `${quizPage.path}/${currentStepNb + 1}`;
 	$: currentStepNb = computeCurrentStepNb(stepNb);
 	$: queryString = query?.toString() ? `?${query.toString()}` : '';
@@ -93,7 +93,7 @@
 				sveltekit:noscroll
 				class="button"
 				class:is-hidden={currentStepNb !== quizSteps.length}
-				href="{quizPage.subpages.result}{queryString}">Voir le résultat</a
+				href="{quizPage.subPages.result}{queryString}">Voir le résultat</a
 			>
 		</div>
 	</form>

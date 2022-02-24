@@ -63,6 +63,17 @@ const notFoundPage = {
 	title: 'Page introuvable'
 };
 
+const guidedTalkPage = {
+	description: '',
+	label: 'Discussion guidée',
+	path: '/discussion-guidee',
+	title: 'Discussion guidée',
+	subPages: {
+		audio: 'audio',
+		video: 'video'
+	}
+};
+
 const supportUsPage = {
 	description: '',
 	label: 'Nous soutenir',
@@ -78,7 +89,7 @@ const quizPage = {
 	label: 'Quiz',
 	path: '/quiz',
 	title: 'Quiz',
-	subpages: {
+	subPages: {
 		result: 'resultat'
 	}
 };
@@ -89,6 +100,7 @@ export {
 	actionsTreePage,
 	communityPage,
 	homePage,
+	guidedTalkPage,
 	notFoundPage,
 	supportUsPage,
 	quizPage

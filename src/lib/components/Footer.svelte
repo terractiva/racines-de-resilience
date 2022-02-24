@@ -5,6 +5,7 @@
 		actionsPage,
 		actionsTreePage,
 		communityPage,
+		guidedTalkPage,
 		homePage,
 		quizPage,
 		supportUsPage
@@ -16,6 +17,7 @@
 		quizPage,
 		actionsPage,
 		actionsTreePage,
+		guidedTalkPage,
 		supportUsPage,
 		communityPage,
 		aboutPage

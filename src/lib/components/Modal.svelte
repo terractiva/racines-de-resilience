@@ -5,7 +5,7 @@
 </script>
 
 {#if isOpen}
-	<a href={backLink}>
+	<a sveltekit:noscroll href={backLink}>
 		<p>
 			<span class="tag">Fermer</span>
 		</p>

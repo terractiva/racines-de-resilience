@@ -15,6 +15,7 @@
 		.position[1]}%; width: {2 * action.radius}%;"
 >
 	<a
+		sveltekit:noscroll
 		use:handleDraggedLink={isDisabled}
 		href="{actionsTreePage.path}/{action.slug}"
 	>
