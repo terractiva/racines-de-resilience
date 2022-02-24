@@ -13,7 +13,7 @@ export default function getActionResults({
 }) {
 	const actionTermRegexp = new RegExp(actionTerm, 'i');
 	const sourceTermRegexp = new RegExp(sourceTerm, 'i');
-	const hasCountry = country.length ? country.includes(countryFrance.slug) : true;
+	const hasCountry = country?.length ? country.includes(countryFrance.slug) : true;
 
 	if (hasCountry) {
 		return actions.filter((action) => {
