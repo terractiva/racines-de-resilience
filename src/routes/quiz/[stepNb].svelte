@@ -29,9 +29,11 @@
 	let nativeForm;
 
 	$: action =
-		currentStepNb === quizSteps.length ? `resultat` : `${quizPage.path}/${currentStepNb + 1}`;
+		currentStepNb === quizSteps.length
+			? quizPage.subpages.result
+			: `${quizPage.path}/${currentStepNb + 1}`;
 	$: currentStepNb = computeCurrentStepNb(stepNb);
-	$: previousHrefSuffix = query?.toString() ? `?${query.toString()}` : '';
+	$: queryString = query?.toString() ? `?${query.toString()}` : '';
 	$: values = quizSteps.map((_, index) => query?.get(`${index + 1}`));
 
 	function computeCurrentStepNb(stepNb) {
@@ -74,15 +76,26 @@
 			/>
 		{/each}
 
-		{#if currentStepNb > 1}
-			<div>
-				<a
-					sveltekit:noscroll
-					class="button primary"
-					href="{quizPage.path}/{currentStepNb - 1}{previousHrefSuffix}">Précédent</a
-				>
-			</div>
-		{/if}
+		<div>
+			<a
+				sveltekit:noscroll
+				class="button primary"
+				class:is-hidden={currentStepNb === 1}
+				href="{quizPage.path}/{currentStepNb - 1}{queryString}">Précédent</a
+			>
+			<a
+				sveltekit:noscroll
+				class="button"
+				class:is-hidden={currentStepNb === quizSteps.length}
+				href="{quizPage.path}/{currentStepNb + 1}{queryString}">Suivant</a
+			>
+			<a
+				sveltekit:noscroll
+				class="button"
+				class:is-hidden={currentStepNb !== quizSteps.length}
+				href="{quizPage.subpages.result}{queryString}">Voir le résultat</a
+			>
+		</div>
 	</form>
 </Section>
 

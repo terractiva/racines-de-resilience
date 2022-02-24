@@ -61,6 +61,10 @@
 			display: none;
 		}
 
+		@include utilities.media-sm-md {
+			padding-bottom: 3rem;
+			padding-top: 3rem;
+		}
 		@include utilities.media-lg {
 			padding: 5rem 7rem;
 		}

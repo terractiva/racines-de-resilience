@@ -77,7 +77,10 @@ const quizPage = {
 	description: '',
 	label: 'Quiz',
 	path: '/quiz',
-	title: 'Quiz'
+	title: 'Quiz',
+	subpages: {
+		result: 'resultat'
+	}
 };
 
 export {
