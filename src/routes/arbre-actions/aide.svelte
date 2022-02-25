@@ -32,7 +32,7 @@
 		</li>
 		<li>
 			<p>
-				<strong>Par la periphérie de l'arbre</strong> en choisissant l'un des grands verbes clefs qui
+				<strong>Par la périphérie de l'arbre</strong> en choisissant l'un des grands verbes clefs qui
 				résument les nuages d'actions qui les entourent.
 			</p>
 		</li>

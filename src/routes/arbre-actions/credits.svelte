@@ -14,8 +14,9 @@
 			<a href="https://elypss.fr/" rel="external" target="_blank">Loïc Cimelière/Elypss</a>
 		</li>
 		<li>
-			<strong>Conception éditoriale et recherches</strong> Brianne Parquier, Charlotte Ogier, Emmanuel
-			Cappellin
+			<strong>Conception éditoriale et recherches</strong>
+			<a href="https://brianneparquier.fr/" rel="external" target="_blank">Brianne Parquier</a>,
+			Charlotte Ogier, Emmanuel Cappellin
 		</li>
 	</ul>
 </Modal>

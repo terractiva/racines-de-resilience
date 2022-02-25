@@ -55,7 +55,7 @@
 					protagonistes du film. Mobilisez votre réseau à l'étranger pour donnez envie à vos
 					ami·e·s, familles, connaissances qui vivent en Afrique, Asie, Europe... d'organiser des
 					projections dans leur cinéma de quartier, festival ou association. Partagez avec eux
-					<a href="https://bit.ly/3AMlMOK" rel="external">cette publication</a>
+					<a href="https://bit.ly/3AMlMOK" rel="external" target="_blank">cette publication</a>
 					et donnez-leur le contact du distributeur international :
 					<a href="mailto:sales@pulp-films.fr" rel="external">sales@pulp-films.fr</a>. Merci à
 					toutes et à tous !
