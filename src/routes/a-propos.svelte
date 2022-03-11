@@ -133,7 +133,7 @@
 
 			<SectionContentListItem
 				isExternalLink
-				link="https://encours3.pulp-films.fr/project/une-fois-que-tu-sais/"
+				link="https://pulp-films.fr/project/une-fois-que-tu-sais/"
 			>
 				<svelte:fragment slot="text">
 					Le film <i>Une fois que tu sais</i> propose un face à face
