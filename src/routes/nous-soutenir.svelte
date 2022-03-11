@@ -145,7 +145,7 @@
 			<SectionContentListItem
 				hasReducedWidth
 				isExternalLink
-				link="mailto:{ownerMail}"
+				link="mailto:{ownerMail}?subject=Je souhaite devenir mécène"
 				linkStyle="primary"
 			>
 				<svelte:fragment slot="text">

@@ -60,10 +60,27 @@
 	</Section>
 </SectionBackground>
 
-<Section>
-	<p class="outro text-center mb-0" slot="content">
-		<b>Merci de votre écoute, et maintenant, en route !</b>
-	</p>
+<Section isCentered>
+	<svelte:fragment slot="content">
+		<p class="outro text-center">
+			<b>Merci de votre écoute !</b>
+		</p>
+		<p class="text-center">Pour soutenir cette démarche d'accompagnement, vous pouvez :</p>
+		<div class="outro-links">
+			<a
+				class="button primary"
+				href="https://www.boutique.racinesderesilience.org/index.php/produit/frune-fois-que-tu-sais-guide-daction/"
+				rel="external"
+				target="_blank">Acheter le guide d'actions</a
+			>
+			<a
+				class="button primary"
+				href="https://www.helloasso.com/associations/terractiva/formulaires/1"
+				rel="external"
+				target="_blank">Faire un don</a
+			>
+		</div>
+	</svelte:fragment>
 </Section>
 
 <SectionBackground background={Backgrounds.Strokes}>
@@ -73,7 +90,15 @@
 <slot />
 
 <style lang="scss">
+	p.text-justify {
+		margin-bottom: 3rem;
+	}
+
 	.outro {
 		font-size: 1.75em;
+	}
+
+	.outro-links {
+		display: flex;
 	}
 </style>

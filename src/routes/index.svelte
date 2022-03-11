@@ -5,7 +5,7 @@
 	import SectionLowTech from '$lib/components/SectionLowTech.svelte';
 	import SectionSupporters from '$lib/components/SectionSupporters.svelte';
 	import Backgrounds from '$lib/constants/backgrounds';
-	import { homePage } from '$lib/constants/pages';
+	import { guidedTalkPage, homePage } from '$lib/constants/pages';
 	import Section from '$lib/components/Section.svelte';
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
@@ -25,6 +25,15 @@
 <SectionBackground background={Backgrounds.Lines}>
 	<SectionFilters />
 </SectionBackground>
+
+<Section isCentered>
+	<svelte:fragment slot="title"
+		>Vous venez de visionner le film <i>Une fois que tu sais</i> ?</svelte:fragment
+	>
+	<a class="button primary" href={guidedTalkPage.path} slot="content"
+		>C'est par ici pour la discussion guidée</a
+	>
+</Section>
 
 <Section>
 	<svelte:fragment slot="title">Actualités</svelte:fragment>
