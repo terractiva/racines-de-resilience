@@ -58,12 +58,14 @@
 			<SectionContentListItem isExternalLink link="https://bit.ly/3AMlMOK">
 				<svelte:fragment slot="title">La sortie internationale a démarré !</svelte:fragment>
 				<svelte:fragment slot="text">
-					Ça y est, <i>Once You Know</i>, la version anglaise du film <i>Une fois que tu sais</i>,
-					est disponible ! Pour marquer le coup, des séances-événements auront lieu dans le monde
-					entier <strong>le vendredi 22 avril</strong>, Jour de la Terre, avec la participation des
-					protagonistes du film. Mobilisez votre réseau à l'étranger pour donnez envie à vos
-					ami·e·s, familles, connaissances qui vivent en Afrique, Asie, Europe... d'organiser des
-					projections dans leur cinéma de quartier, festival ou association. Partagez avec eux
+					La sortie internationale a démarré ! Depuis le 2 février, <i>Once You Know</i>, la version
+					anglaise du film <i>Une fois que tu sais</i>, est disponible dans le monde entier ! Pour
+					marquer le coup, toutes les projections publiques ou privées organisées avant
+					<strong>le vendredi 22 avril</strong>, Jour de la Terre, bénéficieront d'un accès gratuit
+					au grand LIVE en ligne qui regroupera tous les protagonistes du film et le réalisateur ce
+					jour-là. Mobilisez votre réseau à l'étranger pour donnez envie à vos ami·e·s, familles,
+					connaissances qui vivent en Afrique, Asie, Europe... d'organiser une projection dans leur
+					cinéma de quartier, festival ou association ! Partagez avec eux
 					<a href="https://bit.ly/3AMlMOK" rel="external" target="_blank">cette publication</a>
 					et donnez-leur le contact du distributeur international :
 					<a href="mailto:sales@pulp-films.fr" rel="external">sales@pulp-films.fr</a>. Merci à
