@@ -1,6 +1,7 @@
 <script>
 	export let backLink;
 	export let hasPadding = true;
+	export let isLarge = false;
 	export let isOpen;
 </script>
 
@@ -11,7 +12,7 @@
 		</p>
 	</a>
 
-	<div class="card" class:has-padding={hasPadding}>
+	<div class="card" class:has-padding={hasPadding} class:is-large={isLarge}>
 		<slot />
 	</div>
 {/if}
@@ -55,16 +56,21 @@
 	}
 
 	div {
+		max-height: 80%;
 		max-width: var(--grid-maxWidth);
+		overflow: auto;
 
+		&.is-large {
+			@include utilities.media-lg {
+				width: 80%;
+			}
+		}
 		&:not(.has-padding) {
 			padding: 0;
 		}
 
 		@include utilities.media-sm-md {
 			left: calc(var(--grid-gutter) / 2);
-			max-height: 80%;
-			overflow: scroll;
 			right: calc(var(--grid-gutter) / 2);
 			top: 50%;
 			transform: translateY(-50%);

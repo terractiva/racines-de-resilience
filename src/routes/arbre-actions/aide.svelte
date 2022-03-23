@@ -3,7 +3,7 @@
 	import { actionsPage, actionsTreePage } from '$lib/constants/pages';
 </script>
 
-<Modal backLink={actionsTreePage.path} isOpen={true}>
+<Modal isOpen backLink={actionsTreePage.path}>
 	<div class="buttons-wrapper">
 		<a class="button primary" href="{actionsPage.path}#{actionsPage.anchors.filters}"
 			>Découvrir plus d'actions</a

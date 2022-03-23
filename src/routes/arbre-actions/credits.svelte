@@ -3,7 +3,7 @@
 	import { actionsTreePage } from '$lib/constants/pages';
 </script>
 
-<Modal backLink={actionsTreePage.path} isOpen={true}>
+<Modal isOpen backLink={actionsTreePage.path}>
 	<ul>
 		<li>
 			<strong>Illustration</strong>

@@ -3,7 +3,7 @@
 	import { guidedTalkPage } from '$lib/constants/pages';
 </script>
 
-<Modal backLink={guidedTalkPage.path} isOpen={true}>
+<Modal isOpen backLink={guidedTalkPage.path}>
 	<div>
 		<iframe
 			allowfullscreen

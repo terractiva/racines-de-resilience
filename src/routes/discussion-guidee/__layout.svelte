@@ -20,11 +20,10 @@
 <Section>
 	<svelte:fragment slot="content">
 		<p class="text-justify">
-			Bienvenue à vous pour découvrir notre proposition de discussion guidée. Inspirée du temps
-			d’échange post-projection offert au public des salles de cinéma, cet enregistrement audio en
-			accès libre vous offre une animation à vivre depuis chez vous, et vous guide pour aborder les
-			thématiques du film (énergie-climat-résilience) et découvrir des centaines de ressources pour
-			passer à l’action.
+			Découvrez notre proposition de discussion guidée. Inspirée du temps d’échange post-projection
+			offert au public des salles de cinéma, cet enregistrement audio en accès libre vous offre une
+			animation à vivre depuis chez vous, et vous guide pour aborder les thématiques du film
+			(énergie-climat-résilience) et découvrir des centaines de ressources pour passer à l’action.
 		</p>
 
 		<div class="text-center">
