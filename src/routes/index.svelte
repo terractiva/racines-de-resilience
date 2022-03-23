@@ -152,10 +152,19 @@
 			<SectionContentListItem isExternalLink link="https://www.facebook.com/UneFoisQueTuSais/">
 				<svelte:fragment slot="title">Sortie du film<br /> en VOD et DVD</svelte:fragment>
 				<svelte:fragment slot="text">
-					Vous voulez voir <i>Une fois que tu sais</i> chez vous? Le film sera disponible en
-					<strong>Vidéo à la Demande (VOD) le 28 février 2022</strong>, et en
-					<strong>DVD le 19 avril 2022</strong> ! Abonnez-vous à la page Facebook du film pour avoir
-					les détails en temps et en heure.
+					Vous voulez voir <i>Une fois que tu sais</i> chez vous ? Le film est disponible en
+					<strong>Vidéo à la Demande (VOD) depuis le 28 février 2022</strong>. Retrouvez le film
+					<a href="https://bit.ly/3huPsHl" rel="external" target="_blank">sur Vimeo</a>
+					ou
+					<a href="https://bit.ly/3C9zqfK" rel="external" target="_blank"
+						>sur vos plateformes préférées</a
+					>. Emmanuel Cappellin vous annonce cette sortie
+					<a href="https://fb.watch/bwlkPqahCC/" rel="external" target="_blank">en vidéo ici</a>.
+					Après avoir vu le film chez vous, vous pouvez participer à
+					<a href={guidedTalkPage.path}>la discussion guidée</a>
+					qui propose un temps de recul sur le film et son message. Le
+					<strong>DVD sortira en mai 2022 avec des pré-commandes possibles très bientôt</strong> ! Abonnez-vous
+					à la page Facebook du film pour en être informé.e.
 				</svelte:fragment>
 				<svelte:fragment slot="link">Facebook <i>Une fois que tu sais</i></svelte:fragment>
 			</SectionContentListItem>
