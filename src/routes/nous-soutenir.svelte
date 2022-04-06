@@ -66,13 +66,13 @@
 				linkStyle="primary"
 			>
 				<svelte:fragment slot="text">
-					Dans certaines salles, un <strong
-						>guide papier, construit en partenariat avec le magazine <i>Yggdrasil</i></strong
+					Dans plus d’une centaine de salles de cinéma, un <strong
+						>guide réalisé en partenariat avec le magazine <i>Yggdrasil</i></strong
 					>
-					a été distribué pour continuer le mouvement.<br /> C'est la
+					a été distribué pour diffuser nos <i>Racines de résilience</i>. C'est la
 					<strong>version papier de l'arbre aux actions</strong>. Si vous souhaitez vous procurer ce
-					poster A1, en souvenir du film ou pour l'affichez chez vous, signifiez-nous votre intérêt
-					ci-dessous !
+					poster A1, en souvenir du film ou pour l'afficher chez vous, au travail, dans votre
+					association, un lieu public, ou partout ailleurs, c’est ici !
 				</svelte:fragment>
 				<svelte:fragment slot="link">Acheter le poster de l'arbre aux actions</svelte:fragment>
 			</SectionContentListItem>

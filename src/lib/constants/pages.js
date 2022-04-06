@@ -44,9 +44,9 @@ const actionsTreePage = {
 
 const communityPage = {
 	description: '',
-	label: 'Communauté',
-	path: '/communaute',
-	title: 'Communauté'
+	label: 'Le film',
+	path: '/une-fois-que-tu-sais',
+	title: 'Une fois que tu sais'
 };
 
 // Pas de `title` exceptionnellement pour afficher seulement le nom du site
@@ -86,9 +86,9 @@ const supportUsPage = {
 
 const quizPage = {
 	description: '',
-	label: 'Quiz',
-	path: '/quiz',
-	title: 'Quiz',
+	label: 'Test de profils',
+	path: '/test-de-profils',
+	title: 'Test de profils',
 	subPages: {
 		result: 'resultat'
 	}

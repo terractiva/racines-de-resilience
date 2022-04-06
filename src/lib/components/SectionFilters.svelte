@@ -20,7 +20,7 @@
 			</SectionContentListItem>
 
 			<SectionContentListItem link={quizPage.path} linkStyle="primary">
-				<svelte:fragment slot="title">Découvrir mon profil privilégié</svelte:fragment>
+				<svelte:fragment slot="title">Découvrir mon profil d'engagement</svelte:fragment>
 				<svelte:fragment slot="link">Faire le quiz</svelte:fragment>
 			</SectionContentListItem>
 

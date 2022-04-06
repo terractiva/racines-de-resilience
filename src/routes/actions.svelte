@@ -103,9 +103,10 @@
 				<svelte:fragment slot="title">Un site collaboratif</svelte:fragment>
 				<svelte:fragment slot="text">
 					La sélection des actions de l'arbre n'est <strong>pas exhaustive</strong> ! C'est une
-					porte d'entrée à explorer ensemble.<br /> Ce site est collaboratif, bienvenue à vos idées
-					pour <strong>compléter cette liste</strong> avec des actions et structures.<br /> C'est
-					important de rendre visible le magnifique
+					porte d'entrée à explorer ensemble.<br /> Ce site est collaboratif. Vos suggestions sont
+					essentielles pour <strong>compléter cette liste</strong> avec des actions et structures
+					toujours plus nombreuses, diverses et ancrées localement.<br /> C'est important de rendre
+					visible le magnifique
 					<strong>écosystème déjà bien vivant, évolutif</strong> au gré de nos élans d'actions.
 				</svelte:fragment>
 				<svelte:fragment slot="link">Faire grandir l'arbre</svelte:fragment>
@@ -113,6 +114,14 @@
 		</SectionContentList>
 	</svelte:fragment>
 </Section>
+
+<SectionBackground background={Backgrounds.Strokes}>
+	<Section isCentered>
+		<svelte:fragment slot="title"
+			>Révéler les initiatives existantes, tisser une toile plus dense</svelte:fragment
+		>
+	</Section>
+</SectionBackground>
 
 <section class="container" id={actionsPage.anchors.filters}>
 	<aside>

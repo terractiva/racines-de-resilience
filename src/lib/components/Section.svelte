@@ -5,7 +5,7 @@
 
 <section {id} class="container" class:is-centered={isCentered}>
 	{#if $$slots.title}
-		<h2 class:text-center={isCentered}><slot name="title" /></h2>
+		<h2 class:mb-0={!$$slots.content} class:text-center={isCentered}><slot name="title" /></h2>
 	{/if}
 
 	<slot name="content" />

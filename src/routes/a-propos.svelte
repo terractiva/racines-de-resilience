@@ -64,7 +64,7 @@
 			<li class="tool-item">
 				<p class="mb-0">
 					Un <a href="{supportUsPage.path}#{supportUsPage.anchors.paperGuide}"
-						><strong>guide d'action</strong></a
+						><strong>guide d'actions</strong></a
 					> dépliant en affiche, qui propose un panorama des manières concrètes d'agir aujourd'hui.
 				</p>
 			</li>

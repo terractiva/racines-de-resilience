@@ -27,7 +27,7 @@ const config = {
 			pages: [
 				'*',
 				...actions.map((action) => `/arbre-actions/${action.slug}`),
-				...quizSteps.map((_, index) => `/quiz/${index + 1}`)
+				...quizSteps.map((_, index) => `/test-de-profils/${index + 1}`)
 			]
 		}
 	},
