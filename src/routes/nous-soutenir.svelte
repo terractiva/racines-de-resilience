@@ -4,7 +4,7 @@
 	import SectionBackground from '$lib/components/SectionBackground.svelte';
 	import SectionSupporters from '$lib/components/SectionSupporters.svelte';
 	import Backgrounds from '$lib/constants/backgrounds';
-	import { communityPage, supportUsPage } from '$lib/constants/pages';
+	import { onceYouKnowPage, supportUsPage } from '$lib/constants/pages';
 	import Section from '$lib/components/Section.svelte';
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
@@ -173,7 +173,7 @@
 				/> Rejoignez la communauté pour diffuser ses messages au plus grand nombre, organiser des séances-débats,
 				pour vous former à l'animation, ou pour contribuer à la vie du site !
 			</p>
-			<a class="button primary" href={communityPage.path}>En savoir plus</a>
+			<a class="button primary" href={onceYouKnowPage.path}>En savoir plus</a>
 		</SectionContentTwoThirds>
 	</svelte:fragment>
 </Section>

@@ -4,7 +4,7 @@
 	import SectionBackground from '$lib/components/SectionBackground.svelte';
 	import SectionLowTech from '$lib/components/SectionLowTech.svelte';
 	import Backgrounds from '$lib/constants/backgrounds';
-	import { aboutPage, actionsPage, communityPage, supportUsPage } from '$lib/constants/pages';
+	import { aboutPage, actionsPage, onceYouKnowPage, supportUsPage } from '$lib/constants/pages';
 	import Section from '$lib/components/Section.svelte';
 	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
@@ -96,7 +96,11 @@
 				</p>
 				<div class="links-wrapper text-center">
 					<a class="button primary" href={actionsPage.path}>Les actions</a>
-					<a class="button primary" href={communityPage.path}>La communauté</a>
+					<a
+						class="button primary"
+						href="{onceYouKnowPage.path}#{onceYouKnowPage.anchors.animateDiscussion}"
+						>Accompagner le film</a
+					>
 				</div>
 			</SectionContentTwoThirds>
 		</svelte:fragment>
@@ -104,96 +108,50 @@
 </SectionBackground>
 
 <Section>
-	<svelte:fragment slot="title"
-		>A propos d'<i>Une fois que tu sais</i>, le film documentaire</svelte:fragment
-	>
-
+	<svelte:fragment slot="title">Les artisans derrière ce site</svelte:fragment>
 	<svelte:fragment slot="content">
-		<SectionContentList>
-			<SectionContentListItem isExternalLink link="https://pulp-films.fr/">
-				<svelte:fragment slot="text">
-					<i>Une fois que tu sais</i> est <strong>produit par <i>Pulp Films</i></strong>, une jeune
-					société basée dans la Drôme et à Paris qui se veut au plus près des thématiques et des
-					questions contemporaines qui <strong>bousculent nos visions du monde</strong>.
-				</svelte:fragment>
-				<svelte:fragment slot="link">Découvrir <i>Pulp Films</i></svelte:fragment>
-			</SectionContentListItem>
-
-			<SectionContentListItem
-				isExternalLink
-				link="https://www.nourfilms.com/cinema-independant/une-fois-que-tu-sais/"
-			>
-				<svelte:fragment slot="text">
-					<i>Une fois que tu sais</i> est <strong>distribué par <i>Nour Films</i></strong>, société
-					fondée en 2008 par Patrick Sibourd. <i>Nour Films</i> distribue des longs-métrages de
-					toutes nationalités et <strong>soutient des films indépendants et engagés</strong>.
-				</svelte:fragment>
-				<svelte:fragment slot="link">Programmer le film</svelte:fragment>
-			</SectionContentListItem>
-
-			<SectionContentListItem
-				isExternalLink
-				link="https://pulp-films.fr/project/une-fois-que-tu-sais/"
-			>
-				<svelte:fragment slot="text">
-					Le film <i>Une fois que tu sais</i> propose un face à face
-					<strong>poétique et bouleversant</strong> avec le défi climatique. On y chemine aux côtés d'Emmanuel,
-					à la rencontre de lui-même et face à des experts du climat.
-				</svelte:fragment>
-				<svelte:fragment slot="link">Page officielle du film</svelte:fragment>
-			</SectionContentListItem>
-		</SectionContentList>
+		<SectionContentTwoThirds>
+			<ul class="w-100">
+				<li>
+					<a href="https://brianneparquier.fr/" rel="external" target="_blank">Brianne Parquier</a>,
+					Charlotte Ogier, Emmanuel Cappellin : designeu·r·se·s improvisé·e·s, rédacteur·ice·s de
+					textes, coordinateur·ice·s de logiques, gestionnaires d’équipes et jusqu’au-boutistes
+					avéré·e·s
+				</li>
+				<li>
+					<a href="https://elypss.fr/" rel="external" target="_blank">Loïc Cimelière</a> : graphiste
+					de l'arbre aux actions, détenteur d'un diplôme de patience
+				</li>
+				<li>
+					<a href="https://www.theotimenoel.com/" rel="external" target="_blank">Théotime Noël</a>
+					: illustrateur émérite, fondu de nature et très fort en jeu de mots
+				</li>
+				<li>
+					<a href="https://tseignette.github.io/" rel="external" target="_blank">Thomas Seignette</a
+					> : développeur Web, amateur de low-tech
+				</li>
+				<li>Clarisse Barreau : relectrice et consultante, coachs de qualité</li>
+			</ul>
+			<a class="button" href={supportUsPage.path}>Soutenir le projet</a>
+		</SectionContentTwoThirds>
 	</svelte:fragment>
 </Section>
 
 <SectionBackground background={Backgrounds.Strokes}>
-	<Section>
-		<svelte:fragment slot="title">Les artisans derrière ce site</svelte:fragment>
-		<svelte:fragment slot="content">
-			<SectionContentTwoThirds>
-				<ul class="w-100">
-					<li>
-						<a href="https://tseignette.github.io/" rel="external" target="_blank"
-							>Thomas Seignette</a
-						> : développeur Web, amateur de low-tech
-					</li>
-					<li>
-						<a href="https://www.theotimenoel.com/" rel="external" target="_blank">Théotime Noël</a>
-						: illustrateur émérite, fondu de nature et très fort en jeu de mots
-					</li>
-					<li>
-						<a href="https://elypss.fr/" rel="external" target="_blank">Loïc Cimelière</a> : graphiste
-						de l'arbre aux actions, détenteur d'un diplôme de patience
-					</li>
-					<li>Charlotte Ogier : rédactrice de textes, coordinatrice des logiques</li>
-					<li>
-						<a href="https://brianneparquier.fr/" rel="external" target="_blank">Brianne Parquier</a
-						>
-						: designeuse improvisée, relectrice pointilleuse
-					</li>
-					<li>
-						Clarisse Barreau et Emmanuel Cappellin : relecteurs et consultants, coachs de qualité
-					</li>
-				</ul>
-				<a class="button primary" href={supportUsPage.path}>Soutenir le projet</a>
-			</SectionContentTwoThirds>
-		</svelte:fragment>
-	</Section>
-</SectionBackground>
-
-<SectionLowTech>
-	<svelte:fragment slot="title"
-		>La démarche low-tech de <i>Racines de résilience</i></svelte:fragment
-	>
-	<svelte:fragment slot="right-content">
-		<a
-			class="button primary"
-			href="https://github.com/Terractiva/racines-de-resilience#conception-low-tech"
-			rel="external"
-			target="_blank">En savoir plus</a
+	<SectionLowTech>
+		<svelte:fragment slot="title"
+			>La démarche low-tech de <i>Racines de résilience</i></svelte:fragment
 		>
-	</svelte:fragment>
-</SectionLowTech>
+		<svelte:fragment slot="right-content">
+			<a
+				class="button primary"
+				href="https://github.com/Terractiva/racines-de-resilience#conception-low-tech"
+				rel="external"
+				target="_blank">En savoir plus</a
+			>
+		</svelte:fragment>
+	</SectionLowTech>
+</SectionBackground>
 
 <style lang="scss">
 	.image-wrapper {

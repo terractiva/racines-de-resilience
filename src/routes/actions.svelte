@@ -41,7 +41,7 @@
 	import PageMeta from '$lib/components/PageMeta.svelte';
 	import SectionBackground from '$lib/components/SectionBackground.svelte';
 	import Backgrounds from '$lib/constants/backgrounds';
-	import { aboutPage, actionsPage, actionsTreePage, communityPage } from '$lib/constants/pages';
+	import { aboutPage, actionsPage, actionsTreePage, onceYouKnowPage } from '$lib/constants/pages';
 	import Section from '$lib/components/Section.svelte';
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
@@ -52,6 +52,8 @@
 	import getActionResults from '$lib/utils/getActionResults';
 	import InputNames from '$lib/constants/input-names';
 	import handleLoadQuery from '$lib/utils/handleLoadQuery';
+	import Categories from '$lib/data/categories';
+	import subcategories from '$lib/data/subcategories';
 
 	export let filterValues;
 	export let query;
@@ -140,15 +142,50 @@
 
 <SectionBackground background={Backgrounds.Marks}>
 	<Section>
-		<svelte:fragment slot="title">Soutenons-nous !</svelte:fragment>
+		<svelte:fragment slot="title">Trouver du soutien quand on se sent seul·e</svelte:fragment>
 		<svelte:fragment slot="content">
-			<SectionContentTwoThirds>
-				<p class="text-justify w-100 mb-0">
-					Ce n'est pas parce que l'on sait ce qu'on voudrait faire qu'il est facile de le mettre en
-					oeuvre.<br /> La communauté de <i>Racines de Résilience</i> est aussi là pour ça !
-				</p>
-				<a class="button primary" href={communityPage.path}>La communauté</a>
-			</SectionContentTwoThirds>
+			<p>
+				Votre entourage n'est pas sensible à ces questions ? Vous vous sentez en décalage ? Où que
+				l'on soit sur son chemin de transition, il arrive de faire face à des questionnements, du
+				désarroi, ou un sentiment d'impuissance qui freinent la mise en action. C'est le cas pour
+				nombre d'entre nous ! Alors voici quelques pistes pour commencer :
+			</p>
+			<SectionContentList nbItemsByLine={2}>
+				<SectionContentListItem
+					isExternalLink
+					link="http://www.ateliersdetravailquirelie.sitew.fr/"
+					linkStyle="primary"
+				>
+					<svelte:fragment slot="text">
+						L'accompagnement du film <i>Une fois que tu sais</i> s’inspire du
+						<i>Travail Qui Relie</i>
+						(TQR), un processus développé par l'écopsychologue Joanna Macy, qui
+						<strong>soutient la traversée des émotions difficiles</strong> liées à l'état du monde, pour
+						les transformer en élan d'action. Des ateliers accessibles à tou·tes sont proposés toute
+						l’année, un peu partout.
+					</svelte:fragment>
+					<svelte:fragment slot="link">Découvrir les Ateliers TQR</svelte:fragment>
+				</SectionContentListItem>
+
+				<SectionContentListItem
+					link="{actionsPage.path}?{InputNames.subcategory}={subcategories.imagination
+						.slug}&{InputNames.subcategory}={subcategories.uncertainty
+						.slug}&{InputNames.subcategory}={subcategories.living
+						.slug}&{InputNames.subcategory}={subcategories.conflicts.slug}#{actionsPage.anchors
+						.filters}"
+					linkStyle="primary"
+				>
+					<svelte:fragment slot="text">
+						De nombreuses actions, structures et initiatives de la catégorie <i>Régénérer</i> sur
+						notre page
+						<a
+							href="{actionsPage.path}?{InputNames.category}={Categories.Regenerate}#{actionsPage
+								.anchors.filters}">Actions</a
+						> proposent des ressources, des groupes, et des espaces pour trouver du soutien.
+					</svelte:fragment>
+					<svelte:fragment slot="link">Découvrir les actions</svelte:fragment>
+				</SectionContentListItem>
+			</SectionContentList>
 		</svelte:fragment>
 	</Section>
 </SectionBackground>

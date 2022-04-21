@@ -4,7 +4,7 @@
 		aboutPage,
 		actionsPage,
 		actionsTreePage,
-		communityPage,
+		onceYouKnowPage,
 		guidedTalkPage,
 		homePage,
 		quizPage,
@@ -19,7 +19,7 @@
 		actionsTreePage,
 		guidedTalkPage,
 		supportUsPage,
-		communityPage,
+		onceYouKnowPage,
 		aboutPage
 	];
 </script>

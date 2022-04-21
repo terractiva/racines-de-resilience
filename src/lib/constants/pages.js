@@ -42,11 +42,14 @@ const actionsTreePage = {
 	}
 };
 
-const communityPage = {
+const onceYouKnowPage = {
 	description: '',
 	label: 'Le film',
 	path: '/une-fois-que-tu-sais',
-	title: 'Une fois que tu sais'
+	title: 'Une fois que tu sais',
+	anchors: {
+		animateDiscussion: 'animer-echange'
+	}
 };
 
 // Pas de `title` exceptionnellement pour afficher seulement le nom du site
@@ -98,7 +101,7 @@ export {
 	aboutPage,
 	actionsPage,
 	actionsTreePage,
-	communityPage,
+	onceYouKnowPage,
 	homePage,
 	guidedTalkPage,
 	notFoundPage,

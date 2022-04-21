@@ -2,7 +2,7 @@
 	import {
 		aboutPage,
 		actionsPage,
-		communityPage,
+		onceYouKnowPage,
 		homePage,
 		supportUsPage
 	} from '$lib/constants/pages';
@@ -14,7 +14,7 @@
 	export let isFullscreen;
 
 	let isMenuOpen = false;
-	const pages = [actionsPage, supportUsPage, communityPage, aboutPage];
+	const pages = [actionsPage, supportUsPage, onceYouKnowPage, aboutPage];
 </script>
 
 <header class:has-background={!isFullscreen}>
