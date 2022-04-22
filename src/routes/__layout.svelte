@@ -4,9 +4,13 @@
 	import currentPage from '$lib/stores/currentPage';
 </script>
 
-<Header currentPath={$currentPage?.path} isFullscreen={$currentPage?.isFullscreen} />
+<Header
+	currentPath={$currentPage?.path}
+	isFullScreen={$currentPage?.isFullScreen}
+	hideMenu={$currentPage?.hideMenu}
+/>
 
-<main class:is-fullscreen={$currentPage?.isFullscreen}>
+<main class:is-full-screen={$currentPage?.isFullScreen}>
 	<slot />
 </main>
 
@@ -49,7 +53,7 @@
 				main {
 					flex: 1;
 
-					&.is-fullscreen {
+					&.is-full-screen {
 						height: 100%;
 						overflow: hidden;
 						position: relative;
@@ -58,7 +62,7 @@
 							display: none;
 						}
 					}
-					&:not(.is-fullscreen) {
+					&:not(.is-full-screen) {
 						margin-top: utilities.$header-height;
 
 						@include utilities.media-sm {

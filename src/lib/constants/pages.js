@@ -1,7 +1,7 @@
 /**
  * `description` : description de la page pour le référencement
  * `forceTheme` : force le thème de la page
- * `isFullscreen` : si activé, cache le pied de page et fait passer le contenu de la page derrière l'en-tête
+ * `isFullScreen` : si activé, cache le pied de page et fait passer le contenu de la page derrière l'en-tête
  * `label` : texte affiché dans le lien ou bouton qui redirige vers la page
  * `path` : chemin de la page, reflète les fichiers définis dans `src/routes`
  * `title` : titre de la page qu'on retrouve dans l'onglet du navigateur
@@ -32,7 +32,7 @@ const actionsPage = {
 const actionsTreePage = {
 	description: '',
 	forceTheme: Themes.Light,
-	isFullscreen: true,
+	isFullScreen: true,
 	label: 'Arbre aux actions',
 	path: '/arbre-actions',
 	title: 'Arbre aux actions',
@@ -49,6 +49,17 @@ const onceYouKnowPage = {
 	title: 'Une fois que tu sais',
 	anchors: {
 		animateDiscussion: 'animer-echange'
+	}
+};
+
+const onceYouKnowPageEN = {
+	description: '',
+	hideMenu: true,
+	label: 'The film',
+	path: '/once-you-know',
+	title: 'Once You Know',
+	anchors: {
+		animateDiscussion: 'facilitate-discussion'
 	}
 };
 
@@ -102,6 +113,7 @@ export {
 	actionsPage,
 	actionsTreePage,
 	onceYouKnowPage,
+	onceYouKnowPageEN,
 	homePage,
 	guidedTalkPage,
 	notFoundPage,
