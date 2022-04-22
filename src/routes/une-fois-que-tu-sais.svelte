@@ -121,11 +121,16 @@
 					<svelte:fragment slot="link">Louer en Vidéo à la Demande</svelte:fragment>
 				</SectionContentListItem>
 
-				<SectionContentListItem>
+				<SectionContentListItem
+					isExternalLink
+					link="https://www.nourfilms.com/cinema-independant/une-fois-que-tu-sais/"
+					linkStyle="primary"
+				>
 					<svelte:fragment slot="title">En DVD</svelte:fragment>
 					<svelte:fragment slot="text"
 						>Le DVD sortira en mai 2022 avec des pré-commandes possibles bientôt.</svelte:fragment
 					>
+					<svelte:fragment slot="link">Acheter le DVD</svelte:fragment>
 				</SectionContentListItem>
 			</SectionContentList>
 		</svelte:fragment>
