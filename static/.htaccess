@@ -1,11 +1,13 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Redirection vers la version HTTPS avec www
-  # D'après https://www.infomaniak.com/fr/support/faq/1961/forcer-le-https-ssl-dans-lurl-affichee-dans-la-barre-dadresse-du-navigateur
-  RewriteCond %{HTTPS} off [OR]
+  # Redirection vers la version HTTPS
+  RewriteCond %{HTTPS} off [NC]
+  RewriteRule (.*) https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # Redirection vers la version avec www
   RewriteCond %{HTTP_HOST} !^www. [NC]
-  RewriteRule (.*) https://www.racinesderesilience.org/$1 [R=301,L]
+  RewriteRule (.*) https://www.%{HTTP_HOST}/$1 [R=301,L]
 
   # Page 404 personnalisée
   ErrorDocument 404 /introuvable/index.html
