@@ -105,7 +105,7 @@ if (isset($data['error'])) {
   header('HTTP/1.1 400 Bad Request');
   echo json_encode($data['error']);
 } else {
-  $response = array_map('transformAction', $data['records']);
+  $response = deduplicateActions($data['records']);
 
   header('HTTP/1.1 200 OK');
   echo json_encode($response);
@@ -114,6 +114,23 @@ if (isset($data['error'])) {
 // =================================================================================================
 // Airtable vers application
 // =================================================================================================
+function deduplicateActions($data) {
+  $result = [];
+
+  foreach ($data as $index => $airtableAction) {
+    $action = transformAction($airtableAction);
+    $existingActionIndex = array_search($action->text, array_column($result, 'text'));
+
+    if ($existingActionIndex !== false) {
+      $result[$existingActionIndex]->sources[] = $action->sources[0];
+    } else {
+      $result[] = $action;
+    }
+  }
+
+  return $result;
+}
+
 function transformAction($action) {
   $fields = $action['fields'];
   $result = new stdClass;
