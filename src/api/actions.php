@@ -145,6 +145,15 @@ function transformAction($action) {
     if ($fields['Source - Lien']) {
       $source->link = $fields['Source - Lien'];
     }
+    if ($fields['Pays - ID']) {
+      $source->countrySlug = $fields['Pays - ID'][0];
+    }
+    if ($fields['Région - Nom']) {
+      $source->region = $fields['Région - Nom'][0];
+    }
+    if ($fields['Département - Nom']) {
+      $source->department = $fields['Département - Nom'][0];
+    }
 
     $sources[] = $source;
   }

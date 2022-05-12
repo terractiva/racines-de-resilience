@@ -1,142 +1,148 @@
 export const countryFrance = {
-	name: 'France',
-	slug: 'france'
+	slug: 'FR',
+	name: 'France'
+};
+
+export const countryOther = {
+	slug: '-',
+	name: 'Autre'
 };
 
 const countries = [
 	countryFrance,
 	{
-		name: 'Suisse',
-		slug: 'suisse'
+		slug: 'CH',
+		name: 'Suisse'
 	},
 	{
-		name: 'Belgique',
-		slug: 'belgique'
+		slug: 'BE',
+		name: 'Belgique'
 	},
 	{
-		name: 'Canada',
-		slug: 'canada'
+		slug: 'CA',
+		name: 'Canada'
 	},
 	{
-		name: 'Algérie',
-		slug: 'algerie'
+		slug: 'US',
+		name: 'États-Unis'
 	},
 	{
-		name: 'Bénin',
-		slug: 'benin'
+		slug: 'DZ',
+		name: 'Algérie'
 	},
 	{
-		name: 'Burkina Faso',
-		slug: 'burkina-faso'
+		slug: 'BJ',
+		name: 'Bénin'
 	},
 	{
-		name: 'Burundi',
-		slug: 'burundi'
+		slug: 'BF',
+		name: 'Burkina Faso'
 	},
 	{
-		name: 'Cameroun',
-		slug: 'cameroun'
+		slug: 'BI',
+		name: 'Burundi'
 	},
 	{
-		name: 'Comores',
-		slug: 'comores'
+		slug: 'CM',
+		name: 'Cameroun'
 	},
 	{
-		name: 'Congo',
-		slug: 'congo'
+		slug: 'KM',
+		name: 'Comores'
 	},
 	{
-		name: "Côte d'Ivoire",
-		slug: 'cote-d-ivoire'
+		slug: 'CG',
+		name: 'Congo'
 	},
 	{
-		name: 'Djibouti',
-		slug: 'djibouti'
+		slug: 'CI',
+		name: "Côte d'Ivoire"
 	},
 	{
-		name: 'Gabon',
-		slug: 'gabon'
+		slug: 'DJ',
+		name: 'Djibouti'
 	},
 	{
-		name: 'Guinée',
-		slug: 'guinee'
+		slug: 'GA',
+		name: 'Gabon'
 	},
 	{
-		name: 'Guinée équatoriale',
-		slug: 'guinee-equatoriale'
+		slug: 'GN',
+		name: 'Guinée'
 	},
 	{
-		name: 'Haïti',
-		slug: 'haiti'
+		slug: 'GQ',
+		name: 'Guinée équatoriale'
 	},
 	{
-		name: 'Liban',
-		slug: 'liban'
+		slug: 'HT',
+		name: 'Haïti'
 	},
 	{
-		name: 'Luxembourg',
-		slug: 'luxembourg'
+		slug: 'LB',
+		name: 'Liban'
 	},
 	{
-		name: 'Madagascar',
-		slug: 'madagascar'
+		slug: 'LU',
+		name: 'Luxembourg'
 	},
 	{
-		name: 'Mali',
-		slug: 'mali'
+		slug: 'MG',
+		name: 'Madagascar'
 	},
 	{
-		name: 'Maroc',
-		slug: 'maroc'
+		slug: 'ML',
+		name: 'Mali'
 	},
 	{
-		name: 'Mauritanie',
-		slug: 'maurinatie'
+		slug: 'MA',
+		name: 'Maroc'
 	},
 	{
-		name: 'Niger',
-		slug: 'niger'
+		slug: 'MR',
+		name: 'Mauritanie'
 	},
 	{
-		name: 'République Centrafricaine',
-		slug: 'republique-centrafricaine'
+		slug: 'NE',
+		name: 'Niger'
 	},
 	{
-		name: 'République Démocratique du Congo',
-		slug: 'republique-democratique-du-congo'
+		slug: 'CF',
+		name: 'République Centrafricaine'
 	},
 	{
-		name: 'Rwanda',
-		slug: 'rwanda'
+		slug: 'CD',
+		name: 'République Démocratique du Congo'
 	},
 	{
-		name: 'Sénégal',
-		slug: 'senegal'
+		slug: 'RW',
+		name: 'Rwanda'
 	},
 	{
-		name: 'Seychelles',
-		slug: 'seychelles'
+		slug: 'SN',
+		name: 'Sénégal'
 	},
 	{
-		name: 'Tchad',
-		slug: 'tchad'
+		slug: 'SC',
+		name: 'Seychelles'
 	},
 	{
-		name: 'Togo',
-		slug: 'togo'
+		slug: 'TD',
+		name: 'Tchad'
 	},
 	{
-		name: 'Tunisie',
-		slug: 'tunisie'
+		slug: 'TG',
+		name: 'Togo'
 	},
 	{
-		name: 'Vanuatu',
-		slug: 'vanuatu'
+		slug: 'TN',
+		name: 'Tunisie'
 	},
 	{
-		name: 'Autre',
-		slug: 'autre'
-	}
+		slug: 'VU',
+		name: 'Vanuatu'
+	},
+	countryOther
 ];
 
 export default countries;
