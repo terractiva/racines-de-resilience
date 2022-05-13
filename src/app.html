@@ -7,7 +7,6 @@
 		%svelte.head%
 	</head>
 	<body id="svelte">
-		%svelte.body%
 		<script>
 			// Voir `ThemeSwitcher`
 			const savedTheme = localStorage.getItem('theme');
@@ -20,5 +19,38 @@
 				document.body.classList.add('dark');
 			}
 		</script>
+
+		<script>
+			let _paq = (window._paq = window._paq || []);
+
+			_paq.push(['setCustomUrl', window.location.pathname]);
+			_paq.push(['setDocumentTitle', document.title]);
+			_paq.push(['disableCookies']);
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+
+			(function () {
+				const u = '//statistiques.racinesderesilience.org/';
+				let i;
+
+				if (window.location.host.includes('racinesderesilience')) i = '2';
+				else if (window.location.host.includes('roots-of-resilience')) i = '3';
+
+				if (i) {
+					_paq.push(['setTrackerUrl', u + 'matomo.php']);
+					_paq.push(['setSiteId', i]);
+
+					const d = document,
+						g = d.createElement('script'),
+						s = d.getElementsByTagName('script')[0];
+
+					g.async = true;
+					g.src = u + 'matomo.js';
+					s.parentNode.insertBefore(g, s);
+				}
+			})();
+		</script>
+
+		%svelte.body%
 	</body>
 </html>

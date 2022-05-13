@@ -1,8 +1,17 @@
 <script>
+	import { page } from '$app/stores';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import currentPage from '$lib/stores/currentPage';
 </script>
+
+<svelte:window
+	on:sveltekit:navigation-end={() => {
+		_paq.push(['setCustomUrl', $page.path]);
+		_paq.push(['setDocumentTitle', document.title]);
+		_paq.push(['trackPageView']);
+	}}
+/>
 
 <Header
 	currentPath={$currentPage?.path}
