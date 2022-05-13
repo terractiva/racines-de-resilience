@@ -58,7 +58,9 @@
 			vTransform[5] = yMax;
 		}
 
-		transform = `translate(${vTransform[4]}px, ${vTransform[5] - zoom * headerHeight / 2}px) scale(${zoom / zoomMax})`;
+		transform = `translate(${vTransform[4]}px, ${
+			vTransform[5] - (zoom * headerHeight) / 2
+		}px) scale(${zoom / zoomMax})`;
 	}
 
 	function onMoveEnd() {

@@ -19,7 +19,7 @@ const energyActions = [
 		subcategory: subcategories.energy,
 		position: [15.789, 14.293],
 		radius: 2.092,
-		text: `J'achète mon electricité aux producteurs d'énergie renouvelable`,
+		text: `J'achète mon électricité aux producteurs d'énergie renouvelable`,
 		sources: [
 			{ name: `Enercoop`, link: `https://www.enercoop.fr/` },
 			{ name: `Greenpeace`, link: `https://www.guide-electricite-verte.fr/` }

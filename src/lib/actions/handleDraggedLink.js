@@ -1,6 +1,6 @@
 export default function handleDraggedLink(node) {
 	let isDisabled = false;
-  let isNextClickDisabled = false;
+	let isNextClickDisabled = false;
 
 	function onClick(event) {
 		if (isNextClickDisabled) {
@@ -12,9 +12,9 @@ export default function handleDraggedLink(node) {
 		event.preventDefault(); // Empêche le glisser-déposer
 	}
 	function onMouseup() {
-    if (isDisabled) {
-      isNextClickDisabled = true;
-    }
+		if (isDisabled) {
+			isNextClickDisabled = true;
+		}
 	}
 
 	node.addEventListener('click', onClick);

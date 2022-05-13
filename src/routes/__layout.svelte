@@ -5,6 +5,7 @@
 	import currentPage from '$lib/stores/currentPage';
 </script>
 
+<!-- svelte-ignore missing-declaration -->
 <svelte:window
 	on:sveltekit:navigation-end={() => {
 		_paq.push(['setCustomUrl', $page.path]);

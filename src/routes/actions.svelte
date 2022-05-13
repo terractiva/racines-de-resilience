@@ -41,11 +41,10 @@
 	import PageMeta from '$lib/components/PageMeta.svelte';
 	import SectionBackground from '$lib/components/SectionBackground.svelte';
 	import Backgrounds from '$lib/constants/backgrounds';
-	import { aboutPage, actionsPage, actionsTreePage, onceYouKnowPage } from '$lib/constants/pages';
+	import { aboutPage, actionsPage, actionsTreePage } from '$lib/constants/pages';
 	import Section from '$lib/components/Section.svelte';
 	import SectionContentList from '$lib/components/SectionContentList.svelte';
 	import SectionContentListItem from '$lib/components/SectionContentListItem.svelte';
-	import SectionContentTwoThirds from '$lib/components/SectionContentTwoThirds.svelte';
 	import currentPage from '$lib/stores/currentPage';
 	import FiltersDatabaseResults from '$lib/components/FiltersDatabaseResults.svelte';
 	import { browser } from '$app/env';
