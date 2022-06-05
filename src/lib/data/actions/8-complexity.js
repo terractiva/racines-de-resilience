@@ -12,6 +12,7 @@ const complexityActions = [
 		text: `J'organise une rencontre-débat-projection thématique`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Colibris`,
 				link: `https://www.colibris-lemouvement.org/passer-a-laction/organiser-un-evenement/organiser-un-debat`
 			}
@@ -25,7 +26,10 @@ const complexityActions = [
 		position: [23.1159, 79.032],
 		radius: 2.269,
 		text: `Je diffuse des scénarios crédibles de décarbonation de la société`,
-		sources: [{ name: `NégaWatt`, link: `https://negawatt.org/` }, { name: `The Shift Project` }]
+		sources: [
+			{ countrySlug: 'FR', name: `NégaWatt`, link: `https://negawatt.org/` },
+			{ countrySlug: 'FR', name: `The Shift Project` }
+		]
 	},
 	{
 		slug: `relais-informations-fiables`,
@@ -35,7 +39,11 @@ const complexityActions = [
 		position: [22.7497, 84.9397],
 		radius: 2.084,
 		text: `Je relaie des informations fiables sur les réseaux`,
-		sources: [{ name: `GIEC` }, { name: `IPBES` }, { name: `IPSL-CNRS` }]
+		sources: [
+			{ countrySlug: 'FR', name: `GIEC` },
+			{ countrySlug: 'FR', name: `IPBES` },
+			{ countrySlug: 'FR', name: `IPSL-CNRS` }
+		]
 	},
 	{
 		slug: `animation-ateliers-enjeux-climatiques`,
@@ -45,7 +53,9 @@ const complexityActions = [
 		position: [28.5769, 66.4145],
 		radius: 1.9721,
 		text: `J'anime des ateliers interactifs sur les enjeux climatiques`,
-		sources: [{ name: `La Fresque du Climat`, link: `https://fresqueduclimat.org/` }]
+		sources: [
+			{ countrySlug: 'FR', name: `La Fresque du Climat`, link: `https://fresqueduclimat.org/` }
+		]
 	},
 	{
 		slug: `adhesion-groupe-sensibilisation-risques-effondrements`,
@@ -55,7 +65,7 @@ const complexityActions = [
 		position: [24.9422, 68.2197],
 		radius: 2.0247,
 		text: `Je rejoins un groupe local pour sensibiliser aux risques d'effondrements`,
-		sources: [{ name: `Adrastia`, link: `https://adrastia.org/` }]
+		sources: [{ countrySlug: 'FR', name: `Adrastia`, link: `https://adrastia.org/` }]
 	},
 	{
 		slug: `formation-communication-enjeux-energie-climat`,
@@ -67,10 +77,15 @@ const complexityActions = [
 		text: `Je me forme pour communiquer sur les enjeux énergie-climat`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Les Shifters`,
 				link: `https://docs.google.com/forms/d/12ahUuedzFEtx9XQWXGYd0cWssxYa0QEk2OLrFiKRWIg/viewform?edit_requested=true`
 			},
-			{ name: `Avenir Climatique`, link: `https://avenirclimatique.org/lacademy/` }
+			{
+				countrySlug: 'FR',
+				name: `Avenir Climatique`,
+				link: `https://avenirclimatique.org/lacademy/`
+			}
 		]
 	}
 ];

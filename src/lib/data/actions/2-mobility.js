@@ -11,10 +11,10 @@ const mobilityActions = [
 		radius: 2.2,
 		text: `Je remplace la voiture : vélo, transports, co-voiturage`,
 		sources: [
-			{ name: `Plan Vélo`, link: `https://www.ecologie.gouv.fr/velo-et-marche` },
-			{ name: `FUB`, link: `https://www.fub.fr/` },
-			{ name: `TRANS'BUS`, link: `https://www.transbus.org/index.html` },
-			{ name: `KelBillet`, link: `https://www.kelbillet.com/covoiturage/` }
+			{ countrySlug: 'FR', name: `Plan Vélo`, link: `https://www.ecologie.gouv.fr/velo-et-marche` },
+			{ countrySlug: 'FR', name: `FUB`, link: `https://www.fub.fr/` },
+			{ countrySlug: 'FR', name: `TRANS'BUS`, link: `https://www.transbus.org/index.html` },
+			{ countrySlug: 'FR', name: `KelBillet`, link: `https://www.kelbillet.com/covoiturage/` }
 		]
 	},
 	{
@@ -27,6 +27,7 @@ const mobilityActions = [
 		text: `Je pousse mon entreprise à adopter un plan de mobilité`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `ADEME`,
 				link: `https://www.ademe.fr/entreprises-monde-agricole/reduire-impacts/optimiser-mobilite-salaries/dossier/plan-mobilite/plan-mobilite-quest-cest`
 			}
@@ -41,8 +42,8 @@ const mobilityActions = [
 		radius: 2.0514,
 		text: `Élu·e, usagèr·e, je fais changer les politiques de transport`,
 		sources: [
-			{ name: `FNAUT`, link: `https://www.fnaut.fr/` },
-			{ name: `CEREMA`, link: `https://www.cerema.fr/fr/cerema` }
+			{ countrySlug: 'FR', name: `FNAUT`, link: `https://www.fnaut.fr/` },
+			{ countrySlug: 'FR', name: `CEREMA`, link: `https://www.cerema.fr/fr/cerema` }
 		]
 	}
 ];

@@ -12,6 +12,7 @@ const wasteActions = [
 		text: `Je me forme pour devenir maitre·sse composteur·se`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `ADEME`,
 				link: `https://formations.ademe.fr/formations_economie-circulaire_devenir-maitre-composteur-:-prevention-et-gestion-de-proximite-des-biodechets_s4719.html`
 			}
@@ -26,8 +27,8 @@ const wasteActions = [
 		radius: 2.3151,
 		text: `Ingénieur·e, je me forme au low-tech pour minimiser polluants et déchets`,
 		sources: [
-			{ name: `La Low Tech Skol`, link: `https://lowtechskol.org/` },
-			{ name: `L'Atelier Paysan`, link: `https://latelierpaysan.org/` }
+			{ countrySlug: 'FR', name: `La Low Tech Skol`, link: `https://lowtechskol.org/` },
+			{ countrySlug: 'FR', name: `L'Atelier Paysan`, link: `https://latelierpaysan.org/` }
 		]
 	},
 	{
@@ -39,8 +40,8 @@ const wasteActions = [
 		radius: 1.7434,
 		text: `J'adopte les gestes zéro déchet`,
 		sources: [
-			{ name: `Citeo`, link: `https://www.consignesdetri.fr/` },
-			{ name: `Zéro Waste`, link: `https://www.zerowastefrance.org/` }
+			{ countrySlug: 'FR', name: `Citeo`, link: `https://www.consignesdetri.fr/` },
+			{ countrySlug: 'FR', name: `Zéro Waste`, link: `https://www.zerowastefrance.org/` }
 		]
 	},
 	{
@@ -52,9 +53,9 @@ const wasteActions = [
 		radius: 1.8811,
 		text: `Je récupère, répare, recycle`,
 		sources: [
-			{ name: `Ressourceries`, link: `https://ressourceries.info/` },
-			{ name: `Fab Lab`, link: `http://www.fablab.fr` },
-			{ name: `Repair café`, link: `https://www.repaircafe.org/fr/` }
+			{ countrySlug: 'FR', name: `Ressourceries`, link: `https://ressourceries.info/` },
+			{ countrySlug: 'FR', name: `Fab Lab`, link: `http://www.fablab.fr` },
+			{ countrySlug: 'FR', name: `Repair café`, link: `https://www.repaircafe.org/fr/` }
 		]
 	},
 	{
@@ -65,7 +66,7 @@ const wasteActions = [
 		position: [17.5856, 39.11],
 		radius: 2.0007,
 		text: `Industriel·le, je m'inscris dans une économie circulaire`,
-		sources: [{ name: `OPTIGEDE`, link: `https://www.optigede.ademe.fr/` }]
+		sources: [{ countrySlug: 'FR', name: `OPTIGEDE`, link: `https://www.optigede.ademe.fr/` }]
 	}
 ];
 

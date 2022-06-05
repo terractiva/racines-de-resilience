@@ -10,7 +10,13 @@ const demographyActions = [
 		position: [82.9104, 64.861],
 		radius: 2.284,
 		text: `Je place l'autolimitation de la natalité au cœur des questions écologiques`,
-		sources: [{ name: `Démographie Responsable`, link: `https://www.demographie-responsable.org/` }]
+		sources: [
+			{
+				countrySlug: 'FR',
+				name: `Démographie Responsable`,
+				link: `https://www.demographie-responsable.org/`
+			}
+		]
 	},
 	{
 		slug: `formation-sexualite-contraception`,
@@ -20,7 +26,9 @@ const demographyActions = [
 		position: [79.0582, 64.1977],
 		radius: 2.2132,
 		text: `Je deviens incollable sur la sexualité, la contraception et l'avortement`,
-		sources: [{ name: `Planning Familial`, link: `https://www.planning-familial.org/fr` }]
+		sources: [
+			{ countrySlug: 'FR', name: `Planning Familial`, link: `https://www.planning-familial.org/fr` }
+		]
 	},
 	{
 		slug: `lancement-debat-national-politique-population-soutenable`,
@@ -31,8 +39,8 @@ const demographyActions = [
 		radius: 2.25,
 		text: `Je lance un débat national pour une politique de population soutenable`,
 		sources: [
-			{ name: `Population Matters`, link: `https://populationmatters.org/` },
-			{ name: `ICP`, link: `https://populationinstitutecanada.ca/fr/` }
+			{ countrySlug: 'FR', name: `Population Matters`, link: `https://populationmatters.org/` },
+			{ countrySlug: 'FR', name: `ICP`, link: `https://populationinstitutecanada.ca/fr/` }
 		]
 	},
 	{
@@ -43,7 +51,13 @@ const demographyActions = [
 		position: [74.9776, 61.5071],
 		radius: 2.3834,
 		text: `Je choisis d'avoir des enfants aussi en fonction des impacts sur le climat, les ressources et la pollution`,
-		sources: [{ name: `Overpopulation Project`, link: `https://overpopulation-project.com/` }]
+		sources: [
+			{
+				countrySlug: 'FR',
+				name: `Overpopulation Project`,
+				link: `https://overpopulation-project.com/`
+			}
+		]
 	}
 ];
 

@@ -12,10 +12,11 @@ const childrenActions = [
 		text: `Je mets en place un climat éducatif respectueux de l'enfant`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `CANOPÉ`,
 				link: `https://www.reseau-canope.fr/climatscolaire/agir/ressource/ressourceId/les-pratiques-corporelles-de-bien-etre.html`
 			},
-			{ name: `OVEO`, link: `https://www.oveo.org/` }
+			{ countrySlug: 'FR', name: `OVEO`, link: `https://www.oveo.org/` }
 		]
 	},
 	{
@@ -28,10 +29,11 @@ const childrenActions = [
 		text: `Enseignant·e, parent, je pratique l'éducation à la paix et la pédagogie coopératrice`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Graines de Paix`,
 				link: `https://www.grainesdepaix.org/fr/qui-sommes-nous/vision-mission-buts`
 			},
-			{ name: `OCCE`, link: `http://www2.occe.coop/locce` }
+			{ countrySlug: 'FR', name: `OCCE`, link: `http://www2.occe.coop/locce` }
 		]
 	},
 	{
@@ -43,9 +45,17 @@ const childrenActions = [
 		radius: 2.2004,
 		text: `Enseignant·e, parent, je fais de l'éducation à l'environnement`,
 		sources: [
-			{ name: `Réseau École et Nature`, link: `http://reseauecoleetnature.org/taxonomy/term/1269` },
-			{ name: `FNE`, link: `https://www.fne.asso.fr/espace-education` },
-			{ name: `EDUSCOL`, link: `https://eduscol.education.fr/1132/changement-climatique` }
+			{
+				countrySlug: 'FR',
+				name: `Réseau École et Nature`,
+				link: `http://reseauecoleetnature.org/taxonomy/term/1269`
+			},
+			{ countrySlug: 'FR', name: `FNE`, link: `https://www.fne.asso.fr/espace-education` },
+			{
+				countrySlug: 'FR',
+				name: `EDUSCOL`,
+				link: `https://eduscol.education.fr/1132/changement-climatique`
+			}
 		]
 	},
 	{
@@ -58,10 +68,15 @@ const childrenActions = [
 		text: `J’œuvre pour un tronc commun sur l'écologie dans l'enseignement supérieur et dans la formation`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `The Shift Project`,
 				link: `https://theshiftproject.org/article/100-appellent-former-etudiants-climat/`
 			},
-			{ name: `Pour un réveil écologique`, link: `https://pour-un-reveil-ecologique.org/` }
+			{
+				countrySlug: 'FR',
+				name: `Pour un réveil écologique`,
+				link: `https://pour-un-reveil-ecologique.org/`
+			}
 		]
 	},
 	{
@@ -74,14 +89,16 @@ const childrenActions = [
 		text: `Enseignant·e, parent, j'amène les enfants au contact de la nature`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Les Décliques`,
 				link: `https://lesdecliques.com/blog/trouver-forest-schools-france/`
 			},
 			{
+				countrySlug: 'FR',
 				name: `École Alternative`,
 				link: `https://www.ecolealternative.com/carte-interactive-des-ecoles-alternatives/`
 			},
-			{ name: `Classe découverte`, link: `https://www.classe-decouverte.info/` }
+			{ countrySlug: 'FR', name: `Classe découverte`, link: `https://www.classe-decouverte.info/` }
 		]
 	}
 ];

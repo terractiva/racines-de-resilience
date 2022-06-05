@@ -11,8 +11,13 @@ const uncertaintyActions = [
 		radius: 2.3342,
 		text: `J'écoute et prends soin de mon corps : médecines alternatives et pratiques corporelles`,
 		sources: [
-			{ name: `OMNES`, link: `https://www.omnes.fr/page/632267-praticiens-naturopathe-omnes` },
 			{
+				countrySlug: 'FR',
+				name: `OMNES`,
+				link: `https://www.omnes.fr/page/632267-praticiens-naturopathe-omnes`
+			},
+			{
+				countrySlug: 'FR',
 				name: `Maisons sport-santé`,
 				link: `https://www.sports.gouv.fr/pratiques-sportives/sport-sante-bien-etre/maisons-sport-sante/maisons-sport-sante-carte`
 			}
@@ -27,7 +32,11 @@ const uncertaintyActions = [
 		radius: 2.0027,
 		text: `J'anime un cercle de transition intérieure`,
 		sources: [
-			{ name: `Réseau transition belge`, link: `https://pratiquesti.reseautransition.be/?AccueilL` }
+			{
+				countrySlug: 'FR',
+				name: `Réseau transition belge`,
+				link: `https://pratiquesti.reseautransition.be/?AccueilL`
+			}
 		]
 	},
 	{
@@ -39,7 +48,11 @@ const uncertaintyActions = [
 		radius: 1.8794,
 		text: `Je découvre des manières de ralentir mon rythme`,
 		sources: [
-			{ name: `La slow life`, link: `https://www.laslowlife.fr/le-mouvement-slow-un-art-de-vivre/` }
+			{
+				countrySlug: 'FR',
+				name: `La slow life`,
+				link: `https://www.laslowlife.fr/le-mouvement-slow-un-art-de-vivre/`
+			}
 		]
 	},
 	{
@@ -51,7 +64,11 @@ const uncertaintyActions = [
 		radius: 1.9554,
 		text: `J'accueille mon éco-anxiété et j'en parle`,
 		sources: [
-			{ name: `Écopsychologie`, link: `https://www.ecopsychologiefrancophone.org/et-apres/` }
+			{
+				countrySlug: 'FR',
+				name: `Écopsychologie`,
+				link: `https://www.ecopsychologiefrancophone.org/et-apres/`
+			}
 		]
 	},
 	{
@@ -63,8 +80,12 @@ const uncertaintyActions = [
 		radius: 2.035,
 		text: `Je cultive des plaisirs simples et joyeux : balades, jeux, arts, festivités...`,
 		sources: [
-			{ name: `IGN`, link: `https://www.ign.fr/particuliers` },
-			{ name: `ALF`, link: `http://www.kananas.com/associationdesludothequesfrancaises/carte/` }
+			{ countrySlug: 'FR', name: `IGN`, link: `https://www.ign.fr/particuliers` },
+			{
+				countrySlug: 'FR',
+				name: `ALF`,
+				link: `http://www.kananas.com/associationdesludothequesfrancaises/carte/`
+			}
 		]
 	},
 	{
@@ -76,8 +97,12 @@ const uncertaintyActions = [
 		radius: 2.1256,
 		text: `Je pratique l'art d'aller à l'essentiel`,
 		sources: [
-			{ name: `Simplicité volontaire`, link: `http://simplicitevolontaire.org/` },
-			{ name: `Minimalisme`, link: `https://etre-minimaliste.com/blog/` }
+			{
+				countrySlug: 'FR',
+				name: `Simplicité volontaire`,
+				link: `http://simplicitevolontaire.org/`
+			},
+			{ countrySlug: 'FR', name: `Minimalisme`, link: `https://etre-minimaliste.com/blog/` }
 		]
 	}
 ];

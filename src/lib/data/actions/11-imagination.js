@@ -10,7 +10,9 @@ const imaginationActions = [
 		position: [50.3315, 80.7894],
 		radius: 1.7874,
 		text: `J'organise un labo-fiction`,
-		sources: [{ name: `Ateliers de l'Antemonde`, link: `https://antemonde.org/` }]
+		sources: [
+			{ countrySlug: 'FR', name: `Ateliers de l'Antemonde`, link: `https://antemonde.org/` }
+		]
 	},
 	{
 		slug: `participation-atelier-ecriture`,
@@ -20,7 +22,7 @@ const imaginationActions = [
 		position: [47.9667, 84.8266],
 		radius: 2.1504,
 		text: `Je participe à un atelier d'imagination et d'écriture collaborative`,
-		sources: [{ name: `Futurs proches`, link: `https://futursproches.com/` }]
+		sources: [{ countrySlug: 'FR', name: `Futurs proches`, link: `https://futursproches.com/` }]
 	},
 	{
 		slug: `contribution-construction-reseau-tempetes`,
@@ -31,8 +33,8 @@ const imaginationActions = [
 		radius: 2.0705,
 		text: `Je contribue à la construction d'un réseau des tempêtes`,
 		sources: [
-			{ name: `Time to Breathe`, link: `https://www.timetobreathe.cc/` },
-			{ name: `Horizons`, link: `https://www.associationhorizons.com/` }
+			{ countrySlug: 'FR', name: `Time to Breathe`, link: `https://www.timetobreathe.cc/` },
+			{ countrySlug: 'FR', name: `Horizons`, link: `https://www.associationhorizons.com/` }
 		]
 	},
 	{
@@ -44,8 +46,16 @@ const imaginationActions = [
 		radius: 2.1983,
 		text: `Je dessine un projet de société désirable sur mon territoire`,
 		sources: [
-			{ name: `CNNR`, link: `https://www.cnnr.fr/elaboration-du-programme-des-jours-heureux/` },
-			{ name: `Mouvement de la Transition`, link: `https://www.entransition.fr/` }
+			{
+				countrySlug: 'FR',
+				name: `CNNR`,
+				link: `https://www.cnnr.fr/elaboration-du-programme-des-jours-heureux/`
+			},
+			{
+				countrySlug: 'FR',
+				name: `Mouvement de la Transition`,
+				link: `https://www.entransition.fr/`
+			}
 		]
 	}
 ];

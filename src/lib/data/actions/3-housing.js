@@ -10,7 +10,7 @@ const housingActions = [
 		position: [3.0966, 23.7295],
 		radius: 2.0146,
 		text: `Je me forme pour rendre mon campus universitaire bas-carbone`,
-		sources: [{ name: `REFEDD`, link: `https://le-reses.org/nos-formations/` }]
+		sources: [{ countrySlug: 'FR', name: `REFEDD`, link: `https://le-reses.org/nos-formations/` }]
 	},
 	{
 		slug: `investissement-habitat-collectif-eco`,
@@ -21,7 +21,11 @@ const housingActions = [
 		radius: 2.0736,
 		text: `J'investis dans un habitat collectif éco-conçu`,
 		sources: [
-			{ name: `Habitat Participatif France`, link: `https://www.habitatparticipatif-france.fr/` }
+			{
+				countrySlug: 'FR',
+				name: `Habitat Participatif France`,
+				link: `https://www.habitatparticipatif-france.fr/`
+			}
 		]
 	},
 	{
@@ -34,10 +38,11 @@ const housingActions = [
 		text: `J'installe une source renouvelable de chauffage`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Écoconso info`,
 				link: `https://www.ecoconso.be/fr/content/quel-systeme-de-chauffage-choisir`
 			},
-			{ name: `Réseau FAIRE`, link: `https://www.faire.gouv.fr/` }
+			{ countrySlug: 'FR', name: `Réseau FAIRE`, link: `https://www.faire.gouv.fr/` }
 		]
 	},
 	{
@@ -49,8 +54,8 @@ const housingActions = [
 		radius: 2.0164,
 		text: `Je fais la rénovation thermique de mon logement`,
 		sources: [
-			{ name: `Réseau FAIRE`, link: `https://www.faire.gouv.fr/` },
-			{ name: `Dorémi`, link: `https://www.renovation-doremi.com/` }
+			{ countrySlug: 'FR', name: `Réseau FAIRE`, link: `https://www.faire.gouv.fr/` },
+			{ countrySlug: 'FR', name: `Dorémi`, link: `https://www.renovation-doremi.com/` }
 		]
 	},
 	{
@@ -62,8 +67,16 @@ const housingActions = [
 		radius: 2.4867,
 		text: `Bâtisseur·se ou auto-constructeur·rice, je me forme aux alternatives bas-carbone`,
 		sources: [
-			{ name: `Fédération Éco-construction`, link: `https://www.federation-ecoconstruire.org` },
-			{ name: `MOOC Bâtiment durable`, link: `https://www.mooc-batiment-durable.fr/` }
+			{
+				countrySlug: 'FR',
+				name: `Fédération Éco-construction`,
+				link: `https://www.federation-ecoconstruire.org`
+			},
+			{
+				countrySlug: 'FR',
+				name: `MOOC Bâtiment durable`,
+				link: `https://www.mooc-batiment-durable.fr/`
+			}
 		]
 	},
 	{
@@ -75,8 +88,8 @@ const housingActions = [
 		radius: 2.0912,
 		text: `Rénovateur·rice thermique, je me forme aux meilleures pratiques`,
 		sources: [
-			{ name: `Réseau FAIRE`, link: `https://www.faire.gouv.fr/` },
-			{ name: `Dorémi`, link: `https://www.renovation-doremi.com/formation` }
+			{ countrySlug: 'FR', name: `Réseau FAIRE`, link: `https://www.faire.gouv.fr/` },
+			{ countrySlug: 'FR', name: `Dorémi`, link: `https://www.renovation-doremi.com/formation` }
 		]
 	}
 ];

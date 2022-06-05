@@ -10,7 +10,7 @@ const agricultureActions = [
 		position: [3.6717, 74.5782],
 		radius: 2.1607,
 		text: `J'aide de nouveaux·elles agriculteur·rice·s à accéder à du foncier`,
-		sources: [{ name: `Terre de Liens`, link: `https://terredeliens.org/` }]
+		sources: [{ countrySlug: 'FR', name: `Terre de Liens`, link: `https://terredeliens.org/` }]
 	},
 	{
 		slug: `organisation-repas-durable-potes`,
@@ -20,7 +20,13 @@ const agricultureActions = [
 		position: [8.0535, 60.3114],
 		radius: 1.7444,
 		text: `J'organise un repas durable entre potes`,
-		sources: [{ name: `WARN`, link: `https://www.wearereadynow.net/unrepasdurableentrepotes/` }]
+		sources: [
+			{
+				countrySlug: 'FR',
+				name: `WARN`,
+				link: `https://www.wearereadynow.net/unrepasdurableentrepotes/`
+			}
+		]
 	},
 	{
 		slug: `participation-jardin-partage`,
@@ -31,8 +37,16 @@ const agricultureActions = [
 		radius: 2.1119,
 		text: `Je participe à un jardin partagé`,
 		sources: [
-			{ name: `Partageons les Jardins`, link: `http://partageonslesjardins.fr/reseau-national/` },
-			{ name: `Incroyables Comestibles`, link: `https://lesincroyablescomestibles.fr/` }
+			{
+				countrySlug: 'FR',
+				name: `Partageons les Jardins`,
+				link: `http://partageonslesjardins.fr/reseau-national/`
+			},
+			{
+				countrySlug: 'FR',
+				name: `Incroyables Comestibles`,
+				link: `https://lesincroyablescomestibles.fr/`
+			}
 		]
 	},
 	{
@@ -44,9 +58,9 @@ const agricultureActions = [
 		radius: 2.3195,
 		text: `J'adopte une alimentation bio, locale, végé ou végan moins émettrice`,
 		sources: [
-			{ name: `Bioconsomacteurs`, link: `https://www.bioconsomacteurs.org` },
-			{ name: `Bio et local`, link: `https://bioetlocal.org/` },
-			{ name: `Slow Food`, link: `https://slowfood.fr/` }
+			{ countrySlug: 'FR', name: `Bioconsomacteurs`, link: `https://www.bioconsomacteurs.org` },
+			{ countrySlug: 'FR', name: `Bio et local`, link: `https://bioetlocal.org/` },
+			{ countrySlug: 'FR', name: `Slow Food`, link: `https://slowfood.fr/` }
 		]
 	},
 	{
@@ -57,7 +71,9 @@ const agricultureActions = [
 		position: [10.2935, 68.6981],
 		radius: 2.2251,
 		text: `Je soutiens la bio pour tou·te·s, l'insertion et le maraîchage de proximité`,
-		sources: [{ name: `Réseau Cocagne`, link: `http://www.reseaucocagne.asso.fr/` }]
+		sources: [
+			{ countrySlug: 'FR', name: `Réseau Cocagne`, link: `http://www.reseaucocagne.asso.fr/` }
+		]
 	},
 	{
 		slug: `conversion-cantine-bio`,
@@ -69,10 +85,12 @@ const agricultureActions = [
 		text: `Je convertis ma cantine scolaire / d'entreprise / d'EHPAD au bio-local-végétal`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Agir`,
 				link: `https://www.agirpourlenvironnement.org/campagne/du-bio-et-local-dans-les-cantines-c-est-possible/`
 			},
 			{
+				countrySlug: 'FR',
 				name: `CPIE`,
 				link: `https://www.cpie.fr/uncpie/projet/176834/Transformer-pratiques-en-restauration-collective`
 			}
@@ -87,8 +105,12 @@ const agricultureActions = [
 		radius: 1.9459,
 		text: `Je me forme à la traction animale`,
 		sources: [
-			{ name: `CERRTA`, link: `https://www.formationtractionanimale.com` },
-			{ name: `Les Jardins d'Illas`, link: `https://www.agroecologie-tractionanimale.fr/` }
+			{ countrySlug: 'FR', name: `CERRTA`, link: `https://www.formationtractionanimale.com` },
+			{
+				countrySlug: 'FR',
+				name: `Les Jardins d'Illas`,
+				link: `https://www.agroecologie-tractionanimale.fr/`
+			}
 		]
 	},
 	{
@@ -100,9 +122,14 @@ const agricultureActions = [
 		radius: 2.217,
 		text: `Je me forme à l'agro-écologie pour mon jardin`,
 		sources: [
-			{ name: `UPP`, link: `https://permaculture-upp.org/` },
-			{ name: `Terre & Humanisme`, link: `https://formation.terre-humanisme.org/` },
+			{ countrySlug: 'FR', name: `UPP`, link: `https://permaculture-upp.org/` },
 			{
+				countrySlug: 'FR',
+				name: `Terre & Humanisme`,
+				link: `https://formation.terre-humanisme.org/`
+			},
+			{
+				countrySlug: 'FR',
 				name: `Ferme du Bec Hellouin`,
 				link: `https://www.fermedubec.com/se-former/se-former-ailleurs/`
 			}
@@ -117,8 +144,8 @@ const agricultureActions = [
 		radius: 1.9459,
 		text: `Je plante des arbres, beaucoup d'arbres`,
 		sources: [
-			{ name: `Reforest'Action`, link: `https://www.reforestaction.com/` },
-			{ name: `All4Trees`, link: `https://all4trees.org/` }
+			{ countrySlug: 'FR', name: `Reforest'Action`, link: `https://www.reforestaction.com/` },
+			{ countrySlug: 'FR', name: `All4Trees`, link: `https://all4trees.org/` }
 		]
 	},
 	{
@@ -129,7 +156,13 @@ const agricultureActions = [
 		position: [19.2621, 51.7506],
 		radius: 2.1482,
 		text: `Je co-construis une politique agricole européenne intégrant les enjeux énergie-climat`,
-		sources: [{ name: `Pour une autre PAC`, link: `https://pouruneautrepac.eu/qui-sommes-nous/` }]
+		sources: [
+			{
+				countrySlug: 'FR',
+				name: `Pour une autre PAC`,
+				link: `https://pouruneautrepac.eu/qui-sommes-nous/`
+			}
+		]
 	},
 	{
 		slug: `formation-agriculture-sequestration-carbone`,
@@ -141,10 +174,12 @@ const agricultureActions = [
 		text: `Agriculteur·rice, je me forme à la séquestration du carbone`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `ADEME`,
 				link: `https://sites.google.com/view/experimentation-vivea/accueil?authuser=0`
 			},
 			{
+				countrySlug: 'FR',
 				name: `France Carbone Agri`,
 				link: `https://www.france-carbon-agri.fr/possible-interessante-et-accompagnee-objectif-bas-carbonne/`
 			}
@@ -159,10 +194,10 @@ const agricultureActions = [
 		radius: 2.1939,
 		text: `Agriculteur·rice, je me forme en agroécologie`,
 		sources: [
-			{ name: `OSAE`, link: `https://osez-agroecologie.org/` },
-			{ name: `AFAC` },
-			{ name: `Solagro`, link: `https://solagro.org` },
-			{ name: `Agroforesterie`, link: `https://www.agroforesterie.fr/index.php` }
+			{ countrySlug: 'FR', name: `OSAE`, link: `https://osez-agroecologie.org/` },
+			{ countrySlug: 'FR', name: `AFAC` },
+			{ countrySlug: 'FR', name: `Solagro`, link: `https://solagro.org` },
+			{ countrySlug: 'FR', name: `Agroforesterie`, link: `https://www.agroforesterie.fr/index.php` }
 		]
 	}
 ];

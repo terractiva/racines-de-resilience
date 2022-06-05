@@ -10,7 +10,7 @@ const justiceActions = [
 		position: [84.0058, 30.7483],
 		radius: 2.182,
 		text: `Élu·e, je mets en demeure les entreprises pour que leur stratégie s'aligne sur l'Accord de Paris`,
-		sources: [{ name: `Eco Maires`, link: `https://ecomaires.com/` }]
+		sources: [{ countrySlug: 'FR', name: `Eco Maires`, link: `https://ecomaires.com/` }]
 	},
 	{
 		slug: `interpellation-lois-climats-ambitieuses`,
@@ -21,8 +21,8 @@ const justiceActions = [
 		radius: 1.9111,
 		text: `J'interpelle mes élu·e·s pour des lois climat ambitieuses`,
 		sources: [
-			{ name: `FNE`, link: `https://www.fne.asso.fr/` },
-			{ name: `CliMates`, link: `https://www.weareclimates.org/` }
+			{ countrySlug: 'FR', name: `FNE`, link: `https://www.fne.asso.fr/` },
+			{ countrySlug: 'FR', name: `CliMates`, link: `https://www.weareclimates.org/` }
 		]
 	},
 	{
@@ -33,7 +33,7 @@ const justiceActions = [
 		position: [88.8185, 29.3052],
 		radius: 2.2054,
 		text: `Je pétitionne mes élu·e·s européen·ne·s pour décarboner l'économie`,
-		sources: [{ name: `WeMoveEurope`, link: `https://www.wemove.eu/fr` }]
+		sources: [{ countrySlug: 'FR', name: `WeMoveEurope`, link: `https://www.wemove.eu/fr` }]
 	},
 	{
 		slug: `reconnaissance-crime-ecocide-constitution`,
@@ -45,10 +45,12 @@ const justiceActions = [
 		text: `Juriste, je fais reconnaître le crime d'écocide et rentrer le climat dans notre constitution`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Notre Affaire à Tous`,
 				link: `https://notreaffaireatous.org/climat-dans-la-constitution-notre-proposition-ideale/`
 			},
 			{
+				countrySlug: 'FR',
 				name: `Notre Constitution Écologique`,
 				link: `https://www.notreconstitutionecologique.org/`
 			}
@@ -63,16 +65,22 @@ const justiceActions = [
 		radius: 2.3069,
 		text: `J'attaque collectivement l'État en justice pour inaction climatique`,
 		sources: [
-			{ name: `L'Affaire du Siècle`, link: `https://laffairedusiecle.net/` },
+			{ countrySlug: 'FR', name: `L'Affaire du Siècle`, link: `https://laffairedusiecle.net/` },
 			{
+				countrySlug: 'FR',
 				name: `FNH`,
 				link: `https://www.fondation-nicolas-hulot.org/jugement-de-laffaire-du-siecle-linaction-climatique-de-letat-est-illegale/`
 			},
 			{
+				countrySlug: 'FR',
 				name: `Oxfam`,
 				link: `https://www.oxfamfrance.org/laffairedusiecle-categorie/affaire-du-siecle-une-premiere-victoire-historique-pour-climat/`
 			},
-			{ name: `Greenpeace`, link: `https://www.greenpeace.fr/laffaire-du-siecle/` }
+			{
+				countrySlug: 'FR',
+				name: `Greenpeace`,
+				link: `https://www.greenpeace.fr/laffaire-du-siecle/`
+			}
 		]
 	}
 ];

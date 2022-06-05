@@ -12,10 +12,11 @@ const financeActions = [
 		text: `Je lutte contre les paradis fiscaux`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Oxfam`,
 				link: `https://www.oxfamfrance.org/inegalites-et-justice-fiscale/paradis-fiscal-quelle-definition-et-quels-pays/`
 			},
-			{ name: `Attac`, link: `https://france.attac.org/` }
+			{ countrySlug: 'FR', name: `Attac`, link: `https://france.attac.org/` }
 		]
 	},
 	{
@@ -28,6 +29,7 @@ const financeActions = [
 		text: `Je sors mon épargne des banques climaticides`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Guide des Amis de la Terre`,
 				link: `https://www.amisdelaterre.org/choisis-ta-banque-le-guide-eco-citoyen-des-amis-de-la-terre/`
 			}
@@ -43,6 +45,7 @@ const financeActions = [
 		text: `Je me renseigne sur la taxe carbone et autres fiscalités climatiques`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Ministère de la Transition Écologique`,
 				link: `https://www.ecologie.gouv.fr/fiscalite-des-energies`
 			}
@@ -58,6 +61,7 @@ const financeActions = [
 		text: `J'exige l'arrêt des subventions aux énergies fossiles`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Les Amis de la Terre`,
 				link: `https://www.amisdelaterre.org/campagne/pas-un-euro-dargent-public-pour-les-energies-fossiles/`
 			}
@@ -72,8 +76,8 @@ const financeActions = [
 		radius: 2.1299,
 		text: `Je défends une réglementation de la finance au service du climat`,
 		sources: [
-			{ name: `Pacte Finance-Climat`, link: `https://www.pacte-climat.eu/fr/` },
-			{ name: `I4CE`, link: `https://www.i4ce.org/` }
+			{ countrySlug: 'FR', name: `Pacte Finance-Climat`, link: `https://www.pacte-climat.eu/fr/` },
+			{ countrySlug: 'FR', name: `I4CE`, link: `https://www.i4ce.org/` }
 		]
 	}
 ];

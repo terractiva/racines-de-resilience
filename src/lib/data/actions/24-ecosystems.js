@@ -11,8 +11,12 @@ const ecosystemsActions = [
 		radius: 1.9917,
 		text: `Je contribue à l'étude participative de la biodiversité`,
 		sources: [
-			{ name: `OPEN`, link: `https://www.open-sciences-participatives.org/home/` },
-			{ name: `Planète Mer`, link: `https://www.planetemer.org/` }
+			{
+				countrySlug: 'FR',
+				name: `OPEN`,
+				link: `https://www.open-sciences-participatives.org/home/`
+			},
+			{ countrySlug: 'FR', name: `Planète Mer`, link: `https://www.planetemer.org/` }
 		]
 	},
 	{
@@ -23,7 +27,13 @@ const ecosystemsActions = [
 		position: [72.0831, 6.3533],
 		radius: 2.1042,
 		text: `J'interpelle le gouvernement sur les risques de prolifération des OGM`,
-		sources: [{ name: `Agir`, link: `https://ogm-jenveuxpas.agirpourlenvironnement.org/` }]
+		sources: [
+			{
+				countrySlug: 'FR',
+				name: `Agir`,
+				link: `https://ogm-jenveuxpas.agirpourlenvironnement.org/`
+			}
+		]
 	},
 	{
 		slug: `defense-biodiversite`,
@@ -34,11 +44,11 @@ const ecosystemsActions = [
 		radius: 2.116,
 		text: `Je défends la biodiversité des espèces et des milieux`,
 		sources: [
-			{ name: `OFB`, link: `https://ofb.gouv.fr/` },
-			{ name: `WWF`, link: `https://www.wwf.fr/agir-au-quotidien` },
-			{ name: `LPO`, link: `https://www.lpo.fr/` },
-			{ name: `Noé`, link: `https://noe.org/` },
-			{ name: `ASPAS`, link: `https://www.aspas-nature.org/` }
+			{ countrySlug: 'FR', name: `OFB`, link: `https://ofb.gouv.fr/` },
+			{ countrySlug: 'FR', name: `WWF`, link: `https://www.wwf.fr/agir-au-quotidien` },
+			{ countrySlug: 'FR', name: `LPO`, link: `https://www.lpo.fr/` },
+			{ countrySlug: 'FR', name: `Noé`, link: `https://noe.org/` },
+			{ countrySlug: 'FR', name: `ASPAS`, link: `https://www.aspas-nature.org/` }
 		]
 	},
 	{
@@ -50,8 +60,8 @@ const ecosystemsActions = [
 		radius: 2.2215,
 		text: `Je fais respecter les lois qui protègent la vie marine`,
 		sources: [
-			{ name: `Sea Shepherd`, link: `https://seashepherd.fr` },
-			{ name: `Surfrider`, link: `https://surfrider.eu/` }
+			{ countrySlug: 'FR', name: `Sea Shepherd`, link: `https://seashepherd.fr` },
+			{ countrySlug: 'FR', name: `Surfrider`, link: `https://surfrider.eu/` }
 		]
 	},
 	{
@@ -64,6 +74,7 @@ const ecosystemsActions = [
 		text: `Je deviens écovolontaire et pars en mission de conservation`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Cybelle Planète`,
 				link: `https://www.cybelle-planete.org/ecovolontariat/ecovolontariat/definition.html`
 			}
@@ -78,8 +89,8 @@ const ecosystemsActions = [
 		radius: 1.94,
 		text: `Je m'oppose à l'élevage industriel et à ses pollutions`,
 		sources: [
-			{ name: `L214`, link: `https://www.l214.com/antispecisme` },
-			{ name: `CIWF`, link: `https://www.ciwf.fr/` }
+			{ countrySlug: 'FR', name: `L214`, link: `https://www.l214.com/antispecisme` },
+			{ countrySlug: 'FR', name: `CIWF`, link: `https://www.ciwf.fr/` }
 		]
 	},
 	{
@@ -92,6 +103,7 @@ const ecosystemsActions = [
 		text: `Élu·e, j'apprends comment lutter contre l'artificialisation des sols`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Cohésion territoires`,
 				link: `https://www.cohesion-territoires.gouv.fr/lutte-contre-letalement-urbain-et-preservation-des-paysages-et-de-la-biodiversite`
 			}
@@ -106,8 +118,16 @@ const ecosystemsActions = [
 		radius: 2.2138,
 		text: `Je milite pour l'interdiction des pesticides`,
 		sources: [
-			{ name: `Nous voulons des Coquelicots`, link: `https://nousvoulonsdescoquelicots.org/` },
-			{ name: `Générations Futures`, link: `https://www.generations-futures.fr/` }
+			{
+				countrySlug: 'FR',
+				name: `Nous voulons des Coquelicots`,
+				link: `https://nousvoulonsdescoquelicots.org/`
+			},
+			{
+				countrySlug: 'FR',
+				name: `Générations Futures`,
+				link: `https://www.generations-futures.fr/`
+			}
 		]
 	}
 ];

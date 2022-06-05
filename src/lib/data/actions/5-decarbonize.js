@@ -10,7 +10,7 @@ const decarbonizeActions = [
 		position: [3.9493, 42.594],
 		radius: 1.7678,
 		text: `Je calcule mon empreinte carbone`,
-		sources: [{ name: `ADEME`, link: `https://nosgestesclimat.fr/` }]
+		sources: [{ countrySlug: 'FR', name: `ADEME`, link: `https://nosgestesclimat.fr/` }]
 	},
 	{
 		slug: `mesure-impact-gestes-quotidiens`,
@@ -20,7 +20,9 @@ const decarbonizeActions = [
 		position: [4.1209, 54.2866],
 		radius: 1.8596,
 		text: `Je mesure l'impact de mes gestes quotidiens`,
-		sources: [{ name: `Ça Commence Par Moi`, link: `https://cacommenceparmoi.org/` }]
+		sources: [
+			{ countrySlug: 'FR', name: `Ça Commence Par Moi`, link: `https://cacommenceparmoi.org/` }
+		]
 	},
 	{
 		slug: `accompagnement-economie-energie`,
@@ -30,7 +32,9 @@ const decarbonizeActions = [
 		position: [7.0498, 42.042],
 		radius: 1.9936,
 		text: `Je me fais accompagner pour faire des économies d'énergie`,
-		sources: [{ name: `Dr Watt`, link: `https://www.enercoop.fr/formation-dr-watt` }]
+		sources: [
+			{ countrySlug: 'FR', name: `Dr Watt`, link: `https://www.enercoop.fr/formation-dr-watt` }
+		]
 	},
 	{
 		slug: `mesure-reduction-pollution-numerique`,
@@ -42,10 +46,12 @@ const decarbonizeActions = [
 		text: `Je mesure et réduis ma pollution numérique`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Carbonalyser`,
 				link: `https://theshiftproject.org/carbonalyser-extension-navigateur/`
 			},
 			{
+				countrySlug: 'FR',
 				name: `ADEME`,
 				link: `https://agirpourlatransition.ademe.fr/particuliers/bureau/bons-gestes/gardons-controle-pratiques-numeriques`
 			}
@@ -59,7 +65,7 @@ const decarbonizeActions = [
 		position: [9.6831, 48.44],
 		radius: 2.0201,
 		text: `Je scénarise les conséquences d'un monde à +2°C avec mon entreprise`,
-		sources: [{ name: `Carbone4` }]
+		sources: [{ countrySlug: 'FR', name: `Carbone4` }]
 	},
 	{
 		slug: `travail-groupe-empreinte-carbone`,
@@ -70,8 +76,9 @@ const decarbonizeActions = [
 		radius: 2.0501,
 		text: `Je travaille en groupe sur mon empreinte carbone`,
 		sources: [
-			{ name: `MyCO2`, link: `https://www.myco2.fr/` },
+			{ countrySlug: 'FR', name: `MyCO2`, link: `https://www.myco2.fr/` },
 			{
+				countrySlug: 'FR',
 				name: `Conversations Carbones`,
 				link: `https://carboneetsens.fr/particuliers-comment-passer-a-l-action-pour-la-planete/`
 			}
@@ -87,6 +94,7 @@ const decarbonizeActions = [
 		text: `Je défends l'étiquetage carbone et 148 autres propositions`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Convention Citoyenne pour le Climat`,
 				link: `https://www.conventioncitoyennepourleclimat.fr`
 			}
@@ -101,9 +109,14 @@ const decarbonizeActions = [
 		radius: 1.9592,
 		text: `Je change de boulot pour un métier d'avenir`,
 		sources: [
-			{ name: `Shiftyourjob`, link: `https://shiftyourjob.org/` },
-			{ name: `OE`, link: `https://www.orientation-environnement.fr/ressources/` },
+			{ countrySlug: 'FR', name: `Shiftyourjob`, link: `https://shiftyourjob.org/` },
 			{
+				countrySlug: 'FR',
+				name: `OE`,
+				link: `https://www.orientation-environnement.fr/ressources/`
+			},
+			{
+				countrySlug: 'FR',
 				name: `Réseau TEE`,
 				link: `https://www.reseau-tee.net/espace-candidats-offres.php?annonceur=cpie`
 			}

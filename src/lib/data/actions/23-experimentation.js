@@ -11,9 +11,9 @@ const experimentationActions = [
 		radius: 2.2517,
 		text: `Je participe à un camp climat pour me former à la désobéissance civile`,
 		sources: [
-			{ name: `Alternatiba`, link: `https://campclimat.eu/` },
-			{ name: `ANV-COP21`, link: `https://campclimat.eu/` },
-			{ name: `Les Amis de la Terre`, link: `https://campclimat.eu/` }
+			{ countrySlug: 'FR', name: `Alternatiba`, link: `https://campclimat.eu/` },
+			{ countrySlug: 'FR', name: `ANV-COP21`, link: `https://campclimat.eu/` },
+			{ countrySlug: 'FR', name: `Les Amis de la Terre`, link: `https://campclimat.eu/` }
 		]
 	},
 	{
@@ -26,6 +26,7 @@ const experimentationActions = [
 		text: `Je rejoins des squats autogérés : Maisons du Peuple/Maisons de l’Écologie et des Résistances`,
 		sources: [
 			{
+				countrySlug: 'FR',
 				name: `Archipel du Vivant`,
 				link: `https://archipelduvivant.org/ressources/annuaires/zad-mdp-mer/`
 			}
@@ -40,7 +41,11 @@ const experimentationActions = [
 		radius: 2.011,
 		text: `Je rejoins une Zone À Défendre (ZAD)`,
 		sources: [
-			{ name: `Carte des luttes par Reporterre`, link: `https://lutteslocales.gogocarto.fr/` }
+			{
+				countrySlug: 'FR',
+				name: `Carte des luttes par Reporterre`,
+				link: `https://lutteslocales.gogocarto.fr/`
+			}
 		]
 	}
 ];

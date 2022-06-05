@@ -11,8 +11,8 @@ const commonsActions = [
 		radius: 1.9717,
 		text: `Je fais la promotion des services en ligne et logiciels libres`,
 		sources: [
-			{ name: `CHATONS`, link: `https://chatons.org/` },
-			{ name: `April`, link: `https://www.april.org/fr/association/` }
+			{ countrySlug: 'FR', name: `CHATONS`, link: `https://chatons.org/` },
+			{ countrySlug: 'FR', name: `April`, link: `https://www.april.org/fr/association/` }
 		]
 	},
 	{
@@ -24,8 +24,16 @@ const commonsActions = [
 		radius: 1.9963,
 		text: `Je contribue au mouvement des Communs`,
 		sources: [
-			{ name: `Les Communs`, link: `https://annuaire.lescommuns.org/category/evenements/` },
-			{ name: `Mouvement Utopia`, link: `https://mouvementutopia.org/site/identite/` }
+			{
+				countrySlug: 'FR',
+				name: `Les Communs`,
+				link: `https://annuaire.lescommuns.org/category/evenements/`
+			},
+			{
+				countrySlug: 'FR',
+				name: `Mouvement Utopia`,
+				link: `https://mouvementutopia.org/site/identite/`
+			}
 		]
 	},
 	{
@@ -36,7 +44,13 @@ const commonsActions = [
 		position: [88.1151, 57.4779],
 		radius: 1.997,
 		text: `Je diffuse le concept des biorégions`,
-		sources: [{ name: `Réseau des Territorialistes`, link: `https://reseaudesterritorialistes.fr` }]
+		sources: [
+			{
+				countrySlug: 'FR',
+				name: `Réseau des Territorialistes`,
+				link: `https://reseaudesterritorialistes.fr`
+			}
+		]
 	},
 	{
 		slug: `vie-lieux-collectifs`,
@@ -47,8 +61,9 @@ const commonsActions = [
 		radius: 2.189,
 		text: `Je vis dans des lieux collectifs qui privilégient l'usage à la propriété`,
 		sources: [
-			{ name: `Foncière Antidote`, link: `https://lespassageres.org/` },
+			{ countrySlug: 'FR', name: `Foncière Antidote`, link: `https://lespassageres.org/` },
 			{
+				countrySlug: 'FR',
 				name: `La terre en commun`,
 				link: `https://encommun.eco/fonds-de-dotation/pourquoi-fonds-de-dotation`
 			}
@@ -63,8 +78,8 @@ const commonsActions = [
 		radius: 2.2976,
 		text: `J’œuvre pour que l'eau, la terre, les semences deviennent un patrimoine commun`,
 		sources: [
-			{ name: `Eau Bien Commun`, link: `https://coordination-eau.fr/` },
-			{ name: `Kokopelli`, link: `https://kokopelli-semences.fr/fr/` }
+			{ countrySlug: 'FR', name: `Eau Bien Commun`, link: `https://coordination-eau.fr/` },
+			{ countrySlug: 'FR', name: `Kokopelli`, link: `https://kokopelli-semences.fr/fr/` }
 		]
 	},
 	{
@@ -75,7 +90,13 @@ const commonsActions = [
 		position: [75.5209, 49.5302],
 		radius: 1.9464,
 		text: `Je soutiens la création d'une Sécurité Sociale de l'Alimentation`,
-		sources: [{ name: `Collectif SSA`, link: `https://securite-sociale-alimentation.org/` }]
+		sources: [
+			{
+				countrySlug: 'FR',
+				name: `Collectif SSA`,
+				link: `https://securite-sociale-alimentation.org/`
+			}
+		]
 	}
 ];
 
