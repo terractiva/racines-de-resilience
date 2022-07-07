@@ -70,7 +70,7 @@
 			</li>
 			<li class="tool-item">
 				<p class="mb-0">
-					Le <strong>site collaboratif</strong> <i>Racines de Résilience</i>, sur lequel vous êtes,
+					Le <strong>site collaboratif</strong> <i>Racines de résilience</i>, sur lequel vous êtes,
 					pour que ce panorama s'enrichisse jour après jour !
 				</p>
 			</li>
@@ -152,6 +152,30 @@
 		</svelte:fragment>
 	</SectionLowTech>
 </SectionBackground>
+
+<Section>
+	<svelte:fragment slot="title">Notre partenaire éditorial <i>Mue</i></svelte:fragment>
+	<svelte:fragment slot="content">
+		<SectionContentTwoThirds>
+			<p class="text-justify w-100 mb-0">
+				Parce que les gouttes d’eau font les grandes rivières, <i>Racines de résilience</i> s’est
+				associé à
+				<i>Mue</i>, une revue bimestrielle et thématique explorant le monde d’après déjà à l'œuvre
+				ici et maintenant ! Tous les 2 mois, elle met en avant 50 nouvelles initiatives inspirantes
+				et des leviers d’action concrets pour s’engager et co-construire demain. Positive et
+				engageante, inclusive et éthique, consciente et poétique, elle nous encourage à explorer nos
+				possibles et à ouvrir nos imaginaires pour nourrir notre formidable puissance collective.<br
+				/>
+				Conçue par Loïc Cimelière, directeur artistique et Carol Galand, journaliste et artiste,
+				<i>Mue</i> contribue aujourd’hui à déployer notre écosystème d’actions avec toujours plus d’inspirations
+				pour transformer l’à venir !
+			</p>
+			<a class="button primary" href="hhttps://je-mue.com/" rel="external" target="_blank"
+				>Découvrir la revue</a
+			>
+		</SectionContentTwoThirds>
+	</svelte:fragment>
+</Section>
 
 <style lang="scss">
 	.image-wrapper {

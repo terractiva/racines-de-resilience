@@ -194,7 +194,7 @@
 		<svelte:fragment slot="title">Ressources post-projection gratuites</svelte:fragment>
 		<svelte:fragment slot="content">
 			<p class="text-justify mb-0">
-				En plus des actions et structures recensées sur <i>Racines de Résilience</i>, que vous soyez
+				En plus des actions et structures recensées sur <i>Racines de résilience</i>, que vous soyez
 				à la maison en famille ou à une projection publique, des ressources existent pour vous
 				permettre de prolonger la réflexion et l’action en rapport avec les thématiques du film –
 				énergie, climat, effondrement et résilience :

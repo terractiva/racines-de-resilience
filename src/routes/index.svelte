@@ -42,6 +42,27 @@
 		<SectionContentList>
 			<SectionContentListItem
 				isExternalLink
+				link="https://andes-france.com/nos-actions/les-epiceries-solidaires/creer-une-epicerie-solidaire/"
+			>
+				<svelte:fragment slot="title">La revue <i>Mue</i> partenaire éditorial</svelte:fragment>
+				<svelte:fragment slot="text">
+					Parce qu’elle présente aussi des initiatives inspirantes et concrètes pour co-construire
+					demain, <a href="https://je-mue.com/" target="_blank" rel="external"
+						>la revue bimestrielle <i>Mue</i></a
+					>
+					choisit de soutenir <i>Racines de résilience</i> en partageant chaque mois ici l'un des
+					nombreux leviers d'action déclinés dans ses numéros thématiques. Issue de leur numéro 4 :
+					<i>Papilles!</i>
+					voici l’action “Je crée une épicerie solidaire”, en lien avec la structure <i>ANDES</i> qui
+					a développé depuis 20 ans un réseau de 460 épiceries où les familles à faibles revenus accèdent
+					à une alimentation saine et diversifiée. Grâce à son accompagnement, nous pouvons tou·te·s
+					initier un projet d’épicerie sur notre territoire.
+				</svelte:fragment>
+				<svelte:fragment slot="link">Découvrez ANDES</svelte:fragment>
+			</SectionContentListItem>
+
+			<SectionContentListItem
+				isExternalLink
 				link="https://www.google.com/maps/d/viewer?mid=1zvkq6whArE18g8hDYtY9WRNqVJAarAi9&hl=fr&usp=sharing"
 			>
 				<svelte:fragment slot="title">Où voir<br /> <i>Une fois que tu sais</i> ?</svelte:fragment>
@@ -106,7 +127,7 @@
 						href="https://yggdrasil-mag.com/magazine/yggdrasil-numero-10-11-diouze"
 						rel="external"
 						target="_blank">10-11-12</a
-					>... L’arbre aux actions de <i>Racines de Résilience</i> a rencontré un franc succès ! Nous
+					>... L’arbre aux actions de <i>Racines de résilience</i> a rencontré un franc succès ! Nous
 					avons donc lancé une réédition pour que les racines grandissent !
 				</svelte:fragment>
 				<svelte:fragment slot="link">Commander mon guide</svelte:fragment>
