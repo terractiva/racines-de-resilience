@@ -7,6 +7,7 @@
 	import TreePaperVersion from './TreePaperVersion.svelte';
 
 	export let height;
+	export let showActionId;
 	export let width;
 
 	/** @type import('@types/fabric').fabric.StaticCanvas */
@@ -114,7 +115,7 @@
 
 {#if showTree}
 	<TreeNavigator {fabricCanvas} padding={backgroundPadding} let:isDragging>
-		<TreeItems {backgroundPadding} {height} {isDragging} />
+		<TreeItems {backgroundPadding} {height} {isDragging} {showActionId} />
 	</TreeNavigator>
 	<TreeAuthors />
 	<TreePaperVersion />

@@ -25,31 +25,33 @@ import localActions from './7-local.js';
 import complexityActions from './8-complexity.js';
 import childrenActions from './9-children.js';
 
-const actions = [
-	...energyActions,
-	...mobilityActions,
-	...housingActions,
-	...wasteActions,
-	...decarbonizeActions,
-	...agricultureActions,
-	...localActions,
-	...complexityActions,
-	...childrenActions,
-	...artActions,
-	...imaginationActions,
-	...uncertaintyActions,
-	...livingActions,
-	...conflictsActions,
-	...democracyActions,
-	...demographyActions,
-	...commonsActions,
-	...inequalitiesActions,
-	...financeActions,
-	...justiceActions,
-	...publicActions,
-	...climaticideActions,
-	...experimentationActions,
-	...ecosystemsActions
+const actionsBySubcategory = [
+	energyActions,
+	mobilityActions,
+	housingActions,
+	wasteActions,
+	decarbonizeActions,
+	agricultureActions,
+	localActions,
+	complexityActions,
+	childrenActions,
+	artActions,
+	imaginationActions,
+	uncertaintyActions,
+	livingActions,
+	conflictsActions,
+	democracyActions,
+	demographyActions,
+	commonsActions,
+	inequalitiesActions,
+	financeActions,
+	justiceActions,
+	publicActions,
+	climaticideActions,
+	experimentationActions,
+	ecosystemsActions
 ];
+const actions = actionsBySubcategory.flat();
 
 export default actions;
+export { actionsBySubcategory };

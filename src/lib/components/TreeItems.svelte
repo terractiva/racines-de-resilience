@@ -7,6 +7,7 @@
 	export let backgroundPadding;
 	export let height;
 	export let isDragging;
+	export let showActionId;
 
 	$: backgroundHeight = zoomMax * (height - 2 * backgroundPadding[1]);
 </script>
@@ -14,7 +15,7 @@
 <ul>
 	<TreeSubcategories {backgroundHeight} {isDragging} />
 	<TreeBibliography {backgroundHeight} />
-	<TreeActions {backgroundHeight} {isDragging} />
+	<TreeActions {backgroundHeight} {isDragging} {showActionId} />
 </ul>
 
 <style lang="scss">

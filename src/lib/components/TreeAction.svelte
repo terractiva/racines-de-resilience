@@ -4,8 +4,11 @@
 	import { treeFontSize } from '$lib/constants/settings';
 
 	export let action;
+	export let actionIndex;
 	export let backgroundHeight;
 	export let isDisabled;
+	export let showActionId;
+	export let subcategoryIndex;
 
 	$: textClasses = action.categories.map((category) => `text-${category}`).join(' ');
 </script>
@@ -19,6 +22,9 @@
 		use:handleDraggedLink={isDisabled}
 		href="{actionsTreePage.path}/{action.slug}"
 	>
+		{#if showActionId}
+			<p>{subcategoryIndex + 1} - {actionIndex + 1}</p>
+		{/if}
 		<p>{@html action.text}</p>
 
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
