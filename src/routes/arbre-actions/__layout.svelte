@@ -6,10 +6,10 @@
 		return handleLoadQuery(
 			browser && page.query,
 			{
-				showActionId: false
+				showItemsId: false
 			},
 			(query) => ({
-				showActionId: query.get('id') != null
+				showItemsId: query.get('id') != null
 			})
 		);
 	}
@@ -24,7 +24,7 @@
 	import handleLoadQuery from '$lib/utils/handleLoadQuery';
 	import { onMount } from 'svelte';
 
-	export let showActionId;
+	export let showItemsId;
 
 	let height;
 	let width;
@@ -47,6 +47,6 @@
 
 <svelte:window on:resize={setSize} />
 
-<Tree {height} {showActionId} {width} />
+<Tree {height} {showItemsId} {width} />
 
 <slot />

@@ -3,6 +3,8 @@
 
 	export let backgroundHeight;
 	export let bibliographyItem;
+	export let index;
+	export let showId;
 
 	$: bgClasses = bibliographyItem.categories
 		.map((category) => `bg-${category} text-${category}`)
@@ -13,7 +15,10 @@
 	style="font-size: {treeFontSize * backgroundHeight}px; left: {bibliographyItem
 		.position[0]}%; top: {bibliographyItem.position[1]}%; width: {2 * bibliographyItem.radius}%;"
 >
-	<p class={bgClasses}>{@html bibliographyItem.text}</p>
+	<p class={bgClasses}>
+		{#if showId}ID {index + 1}<br />{/if}
+		{@html bibliographyItem.text}
+	</p>
 </li>
 
 <style lang="scss">

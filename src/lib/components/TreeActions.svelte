@@ -5,7 +5,7 @@
 
 	export let backgroundHeight;
 	export let isDragging;
-	export let showActionId;
+	export let showId;
 </script>
 
 {#each actionsBySubcategory as actions, subcategoryIndex}
@@ -14,7 +14,7 @@
 			{action}
 			{actionIndex}
 			{backgroundHeight}
-			{showActionId}
+			{showId}
 			{subcategoryIndex}
 			isDisabled={isDragging}
 		/>

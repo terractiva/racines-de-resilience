@@ -3,8 +3,9 @@
 	import TreeBibliographyItem from './TreeBibliographyItem.svelte';
 
 	export let backgroundHeight;
+	export let showId;
 </script>
 
-{#each bibliography as bibliographyItem}
-	<TreeBibliographyItem {backgroundHeight} {bibliographyItem} />
+{#each bibliography as bibliographyItem, index}
+	<TreeBibliographyItem {backgroundHeight} {bibliographyItem} {index} {showId} />
 {/each}

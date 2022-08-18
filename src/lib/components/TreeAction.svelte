@@ -7,7 +7,7 @@
 	export let actionIndex;
 	export let backgroundHeight;
 	export let isDisabled;
-	export let showActionId;
+	export let showId;
 	export let subcategoryIndex;
 
 	$: textClasses = action.categories.map((category) => `text-${category}`).join(' ');
@@ -22,8 +22,12 @@
 		use:handleDraggedLink={isDisabled}
 		href="{actionsTreePage.path}/{action.slug}"
 	>
-		{#if showActionId}
-			<p>{subcategoryIndex + 1} - {actionIndex + 1}</p>
+		{#if showId}
+			<p>
+				ID {(subcategoryIndex + 1).toString().padStart(2, '0')}{(actionIndex + 1)
+					.toString()
+					.padStart(2, '0')}
+			</p>
 		{/if}
 		<p>{@html action.text}</p>
 
