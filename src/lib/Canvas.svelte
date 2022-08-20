@@ -3,6 +3,7 @@
   import { fabric } from 'fabric';
   import Actions from "./Actions.svelte";
   import GestureHandler from "./GestureHandler.svelte";
+import { readable } from "svelte/store";
 
   /** @type number */
   export let height;
@@ -28,6 +29,7 @@
 
     if (isEdit) {
       const circle = new fabric.Circle({ radius: 25, opacity: 0.1 });
+      const rectangle = new fabric.Rect({ height: 25, opacity: 0.1, width: 30 });
 
 			circle.on('modified', (event) => {
 				const radius = 100 * event.target.radius * event.target.scaleX / (fabricCanvas.getWidth() - 2 * paddingX);
@@ -36,13 +38,24 @@
 
 				console.log(`{
 					position: [${left.toFixed(4)}, ${top.toFixed(4)}],
-					rayon: ${radius.toFixed(4)},
-					sources: \`\`,
-					texte: \`\`
+					radius: ${radius.toFixed(4)},
+				}`)
+			});
+			rectangle.on('modified', (event) => {
+				const height = 50 * event.target.height * event.target.scaleY / (fabricCanvas.getHeight() - 2 * paddingY);
+				const width = 50 * event.target.width * event.target.scaleX / (fabricCanvas.getWidth() - 2 * paddingX);
+				const left = 100 * (event.target.left - paddingX) / (fabricCanvas.getWidth() - 2 * paddingX);
+				const top = 100 * (event.target.top - paddingY) / (fabricCanvas.getHeight() - 2 * paddingY);
+
+				console.log(`{
+					position: [${left.toFixed(4)}, ${top.toFixed(4)}],
+					width: ${width.toFixed(4)},
+					height: ${height.toFixed(4)}
 				}`)
 			});
 
       fabricCanvas.add(circle);
+      fabricCanvas.add(rectangle);
     }
   });
 
