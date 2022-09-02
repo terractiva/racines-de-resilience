@@ -61,38 +61,36 @@
 				<svelte:fragment slot="link">Découvrez ANDES</svelte:fragment>
 			</SectionContentListItem>
 
-			<SectionContentListItem
-				isExternalLink
-				link="https://www.google.com/maps/d/viewer?mid=1zvkq6whArE18g8hDYtY9WRNqVJAarAi9&hl=fr&usp=sharing"
-			>
-				<svelte:fragment slot="title">Où voir<br /> <i>Une fois que tu sais</i> ?</svelte:fragment>
+			<SectionContentListItem isExternalLink link="https://t.ly/8ZuU">
+				<svelte:fragment slot="title"
+					><i>Une fois que tu sais</i> arrive en Suisse et en Belgique</svelte:fragment
+				>
 				<svelte:fragment slot="text">
-					Les <strong>séances-événements</strong> avant et après la
-					<strong>sortie le 22 septembre</strong>
-					au cinéma du film <i>Une fois que tu sais</i> peuvent permettre aux enjeux climatiques de
-					passer sur le devant de la scène ! Voici une <strong>carte pour découvrir</strong> les séances
-					près de chez vous.
+					A la rentrée 2022, ce documentaire poignant sort dans les salles chez nos voisins
+					francophones. On a besoin de relais pour faire projeter le film dans les cinémas belges et
+					suisses, animer des temps d’échange, ajouter des actions et des structures locales dans
+					l'arbre et surtout pour faire passer le mot ! Invitez vos réseaux à rejoindre la
+					communauté d'accompagnement du film. Merci de votre soutien !
 				</svelte:fragment>
-				<svelte:fragment slot="link">Trouver une séance</svelte:fragment>
+				<svelte:fragment slot="link">Rejoignez l'aventure</svelte:fragment>
 			</SectionContentListItem>
 
 			<SectionContentListItem isExternalLink link="https://bit.ly/3AMlMOK">
-				<svelte:fragment slot="title">La sortie internationale a démarré !</svelte:fragment>
+				<svelte:fragment slot="title">Soutenez la sortie internationale !</svelte:fragment>
 				<svelte:fragment slot="text">
-					La sortie internationale a démarré ! Depuis le 2 février, <i>Once You Know</i>, la version
-					anglaise du film <i>Une fois que tu sais</i>, est disponible dans le monde entier ! Pour
-					marquer le coup, toutes les projections publiques ou privées organisées avant
-					<strong>le vendredi 22 avril</strong>, Jour de la Terre, bénéficieront d'un accès gratuit
-					au grand LIVE en ligne qui regroupera tous les protagonistes du film et le réalisateur ce
-					jour-là. Mobilisez votre réseau à l'étranger pour donnez envie à vos ami·e·s, familles,
-					connaissances qui vivent en Afrique, Asie, Europe... d'organiser une projection dans leur
-					cinéma de quartier, festival ou association ! Partagez avec eux
-					<a href="https://bit.ly/3AMlMOK" rel="external" target="_blank">cette publication</a>
+					La sortie internationale a démarré depuis le 2 février 2022. <i>Once You Know</i>, la
+					version anglaise du film <i>Une fois que tu sais</i>, est disponible dans le monde entier,
+					sous-titré en 17 langues ! Mobilisez votre réseau à l'étranger pour donner envie à vos
+					ami·e·s, familles, connaissances qui vivent en Afrique, Asie, Europe... d'organiser une
+					projection dans leur cinéma de quartier, festival ou association ! Partagez avec eux
+					<a href="https://bit.ly/3AMlMOK" target="_blank" rel="external"
+						>la bande-annonce en anglais</a
+					>
 					et donnez-leur le contact du distributeur international :
 					<a href="mailto:sales@pulp-films.fr" rel="external">sales@pulp-films.fr</a>. Merci à
 					toutes et à tous !
 				</svelte:fragment>
-				<svelte:fragment slot="link">Partager la publication</svelte:fragment>
+				<svelte:fragment slot="link">Partagez la bande-annonce</svelte:fragment>
 			</SectionContentListItem>
 
 			<SectionContentListItem isExternalLink link="mailto:{ownerMail}">
