@@ -174,7 +174,7 @@
 
 			<SectionContentListItem
 				isExternalLink
-				link="/fichiers/Une_fois_que_tu_sais_-_Guide_danimation_-_FR.pdf"
+				link="https://35aed784.sibforms.com/serve/MUIEANIPDOPJqb2jNiTD8VSsH_O_a6Q4DMCXQUoWiqEAUlmCET-3sNkRHlsu0bnItfppKNBDenp3tXHZN3iDbrQV_KnlSQ1lBsECHHhdXb5TWQqvAuT_Sgu1IIH_G7a8Q_5uoMlgQ-mBlMlxRcwqdW9sS66WpanJJyjLW4HpsIMsYWqysNqncTSJwlQAyLofoJ7gKBwkjv7GGj6F"
 			>
 				<svelte:fragment slot="title">Grand saut</svelte:fragment>
 				<svelte:fragment slot="text">
