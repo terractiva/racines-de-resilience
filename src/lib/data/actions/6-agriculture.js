@@ -195,7 +195,7 @@ const agricultureActions = [
 		text: `Agriculteur·rice, je me forme en agroécologie`,
 		sources: [
 			{ countrySlug: 'FR', name: `OSAE`, link: `https://osez-agroecologie.org/` },
-			{ countrySlug: 'FR', name: `AFAC` },
+			{ countrySlug: 'FR', name: `Afac-Agroforesteries`, link: `https://afac-agroforesteries.fr/` },
 			{ countrySlug: 'FR', name: `Solagro`, link: `https://solagro.org` },
 			{ countrySlug: 'FR', name: `Agroforesterie`, link: `https://www.agroforesterie.fr/index.php` }
 		]

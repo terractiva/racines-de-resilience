@@ -170,7 +170,7 @@
 				<i>Mue</i> contribue aujourd’hui à déployer notre écosystème d’actions avec toujours plus d’inspirations
 				pour transformer l’à venir !
 			</p>
-			<a class="button primary" href="hhttps://je-mue.com/" rel="external" target="_blank"
+			<a class="button primary" href="https://je-mue.com/" rel="external" target="_blank"
 				>Découvrir la revue</a
 			>
 		</SectionContentTwoThirds>
