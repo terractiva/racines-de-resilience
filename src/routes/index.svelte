@@ -40,10 +40,7 @@
 
 	<svelte:fragment slot="content">
 		<SectionContentList>
-			<SectionContentListItem
-				isExternalLink
-				link="https://andes-france.com/nos-actions/les-epiceries-solidaires/creer-une-epicerie-solidaire/"
-			>
+			<SectionContentListItem isExternalLink link="https://classe-dehors.org/?PagePrincipale">
 				<svelte:fragment slot="title">La revue <i>Mue</i> partenaire éditorial</svelte:fragment>
 				<svelte:fragment slot="text">
 					Parce qu’elle présente aussi des initiatives inspirantes et concrètes pour co-construire
@@ -51,14 +48,16 @@
 						>la revue bimestrielle <i>Mue</i></a
 					>
 					choisit de soutenir <i>Racines de résilience</i> en partageant chaque mois ici l'un des
-					nombreux leviers d'action déclinés dans ses numéros thématiques. Issue de leur numéro 4 :
-					<i>Papilles!</i>
-					voici l’action “Je crée une épicerie solidaire”, en lien avec la structure <i>ANDES</i> qui
-					a développé depuis 20 ans un réseau de 460 épiceries où les familles à faibles revenus accèdent
-					à une alimentation saine et diversifiée. Grâce à son accompagnement, nous pouvons tou·te·s
-					initier un projet d’épicerie sur notre territoire.
+					nombreux leviers d'action déclinés dans ses numéros thématiques. Issue de leur numéro 5 :
+					<i>Apprentissages</i>, voici l’action "Enseignant·e, parent, j’amène les enfants au
+					contact de la nature", en lien avec l’initiative citoyenne
+					<a href="http://classe-dehors.org/" target="_blank" rel="external"><i>Classe Dehors</i></a
+					>, une communauté d’entraide pour faciliter la pratique de la classe en extérieur. Choisir
+					un lieu et une durée, obtenir les autorisations, mobiliser des soutiens, trouver des
+					ressources… c’est une véritable mine d’informations pour les enseignant·es tenté·es par
+					l’expérience !
 				</svelte:fragment>
-				<svelte:fragment slot="link">Découvrez ANDES</svelte:fragment>
+				<svelte:fragment slot="link">Découvrez Classe Dehors</svelte:fragment>
 			</SectionContentListItem>
 
 			<SectionContentListItem isExternalLink link="https://t.ly/8ZuU">
