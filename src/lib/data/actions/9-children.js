@@ -47,8 +47,8 @@ const childrenActions = [
 		sources: [
 			{
 				countrySlug: 'FR',
-				name: `Réseau École et Nature`,
-				link: `http://reseauecoleetnature.org/taxonomy/term/1269`
+				name: `FRENE`,
+				link: `https://frene.org/generalites-eedd/225630/`
 			},
 			{ countrySlug: 'FR', name: `FNE`, link: `https://www.fne.asso.fr/espace-education` },
 			{
