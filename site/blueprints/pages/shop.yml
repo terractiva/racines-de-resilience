@@ -1,0 +1,46 @@
+title: Shop
+icon: 🛍
+
+options:
+  title: false
+  duplicate: false
+  status: false
+  url: false
+  delete: false
+
+sections:
+  stats:
+    type: stats
+    size: huge
+    reports:
+      - label: Revenue
+        value: €29,682
+        info: +112.5%
+        link: https://getkirby.com/buy
+        theme: positive
+      - label: Orders
+        value: 265
+        info: +82.8%
+        theme: positive
+      - label: Avg. Transaction
+        value: €112.01
+        info: +16.3%
+        theme: positive
+      - label: Refunds
+        value: €15.20
+        info: +10.5%
+        theme: positive
+      - label: Discount sales
+        value: €1,422
+        info: n/a
+
+  products:
+    type: pages
+    empty: No products yet
+    layout: cards
+    size: small
+    template: shop-product
+    info: "€ {{ page.price }}"
+    image:
+      ratio: 1/1
+      cover: true

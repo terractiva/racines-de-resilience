@@ -1,0 +1,68 @@
+{
+  "version" : "98",
+  "label" : "Roots of resilience",
+  "services" : [
+    {
+      "type" : "apache",
+      "config" : {
+        "id" : "B411",
+        "user_and_group" : "current",
+        "build_order" : 50,
+        "requested_version" : "2.4",
+        "label" : "Apache server service",
+        "display_order" : 999,
+        "sites" : [
+          {
+            "domain" : "www.racinesderesilience.local",
+            "id" : "9394",
+            "ssl_port" : "auto",
+            "linked_php" : "BC07",
+            "non_ssl_port" : "auto",
+            "reverse_proxy_http" : [
+              {
+                "frontend_ssl_port" : "auto",
+                "backend_using_ssl" : true,
+                "frontend_port" : "auto",
+                "domains" : [
+                  "www.racinesderesilience.local"
+                ]
+              }
+            ],
+            "template" : "generic"
+          },
+          {
+            "domain" : "www.roots-of-resilience.local",
+            "id" : "A2E7",
+            "ssl_port" : "auto",
+            "linked_php" : "BC07",
+            "non_ssl_port" : "auto",
+            "reverse_proxy_http" : [
+              {
+                "frontend_ssl_port" : "auto",
+                "backend_using_ssl" : true,
+                "frontend_port" : "auto",
+                "domains" : [
+                  "www.roots-of-resilience.local"
+                ]
+              }
+            ],
+            "template" : "generic"
+          }
+        ]
+      }
+    },
+    {
+      "type" : "php",
+      "config" : {
+        "port" : "auto",
+        "id" : "BC07",
+        "user_and_group" : "current",
+        "requested_version" : "8.1",
+        "build_order" : 10,
+        "label" : "PHP service",
+        "display_order" : 0
+      }
+    }
+  ],
+  "uuid" : "9D23BA"
+}

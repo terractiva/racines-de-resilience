@@ -1,0 +1,37 @@
+Title: BakeBakeLove
+
+----
+
+Clientid: 2
+
+----
+
+Contact: 
+
+----
+
+Vip: false
+
+----
+
+Link: https://bakebakelove.example.com
+
+----
+
+Email: bakebakelove@example.com
+
+----
+
+Phone: 
+
+----
+
+Address: 
+
+----
+
+Notes: 
+
+----
+
+Vatid: 

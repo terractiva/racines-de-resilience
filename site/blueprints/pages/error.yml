@@ -1,0 +1,7 @@
+title: Default Page
+
+fields:
+  text:
+    label: Error message
+    type: text
+

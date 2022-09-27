@@ -1,0 +1,9 @@
+title: Proof of concept
+icon: ✅
+
+options:
+  title: false
+  duplicate: false
+  status: false
+  url: false
+  delete: false

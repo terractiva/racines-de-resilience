@@ -1,0 +1,37 @@
+Title: BeautyBox
+
+----
+
+Clientid: 3
+
+----
+
+Contact: 
+
+----
+
+Vip: false
+
+----
+
+Link: https://beautybox.example.com
+
+----
+
+Email: beautybox@example.com
+
+----
+
+Phone: 
+
+----
+
+Address: 
+
+----
+
+Notes: 
+
+----
+
+Vatid: 
