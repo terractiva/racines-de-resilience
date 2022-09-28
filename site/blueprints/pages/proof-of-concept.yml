@@ -7,3 +7,60 @@ options:
   status: false
   url: false
   delete: false
+
+columns:
+  - width: 2/3
+    fields:
+      news:
+        type: structure
+        label: Actualités
+        prepend: true
+        columns:
+          title: true
+          content: true
+        fields:
+          title:
+            type: writer
+            label: Titre
+            required: true
+            inline: true
+          content:
+            type: writer
+            label: Contenu
+            required: true
+            nodes:
+              - bulletList
+              - orderedList
+          buttonLabel:
+            type: writer
+            label: Texte du bouton
+            required: true
+            inline: true
+            marks:
+              - bold
+              - italic
+              - underline
+              - strike
+          buttonType:
+            type: select
+            label: Type de lien du bouton
+            required: true
+            default: url
+            width: 1/2
+            options:
+              url: URL
+              email: E-mail
+          buttonUrl:
+            type: url
+            label: Lien du bouton
+            required: true
+            width: 1/2
+            when:
+              buttonType: url
+          buttonEmail:
+            type: email
+            label: E-mail du bouton
+            required: true
+            width: 1/2
+            when:
+              buttonType: email
