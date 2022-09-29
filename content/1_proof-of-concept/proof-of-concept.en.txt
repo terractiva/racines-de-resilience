@@ -1,0 +1,36 @@
+Title: Proof of concept
+
+----
+
+News:
+
+- 
+  title: 'La revue <em>Mue</em> partenaire éditorial'
+  content: |
+    <p>Parce qu’elle présente aussi des initiatives inspirantes et concrètes pour co-construire demain, <a href="https://je-mue.com/" rel="noopener noreferrer">la revue bimestrielle </a><em><a href="https://je-mue.com/" rel="noopener noreferrer">Mue</a></em> choisit de soutenir <em>Racines de résilience</em> en partageant chaque mois ici l'un des nombreux leviers d'action déclinés dans ses numéros thématiques. Issue de leur numéro 5 : <em>Apprentissages</em>, voici l’action "Enseignant·e, parent, j’amène les enfants au contact de la nature", en lien avec l’initiative citoyenne <em><a href="http://classe-dehors.org/" rel="noopener noreferrer">Classe Dehors</a></em><a href="http://classe-dehors.org/" rel="noopener noreferrer">,</a> une communauté d’entraide pour faciliter la pratique de la classe en extérieur. Choisir un lieu et une durée, obtenir les autorisations, mobiliser des soutiens, trouver des ressources… c’est une véritable mine d’informations pour les enseignant·es tenté·es par l’expérience !</p>
+  buttonlabel: "Rejoignez l'aventure"
+  buttontype: url
+  buttonurl: https://t.ly/8ZuU
+  buttonemail: ""
+- 
+  title: '<em>Une fois que tu sais</em> arrive en Suisse et en Belgique'
+  content: "<p>A la rentrée 2022, ce documentaire poignant sort dans les salles chez nos voisins francophones. On a besoin de relais pour faire projeter le film dans les cinémas belges et suisses, animer des temps d’échange, ajouter des actions et des structures locales dans l'arbre et surtout pour faire passer le mot ! Invitez vos réseaux à rejoindre la communauté d'accompagnement du film. Merci de votre soutien !</p>"
+  buttonlabel: 'Découvrez <em>Classe Dehors</em>'
+  buttontype: url
+  buttonurl: https://classe-dehors.org/
+  buttonemail: ""
+- 
+  title: Merci et bravo au film et sa communauté
+  content: '<p><strong>15 000 spectateur·ice·s</strong> d’<em>Une fois que tu sais</em> en salle de cinéma, <strong>90 séances-événements</strong> avec animations, <strong>15 000 guides</strong> distribués au public et plus de <strong>50 000 visites</strong> sur ce site en 5 mois ! Ce n’est que le début, le film continue de rencontrer le public dans les salles de cinéma ou ailleurs. Associations, entreprises, collectivités, écoles... vous voulez organiser une projection ?</p>'
+  buttonlabel: Contactez-nous
+  buttontype: email
+  buttonurl: ""
+  buttonemail: contact@racinesderesilience.org
+
+----
+
+Modules: [{"attrs":[],"columns":[{"blocks":[],"id":"da789c0e-abd6-491e-b0a5-19296b34a1cc","width":"1\/1"}],"id":"189206c2-139a-4254-9932-0fe6d3f00dd6"}]
+
+----
+
+Description: Roots of resilience proof of concept

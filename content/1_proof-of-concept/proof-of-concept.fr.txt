@@ -2,6 +2,10 @@ Title: Preuve de concept
 
 ----
 
+Slug: preuve-de-concept
+
+----
+
 News:
 
 - 

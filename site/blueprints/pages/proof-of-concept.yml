@@ -2,16 +2,15 @@ title: Proof of concept
 icon: ✅
 
 options:
-  title: false
   duplicate: false
   status: false
-  url: false
   delete: false
 
 # TODO: séparer dans des fichiers
 columns:
   - width: 2/3
     sections:
+      # TODO: avertissement pour penser à modifier les articles dans l'autre langue
       news:
         type: fields
         fields:
