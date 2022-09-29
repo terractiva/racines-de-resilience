@@ -1,0 +1,5 @@
+Title: À propos
+
+----
+
+showInMenu: true

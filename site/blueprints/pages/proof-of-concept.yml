@@ -64,3 +64,9 @@ columns:
             width: 1/2
             when:
               buttonType: email
+
+  - width: 1/3
+    sections:
+      pages:
+        template:
+          - proof-of-concept-page

@@ -1,0 +1,9 @@
+title: Proof of concept page
+
+fields:
+  showInMenu:
+    type: toggle
+    label: Inclure dans le menu ?
+    text:
+        - Non
+        - Oui

@@ -1,0 +1,5 @@
+Title: Actions
+
+----
+
+showInMenu: true
