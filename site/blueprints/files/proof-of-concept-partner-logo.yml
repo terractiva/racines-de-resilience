@@ -1,0 +1,6 @@
+title: Logo du partenaire
+accept:
+  type: image
+image:
+  back: white
+  ratio: 2/1

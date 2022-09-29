@@ -1,0 +1,21 @@
+title: Partenaire
+
+status:
+  draft: Archivée
+  listed: En ligne
+
+columns:
+  - width: 1/3
+    sections:
+      files:
+        label: Logo
+        max: 1
+        template: proof-of-concept-partner-logo
+        layout: cards
+        size: small
+
+  - width: 2/3
+    fields:
+      url:
+        type: url
+        label: Lien

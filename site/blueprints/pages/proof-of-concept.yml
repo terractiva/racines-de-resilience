@@ -8,65 +8,79 @@ options:
   url: false
   delete: false
 
+# TODO: séparer dans des fichiers
 columns:
   - width: 2/3
-    fields:
+    sections:
       news:
-        type: structure
-        label: Actualités
-        prepend: true
-        columns:
-          title: true
-          content: true
+        type: fields
         fields:
-          title:
-            type: writer
-            label: Titre
-            required: true
-            inline: true
-          content:
-            type: writer
-            label: Contenu
-            required: true
-            nodes:
-              - bulletList
-              - orderedList
-          buttonLabel:
-            type: writer
-            label: Texte du bouton
-            required: true
-            inline: true
-            marks:
-              - bold
-              - italic
-              - underline
-              - strike
-          buttonType:
-            type: select
-            label: Type de lien du bouton
-            required: true
-            default: url
-            width: 1/2
-            options:
-              url: URL
-              email: E-mail
-          buttonUrl:
-            type: url
-            label: Lien du bouton
-            required: true
-            width: 1/2
-            when:
-              buttonType: url
-          buttonEmail:
-            type: email
-            label: E-mail du bouton
-            required: true
-            width: 1/2
-            when:
-              buttonType: email
+          news:
+            type: structure
+            label: Actualités
+            prepend: true
+            columns:
+              title: true
+              content: true
+            fields:
+              title:
+                type: writer
+                label: Titre
+                required: true
+                inline: true
+              content:
+                type: writer
+                label: Contenu
+                required: true
+                nodes:
+                  - bulletList
+                  - orderedList
+              buttonLabel:
+                type: writer
+                label: Texte du bouton
+                required: true
+                inline: true
+                marks:
+                  - bold
+                  - italic
+                  - underline
+                  - strike
+              buttonType:
+                type: select
+                label: Type de lien du bouton
+                required: true
+                default: url
+                width: 1/2
+                options:
+                  url: URL
+                  email: E-mail
+              buttonUrl:
+                type: url
+                label: Lien du bouton
+                required: true
+                width: 1/2
+                when:
+                  buttonType: url
+              buttonEmail:
+                type: email
+                label: E-mail du bouton
+                required: true
+                width: 1/2
+                when:
+                  buttonType: email
+
+      partners:
+        type: pages
+        label: Partenaires
+        parent: site.find("proof-of-concept/partenaires")
+        size: tiny
+        layout: cards
+        template: proof-of-concept-partner
+        image:
+          back: white
+          ratio: 2/1
 
   - width: 1/3
     sections:
       pages:
-        template:
-          - proof-of-concept-page
+        template: proof-of-concept-page

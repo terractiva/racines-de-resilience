@@ -1,0 +1,18 @@
+title: Partenaires
+
+status:
+  draft: Page verrouillée
+  unlisted: Page verrouillée
+  listed: Page verrouillée
+
+options:
+  title: false
+  status: false
+  duplicate: false
+  url: false
+  delete: false
+
+sections:
+  info:
+    label: Information
+    text: Vous pouvez paramétrer les partenaires depuis la page principale des paramètres.

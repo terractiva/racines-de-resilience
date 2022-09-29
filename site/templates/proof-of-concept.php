@@ -1,5 +1,6 @@
 <?php snippet('proof-of-concept/header') ?>
 
+<!-- TODO: cacher si pas d'actualités -->
 <section>
   <h2 class="h2">Actualités</h2>
 
@@ -8,7 +9,7 @@
     <li class="column">
       <h3 class="h3 text"><?= $newsItem->title()->text() ?></h3>
       <div class="text">
-        <?= $newsItem->content()->content()->sanitize() ?>
+        <?= $newsItem->content()->get('content')->sanitize() ?>
       </div>
       <?php
         $buttonAttr = ['class' => 'button'];
@@ -23,6 +24,25 @@
         <?= $newsItem->buttonLabel()->text() ?>
       </a>
       <?php endif ?>
+    </li>
+    <?php endforeach ?>
+  </ul>
+</section>
+
+<!-- TODO: cacher si pas de partenaires -->
+<section>
+  <h2 class="h2">Partenaires</h2>
+
+  <ul class="grid" style="--columns: 2">
+    <?php foreach (page('proof-of-concept/partenaires')->children()->listed() as $partner): ?>
+    <li class="column">
+      <?php if ($url = $partner->content()->get('url')->value()) echo "<a href=" . $url . ">"; ?>
+      <?php if($logo = $partner->image()): ?>
+      <img src="<?= $logo->url() ?>" alt="<?= $partner->title()->escape('alt') ?>">
+      <?php else: ?>
+      <?= $partner->title()->escape('html') ?>
+      <?php endif ?>
+      <?php if ($url) echo "</a>"; ?>
     </li>
     <?php endforeach ?>
   </ul>
