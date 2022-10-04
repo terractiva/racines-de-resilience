@@ -1,0 +1,9 @@
+Title: Nous soutenir
+
+----
+
+Showinmenu: true
+
+----
+
+Content: [{"attrs":[],"columns":[{"blocks":[{"content":[],"id":"740a517d-94cc-4ed7-827c-a1651971a451","isHidden":false,"type":"partners"}],"id":"d56e6383-e23a-4870-bc17-c147866f817f","width":"1\/1"}],"id":"acb023af-e1e6-487b-b1c7-70a0a7caf511"}]

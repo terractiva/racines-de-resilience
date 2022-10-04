@@ -71,7 +71,7 @@ columns:
       partners:
         type: pages
         label: Partenaires
-        parent: site.find("proof-of-concept/partenaires")
+        parent: site.find("proof-of-concept/partners")
         size: tiny
         layout: cards
         template: proof-of-concept-partner

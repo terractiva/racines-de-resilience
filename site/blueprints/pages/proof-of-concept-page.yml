@@ -7,3 +7,8 @@ fields:
     text:
         - Non
         - Oui
+  content:
+    label: Contenu
+    type: layout
+    fieldsets:
+      - partners
