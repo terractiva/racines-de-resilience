@@ -3,6 +3,7 @@
 return [
   'debug' => true,
   'languages' => true,
+  'cache.airtable' => true,
   'content' => [
     // make the media tokens independent from the instance
     // otherwise the global _media CDN directory won't work

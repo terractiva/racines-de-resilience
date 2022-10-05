@@ -82,4 +82,6 @@ columns:
   - width: 1/3
     sections:
       pages:
-        template: proof-of-concept-page
+        template:
+          - proof-of-concept-page
+          - proof-of-concept-actions

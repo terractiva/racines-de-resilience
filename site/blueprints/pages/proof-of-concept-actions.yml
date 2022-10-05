@@ -1,0 +1,10 @@
+title: Proof of concept actions
+
+fields:
+  # TODO: factoriser
+  showInMenu:
+    type: toggle
+    label: Inclure dans le menu ?
+    text:
+        - Non
+        - Oui
