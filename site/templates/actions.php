@@ -2,7 +2,7 @@
   <?php snippet('layout/header', ['showNav' => true]) ?>
   <main>
     <?php snippet('sections/section-hero') ?>
-    <p>TODO: contenu</p>
+    <p>TODO: actions</p>
   </main>
   <?php snippet('layout/footer') ?>
 <?php snippet('layout/html-close') ?>
