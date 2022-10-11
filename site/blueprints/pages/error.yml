@@ -1,0 +1,9 @@
+title: Page introuvable
+icon: 💣
+
+options:
+  duplicate: false
+
+sections:
+  heading:
+    extends: sections/page-heading

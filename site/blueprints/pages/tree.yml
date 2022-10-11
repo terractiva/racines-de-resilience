@@ -1,0 +1,11 @@
+title: Arbre aux actions
+icon: 🌳
+
+options:
+  changeStatus: false
+  delete: false
+  duplicate: false
+
+sections:
+  config:
+    extends: sections/page-config

@@ -1,0 +1,6 @@
+type: fields
+fields:
+  heading:
+    type: text
+    label: En-tête
+    required: true

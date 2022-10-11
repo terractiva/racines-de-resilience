@@ -1,5 +1,10 @@
-title: Page par défaut
-icon: 📝
+title: Actions
+icon: ✊
+
+options:
+  changeStatus: false
+  delete: false
+  duplicate: false
 
 sections:
   config:

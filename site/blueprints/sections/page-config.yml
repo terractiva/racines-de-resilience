@@ -1,0 +1,19 @@
+type: fields
+fields:
+  showInMenu:
+    type: toggle
+    label: Affiché dans le menu
+    width: 1/2
+    default: false
+    text:
+        - Non
+        - Oui
+
+  menuLabel:
+    type: text
+    label: Libellé dans le menu
+    help: Laisser vide pour utiliser le titre de la page
+    placeholder: "{{ page.title }}"
+    width: 1/2
+    when:
+      showInMenu: true

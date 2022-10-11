@@ -1,0 +1,17 @@
+Title: À propos
+
+----
+
+Showinmenu: true
+
+----
+
+Menulabel: 
+
+----
+
+Heading: Réunir et relier les idées, pour une société qui soutient la vie
+
+----
+
+Uuid: oW42R8LCvTrrjUZc

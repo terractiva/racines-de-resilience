@@ -1,5 +1,9 @@
-title: Page par défaut
-icon: 📝
+title: Accueil
+icon: 🏠
+
+options:
+  changeStatus: false
+  duplicate: false
 
 sections:
   config:
