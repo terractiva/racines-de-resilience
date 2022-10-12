@@ -23,20 +23,39 @@
     "> 0.1% and not dead"
   ],
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "parserPreset": {
       "parserOpts": {
         "headerPattern": "^([\\wéâ]*)(?:\\((.*)\\))?!?: (.*)$"
       }
     },
     "rules": {
-      "scope-empty": [2, "always"],
-      "subject-case": [2, "always", "sentence-case"],
-      "subject-max-length": [2, "always", 72],
+      "scope-empty": [
+        2,
+        "always"
+      ],
+      "subject-case": [
+        2,
+        "always",
+        "sentence-case"
+      ],
+      "subject-max-length": [
+        2,
+        "always",
+        72
+      ],
       "type-enum": [
         2,
         "always",
-        ["amélioration", "correction", "factorisation", "fonctionnalité", "tâche"]
+        [
+          "amélioration",
+          "correction",
+          "factorisation",
+          "fonctionnalité",
+          "tâche"
+        ]
       ]
     }
   },
@@ -44,6 +63,7 @@
     "words": [
       "bulma",
       "cssnano",
+      "kirby",
       "purgecss"
     ]
   },

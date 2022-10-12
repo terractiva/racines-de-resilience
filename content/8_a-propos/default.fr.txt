@@ -10,7 +10,11 @@ Menulabel:
 
 ----
 
-Heading: Réunir et relier les idées, pour une société qui soutient la vie
+Heading1: Réunir et relier les idées,
+
+----
+
+Heading2: pour une société qui soutient la vie
 
 ----
 

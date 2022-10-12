@@ -10,7 +10,11 @@ Menulabel:
 
 ----
 
-Heading: Énergie, climat, effondrement, résilience... On fait quoi maintenant ?
+Heading1: Énergie, climat, effondrement, résilience...
+
+----
+
+Heading2: On fait quoi maintenant ?
 
 ----
 

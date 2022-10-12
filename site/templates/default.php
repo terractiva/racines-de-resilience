@@ -1,8 +1,13 @@
 <?php snippet('layout/html-open') ?>
-  <?php snippet('layout/header', ['showNav' => true]) ?>
+  <?php snippet('layout/nav', ['showMenu' => true]) ?>
   <main>
-    <?php snippet('sections/section-hero') ?>
-    <p>TODO: contenu</p>
+    <?php snippet('sections/section-hero', ['size' => 'is-large']) ?>
+
+    <section class="section">
+      <div class="container">
+        <p>TODO: contenu</p>
+      </div>
+    </section>
   </main>
   <?php snippet('layout/footer') ?>
 <?php snippet('layout/html-close') ?>

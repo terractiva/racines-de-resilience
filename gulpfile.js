@@ -7,17 +7,16 @@ import gulpSass from 'gulp-sass';
 import combineMediaQuery from 'postcss-combine-media-query';
 import dartSass from 'sass';
 
-const cssSources = ['assets/css/styles.scss'];
-const htmlSources = ['site/snippets/**/*.php', 'site/templates/**/*.php'];
-
 function compile() {
   return gulp
-    .src(cssSources)
+    .src(['assets/css/styles.scss'])
     .pipe(gulpSass(dartSass)({ includePaths: 'node_modules' }));
 }
 
 function optimize() {
-  return purgeCSS({ content: htmlSources }).pipe(
+  return purgeCSS({
+    content: ['site/snippets/**/*.php', 'site/templates/**/*.php']
+  }).pipe(
     postCSS([
       combineMediaQuery,
       autoprefixer,
@@ -38,7 +37,7 @@ function devBuild() {
 
 export function dev() {
   return gulp.watch(
-    [...cssSources, ...htmlSources],
+    ['assets/css/**/*.scss'],
     { delay: 500, ignoreInitial: false },
     devBuild
   );

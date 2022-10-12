@@ -1,0 +1,48 @@
+nav {
+  a {
+    font-weight: $weight-medium;
+  }
+
+  a.navbar-item, .navbar-lang a {
+    &:hover, &.is-active {
+      text-decoration: underline $primary 2px; 
+    }
+  }
+
+  a.navbar-item {
+    background-color: transparent !important;
+  }
+
+  .navbar-brand a {
+    flex-shrink: 1;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      filter: brightness(100);
+    }
+  }
+
+  .navbar-lang {
+    display: inline-flex;
+
+    a {
+      color: inherit;
+    }
+    span {
+      white-space: break-spaces;
+    }
+  }
+
+  @include touch {
+    .navbar-item .button {
+      width: 100%;
+    }
+  }
+
+  .navbar-burger {
+    flex-shrink: 0;
+  }
+}

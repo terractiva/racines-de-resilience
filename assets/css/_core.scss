@@ -1,0 +1,20 @@
+$blue: #59A6D9;
+$green: #88B559;
+$purple: #332131;
+$red: #D47866;
+$white: #F5EAE0;
+$black: $purple;
+
+$primary: $red;
+$custom-colors: (
+  "blue": ($blue, #fff),
+  "green": ($green, #fff),
+  "red": ($red, #fff),
+  "purple": ($purple, #fff)
+);
+
+@import "bulma/sass/utilities/_all.sass";
+
+$text: $black;
+$link: $text;
+$link-hover: $primary;

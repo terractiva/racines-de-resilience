@@ -6,7 +6,7 @@ Showinmenu: true
 
 ----
 
-Menulabel: Arbre
+Menulabel: L'arbre
 
 ----
 

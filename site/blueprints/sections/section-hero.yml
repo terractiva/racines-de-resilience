@@ -1,0 +1,10 @@
+type: fields
+fields:
+  heading1:
+    type: text
+    label: En-tête (ligne 1)
+    required: true
+
+  heading2:
+    type: text
+    label: En-tête (ligne 2)

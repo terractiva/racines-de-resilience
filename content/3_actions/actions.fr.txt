@@ -10,7 +10,11 @@ Menulabel:
 
 ----
 
-Heading: S'inspirer de l'écosystème des possibles pour passer à l'action, ensemble
+Heading1: S'inspirer de l'écosystème des possibles
+
+----
+
+Heading2: pour passer à l'action, ensemble
 
 ----
 

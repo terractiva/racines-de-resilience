@@ -6,4 +6,4 @@ options:
 
 sections:
   heading:
-    extends: sections/page-heading
+    extends: sections/section-hero

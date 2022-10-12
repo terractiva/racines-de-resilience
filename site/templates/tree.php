@@ -1,6 +1,10 @@
 <?php snippet('layout/html-open') ?>
-  <?php snippet('layout/header', ['showNav' => false]) ?>
+  <?php snippet('layout/nav', ['showMenu' => false]) ?>
   <main>
-    <p>TODO: arbre</p>
+    <section class="section">
+      <div class="container">
+        <p>TODO: arbre</p>
+      </div>
+    </section>
   </main>
 <?php snippet('layout/html-close') ?>

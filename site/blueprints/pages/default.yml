@@ -5,4 +5,4 @@ sections:
   config:
     extends: sections/page-config
   heading:
-    extends: sections/page-heading
+    extends: sections/section-hero

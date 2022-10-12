@@ -2,7 +2,7 @@ Title: Le film
 
 ----
 
-Showinmenu: true
+Showinmenu: false
 
 ----
 
@@ -10,7 +10,7 @@ Menulabel:
 
 ----
 
-Heading: À l’origine du projet, un film
+Heading1: À l’origine du projet, un film
 
 ----
 
