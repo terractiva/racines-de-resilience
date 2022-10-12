@@ -40,5 +40,12 @@
       ]
     }
   },
+  "cspell": {
+    "words": [
+      "bulma",
+      "cssnano",
+      "purgecss"
+    ]
+  },
   "type": "module"
 }

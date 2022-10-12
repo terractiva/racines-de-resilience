@@ -18,7 +18,7 @@ Icon
 # ---------------
 
 /media/*
-!/media/index.html
+!/media/.gitkeep
 
 # Lock files
 # ---------------
@@ -40,19 +40,19 @@ Icon
 # ---------------
 
 /site/cache/*
-!/site/cache/index.html
+!/site/cache/.gitkeep
 
 # Accounts
 # ---------------
 
 /site/accounts/*
-!/site/accounts/index.html
+!/site/accounts/.gitkeep
 
 # Sessions
 # ---------------
 
 /site/sessions/*
-!/site/sessions/index.html
+!/site/sessions/.gitkeep
 
 # License
 # ---------------
