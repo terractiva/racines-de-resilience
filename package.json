@@ -64,7 +64,8 @@
       "bulma",
       "cssnano",
       "kirby",
-      "purgecss"
+      "purgecss",
+      "Terractiva"
     ]
   },
   "type": "module"

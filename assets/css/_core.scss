@@ -2,19 +2,26 @@ $blue: #59A6D9;
 $green: #88B559;
 $purple: #332131;
 $red: #D47866;
-$white: #F5EAE0;
-$black: $purple;
-
+$light: #F5EAE0;
+$dark: $purple;
 $primary: $red;
+
 $custom-colors: (
   "blue": ($blue, #fff),
   "green": ($green, #fff),
-  "red": ($red, #fff),
-  "purple": ($purple, #fff)
+  "red": ($red, #000),
+  "purple": ($purple, #fff),
+  "white": (#fff, #000)
 );
 
 @import "bulma/sass/utilities/_all.sass";
 
-$text: $black;
+$text: $dark;
+$text-strong: $dark;
 $link: $text;
 $link-hover: $primary;
+
+$scheme-main: $light;
+
+$footer-background-color: $black;
+$footer-color: $white;

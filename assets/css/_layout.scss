@@ -38,11 +38,18 @@ nav {
 
   @include touch {
     .navbar-item .button {
+      margin-right: 0 !important;
       width: 100%;
     }
   }
 
   .navbar-burger {
     flex-shrink: 0;
+  }
+}
+
+footer {
+  a, .title {
+    color: inherit;
   }
 }

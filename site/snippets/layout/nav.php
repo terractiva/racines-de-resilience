@@ -34,7 +34,7 @@
             <a class="button is-red" href="<?= $supportPage->url() ?>">
               <?= $supportPage->title()->escape() ?>
             </a>
-            <a class="button is-dark is-inverted" href="https://airtable.com/shrlqNJvuiem0iFkA">
+            <a class="button is-white" href="https://airtable.com/shrlqNJvuiem0iFkA">
               Ajouter une action
             </a>
           </div>
