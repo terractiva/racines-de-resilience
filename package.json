@@ -1,9 +1,13 @@
 {
   "scripts": {
     "dev": "gulp dev",
-    "build": "gulp build"
+    "build": "gulp build",
+    "lint:commit": "commitlint -e ${1}",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "autoprefixer": "^10.4.12",
     "bulma": "^0.9.4",
     "cssnano": "^5.1.13",
@@ -11,11 +15,30 @@
     "gulp-postcss": "^9.0.1",
     "gulp-purgecss": "^5.0.0",
     "gulp-sass": "^5.1.0",
+    "husky": "^8.0.1",
     "postcss-combine-media-query": "^1.0.1",
     "sass": "^1.55.0"
   },
   "browserslist": [
     "> 0.1% and not dead"
   ],
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"],
+    "parserPreset": {
+      "parserOpts": {
+        "headerPattern": "^([\\wéâ]*)(?:\\((.*)\\))?!?: (.*)$"
+      }
+    },
+    "rules": {
+      "scope-empty": [2, "always"],
+      "subject-case": [2, "always", "sentence-case"],
+      "subject-max-length": [2, "always", 72],
+      "type-enum": [
+        2,
+        "always",
+        ["amélioration", "correction", "factorisation", "fonctionnalité", "tâche"]
+      ]
+    }
+  },
   "type": "module"
 }
