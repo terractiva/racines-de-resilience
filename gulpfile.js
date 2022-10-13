@@ -13,18 +13,20 @@ function compile() {
     .pipe(gulpSass(dartSass)({ includePaths: 'node_modules' }));
 }
 
-function optimize() {
+function purge() {
   return purgeCSS({
-    content: ['site/snippets/**/*.php', 'site/templates/**/*.php']
-  }).pipe(
-    postCSS([
-      combineMediaQuery,
-      autoprefixer,
-      cssnano({
-        preset: ['default', { discardComments: { removeAll: true } }],
-      }),
-    ])
-  );
+    content: ['site/**/*.php', 'site/**/*.yml']
+  });
+}
+
+function optimize() {
+  return postCSS([
+    combineMediaQuery,
+    autoprefixer,
+    cssnano({
+      preset: ['default', { discardComments: { removeAll: true } }]
+    })
+  ])
 }
 
 function write() {
@@ -44,5 +46,5 @@ export function dev() {
 }
 
 export function build() {
-  return compile().pipe(optimize()).pipe(write());
+  return compile().pipe(purge()).pipe(optimize()).pipe(write());
 }
