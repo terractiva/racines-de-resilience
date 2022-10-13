@@ -8,6 +8,14 @@
 # http://yourdomain.com/about-us/team
 RewriteEngine on
 
+# Redirection vers la version HTTPS
+RewriteCond %{HTTPS} off [NC]
+RewriteRule (.*) https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Redirection vers la version avec www
+RewriteCond %{HTTP_HOST} !^www. [NC]
+RewriteRule (.*) https://www.%{HTTP_HOST}/$1 [R=301,L]
+
 # make sure to set the RewriteBase correctly
 # if you are running the site in a subfolder;
 # otherwise links or the entire site will break.
