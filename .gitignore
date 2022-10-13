@@ -9,11 +9,6 @@ Icon
 
 /node_modules/*
 
-# Compiled files
-# ---------------
-
-/assets/css/styles.css
-
 # Temporary files
 # ---------------
 

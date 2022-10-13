@@ -31,10 +31,10 @@
         <div class="navbar-item">
           <div class="buttons">
             <?php $supportPage = page('nous-soutenir'); ?>
-            <a class="button is-red" href="<?= $supportPage->url() ?>">
+            <a class="button is-blue" href="<?= $supportPage->url() ?>">
               <?= $supportPage->title()->escape() ?>
             </a>
-            <a class="button is-white" href="https://airtable.com/shrlqNJvuiem0iFkA">
+            <a class="button is-red" href="https://airtable.com/shrlqNJvuiem0iFkA">
               Ajouter une action
             </a>
           </div>

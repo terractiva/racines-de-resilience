@@ -37,14 +37,15 @@
       </div>
     </div>
 
-    <div class="content has-text-centered">
+    <div class="content">
       <p>
         Site par <a href="https://tseignette.github.io/">Thomas Seignette</a> • Hébergé gracieusement par <a href="https://www.infomaniak.com/fr">Infomaniak</a>
       </p>
       <p>Terractiva © 2022</p>
+      <?php if (option('environment') !== 'dev'): ?>
       <div id="wcb" class="carbonbadge wcb-d"></div>
+      <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+      <?php endif ?>
     </div>
   </div>
 </footer>
-
-<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>

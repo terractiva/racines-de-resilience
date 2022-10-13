@@ -3,3 +3,13 @@
     text-decoration: underline 2px $primary;
   }
 }
+
+section {
+  &.has-background-purple * {
+    color: $white;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+}

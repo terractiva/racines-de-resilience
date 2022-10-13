@@ -48,8 +48,16 @@ nav {
   }
 }
 
+.hero .title {
+  line-height: inherit;
+}
+
 footer {
   a, .title {
     color: inherit;
+  }
+
+  > div > div.content:last-child {
+    text-align: center;
   }
 }
