@@ -7,3 +7,5 @@ options:
 sections:
   heading:
     extends: sections/section-hero
+  layout:
+    extends: sections/page-layout

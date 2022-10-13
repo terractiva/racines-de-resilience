@@ -1,0 +1,17 @@
+name: Section
+icon: template
+wysiwyg: true
+fields:
+  style:
+    type: select
+    label: Style
+    options:
+      has-background-blue: Bleu
+      has-background-red: Rouge
+      has-background-green: Vert
+      has-background-purple: Violet
+
+  heading:
+    type: writer
+    label: Titre
+    inline: true

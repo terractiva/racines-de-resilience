@@ -18,4 +18,8 @@ Heading2: On fait quoi maintenant ?
 
 ----
 
+Layout: [{"content":{"style":"","heading":"Section normale"},"id":"c641931b-d673-490c-a196-8ba4ffc7ba53","isHidden":false,"type":"section"},{"content":{"style":"has-background-blue","heading":"Section bleue"},"id":"e85d8bbc-1d23-4309-9998-7086a3c09cf9","isHidden":false,"type":"section"},{"content":{"style":"","heading":"Section normale"},"id":"b9113b8a-f3c2-46fd-89c7-b717ee3e17fd","isHidden":false,"type":"section"},{"content":{"style":"has-background-red","heading":"Section rouge"},"id":"6519b974-d397-4e38-afcc-7d81fff8089d","isHidden":false,"type":"section"},{"content":{"style":"","heading":"Section normale"},"id":"45323e33-207e-43a4-9107-4873e3bf58b7","isHidden":false,"type":"section"},{"content":{"style":"has-background-green","heading":"Section verte"},"id":"86b7f3e0-d562-4c06-88cb-9244f902f09e","isHidden":false,"type":"section"},{"content":{"style":"","heading":"Section normale"},"id":"398f0773-b8c4-424f-8841-f85bfb3164f4","isHidden":false,"type":"section"},{"content":{"style":"has-background-purple","heading":"Section violette"},"id":"404d1e28-baee-48a5-a3d3-5b0b0bc6d193","isHidden":false,"type":"section"},{"content":{"style":"","heading":"Section normale"},"id":"cbd9fa17-a592-4ee3-a687-4a08782c6587","isHidden":false,"type":"section"}]
+
+----
+
 Uuid: 3xOuBIeX2OgO6UgS

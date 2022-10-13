@@ -10,3 +10,5 @@ sections:
     extends: sections/page-config
   heading:
     extends: sections/section-hero
+  layout:
+    extends: sections/page-layout

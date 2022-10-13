@@ -65,7 +65,8 @@
       "cssnano",
       "kirby",
       "purgecss",
-      "Terractiva"
+      "Terractiva",
+      "wysiwyg"
     ]
   },
   "type": "module"

@@ -1,0 +1,7 @@
+type: fields
+fields:
+  layout:
+    type: blocks
+    label: Mise en page
+    fieldsets:
+      section: true
