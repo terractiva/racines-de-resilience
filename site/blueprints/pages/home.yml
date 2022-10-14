@@ -5,10 +5,19 @@ options:
   changeStatus: false
   duplicate: false
 
-sections:
-  config:
-    extends: sections/page-config
-  heading:
-    extends: sections/section-hero
-  layout:
-    extends: sections/page-layout
+tabs:
+  content:
+    label: Contenu
+    icon: page
+    sections:
+      heading:
+        extends: sections/section-hero
+      layout:
+        extends: sections/page-layout
+
+  settings:
+    label: Paramètres
+    icon: settings
+    sections:
+      settings:
+        extends: sections/page-settings

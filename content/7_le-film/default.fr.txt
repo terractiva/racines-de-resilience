@@ -2,15 +2,15 @@ Title: Le film
 
 ----
 
-Showinmenu: false
+Heading: À l’origine du projet, un film
 
 ----
 
-Menulabel: 
+Layout: 
 
 ----
 
-Heading1: À l’origine du projet, un film
+Navlabel: 
 
 ----
 

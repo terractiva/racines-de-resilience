@@ -1,10 +1,8 @@
 type: fields
 fields:
-  heading1:
-    type: text
-    label: En-tête (ligne 1)
+  heading:
+    type: writer
+    label: Titre
     required: true
-
-  heading2:
-    type: text
-    label: En-tête (ligne 2)
+    inline: true
+    nodes: false

@@ -6,6 +6,15 @@ options:
   delete: false
   duplicate: false
 
-sections:
-  config:
-    extends: sections/page-config
+tabs:
+  content:
+    label: Contenu
+    icon: page
+    sections:
+
+  settings:
+    label: Paramètres
+    icon: settings
+    sections:
+      settings:
+        extends: sections/page-settings

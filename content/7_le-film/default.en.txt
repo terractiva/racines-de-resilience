@@ -6,20 +6,16 @@ Slug: the-film
 
 ----
 
-Showinmenu: false
+Heading: <em>Roots of resilience</em> grew out of a film
 
 ----
 
-Menulabel: 
+Layout: 
 
 ----
 
-Heading1: Roots of resilience grew out of a film
+Navlabel: 
 
 ----
 
 Uuid: asaA7JJJPXhOtvsr
-
-----
-
-Heading2: 

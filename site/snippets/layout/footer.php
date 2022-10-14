@@ -2,20 +2,17 @@
   <div class="container">
     <div class="columns">
       <div class="column is-4">
-        <p class="title is-5"><strong>Nous suivre</strong></p>
+        <p class="title is-5">
+          <strong><?= $site->footerSocialHeading()->escape() ?></strong>
+        </p>
         <ul>
+          <?php foreach ($site->footerSocialLinks()->toStructure() as $socialLink): ?>
           <li>
-            <a>Facebook</a>
+            <a href="<?= $socialLink->url()->escape('attr') ?>">
+              <?= $socialLink->label()->escape() ?>
+            </a>
           </li>
-          <li>
-            <a>Instagram</a>
-          </li>
-          <li>
-            <a>Twitter</a>
-          </li>
-          <li>
-            <a>S'abonner</a>
-          </li>
+          <?php endforeach ?>
         </ul>
       </div>
 
@@ -31,17 +28,13 @@
       </div>
 
       <div class="column is-4 content">
-        <p>Les textes et labels de ce site placés sous licence CC0 et sont libres de diffusion, à condition de citer ©RacinesDeResilience et de nous le faire savoir.</p>
-        <p>Les images sont la propriété de Théotime Noël et l'Arbre aux actions de l'association Terractiva.</p>
-        <p>Les contenus de toutes les actions référencées appartiennent à leurs structures respectives.</p>
+        <?= $site->footerFreeText() ?>
       </div>
     </div>
 
     <div class="content">
-      <p>
-        Site par <a href="https://tseignette.github.io/">Thomas Seignette</a> • Hébergé gracieusement par <a href="https://www.infomaniak.com/fr">Infomaniak</a>
-      </p>
-      <p>Terractiva © 2022</p>
+      <?= $site->footerCopyright() ?>
+
       <?php if (option('environment') !== 'dev'): ?>
       <div id="wcb" class="carbonbadge wcb-d"></div>
       <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>

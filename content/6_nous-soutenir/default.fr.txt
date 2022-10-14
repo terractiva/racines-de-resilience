@@ -2,19 +2,15 @@ Title: Nous soutenir
 
 ----
 
-Showinmenu: false
+Heading: Nous avons besoin de vous<br>pour continuer à essaimer
 
 ----
 
-Menulabel: 
+Layout: 
 
 ----
 
-Heading1: Nous avons besoin de vous
-
-----
-
-Heading2: pour continuer à essaimer
+Navlabel: 
 
 ----
 

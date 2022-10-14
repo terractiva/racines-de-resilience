@@ -2,11 +2,7 @@ Title: Arbre aux actions
 
 ----
 
-Showinmenu: true
-
-----
-
-Menulabel: L'arbre
+Navlabel: L'arbre
 
 ----
 

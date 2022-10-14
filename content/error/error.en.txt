@@ -2,7 +2,11 @@ Title: Page not found
 
 ----
 
-Heading1: Page not found
+Heading: Page not found
+
+----
+
+Layout: 
 
 ----
 

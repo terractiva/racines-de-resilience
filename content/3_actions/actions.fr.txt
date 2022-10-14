@@ -2,19 +2,11 @@ Title: Actions
 
 ----
 
-Showinmenu: true
+Heading: S'inspirer de l'écosystème des possibles<br>pour passer à l'action, ensemble
 
 ----
 
-Menulabel: 
-
-----
-
-Heading1: S'inspirer de l'écosystème des possibles
-
-----
-
-Heading2: pour passer à l'action, ensemble
+Navlabel: 
 
 ----
 

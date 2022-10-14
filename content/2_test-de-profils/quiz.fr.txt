@@ -2,15 +2,11 @@ Title: Test de profils
 
 ----
 
-Showinmenu: false
+Heading: Le dernier test avant la fin du monde
 
 ----
 
-Menulabel: 
-
-----
-
-Heading1: Le dernier test avant la fin du monde
+Navlabel: 
 
 ----
 

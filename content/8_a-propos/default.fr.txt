@@ -2,19 +2,15 @@ Title: À propos
 
 ----
 
-Showinmenu: true
+Heading: Réunir et relier les idées,<br>pour une société qui soutient la vie
 
 ----
 
-Menulabel: 
+Layout: 
 
 ----
 
-Heading1: Réunir et relier les idées,
-
-----
-
-Heading2: pour une société qui soutient la vie
+Navlabel: 
 
 ----
 

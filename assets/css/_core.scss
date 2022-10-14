@@ -16,12 +16,16 @@ $custom-colors: (
 );
 
 $text: $dark;
-$text-strong: $dark;
-$link: $text;
+$text-strong: inherit;
+$link: inherit;
 $link-hover: $primary;
 
 $scheme-main: $light;
 
+$navbar-background-color: $dark;
+$navbar-item-color: $white;
+$navbar-item-active-color: $navbar-item-color;
+$navbar-item-hover-color: $navbar-item-color;
 $footer-background-color: $black;
 $footer-color: $white;
 

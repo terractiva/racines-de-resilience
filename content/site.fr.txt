@@ -1,1 +1,51 @@
 Title: Racines de résilience
+
+----
+
+Actionaddurl: https://airtable.com/shrlqNJvuiem0iFkA
+
+----
+
+Logo: - file://0DxFkz6737ymnw7Z
+
+----
+
+Navpages:
+
+- page://qm0sQPbBSM5LZPGM
+- page://YKln3T0YKA0khias
+- page://oW42R8LCvTrrjUZc
+
+----
+
+Footersocialheading: Nous suivre
+
+----
+
+Footersociallinks:
+
+- 
+  label: Facebook
+  url: >
+    https://www.facebook.com/UneFoisQueTuSais/
+- 
+  label: Instagram
+  url: https://www.instagram.com/_onceyouknow/
+- 
+  label: Twitter
+  url: https://twitter.com/onceyouknowfilm
+- 
+  label: TikTok
+  url: https://www.tiktok.com/@_onceyouknow
+
+----
+
+Footersitemapheading: Plan du site
+
+----
+
+Footerfreetext: <p>Les textes et labels de ce site placés sous licence CC0 et sont libres de diffusion, à condition de citer ©RacinesDeResilience et de nous le faire savoir.</p><p>Les images sont la propriété de Théotime Noël et l'Arbre aux actions de l'association Terractiva.</p><p>Les contenus de toutes les actions référencées appartiennent à leurs structures respectives.</p>
+
+----
+
+Footercopyright: <p>Site par <a href="https://tseignette.github.io/" rel="noopener noreferrer">Thomas Seignette</a> • Hébergé gracieusement par <a href="https://www.infomaniak.com/fr" rel="noopener noreferrer">Infomaniak</a></p><p>Terractiva © 2022</p>

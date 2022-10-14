@@ -2,15 +2,15 @@ Title: Discussion guidée
 
 ----
 
-Showinmenu: false
+Heading: Discussion guidée
 
 ----
 
-Menulabel: 
+Layout: 
 
 ----
 
-Heading1: Discussion guidée
+Navlabel: 
 
 ----
 

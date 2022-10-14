@@ -1,0 +1,8 @@
+type: fields
+fields:
+  navLabel:
+    type: text
+    label: Libellé dans l'en-tête
+    width: 1/3
+    help: Laisser vide pour utiliser le titre de la page
+    placeholder: "{{ page.title }}"

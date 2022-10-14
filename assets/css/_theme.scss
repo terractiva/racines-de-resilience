@@ -1,15 +1,16 @@
-.content {
-  a {
-    text-decoration: underline 2px $primary;
-  }
-}
-
 section {
-  &.has-background-purple * {
+  &.has-background-purple {
     color: $white;
   }
 
-  h1, h2 {
+  .title {
+    line-height: inherit;
     text-align: center;
+  }
+}
+
+.content {
+  a {
+    text-decoration: underline 2px $primary;
   }
 }
