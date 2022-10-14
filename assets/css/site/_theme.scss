@@ -1,0 +1,29 @@
+section {
+  &.has-background-purple {
+    color: $white;
+  }
+
+  > div > .title {
+    line-height: inherit;
+    text-align: center;
+  }
+}
+
+.news .subtitle {
+  font-weight: $weight-medium;
+}
+
+.card-footer-item {
+  display: inline-block;
+  text-align: center;
+}
+
+.content, .card-footer {
+  a {
+    text-decoration: underline 2px $primary;
+  }
+}
+
+h1, h2 {
+  font-family: $family-secondary;
+}

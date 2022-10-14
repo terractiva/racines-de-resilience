@@ -2,122 +2,14 @@ tabs:
   home:
     label: Accueil
     icon: home
-    columns:
-      analytics:
-        width: 2/3
-        sections:
-          todo:
-            type: info
-            label: Statistiques
-            text: "TODO: insérer les statistiques Matomo"
-      pages:
-        width: 1/3
-        sections:
-          pages:
-            type: pages
-            label: Pages
-            create: default
+    extends: sections/site-tab-home
 
   files:
     label: Fichiers
     icon: file
-    sections:
-      files:
-        type: files
-        label: " "
+    extends: sections/site-tab-files
 
   settings:
     label: Paramètres
     icon: settings
-    columns:
-      - width: 1/1
-        fields:
-          miscHeadline:
-            type: headline
-            label: Divers
-            numbered: false
-      - width: 1/1
-        fields:
-          actionAddUrl:
-            type: url
-            label: Lien pour l'ajout action
-
-      - width: 1/1
-        fields:
-          navHeadline:
-            type: headline
-            label: En-tête
-            numbered: false
-      - width: 1/1
-        fields:
-          logo:
-            type: files
-            label: Logo
-            width: 1/2
-            help: L'image sera automatiquement optimisée
-            min: 1
-            max: 1
-            layout: cards
-            size: tiny
-            template: logo
-            image:
-              back: white
-          navPages:
-            type: pages
-            label: Pages
-            width: 1/2
-            help: Le libellé est personnalisable dans les paramètres de la page
-            text: "{{ model.navLabel.or(model.title) }}"
-
-      - width: 1/1
-        fields:
-          footerHeadline:
-            type: headline
-            label: Pied de page
-            numbered: false
-      - width: 1/3
-        fields:
-          footerSocialHeading:
-            type: text
-            label: Réseaux sociaux - Titre
-            required: true
-          footerSocialLinks:
-            type: structure
-            label: Réseaux sociaux - Liens
-            fields:
-              label:
-                type: text
-                label: Libellé
-                required: true
-              url:
-                type: url
-                label: Lien
-                required: true
-      - width: 1/3
-        sections:
-          footerSitemapFields:
-            type: fields
-            fields:
-              footerSitemapHeading:
-                type: text
-                label: Plan - Titre
-                required: true
-          footerSitemapPages:
-            type: pages
-            label: Plan - Pages
-            status: listed
-            create: false
-      - width: 1/3
-        fields:
-          footerFreeText:
-            type: writer
-            label: Texte libre
-            required: true
-            nodes: false
-      - width: 1/1
-        fields:
-          footerCopyright:
-            type: writer
-            label: Copyright
-            required: true
-            nodes: false
+    extends: sections/site-tabs-settings

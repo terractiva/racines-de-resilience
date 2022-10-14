@@ -2,7 +2,7 @@ Title: Discussion guidée
 
 ----
 
-Heading: Discussion guidée
+Heroheading: Discussion guidée
 
 ----
 

@@ -9,7 +9,7 @@ import dartSass from 'sass';
 
 function compile() {
   return gulp
-    .src(['assets/css/styles.scss'])
+    .src(['assets/css/site/styles.scss'])
     .pipe(gulpSass(dartSass)({ includePaths: 'node_modules' }));
 }
 
@@ -30,7 +30,7 @@ function optimize() {
 }
 
 function write() {
-  return gulp.dest('assets/css');
+  return gulp.dest('assets/css/site');
 }
 
 function devBuild() {
@@ -39,7 +39,7 @@ function devBuild() {
 
 export function dev() {
   return gulp.watch(
-    ['assets/css/**/*.scss'],
+    ['assets/css/site/**/*.scss'],
     { delay: 500, ignoreInitial: false },
     devBuild
   );

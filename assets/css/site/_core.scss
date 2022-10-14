@@ -15,10 +15,13 @@ $custom-colors: (
   "purple": ($purple, $white)
 );
 
+$family-secondary: "Tahoma", $family-sans-serif;
+
 $text: $dark;
 $text-strong: inherit;
 $link: inherit;
 $link-hover: $primary;
+$subtitle-color: inherit;
 
 $scheme-main: $light;
 
@@ -28,6 +31,8 @@ $navbar-item-active-color: $navbar-item-color;
 $navbar-item-hover-color: $navbar-item-color;
 $footer-background-color: $black;
 $footer-color: $white;
+
+$card-footer-border-top: 1px solid $grey;
 
 // Utilities
 @import "bulma/sass/utilities/functions.sass";
@@ -65,7 +70,7 @@ $footer-color: $white;
 
 // Components
 // @import "bulma/sass/components/breadcrumb.sass";
-// @import "bulma/sass/components/card.sass";
+@import "bulma/sass/components/card.sass";
 // @import "bulma/sass/components/dropdown.sass";
 // @import "bulma/sass/components/level.sass";
 // @import "bulma/sass/components/media.sass";

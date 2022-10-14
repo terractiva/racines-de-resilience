@@ -6,7 +6,7 @@ Slug: the-film
 
 ----
 
-Heading: <em>Roots of resilience</em> grew out of a film
+Heroheading: <em>Roots of resilience</em> grew out of a film
 
 ----
 

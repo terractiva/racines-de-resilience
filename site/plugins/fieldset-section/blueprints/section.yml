@@ -12,6 +12,13 @@ fields:
       has-background-purple: Violet
 
   heading:
-    type: writer
+    extends: fields/heading
     label: Titre
-    inline: true
+
+  layout:
+    type: layout
+    label: Contenu
+    layouts:
+      - "1/1"
+    fieldsets:
+      news: true

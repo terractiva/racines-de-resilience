@@ -2,7 +2,7 @@ Title: À propos
 
 ----
 
-Heading: Réunir et relier les idées,<br>pour une société qui soutient la vie
+Heroheading: Réunir et relier les idées,<br>pour une société qui soutient la vie
 
 ----
 

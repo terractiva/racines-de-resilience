@@ -2,7 +2,7 @@ Title: Actions
 
 ----
 
-Heading: S'inspirer de l'écosystème des possibles<br>pour passer à l'action, ensemble
+Heroheading: S'inspirer de l'écosystème des possibles<br>pour passer à l'action, ensemble
 
 ----
 

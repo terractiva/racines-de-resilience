@@ -1,0 +1,48 @@
+columns:
+  - width: 2/3
+    sections:
+      news:
+        type: fields
+        fields:
+          news:
+            type: structure
+            label: Actualités
+            min: 1
+            sortBy: date desc
+            columns:
+              heading: true
+              date: true
+            fields:
+              heading:
+                extends: fields/heading
+                required: true
+              date:
+                type: date
+                label: Date
+                required: true
+                default: today
+                display: DD/MM/YYYY
+              text:
+                type: writer
+                label: Contenu
+                required: true
+                nodes: false
+              linkLabel:
+                type: writer
+                label: Bouton - Libellé
+                inline: true
+                marks:
+                  - bold
+                  - italic
+                  - underline
+                  - strike
+              linkUrl:
+                type: url
+                label: Bouton - Lien
+
+  - width: 1/3
+    sections:
+      pages:
+        type: pages
+        label: Pages
+        create: default

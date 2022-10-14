@@ -31,10 +31,10 @@
         <div class="navbar-item">
           <div class="buttons">
             <?php $supportPage = page('nous-soutenir'); ?>
-            <a class="button is-red" href="<?= $supportPage->url() ?>">
+            <a class="button is-red is-light" href="<?= $supportPage->url() ?>">
               <?= $supportPage->title()->escape() ?>
             </a>
-            <a class="button is-blue" href="<?= $site->actionAddUrl()->escape('attr') ?>">
+            <a class="button is-blue is-light" href="<?= $site->actionAddUrl()->escape('attr') ?>">
               Ajouter une action
             </a>
           </div>

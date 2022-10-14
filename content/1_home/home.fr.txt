@@ -2,11 +2,11 @@ Title: Accueil
 
 ----
 
-Heading: Énergie, climat, effondrement, résilience...<br>On fait quoi maintenant ?
+Heroheading: Énergie, climat, effondrement, résilience...<br>On fait quoi maintenant ?
 
 ----
 
-Layout: [{"content":{"style":"","heading":"Plus de 200 actions"},"id":"c641931b-d673-490c-a196-8ba4ffc7ba53","isHidden":false,"type":"section"},{"content":{"style":"has-background-blue","heading":"En ce moment"},"id":"e85d8bbc-1d23-4309-9998-7086a3c09cf9","isHidden":false,"type":"section"},{"content":{"style":"","heading":"<em>Racines de r\u00e9silience<\/em> existe<br>gr\u00e2ce \u00e0 nos m\u00e9c\u00e8nes et partenaires... merci \u00e0 eux !"},"id":"b9113b8a-f3c2-46fd-89c7-b717ee3e17fd","isHidden":false,"type":"section"}]
+Layout: [{"content":{"style":"","heading":"Plus de 200 actions","layout":""},"id":"c641931b-d673-490c-a196-8ba4ffc7ba53","isHidden":false,"type":"section"},{"content":{"style":"has-background-red","heading":"En ce moment","layout":"[{\"attrs\":[],\"columns\":[{\"blocks\":[{\"content\":[],\"id\":\"aa76d3a7-abb4-451a-9581-88a1faa321ba\",\"isHidden\":false,\"type\":\"news\"}],\"id\":\"840bdd18-d175-4461-8fae-6b9460e77c66\",\"width\":\"1\\\/1\"}],\"id\":\"cae766a8-eba5-4422-9ca8-08cf9ec16b6c\"}]"},"id":"e85d8bbc-1d23-4309-9998-7086a3c09cf9","isHidden":false,"type":"section"},{"content":{"style":"","heading":"<em>Racines de r\u00e9silience<\/em> existe<br>gr\u00e2ce \u00e0 nos m\u00e9c\u00e8nes et partenaires... merci \u00e0 eux !","layout":""},"id":"b9113b8a-f3c2-46fd-89c7-b717ee3e17fd","isHidden":false,"type":"section"}]
 
 ----
 
