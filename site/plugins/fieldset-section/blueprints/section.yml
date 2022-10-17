@@ -22,3 +22,4 @@ fields:
       - "1/1"
     fieldsets:
       news: true
+      partners: true

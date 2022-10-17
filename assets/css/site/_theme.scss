@@ -13,6 +13,29 @@ section {
   font-weight: $weight-medium;
 }
 
+.partners {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: $weight-medium;
+  margin: -$column-gap;
+  justify-content: center;
+  text-align: center;
+
+  li {
+    padding: $column-gap;
+
+    a:hover img {
+      opacity: 0.6;
+    }
+    img {
+      height: 60px;
+      object-fit: contain;
+      width: 120px;
+    }
+  }
+}
+
 .card-footer-item {
   display: inline-block;
   text-align: center;
