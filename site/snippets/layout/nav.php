@@ -18,23 +18,26 @@
     <?php if ($showMenu): ?>
     <div class="navbar-menu" id="navbar-menu">
       <div class="navbar-start">
-        <?php snippet('layout/nav-lang') ?>
-      </div>
-
-      <div class="navbar-end">
         <?php foreach ($site->navPages()->toPages() as $navPage): ?>
         <a class="navbar-item<?php e($navPage->isOpen(), ' is-active') ?>" href="<?= $navPage->url() ?>">
           <?= $navPage->navLabel()->or($navPage->title())->escape() ?>
         </a>
         <?php endforeach ?>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <?php snippet('layout/nav-lang') ?>
+        </div>
 
         <div class="navbar-item">
           <div class="buttons">
-            <?php $supportPage = page('nous-soutenir'); ?>
-            <a class="button is-red is-light" href="<?= $supportPage->url() ?>">
-              <?= $supportPage->title()->escape() ?>
+            <?php if ($navButtonPage = $site->navButtonPage()->toPage()): ?>
+            <a class="button is-blue is-light" href="<?= $navButtonPage->url() ?>">
+              <?= $navButtonPage->navLabel()->or($navButtonPage->title())->escape() ?>
             </a>
-            <a class="button is-blue is-light" href="<?= $site->actionAddUrl()->escape('attr') ?>">
+            <?php endif ?>
+            <a class="button is-green is-light" href="<?= $site->actionAddUrl()->escape('attr') ?>">
               Ajouter une action
             </a>
           </div>

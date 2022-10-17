@@ -1,7 +1,7 @@
 <?php snippet('layout/html-open') ?>
   <?php snippet('layout/nav', ['showMenu' => true]) ?>
   <main>
-    <?php snippet('sections/section-hero', ['size' => 'is-medium']) ?>
+    <?php snippet('sections/section-hero') ?>
 
     <section class="section">
       <div class="container">

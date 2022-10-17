@@ -1,17 +1,26 @@
 nav {
-  a {
-    font-weight: $weight-medium;
-  }
-
-  a.navbar-item, .navbar-lang a {
-    &:hover, &.is-active {
-      text-decoration: underline $primary 2px; 
+  @include until($navbar-breakpoint) {
+    .button {
+      margin-right: 0 !important;
+      width: 100%;
     }
   }
 
-  a.navbar-item {
-    background-color: transparent !important;
+  .navbar-start {
+    margin-left: auto;
+    margin-right: 0;
   }
+
+  a {
+    font-weight: $weight-semibold;
+
+    &:not(.button) {
+      &:hover, &.is-active {
+        text-decoration: underline $primary 2px; 
+      }
+    }
+  }
+
 
   .navbar-brand a {
     flex-shrink: 1;
@@ -25,19 +34,8 @@ nav {
     }
   }
 
-  .navbar-lang {
-    display: inline-flex;
-
-    span {
-      white-space: break-spaces;
-    }
-  }
-
-  @include touch {
-    .navbar-item .button {
-      margin-right: 0 !important;
-      width: 100%;
-    }
+  .navbar-lang a:hover {
+    color: inherit;
   }
 
   .navbar-burger {
@@ -45,8 +43,17 @@ nav {
   }
 }
 
-footer {
-  > div > div.content:last-child {
-    text-align: center;
+.hero-body {
+  text-align: center;
+
+  .title:not(:last-child) {
+    margin-bottom: $size-1;
   }
+  .button {
+    font-weight: $weight-medium;
+  }
+}
+
+footer > div > div.content:last-child {
+  text-align: center;
 }

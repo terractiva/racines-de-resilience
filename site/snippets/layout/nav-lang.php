@@ -1,19 +1,11 @@
-<?php if (!$page->isErrorPage()): ?>
-<?php $pageTranslations = $page->translations()->filterBy('exists', true)->flip() ?>
-<?php if (count($pageTranslations) > 1): ?>
-<div class="navbar-item navbar-lang">
-  <?php foreach ($languages = $pageTranslations->toArray() as $language): ?>
+<?php $languages = $site->translations()->flip()->toArray(); ?>
+<p class="navbar-lang">
+  <?php foreach ($languages as $language): ?>
+  <?php $code = $language['code']; ?>
   <a
-    <?php e($kirby->language()->code() === $language['code'], 'class="is-active"') ?>
-    href="<?= $page->url($language['code']) ?>"
-  >
-    <?= Str::upper($language['code']) ?>
-  </a>
-
-  <?php if (end($languages) !== $language): ?>
-  <span> / </span>
-  <?php endif ?>
+    <?php e($code === $kirby->language()->code(), 'class="is-active"') ?>
+    href="<?= $page->translation($code)->exists() ? $page->url($code) : $site->url($code) ?>"
+  ><?= Str::upper($code) ?></a>
+  <?php e($language !== end($languages), '/') ?>
   <?php endforeach ?>
-</div>
-<?php endif ?>
-<?php endif ?>
+</p>

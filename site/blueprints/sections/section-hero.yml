@@ -2,4 +2,21 @@ type: fields
 fields:
   heroHeading:
     extends: fields/heading
+    label: Introduction - Titre
     required: true
+
+  heroPageLabel:
+    type: writer
+    label: Introduction - Bouton - Libellé
+    width: 1/2
+    inline: true
+    marks:
+      - bold
+      - italic
+      - underline
+      - strike
+  heroPage:
+    type: pages
+    label: Introduction - Bouton - Lien
+    width: 1/2
+    max: 1

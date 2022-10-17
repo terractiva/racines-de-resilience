@@ -1,6 +1,6 @@
 {
   "version" : "98",
-  "label" : "Roots of resilience",
+  "label" : "Racines de résilience",
   "services" : [
     {
       "type" : "apache",

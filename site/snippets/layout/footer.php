@@ -19,10 +19,12 @@
       <div class="column is-4">
         <p class="title is-5"><strong>Plan du site</strong></p>
         <ul>
-          <?php foreach ($site->children()->listed() as $listedPage): ?>
+          <?php foreach ($site->children()->listed() as $footerPage): ?>
+          <?php if ($footerPage->translation()->exists()): ?>
           <li>
-            <a href="<?= $listedPage->url() ?>"><?= $listedPage->title()->escape() ?></a>
+            <a href="<?= $footerPage->url() ?>"><?= $footerPage->title()->escape() ?></a>
           </li>
+          <?php endif ?>
           <?php endforeach ?>
         </ul>
       </div>

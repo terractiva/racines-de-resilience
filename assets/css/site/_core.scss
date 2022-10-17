@@ -25,13 +25,17 @@ $subtitle-color: inherit;
 
 $scheme-main: $light;
 
+$radius: 0;
+
 $navbar-background-color: $dark;
 $navbar-item-color: $white;
 $navbar-item-active-color: $navbar-item-color;
+$navbar-item-hover-background-color: transparent;
 $navbar-item-hover-color: $navbar-item-color;
 $footer-background-color: $black;
 $footer-color: $white;
 
+$card-radius: 0;
 $card-footer-border-top: 1px solid $grey;
 
 // Utilities
