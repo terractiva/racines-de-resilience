@@ -16,7 +16,6 @@
     "gulp-purgecss": "^5.0.0",
     "gulp-sass": "^5.1.0",
     "husky": "^8.0.1",
-    "postcss-combine-media-query": "^1.0.1",
     "sass": "^1.55.0"
   },
   "browserslist": [

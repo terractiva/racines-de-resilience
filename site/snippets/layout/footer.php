@@ -34,7 +34,7 @@
       </div>
     </div>
 
-    <div class="content">
+    <div class="footer-copyright content">
       <?= $site->footerCopyright() ?>
 
       <?php if (option('environment') !== 'dev'): ?>

@@ -85,21 +85,10 @@
   );
 ?>
 
-<div class="columns is-multiline is-centered">
+<div class="columns is-centered is-multiline">
   <?php foreach ($actions as $action): ?>
   <div class="column is-half-tablet is-two-fifths-desktop">
-    <?= snippet('blocks/action', ['action' => $action]) ?>
+    <?= snippet('elements/action', ['action' => $action]) ?>
   </div>
   <?php endforeach ?>
 </div>
-
-<?php if ($block->buttons()->isNotEmpty()): ?>
-<div class="buttons is-centered">
-  <?php foreach ($block->buttons()->toStructure() as $button): ?>
-  <?php $url = $button->type() == 'page' ? $button->page()->toPage()->url() : $button->url()->escape('attr'); ?>
-  <a class="button is-dark is-outlined" href="<?= $url ?>">
-    <?= $button->label()->escape() ?>
-  </a>
-  <?php endforeach ?>
-</div>
-<?php endif ?>

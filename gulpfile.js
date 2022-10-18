@@ -4,7 +4,6 @@ import gulp from 'gulp';
 import postCSS from 'gulp-postcss';
 import purgeCSS from 'gulp-purgecss';
 import gulpSass from 'gulp-sass';
-import combineMediaQuery from 'postcss-combine-media-query';
 import dartSass from 'sass';
 
 function compile() {
@@ -21,7 +20,6 @@ function purge() {
 
 function optimize() {
   return postCSS([
-    combineMediaQuery,
     autoprefixer,
     cssnano({
       preset: ['default', { discardComments: { removeAll: true } }]

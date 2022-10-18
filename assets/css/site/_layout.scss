@@ -1,31 +1,18 @@
-nav {
-  @include until($navbar-breakpoint) {
-    .button {
-      margin-right: 0 !important;
-      width: 100%;
-    }
+.navbar {
+  font-weight: $weight-semibold;
+
+  a:not(:hover, .is-active) {
+    text-decoration: none;
   }
 
-  .navbar-start {
+  &-start {
     margin-left: auto;
     margin-right: 0;
   }
-
-  a {
-    font-weight: $weight-semibold;
-
-    &:not(.button) {
-      &:hover, &.is-active {
-        text-decoration: underline $primary 2px; 
-      }
-    }
-  }
-
-
-  .navbar-brand a {
+  &-brand a {
     flex-shrink: 1;
 
-    &:hover {
+    &:hover img {
       opacity: 0.8;
     }
 
@@ -33,27 +20,28 @@ nav {
       filter: brightness(100);
     }
   }
-
-  .navbar-lang a:hover {
+  &-lang a:hover {
     color: inherit;
   }
 
-  .navbar-burger {
-    flex-shrink: 0;
+  @include until($navbar-breakpoint) {
+    .navbar-burger {
+      flex-shrink: 0;
+    }
+
+    .button {
+      margin-right: 0 !important;
+      width: 100%;
+    }
   }
 }
 
-.hero-body {
-  text-align: center;
-
-  .title:not(:last-child) {
-    margin-bottom: $size-1;
+.footer {
+  ul a {
+    text-decoration: none;
   }
-  .button {
-    font-weight: $weight-medium;
-  }
-}
 
-footer > div > div.content:last-child {
-  text-align: center;
+  &-copyright {
+    text-align: center;
+  }
 }

@@ -1,101 +1,40 @@
-section > div > .title {
-  line-height: inherit;
-  text-align: center;
-}
-
-.action {
-  border: 2px solid;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: $column-gap;
-
-  &.is-build {
-    border-color: $build;
-  }
-  &.is-regenerate {
-    border-color: $regenerate;
-  }
-  &.is-intervene {
-    border-color: $intervene;
-  }
-
-  header p:first-child {
-    float: right;
-    user-select: none;
-  }
-  > *:not(:last-child) {
-    margin-bottom: $size-7;
-  }
-  > *:nth-child(2) {
-    margin-top: auto;
-  }
-  a {
-    text-decoration: underline 2px;
-  }
-}
-
-.news .subtitle {
-  font-weight: $weight-medium;
-}
-
-.partners {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  font-weight: $weight-medium;
-  margin: -$column-gap;
-  justify-content: center;
-  text-align: center;
-
-  li {
-    padding: $column-gap;
-
-    a:hover img {
-      opacity: 0.6;
-    }
-    img {
-      height: 60px;
-      object-fit: contain;
-      width: 120px;
-    }
-  }
-}
-
-.card-footer-item {
-  display: inline-block;
-  text-align: center;
-}
-
-a {
-  &.is-build {
-    text-decoration-color: $build;
-
-    &:hover {
-      color: $build;
-    }
-  }
-  &.is-regenerate {
-    text-decoration-color: $regenerate;
-
-    &:hover {
-      color: $regenerate;
-    }
-  }
-  &.is-intervene {
-    text-decoration-color: $intervene;
-
-    &:hover {
-      color: $intervene;
-    }
-  }
-}
-.content, .card-footer {
-  a {
-    text-decoration: underline 2px $primary;
-  }
-}
-
 h1, h2 {
   font-family: $family-secondary;
+
+  &.title {
+    line-height: inherit;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: $size-1;
+    }
+  }
+}
+
+a:not(.button) {
+  text-decoration: underline 2px $primary;
+
+  @mixin link-variant($color) {
+    text-decoration-color: $color;
+
+    &:hover {
+      color: $color;
+    }
+  }
+  &.is-build {
+    @include link-variant($build);
+  }
+  &.is-regenerate {
+    @include link-variant($regenerate);
+  }
+  &.is-intervene {
+    @include link-variant($intervene);
+  }
+}
+
+.card {
+  &-footer-item {
+    display: inline-block;
+    text-align: center;
+  }
 }

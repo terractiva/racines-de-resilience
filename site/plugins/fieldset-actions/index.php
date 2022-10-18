@@ -2,10 +2,10 @@
 
 Kirby::plugin('racines-de-resilience/fieldset-actions', [
   'blueprints' => [
-    'blocks/actions' => __DIR__ . '/blueprints/actions.yml'
+    'blocks/actions' => __DIR__ . '/blueprint.yml'
   ],
   'snippets' => [
-    'blocks/action' => __DIR__ . '/snippets/action.php',
-    'blocks/actions' => __DIR__ . '/snippets/actions.php'
+    'blocks/actions' => __DIR__ . '/snippet.php',
+    'elements/action' => __DIR__ . '/snippets/action.php'
   ]
 ]);

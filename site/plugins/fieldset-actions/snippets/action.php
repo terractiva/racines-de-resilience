@@ -9,22 +9,24 @@
   $class = esc($class, 'attr');
 ?>
 
-<article class="action <?= $class ?>">
-  <header class="title is-6">
-    <p><?= str_repeat('∎', $action['level']) ?></p>
-    <p><?= esc($action['name']) ?></p>
-  </header>
+<div class="action <?= $class ?>">
+  <div class="action-name title is-6">
+    <p class="action-level">
+      <?= str_repeat('∎', $action['level']) ?>
+    </p>
+    <p>
+      <?= esc($action['name']) ?>
+    </p>
+  </div>
 
-  <p>
+  <p class="action-sources">
     <?php foreach ($sources = $action['sources'] as $source): ?>
     <?php e($hasUrl = $source['url'], '<a class="' . $class . '" href="' . esc($source['url'] ?? '', 'attr') . '">'); ?>
-    <?= $source['name'] ?><?php e($hasUrl, '</a>'); ?><?php e($source !== end($sources), ',') ?>
+    <?= $source['name'] ?><?php e($hasUrl, '</a>') . e($source !== end($sources), ','); ?>
     <?php endforeach ?>
   </p>
 
-  <p>
-    <span class="tag <?= $class ?> is-light is-medium">
-      <?= esc($action['subcategory']) ?>
-    </span>
+  <p class="action-subcategory">
+    <?= esc($action['subcategory']) ?>
   </p>
-</article>
+</div>
