@@ -1,18 +1,16 @@
 @import "bulma/sass/utilities/initial-variables.sass";
 
-$blue: #59A6D9;
-$green: #88B559;
-$purple: #332131;
-$red: #D47866;
+$build: #59A6D9; // bleu
+$regenerate: #88B559; // vert
+$intervene: #D47866; //rouge
 $light: #F5EAE0;
-$dark: $purple;
-$primary: $red;
+$dark: #332131;
+$primary: $intervene;
 
 $custom-colors: (
-  "blue": ($blue, $black),
-  "green": ($green, $black),
-  "red": ($red, $black),
-  "purple": ($purple, $white)
+  "build": ($build, $black),
+  "regenerate": ($regenerate, $black),
+  "intervene": ($intervene, $black)
 );
 
 $family-secondary: "Tahoma", $family-sans-serif;
@@ -60,7 +58,7 @@ $card-footer-border-top: 1px solid $grey;
 // @import "bulma/sass/elements/notification.sass";
 // @import "bulma/sass/elements/progress.sass";
 // @import "bulma/sass/elements/table.sass";
-// @import "bulma/sass/elements/tag.sass";
+@import "bulma/sass/elements/tag.sass";
 @import "bulma/sass/elements/title.sass";
 // @import "bulma/sass/elements/other.sass";
 

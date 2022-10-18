@@ -33,11 +33,11 @@
         <div class="navbar-item">
           <div class="buttons">
             <?php if ($navButtonPage = $site->navButtonPage()->toPage()): ?>
-            <a class="button is-blue is-light" href="<?= $navButtonPage->url() ?>">
+            <a class="button is-build is-light" href="<?= $navButtonPage->url() ?>">
               <?= $navButtonPage->navLabel()->or($navButtonPage->title())->escape() ?>
             </a>
             <?php endif ?>
-            <a class="button is-green is-light" href="<?= $site->actionAddUrl()->escape('attr') ?>">
+            <a class="button is-regenerate is-light" href="<?= $site->actionAddUrl()->escape('attr') ?>">
               Ajouter une action
             </a>
           </div>

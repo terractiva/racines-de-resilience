@@ -1,11 +1,37 @@
-section {
-  &.has-background-purple {
-    color: $white;
+section > div > .title {
+  line-height: inherit;
+  text-align: center;
+}
+
+.action {
+  border: 2px solid;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: $column-gap;
+
+  &.is-build {
+    border-color: $build;
+  }
+  &.is-regenerate {
+    border-color: $regenerate;
+  }
+  &.is-intervene {
+    border-color: $intervene;
   }
 
-  > div > .title {
-    line-height: inherit;
-    text-align: center;
+  header p:first-child {
+    float: right;
+    user-select: none;
+  }
+  > *:not(:last-child) {
+    margin-bottom: $size-7;
+  }
+  > *:nth-child(2) {
+    margin-top: auto;
+  }
+  a {
+    text-decoration: underline 2px;
   }
 }
 
@@ -41,6 +67,29 @@ section {
   text-align: center;
 }
 
+a {
+  &.is-build {
+    text-decoration-color: $build;
+
+    &:hover {
+      color: $build;
+    }
+  }
+  &.is-regenerate {
+    text-decoration-color: $regenerate;
+
+    &:hover {
+      color: $regenerate;
+    }
+  }
+  &.is-intervene {
+    text-decoration-color: $intervene;
+
+    &:hover {
+      color: $intervene;
+    }
+  }
+}
 .content, .card-footer {
   a {
     text-decoration: underline 2px $primary;

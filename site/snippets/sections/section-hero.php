@@ -1,4 +1,4 @@
-<section class="hero is-purple is-medium">
+<section class="hero is-dark is-medium">
   <div class="hero-body">
     <h1 class="title">
       <?= $page->heroHeading() ?>

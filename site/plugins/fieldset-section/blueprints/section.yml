@@ -6,10 +6,10 @@ fields:
     type: select
     label: Style
     options:
-      has-background-blue: Bleu
-      has-background-red: Rouge
-      has-background-green: Vert
-      has-background-purple: Violet
+      has-background-dark has-text-white: Sombre
+      has-background-build: Bleu (Construire)
+      has-background-intervene: Rouge (S'interposer)
+      has-background-regenerate: Vert (Régénérer)
 
   heading:
     extends: fields/heading
@@ -21,5 +21,6 @@ fields:
     layouts:
       - "1/1"
     fieldsets:
+      actions: true
       news: true
       partners: true

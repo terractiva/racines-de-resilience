@@ -12,4 +12,4 @@ tabs:
   settings:
     label: Paramètres
     icon: settings
-    extends: sections/site-tabs-settings
+    extends: sections/site-tab-settings

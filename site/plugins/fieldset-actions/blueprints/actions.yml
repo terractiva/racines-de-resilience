@@ -1,0 +1,40 @@
+name: Actions
+icon: star
+fields:
+  buttons:
+    type: structure
+    label: Boutons
+    columns:
+      label: true
+      page: true
+      url: true
+    fields:
+      label:
+        type: text
+        label: Libellé
+        width: 1/2
+        required: true
+      type:
+        type: select
+        label: Type
+        width: 1/2
+        required: true
+        default: page
+        options:
+          page: Lien interne
+          url: Lien externe
+
+      page:
+        type: pages
+        label: Page
+        required: true
+        max: 1
+        when:
+          type: page
+
+      url:
+        type: url
+        label: Lien
+        required: true
+        when:
+          type: url
