@@ -1,6 +1,6 @@
-<ul class="partners">
+<div class="partners columns is-centered is-mobile is-multiline">
   <?php foreach ($site->partners()->toStructure() as $partner): ?>
-  <li class="">
+  <div class="column is-narrow">
     <?php e($hasUrl = $partner->url()->isNotEmpty(), '<a href="' . $partner->url()->escape('attr') . '">'); ?>
     <?php if ($partner->logo()->isNotEmpty()): ?>
     <img
@@ -11,6 +11,6 @@
     <p><?= $partner->name()->escape() ?></p>
     <?php endif ?>
     <?php e($hasUrl, '</a>'); ?>
-  </li>
+  </div>
   <?php endforeach ?>
-</unlink>
+</div>

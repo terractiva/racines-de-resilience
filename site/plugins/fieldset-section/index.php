@@ -2,9 +2,9 @@
 
 Kirby::plugin('racines-de-resilience/fieldset-section', [
   'blueprints' => [
-    'blocks/section' => __DIR__ . '/blueprints/section.yml'
+    'blocks/section' => __DIR__ . '/blueprint.yml'
   ],
   'snippets' => [
-    'blocks/section' => __DIR__ . '/snippets/section.php'
+    'blocks/section' => __DIR__ . '/snippet.php'
   ]
 ]);

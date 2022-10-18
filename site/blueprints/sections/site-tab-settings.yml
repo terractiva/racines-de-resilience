@@ -7,9 +7,6 @@ columns:
         numbered: false
   - width: 1/1
     fields:
-      actionAddUrl:
-        type: url
-        label: Lien pour ajouter une action
       partners:
         type: structure
         label: Partenaires
@@ -19,7 +16,7 @@ columns:
           logo:
             type: files
             label: Logo
-            width: 1/3
+            width: 1/6
             help: L'image sera automatiquement optimisée
             max: 1
             layout: cards
@@ -30,13 +27,13 @@ columns:
           name:
             type: text
             label: Nom
-            width: 1/3
+            width: 5/12
             required: true
             autofocus: true
           url:
             type: url
             label: Lien
-            width: 1/3
+            width: 5/12
 
   - width: 1/1
     fields:
@@ -49,7 +46,7 @@ columns:
       logo:
         type: files
         label: Logo
-        width: 1/3
+        width: 1/6
         required: true
         help: L'image sera automatiquement optimisée
         max: 1
@@ -61,16 +58,12 @@ columns:
       navPages:
         type: pages
         label: Liens
-        width: 1/3
+        width: 5/12
         help: Le libellé est personnalisable dans les paramètres de la page
         text: "{{ model.navLabel.or(model.title) }}"
-      navButtonPage:
-        type: pages
-        label: Bouton
-        width: 1/3
-        help: Le libellé est personnalisable dans les paramètres de la page
-        max: 1
-        text: "{{ model.navLabel.or(model.title) }}"
+      navButtons:
+        extends: fields/buttons
+        width: 5/12
 
   - width: 1/1
     fields:

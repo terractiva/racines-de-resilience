@@ -42,10 +42,6 @@ News:
 
 ----
 
-Actionaddurl: https://airtable.com/shrlqNJvuiem0iFkA
-
-----
-
 Partners:
 
 - 
@@ -107,7 +103,25 @@ Navpages:
 
 ----
 
-Navbuttonpage: - page://lAqO3y4hhuMN3Ugu
+Navbuttons:
+
+- 
+  color: is-build
+  islight: 'true'
+  isoutlined: 'false'
+  label: Nous soutenir
+  type: page
+  page:
+    - page://lAqO3y4hhuMN3Ugu
+  url: ""
+- 
+  color: is-regenerate
+  islight: 'true'
+  isoutlined: 'false'
+  label: Ajouter une action
+  type: url
+  page: [ ]
+  url: https://airtable.com/shrlqNJvuiem0iFkA
 
 ----
 

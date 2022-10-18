@@ -1,0 +1,62 @@
+type: structure
+label: Boutons
+columns:
+  label: true
+  page: true
+  url: true
+fields:
+  color:
+    type: select
+    label: Couleur
+    required: true
+    width: 1/3
+    default: is-dark
+    options:
+      is-dark: Noir
+      is-white: Blanc
+      is-build: Bleu (Construire)
+      is-intervene: Rouge (S'interposer)
+      is-regenerate: Vert (Régénérer)
+  isLight:
+    type: toggle
+    label: Style de couleur
+    width: 1/3
+    text:
+      - Normal
+      - Léger
+  isOutlined:
+    type: toggle
+    label: Variante
+    width: 1/3
+    text:
+      - Normal
+      - Bordure
+
+  label:
+    type: text
+    label: Libellé
+    width: 1/2
+    required: true
+  type:
+    type: select
+    label: Type
+    width: 1/2
+    required: true
+    default: page
+    options:
+      page: Lien interne
+      url: Lien externe
+
+  page:
+    type: pages
+    label: Page
+    required: true
+    max: 1
+    when:
+      type: page
+  url:
+    type: url
+    label: Lien
+    required: true
+    when:
+      type: url

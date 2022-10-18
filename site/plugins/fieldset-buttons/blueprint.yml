@@ -1,0 +1,6 @@
+name: Boutons
+icon: url
+fields:
+  buttons:
+    extends: fields/buttons
+    required: true

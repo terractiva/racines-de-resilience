@@ -30,18 +30,11 @@
           <?php snippet('layout/nav-lang') ?>
         </div>
 
+        <?php if ($site->navButtons()->isNotEmpty()): ?>
         <div class="navbar-item">
-          <div class="buttons">
-            <?php if ($navButtonPage = $site->navButtonPage()->toPage()): ?>
-            <a class="button is-build is-light" href="<?= $navButtonPage->url() ?>">
-              <?= $navButtonPage->navLabel()->or($navButtonPage->title())->escape() ?>
-            </a>
-            <?php endif ?>
-            <a class="button is-regenerate is-light" href="<?= $site->actionAddUrl()->escape('attr') ?>">
-              Ajouter une action
-            </a>
-          </div>
+          <?= snippet('elements/buttons', ['buttons' => $site->navButtons()]) ?>
         </div>
+        <?php endif ?>
       </div>
     </div>
     <?php endif ?>

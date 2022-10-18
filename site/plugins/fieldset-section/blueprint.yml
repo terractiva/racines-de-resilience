@@ -6,7 +6,7 @@ fields:
     type: select
     label: Style
     options:
-      has-background-dark has-text-white: Sombre
+      has-background-dark has-text-white: Noir
       has-background-build: Bleu (Construire)
       has-background-intervene: Rouge (S'interposer)
       has-background-regenerate: Vert (Régénérer)
@@ -21,6 +21,7 @@ fields:
     layouts:
       - "1/1"
     fieldsets:
+      buttons: true
       actions: true
       news: true
       partners: true

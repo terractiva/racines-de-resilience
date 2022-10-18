@@ -1,4 +1,4 @@
-<section class="section <?= $block->style()->isNotEmpty() ? ' ' . $block->style() : '' ?>">
+<section class="section<?= e($block->style()->isNotEmpty(), ' ' . $block->style()) ?>">
   <div class="container">
     <?php if ($block->heading()->isNotEmpty()): ?>
     <h2 class="title"><?= $block->heading() ?></h2>
