@@ -1,5 +1,8 @@
 type: fields
 fields:
+  settingsMemo:
+    extends: sections/memo
+
   navLabel:
     type: text
     label: Libellé dans l'en-tête

@@ -1,11 +1,16 @@
 columns:
-  - width: 1/1
+  - width:
+    sections:
+      siteHomeMemo:
+        extends: sections/memo
+
+  - width:
     fields:
       miscHeadline:
         type: headline
         label: Divers
         numbered: false
-  - width: 1/1
+  - width:
     fields:
       partners:
         type: structure
@@ -35,13 +40,13 @@ columns:
             label: Lien
             width: 5/12
 
-  - width: 1/1
+  - width:
     fields:
       navHeadline:
         type: headline
         label: En-tête
         numbered: false
-  - width: 1/1
+  - width:
     fields:
       logo:
         type: files
@@ -65,7 +70,7 @@ columns:
         extends: fields/buttons
         width: 5/12
 
-  - width: 1/1
+  - width:
     fields:
       footerHeadline:
         type: headline
@@ -111,7 +116,7 @@ columns:
         label: Texte libre
         required: true
         nodes: false
-  - width: 1/1
+  - width:
     fields:
       footerCopyright:
         type: writer

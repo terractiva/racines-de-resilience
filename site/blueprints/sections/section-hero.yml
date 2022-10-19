@@ -1,5 +1,8 @@
 type: fields
 fields:
+  heroMemo:
+    extends: sections/memo
+
   heroHeading:
     extends: fields/heading
     label: Introduction - Titre

@@ -1,4 +1,9 @@
 columns:
+  - width:
+    sections:
+      siteHomeMemo:
+        extends: sections/memo
+
   - width: 2/3
     sections:
       news:

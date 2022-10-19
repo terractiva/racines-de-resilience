@@ -11,6 +11,8 @@ tabs:
     label: Contenu
     icon: page
     sections:
+      treeMemo:
+        extends: sections/memo
 
   settings:
     label: Paramètres
