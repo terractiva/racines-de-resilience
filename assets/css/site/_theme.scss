@@ -12,7 +12,9 @@ h1, h2 {
 }
 
 a:not(.button) {
-  text-decoration: underline 2px $primary;
+  text-decoration: underline;
+  text-decoration-color: $primary;
+  text-decoration-thickness: 2px;
 
   @mixin link-variant($color) {
     text-decoration-color: $color;
