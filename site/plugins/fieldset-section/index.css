@@ -1,3 +1,4 @@
-.plugin-fieldset-section {
+.plugin-fieldset-section .k-field-header,
+.plugin-fieldset-section > p {
   text-align: center;
 }

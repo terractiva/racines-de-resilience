@@ -1,18 +1,35 @@
 panel.plugin('racines-de-resilience/fieldset-section', {
   blocks: {
-    section: `
-      <div class="plugin-fieldset-section">
-        <div class="k-block-type-heading-input" data-level="h2">
-          <k-writer
-            placeholder="Titre..."
-            ref="input"
-            :inline="true"
-            :value="content.heading"
-            @input="update({ heading: $event })"
+    section: {
+      data() {
+        return {
+          model: {
+            heading: this.content.heading,
+            layout: this.content.layout
+          }
+        };
+      },
+      computed: {
+        fields() {
+          return {
+            heading: this.field('heading'),
+            layout: this.field('layout')
+          };
+        }
+      },
+      template: `
+        <div class="plugin-fieldset-section">
+          <k-fieldset
+            v-model="model"
+            :fields="fields"
+            @input="update({
+              heading: $event.heading,
+              layout: $event.layout
+            })"
           />
+          <p><i>Plus d'options dans les paramètres</i></p>
         </div>
-        <p><em>Ouvrez les paramètres pour sélectionner le contenu</em></p>
-      </div>
-    `
+      `
+    }
   }
 });
