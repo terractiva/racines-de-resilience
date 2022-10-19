@@ -1,0 +1,21 @@
+Title: Actions
+
+----
+
+Heroheading: Passer à l'action,<br>Ensemble
+
+----
+
+Herobuttons: 
+
+----
+
+Layout: [{"content":{"style":"","heading":"<em>En cours de construction<\/em>","layout":""},"id":"7b238d7a-c2e1-41bf-98bc-4d205676caad","isHidden":false,"type":"section"}]
+
+----
+
+Navlabel: 
+
+----
+
+Uuid: qm0sQPbBSM5LZPGM

@@ -6,6 +6,20 @@ Heroheading: Page introuvable
 
 ----
 
+Herobuttons:
+
+- 
+  color: is-white
+  islight: 'false'
+  isoutlined: 'false'
+  label: "Revenir à l'accueil"
+  type: page
+  page:
+    - page://3xOuBIeX2OgO6UgS
+  url: ""
+
+----
+
 Layout: 
 
 ----

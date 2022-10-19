@@ -1,0 +1,25 @@
+Title: The film
+
+----
+
+Slug: the-film
+
+----
+
+Heroheading: <em>Roots of resilience</em> grew out of a film
+
+----
+
+Herobuttons: 
+
+----
+
+Layout: [{"content":{"style":"","heading":"<em>Under construction<\/em>","layout":""},"id":"f194fb57-8e4c-441a-8006-7d2c637910bf","isHidden":false,"type":"section"}]
+
+----
+
+Navlabel: 
+
+----
+
+Uuid: asaA7JJJPXhOtvsr

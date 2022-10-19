@@ -11,3 +11,17 @@ Layout:
 ----
 
 Uuid: P2EbgpSFqUq0isKV
+
+----
+
+Herobuttons:
+
+- 
+  color: is-white
+  islight: 'false'
+  isoutlined: 'false'
+  label: Go back home
+  type: page
+  page:
+    - page://3xOuBIeX2OgO6UgS
+  url: ""

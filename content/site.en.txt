@@ -1,0 +1,160 @@
+Title: Racines de résilience
+
+----
+
+News:
+
+- 
+  heading: >
+    Need a gift? Limited-edition posters and
+    soundtracks
+  date: 2022-10-15
+  text: '<p>Supporting artists created limited-edition posters of <em>Once you know</em> and the original score composer designed an exclusive soundtrack as well as a podcast on the film. To support us and create awareness around the film, treat yourself to hand crafted, sustainable prints using risography or to an exclusive digital soundtrack.</p>'
+  linklabel: Explore the shop
+  linkurl: >
+    https://www.boutique.racinesderesilience.org/
+- 
+  heading: '<em>Once you know</em> now in Switzerland and Belgium'
+  date: 2022-08-31
+  text: '<p>This heartbreaking documentary is out in Swiss and Belgian film theatres in the fall 2022. In both countries, we need support to organise screenings, facilitate live forums, localise the actions and organisations in the tree and last but not least, to spread the news. Invite your network to follow the film and its online community. Thank you for your support!</p>'
+  linklabel: Join the adventure
+  linkurl: https://t.ly/8ZuU
+- 
+  heading: '<em>Mue</em> magazine, our press partner'
+  date: 2022-07-15
+  text: '<p>Another stakeholder in co-building tomorrow’s world through inspiring and practical initiatives, the bi-monthly magazine <em><a href="https://je-mue.com/" target="_blank" rel="noopener noreferrer">Mue</a></em> choses to support <em>Roots to resilience</em> by sharing one of many levers outlined in their themed issues.</p><p>From issue #4 <em>Papilles!</em> came the action <strong>Creating outreach grocery shop</strong>, as part of the <em>ANDES </em>initiative which over the past 20 years has developed a network of 460 grocery stores, providing low income families with healthy and diverse food. Thanks to <em>Mue</em>, we can now all start a local outreach grocery project.</p>'
+  linklabel: 'More about <em>ANDES</em>'
+  linkurl: >
+    https://andes-france.com/nos-actions/les-epiceries-solidaires/creer-une-epicerie-solidaire/
+- 
+  heading: Facilitation changes everything!
+  date: 2022-05-03
+  text: '<p>If you couldn’t make it to one of the screening events, enjoy the public’s reactions at Saint-Michel, Paris during this October 2021 screening. And if you’re still curious about it, you can access <a href="https://tube.nocturlab.fr/videos/watch/c0749df2-fcfa-4a3e-b4ab-c5e8bae9a6a7" rel="noopener noreferrer">the full event here</a> facilitated by <strong>Brianne Parquier</strong> with <strong>Emmanuel Cappellin</strong>, <strong>Anne-Marie Sangla</strong> and <strong>Jean-Marc Jancovici</strong>!</p>'
+  linklabel: Watch the teaser
+  linkurl: >
+    https://www.facebook.com/UneFoisQueTuSais/videos/267364971934339/
+- 
+  heading: VOD and DVD release
+  date: 2022-03-01
+  text: |
+    <p>You want to see <em>Once you know</em> at home? The film is available <strong>On Demand (VOD) from February 28 2022</strong>. You can access it <a href="https://bit.ly/3huPsHl" rel="noopener noreferrer">on Vimeo</a> or <a href="https://bit.ly/3C9zqfK" rel="noopener noreferrer">on the French website AlloCiné</a>. <a href="https://fb.watch/bwlkPqahCC/" rel="noopener noreferrer">Here</a> is the release Emmanuel Cappellin's announcement. Once you’ve seen the film, you can head to <a href="https://www.racinesderesilience.org/discussion-guidee" rel="noopener noreferrer">this guided discussion</a>: it aims to put the film's message into perspective. The <strong>DVD was released in May 2022</strong>. Follow the movie on Facebook to keep yourself up to date!</p>
+  linklabel: Page of the film
+  linkurl: >
+    https://pulp-films.fr/project/une-fois-que-tu-sais/
+
+----
+
+Partners:
+
+- 
+  logo:
+    - file://t0jRE56yDAGoBcf6
+  name: Yggdrasil
+  url: https://yggdrasil-mag.com/
+- 
+  logo:
+    - file://64KSRmYwzm7egnJJ
+  name: Nutergia
+  url: https://www.nutergia.com/
+- 
+  logo:
+    - file://thL1xE2iRwD6fDv7
+  name: Léa Nature
+  url: https://www.leanature.com/
+- 
+  logo:
+    - file://T0jpchrvY77qKLhY
+  name: Infomaniak
+  url: https://www.infomaniak.com/fr
+- 
+  logo:
+    - file://YgE6Rh1XDeyDOiUh
+  name: '1% for the Planet'
+  url: https://www.onepercentfortheplanet.fr/
+- 
+  logo:
+    - file://kHtvtMX7njRI2zj7
+  name: Nour films
+  url: https://www.nourfilms.com/
+- 
+  logo: [ ]
+  name: Thomas Seignette
+  url: https://tseignette.github.io/
+- 
+  logo:
+    - file://JrYwHPxIqoNN5a4b
+  name: Pulp Films
+  url: https://pulp-films.fr/
+- 
+  logo:
+    - file://C9VPj84r4YoSe7lJ
+  name: Terractiva
+  url: ""
+
+----
+
+Logo: - file://0iCvAOoRs5QtgRYD
+
+----
+
+Navpages:
+
+- page://qm0sQPbBSM5LZPGM
+- page://YKln3T0YKA0khias
+- page://oW42R8LCvTrrjUZc
+
+----
+
+Navbuttons:
+
+- 
+  color: is-build
+  islight: 'true'
+  isoutlined: 'false'
+  label: Support us
+  type: page
+  page:
+    - page://lAqO3y4hhuMN3Ugu
+  url: ""
+- 
+  color: is-regenerate
+  islight: 'true'
+  isoutlined: 'false'
+  label: Add an action
+  type: url
+  page: [ ]
+  url: https://airtable.com/shrlqNJvuiem0iFkA
+
+----
+
+Footersocialheading: Follow us
+
+----
+
+Footersociallinks:
+
+- 
+  label: Facebook
+  url: >
+    https://www.facebook.com/UneFoisQueTuSais/
+- 
+  label: Instagram
+  url: https://www.instagram.com/_onceyouknow/
+- 
+  label: Twitter
+  url: https://twitter.com/onceyouknowfilm
+- 
+  label: TikTok
+  url: https://www.tiktok.com/@_onceyouknow
+
+----
+
+Footersitemapheading: Site map
+
+----
+
+Footerfreetext: <p>The code of the website is available on <a href="https://github.com/Terractiva/racines-de-resilience/" rel="noopener noreferrer">GitHub</a>, it is placed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer">CC BY-SA 4.0</a> licence.</p><p>The images are the property of <a href="https://www.theotimenoel.com/" rel="noopener noreferrer">Théotime Noël</a> and the <em>Tree of actions</em> of the Terractiva association.</p><p>The contents of all listed actions belong to their respective structures.</p>
+
+----
+
+Footercopyright: <p>Website by <a href="https://tseignette.github.io/en" rel="noopener noreferrer">Thomas Seignette</a> • Kindly hosted by <a href="https://www.infomaniak.com/en" rel="noopener noreferrer">Infomaniak</a></p><p>Terractiva © 2022</p>

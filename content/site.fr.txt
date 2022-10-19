@@ -21,7 +21,7 @@ News:
   heading: 'La revue <em>Mue</em> partenaire éditorial'
   date: 2022-07-15
   text: |
-    <p>Parce qu’elle présente aussi des initiatives inspirantes et concrètes pour co-construire demain, la revue bimestrielle <em><a href="https://je-mue.com/" target="_blank" rel="noopener noreferrer">Mue</a></em> choisit de soutenir <em>Racines de résilience</em> en partageant chaque mois ici l'un des nombreux leviers d'action déclinés dans ses numéros thématiques.</p><p>Issue de leur numéro 5 : <em>Apprentissages</em> ; voici l’action <strong>Enseignant·e, parent, j’amène les enfants au contact de la nature</strong>, en lien avec l’initiative citoyenne <em><a href="http://classe-dehors.org/" target="_blank" rel="noopener noreferrer">Classe Dehors</a></em>, une communauté d’entraide pour faciliter la pratique de la classe en extérieur. Choisir un lieu et une durée, obtenir les autorisations, mobiliser des soutiens, trouver des ressources… c’est une véritable mine d’informations pour les enseignant·es tenté·es par l’expérience !</p>
+    <p>Parce qu’elle présente aussi des initiatives inspirantes et concrètes pour co-construire demain, la revue bimestrielle <em><a href="https://je-mue.com/" target="_blank" rel="noopener noreferrer">Mue</a></em> choisit de soutenir <em>Racines de résilience</em> en partageant chaque mois ici l'un des nombreux leviers d'action déclinés dans ses numéros thématiques.</p><p>Issue de leur numéro 5 <em>Apprentissages</em> voici l’action <strong>Enseignant·e, parent, j’amène les enfants au contact de la nature</strong>, en lien avec l’initiative citoyenne <em><a href="http://classe-dehors.org/" target="_blank" rel="noopener noreferrer">Classe Dehors</a></em>, une communauté d’entraide pour faciliter la pratique de la classe en extérieur. Choisir un lieu et une durée, obtenir les autorisations, mobiliser des soutiens, trouver des ressources… c’est une véritable mine d’informations pour les enseignant·es tenté·es par l’expérience !</p>
   linklabel: 'Découvrez <em>Classe Dehors</em>'
   linkurl: >
     https://classe-dehors.org/?PagePrincipale
@@ -151,7 +151,7 @@ Footersitemapheading: Plan du site
 
 ----
 
-Footerfreetext: <p>Les textes et labels de ce site placés sous licence CC0 et sont libres de diffusion, à condition de citer ©RacinesDeResilience et de nous le faire savoir.</p><p>Les images sont la propriété de Théotime Noël et l'Arbre aux actions de l'association Terractiva.</p><p>Les contenus de toutes les actions référencées appartiennent à leurs structures respectives.</p>
+Footerfreetext: <p>Le code du site est disponible sur <a href="https://github.com/Terractiva/racines-de-resilience/" rel="noopener noreferrer">GitHub</a>, il est placé sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" rel="noopener noreferrer">CC BY-SA 4.0</a>.</p><p>Les images sont la propriété de <a href="https://www.theotimenoel.com/" rel="noopener noreferrer">Théotime Noël</a> et l'<em>Arbre aux actions</em> de l'association Terractiva.</p><p>Les contenus de toutes les actions référencées appartiennent à leurs structures respectives.</p>
 
 ----
 

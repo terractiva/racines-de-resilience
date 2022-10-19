@@ -17,7 +17,7 @@
       </div>
 
       <div class="column is-4">
-        <p class="title is-5"><strong>Plan du site</strong></p>
+        <p class="title is-5"><strong><?= $site->footerSitemapHeading()->escape() ?></strong></p>
         <ul>
           <?php foreach ($site->children()->listed() as $footerPage): ?>
           <?php if ($footerPage->translation()->exists()): ?>
@@ -37,7 +37,7 @@
     <div class="footer-copyright content">
       <?= $site->footerCopyright() ?>
 
-      <?php if (option('environment') !== 'dev'): ?>
+      <?php if (option('environment') == 'prod'): ?>
       <div id="wcb" class="carbonbadge wcb-d"></div>
       <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
       <?php endif ?>
