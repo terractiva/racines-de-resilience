@@ -37,7 +37,7 @@ News:
   heading: VOD and DVD release
   date: 2022-03-01
   text: |
-    <p>You want to see <em>Once you know</em> at home? The film is available <strong>On Demand (VOD) from February 28 2022</strong>. You can access it <a href="https://bit.ly/3huPsHl" rel="noopener noreferrer">on Vimeo</a> or <a href="https://bit.ly/3C9zqfK" rel="noopener noreferrer">on the French website AlloCiné</a>. <a href="https://fb.watch/bwlkPqahCC/" rel="noopener noreferrer">Here</a> is the release Emmanuel Cappellin's announcement. Once you’ve seen the film, you can head to <a href="https://www.racinesderesilience.org/discussion-guidee" rel="noopener noreferrer">this guided discussion</a>: it aims to put the film's message into perspective. The <strong>DVD was released in May 2022</strong>. Follow the movie on Facebook to keep yourself up to date!</p>
+    <p>You want to see <em>Once you know</em> at home? The film is available <strong>On Demand (VOD) from February 28 2022</strong>. You can access it <a href="https://bit.ly/3huPsHl" rel="noopener noreferrer">on Vimeo</a> or <a href="https://bit.ly/3C9zqfK" rel="noopener noreferrer">on the French website AlloCiné</a>. <a href="https://fb.watch/bwlkPqahCC/" rel="noopener noreferrer">Here</a> is the release Emmanuel Cappellin's announcement. Once you’ve seen the film, you can head to <a href="/guided-discussion" rel="noopener noreferrer">this guided discussion</a>: it aims to put the film's message into perspective. The <strong>DVD was released in May 2022</strong>. Follow the movie on Facebook to keep yourself up to date!</p>
   linklabel: Page of the film
   linkurl: >
     https://pulp-films.fr/project/une-fois-que-tu-sais/
@@ -115,7 +115,10 @@ Navbuttons:
   type: page
   page:
     - page://lAqO3y4hhuMN3Ugu
+  pageanchor: ""
   url: ""
+  email: ""
+  emailsubject: ""
 - 
   color: is-regenerate
   islight: 'true'
@@ -123,7 +126,10 @@ Navbuttons:
   label: Add an action
   type: url
   page: [ ]
+  pageanchor: ""
   url: https://airtable.com/shrlqNJvuiem0iFkA
+  email: ""
+  emailsubject: ""
 
 ----
 

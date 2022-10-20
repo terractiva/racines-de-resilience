@@ -9,5 +9,10 @@ Kirby::plugin('racines-de-resilience/helpers', [
 
       return $site->breadcrumb()->not('home')->first()->title()->escape() . ' • ' . $site->title()->escape();
     }
+  ],
+  'fieldMethods' => [
+    'toTitleId' => function ($field) {
+      return Str::slug(strip_tags(str_replace('<br>', ' ', $field->value())));
+    }
   ]
 ]);

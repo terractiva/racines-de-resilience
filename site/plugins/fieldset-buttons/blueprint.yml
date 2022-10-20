@@ -1,6 +1,13 @@
 name: Boutons
 icon: url
 fields:
+  isVertical:
+    type: toggle
+    label: Afficher à la verticale
+    text:
+      - Non
+      - Oui
+
   buttons:
     extends: fields/buttons
     required: true

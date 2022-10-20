@@ -15,20 +15,12 @@
     &:hover img {
       opacity: 0.8;
     }
-
-    img {
-      filter: brightness(100);
-    }
   }
   &-lang a:hover {
     color: inherit;
   }
 
   @include until($navbar-breakpoint) {
-    .navbar-burger {
-      flex-shrink: 0;
-    }
-
     .button {
       margin-right: 0 !important;
       width: 100%;

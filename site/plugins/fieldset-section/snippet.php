@@ -1,19 +1,11 @@
-<section class="section<?= e($block->style()->isNotEmpty(), ' ' . $block->style()) ?>">
+<section class="section<?= e($block->color()->isNotEmpty(), ' ' . $block->color()) ?>">
   <div class="container">
     <?php if ($block->heading()->isNotEmpty()): ?>
-    <h2 class="title"><?= $block->heading() ?></h2>
+    <h2 class="title" id="<?= $block->heading()->toTitleId() ?>">
+      <?= $block->heading() ?>
+    </h2>
     <?php endif ?>
 
-    <?php foreach ($block->layout()->toLayouts() as $layout): ?>
-      <div class="columns">
-      <?php foreach ($layout->columns() as $column): ?>
-      <div class="column is-<?= $column->span() ?>">
-        <?php foreach ($column->blocks() as $columnBlock): ?>
-        <?= $columnBlock ?>
-        <?php endforeach ?>
-      </div>
-      <?php endforeach ?>
-    </div>
-    <?php endforeach ?>
+    <?= snippet('layout/layouts', ['layouts' => $block->layout()->toLayouts()]) ?>
   </div>
 </section>

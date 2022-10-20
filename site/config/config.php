@@ -6,7 +6,8 @@ return [
   'languages' => true,
   'languages.detect' => true,
   'panel' => [
-    'css' => 'assets/css/panel/styles.css'
+    'css' => 'assets/css/panel/styles.css',
+    'favicon' => 'assets/images/favicon.ico'
   ],
   'urls' => [
     'en' => 'https://www.roots-of-resilience.local',

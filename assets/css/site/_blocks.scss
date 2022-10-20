@@ -1,3 +1,7 @@
+.layouts {
+  justify-content: space-evenly;
+}
+
 .news {
   .subtitle {
     font-weight: $weight-medium;
@@ -26,6 +30,51 @@
     display: block;
     max-width: initial;
     object-fit: contain;
+  }
+}
+
+.box {
+  border: 2px solid $dark;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: $card-content-padding;
+
+  &:not(:last-child) {
+    margin-bottom: $size-4;
+  }
+  &.is-white {
+    border-color: $white;
+  }
+  &.is-build {
+    border-color: $build;
+  }
+  &.is-regenerate {
+    border-color: $regenerate;
+  }
+  &.is-intervene {
+    border-color: $intervene;
+  }
+
+  .title {
+    text-align: center;
+
+    + .buttons:last-child {
+      margin-bottom: auto;
+    }
+  }
+  .buttons {
+    &:last-child {
+      margin-top: auto;
+
+      &:first-child {
+        margin-bottom: auto;
+      }
+    }
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
   }
 }
 

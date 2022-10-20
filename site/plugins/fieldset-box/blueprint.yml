@@ -1,0 +1,28 @@
+name: Boîte
+icon: box
+fields:
+  color:
+    type: select
+    label: Couleur
+    placeholder: Noir
+    options:
+      is-white: Blanc
+      is-build: Bleu (Construire)
+      is-intervene: Rouge (S'interposer)
+      is-regenerate: Vert (Régénérer)
+
+  heading:
+    extends: fields/heading
+
+  layout:
+    type: layout
+    label: Contenu
+    layouts:
+      - "1/1"
+      - "1/2, 1/2"
+      - "5/12, 5/12"
+      - "1/3, 1/3, 1/3"
+    fieldsets:
+      text: true
+      list: true
+      buttons: true

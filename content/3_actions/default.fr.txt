@@ -10,7 +10,7 @@ Herobuttons:
 
 ----
 
-Layout: [{"content":{"style":"","heading":"<em>En cours de construction<\/em>","layout":""},"id":"7b238d7a-c2e1-41bf-98bc-4d205676caad","isHidden":false,"type":"section"}]
+Layout: [{"content":{"color":"","heading":"Trouver une action adapt\u00e9e \u00e0 moi","layout":"[{\"attrs\":[],\"columns\":[{\"blocks\":[{\"content\":{\"isvertical\":\"false\",\"buttons\":[{\"color\":\"is-dark\",\"islight\":\"false\",\"isoutlined\":\"false\",\"label\":\"D\\u00e9couvrir les 24 th\\u00e9matiques\",\"type\":\"page\",\"page\":[\"page:\\\/\\\/qm0sQPbBSM5LZPGM\"],\"pageanchor\":\"24-thematiques-pour-agir\",\"url\":\"\",\"email\":\"\",\"emailsubject\":\"\"}]},\"id\":\"1f9d5419-522c-4e05-879a-23118419bdbe\",\"isHidden\":false,\"type\":\"buttons\"}],\"id\":\"e1204ef3-05cb-44eb-bc6e-0410badb3800\",\"width\":\"1\\\/1\"}],\"id\":\"9c60b205-ae99-487c-923b-dc703419219d\"}]"},"id":"7b238d7a-c2e1-41bf-98bc-4d205676caad","isHidden":false,"type":"section"},{"content":{"color":"","heading":"24 th\u00e9matiques pour agir","layout":""},"id":"c6267e99-4ef7-44c6-bb1e-bdf216c272a0","isHidden":false,"type":"section"}]
 
 ----
 

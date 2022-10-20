@@ -10,7 +10,7 @@ Herobuttons:
 
 ----
 
-Layout: [{"content":{"style":"","heading":"<em>En cours de construction<\/em>","layout":""},"id":"51882604-ee2d-413d-97f4-390b95d82661","isHidden":false,"type":"section"}]
+Layout: [{"content":{"color":"","heading":"<em>En cours de construction<\/em>","layout":""},"id":"51882604-ee2d-413d-97f4-390b95d82661","isHidden":false,"type":"section"}]
 
 ----
 

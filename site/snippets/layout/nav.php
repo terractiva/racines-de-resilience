@@ -4,7 +4,7 @@
       <a class="navbar-item" href="<?= $site->url() ?>">
         <img
           alt="<?= $site->title()->escape('attr') ?>"
-          src="<?= $site->logo()->toFile()->resize(null, 60)->url() ?>"
+          src="<?= $site->logo()->toFile()->resize(null, 80)->url() ?>"
         >
       </a>
 

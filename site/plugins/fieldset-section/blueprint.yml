@@ -2,9 +2,10 @@ name: Section
 icon: template
 wysiwyg: true
 fields:
-  style:
+  color:
     type: select
-    label: Style
+    label: Couleur
+    placeholder: Blanc
     options:
       has-background-dark has-text-white: Noir
       has-background-build: Bleu (Construire)
@@ -20,8 +21,16 @@ fields:
     label: Contenu
     layouts:
       - "1/1"
+      - "1/2, 1/2"
+      - "5/12, 5/12"
+      - "1/3, 2/3"
+      - "2/3, 1/3"
+      - "1/3, 1/3, 1/3"
     fieldsets:
+      text: true
+      list: true
       buttons: true
+      box: true
       actions: true
       news: true
       partners: true

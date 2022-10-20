@@ -59,7 +59,7 @@ columns:
         size: tiny
         template: logo
         image:
-          back: white
+          back: black
       navPages:
         type: pages
         label: Liens

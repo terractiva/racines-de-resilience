@@ -40,3 +40,28 @@ a:not(.button) {
     text-align: center;
   }
 }
+
+.buttons {
+  &.is-vertical {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: auto;
+    min-width: 50%;
+    width: fit-content;
+
+    &:first-child:last-child {
+      height: 100%;
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+
+  .button {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
