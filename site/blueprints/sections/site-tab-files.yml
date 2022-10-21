@@ -1,4 +1,19 @@
 sections:
+  fonts:
+    type: files
+    label: Polices
+    help: "Pour convertir une police en `.woff` et `.woff2` : https://transfonter.org/"
+    template: font
+    sortable: false
+
   files:
     type: files
-    label: " "
+    label: Fichiers
+    template: default
+    sortable: false
+
+  images:
+    type: files
+    label: Images
+    template: image
+    sortable: false

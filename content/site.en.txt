@@ -48,32 +48,32 @@ Partners:
 
 - 
   logo:
-    - file://t0jRE56yDAGoBcf6
+    - file://v6bw4o2vJoptUmMw
   name: Yggdrasil
   url: https://yggdrasil-mag.com/
 - 
   logo:
-    - file://64KSRmYwzm7egnJJ
+    - file://wi3KRggkrqtMSjXN
   name: Nutergia
   url: https://www.nutergia.com/
 - 
   logo:
-    - file://thL1xE2iRwD6fDv7
+    - file://3MQBkvth8dwgqrKe
   name: Léa Nature
   url: https://www.leanature.com/
 - 
   logo:
-    - file://T0jpchrvY77qKLhY
+    - file://VfIA2gSqhVXJlwxL
   name: Infomaniak
   url: https://www.infomaniak.com/fr
 - 
   logo:
-    - file://YgE6Rh1XDeyDOiUh
+    - file://UYd966SgOfmtQm6y
   name: '1% for the Planet'
   url: https://www.onepercentfortheplanet.fr/
 - 
   logo:
-    - file://kHtvtMX7njRI2zj7
+    - file://HT3W8ZoLavHjEviy
   name: Nour films
   url: https://www.nourfilms.com/
 - 
@@ -82,18 +82,18 @@ Partners:
   url: https://tseignette.github.io/
 - 
   logo:
-    - file://JrYwHPxIqoNN5a4b
+    - file://WezW8qTxSx00wdY2
   name: Pulp Films
   url: https://pulp-films.fr/
 - 
   logo:
-    - file://C9VPj84r4YoSe7lJ
+    - file://rDskjSICg29JgARL
   name: Terractiva
   url: ""
 
 ----
 
-Logo: - file://0iCvAOoRs5QtgRYD
+Logo: - file://HTcoYVDBoCcv1PDc
 
 ----
 

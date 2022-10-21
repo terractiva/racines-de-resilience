@@ -1,9 +1,5 @@
-Sort: 1
+Uuid: Cka1MfFSmd4oUCCe
 
 ----
 
-Uuid: 0DxFkz6737ymnw7Z
-
-----
-
-Template: logo
+Template: image

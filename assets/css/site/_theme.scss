@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Police Titre';
+  src: url('/police-titre.woff2') format('woff2'),
+      url('/police-titre.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
 h1, h2 {
   font-family: $family-secondary;
 

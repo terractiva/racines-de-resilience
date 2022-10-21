@@ -1,0 +1,7 @@
+title: Police
+
+options:
+  changeName: false
+  delete: false
+
+accept: application/octet-stream
