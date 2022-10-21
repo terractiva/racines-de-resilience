@@ -1,0 +1,10 @@
+.plugin-fieldset-box {
+  padding: 1.5rem;
+}
+.plugin-fieldset-box-title  {
+  text-align: center;
+}
+.plugin-fieldset-box-helper  {
+  margin-bottom: 0.75rem;
+  text-align: center;
+}

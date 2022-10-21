@@ -19,6 +19,10 @@ panel.plugin('racines-de-resilience/fieldset-section', {
       },
       template: `
         <div class="plugin-fieldset-section">
+          <h1 class="plugin-fieldset-section-title">Section</h1>
+          <p class="plugin-fieldset-section-helper">
+            <i>Plus d'options dans les paramètres</i>
+          </p>
           <k-fieldset
             v-model="model"
             :fields="fields"
@@ -27,7 +31,6 @@ panel.plugin('racines-de-resilience/fieldset-section', {
               layout: $event.layout
             })"
           />
-          <p><i>Plus d'options dans les paramètres</i></p>
         </div>
       `
     }

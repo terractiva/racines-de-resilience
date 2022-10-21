@@ -1,8 +1,13 @@
 .plugin-fieldset-section {
   padding: 3rem 0;
 }
-.plugin-fieldset-section .k-field-header,
-.plugin-fieldset-section > p {
-  margin-top: 0.75rem;
+.plugin-fieldset-section-title  {
   text-align: center;
+}
+.plugin-fieldset-section-helper  {
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+.plugin-fieldset-section .k-field-header {
+  display: none;
 }

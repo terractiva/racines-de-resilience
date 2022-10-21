@@ -1,5 +1,6 @@
 name: Boîte
 icon: box
+wysiwyg: true
 fields:
   color:
     type: select
