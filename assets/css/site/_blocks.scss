@@ -14,7 +14,7 @@
 
   img, a {
     height: 60px;
-    width: 120px;
+    max-width: 120px;
   }
   a {
     align-items: center;
@@ -28,7 +28,6 @@
   }
   img {
     display: block;
-    max-width: initial;
     object-fit: contain;
   }
 }

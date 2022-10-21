@@ -42,6 +42,27 @@ a:not(.button) {
   }
 }
 
+details {
+  &:not(:last-child) {
+    margin-bottom: $size-6;
+  }
+
+  summary {
+    cursor: pointer;
+  }
+  .content {
+    margin-top: $size-7;
+  }
+}
+
+iframe {
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: $size-4;
+  }
+}
+
 .card {
   &-footer-item {
     display: inline-block;

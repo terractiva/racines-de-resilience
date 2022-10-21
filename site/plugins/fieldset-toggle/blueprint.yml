@@ -1,0 +1,13 @@
+name: Bloc déroulant
+icon: angle-right
+fields:
+  summary:
+    type: writer
+    label: Bouton
+    required: true
+    inline: true
+
+  text:
+    type: writer
+    label: Texte
+    required: true

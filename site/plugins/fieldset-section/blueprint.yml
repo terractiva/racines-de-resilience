@@ -30,6 +30,8 @@ fields:
       text: true
       list: true
       buttons: true
+      toggle: true
+      soundcloud: true
       box: true
       actions: true
       news: true

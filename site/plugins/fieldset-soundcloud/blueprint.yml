@@ -1,0 +1,7 @@
+name: Soundcloud
+icon: audio
+fields:
+  url:
+    type: url
+    label: Lien
+    required: true
