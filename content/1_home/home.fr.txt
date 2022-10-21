@@ -27,8 +27,4 @@ Layout: [{"content":{"color":"","heading":"Plus de 200 fa\u00e7ons de<br>passer 
 
 ----
 
-Navlabel: 
-
-----
-
 Uuid: 3xOuBIeX2OgO6UgS

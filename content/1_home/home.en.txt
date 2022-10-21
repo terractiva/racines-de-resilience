@@ -26,8 +26,4 @@ Layout: [{"content":{"color":"","heading":"More than 200 ways to act","layout":"
 
 ----
 
-Navlabel: 
-
-----
-
 Uuid: 3xOuBIeX2OgO6UgS

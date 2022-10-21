@@ -14,8 +14,4 @@ Layout: [{"content":{"color":"","heading":"Apr\u00e8s le film, ouvrir la parole"
 
 ----
 
-Navlabel: 
-
-----
-
 Uuid: MFi0DUNYsdjEdOnR

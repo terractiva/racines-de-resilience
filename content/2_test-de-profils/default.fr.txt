@@ -14,8 +14,4 @@ Layout: [{"content":{"color":"","heading":"<em>En cours de construction<\/em>","
 
 ----
 
-Navlabel: 
-
-----
-
 Uuid: glpbimFbvkTWtRnq

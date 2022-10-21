@@ -97,20 +97,52 @@ Logo: - file://0iCvAOoRs5QtgRYD
 
 ----
 
-Navpages:
+Navlinks:
 
-- page://qm0sQPbBSM5LZPGM
-- page://YKln3T0YKA0khias
-- page://oW42R8LCvTrrjUZc
+- 
+  label: Actions
+  type: page
+  page:
+    - page://qm0sQPbBSM5LZPGM
+  pageanchor: ""
+  url: ""
+  email: ""
+  emailsubject: ""
+- 
+  label: Tree
+  type: page
+  page:
+    - page://YKln3T0YKA0khias
+  pageanchor: ""
+  url: ""
+  email: ""
+  emailsubject: ""
+- 
+  label: Add an action
+  type: url
+  page: [ ]
+  pageanchor: ""
+  url: https://airtable.com/shrlqNJvuiem0iFkA
+  email: ""
+  emailsubject: ""
 
 ----
 
 Navbuttons:
 
 - 
+  label: The film
+  type: page
+  page:
+    - page://asaA7JJJPXhOtvsr
+  pageanchor: ""
+  url: ""
+  email: ""
+  emailsubject: ""
   color: is-build
   islight: 'true'
   isoutlined: 'false'
+- 
   label: Support us
   type: page
   page:
@@ -119,17 +151,9 @@ Navbuttons:
   url: ""
   email: ""
   emailsubject: ""
-- 
   color: is-regenerate
   islight: 'true'
   isoutlined: 'false'
-  label: Add an action
-  type: url
-  page: [ ]
-  pageanchor: ""
-  url: https://airtable.com/shrlqNJvuiem0iFkA
-  email: ""
-  emailsubject: ""
 
 ----
 

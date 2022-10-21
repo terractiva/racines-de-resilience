@@ -1,8 +1,8 @@
-Title: The film
+Title: The film - Once you know
 
 ----
 
-Slug: the-film
+Slug: the-film-once-you-know
 
 ----
 
@@ -15,10 +15,6 @@ Herobuttons:
 ----
 
 Layout: [{"content":{"color":"","heading":"<em>Under construction<\/em>","layout":""},"id":"f194fb57-8e4c-441a-8006-7d2c637910bf","isHidden":false,"type":"section"}]
-
-----
-
-Navlabel: 
 
 ----
 

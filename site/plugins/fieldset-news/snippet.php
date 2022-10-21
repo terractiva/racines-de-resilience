@@ -7,7 +7,7 @@
           <?= $newsItem->heading() ?>
         </h3>
         <p class="subtitle is-6">
-          <?= snippet('elements/time', ['date' => $newsItem->date()]) ?>
+          <?php snippet('elements/time', ['date' => $newsItem->date()]) ?>
         </p>
         <div class="content">
           <?= $newsItem->text() ?>

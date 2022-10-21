@@ -6,17 +6,6 @@ options:
   delete: false
   duplicate: false
 
-tabs:
-  content:
-    label: Contenu
-    icon: page
-    sections:
-      heading:
-        extends: sections/section-hero
-
-  settings:
-    label: Paramètres
-    icon: settings
-    sections:
-      settings:
-        extends: sections/page-settings
+sections:
+  heading:
+    extends: sections/section-hero

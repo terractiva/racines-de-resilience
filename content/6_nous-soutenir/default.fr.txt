@@ -14,8 +14,4 @@ Layout: [{"content":{"color":"","heading":"Participez au financement !","layout"
 
 ----
 
-Navlabel: 
-
-----
-
 Uuid: lAqO3y4hhuMN3Ugu

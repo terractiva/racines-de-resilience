@@ -6,10 +6,6 @@ Slug: tree-of-actions
 
 ----
 
-Navlabel: The tree
-
-----
-
 Uuid: YKln3T0YKA0khias
 
 ----

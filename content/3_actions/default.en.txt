@@ -10,10 +10,6 @@ Herobuttons:
 
 ----
 
-Navlabel: 
-
-----
-
 Uuid: qm0sQPbBSM5LZPGM
 
 ----

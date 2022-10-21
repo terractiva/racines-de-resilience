@@ -1,0 +1,7 @@
+type: structure
+label: Liens
+columns:
+  label: true
+  type: true
+fields:
+  extends: fields/link

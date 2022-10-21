@@ -1,5 +1,5 @@
-.k-block-container-type-section:not(:last-of-type) .plugin-fieldset-section {
-  margin-bottom: 6rem;
+.plugin-fieldset-section {
+  padding: 3rem 0;
 }
 .plugin-fieldset-section .k-field-header,
 .plugin-fieldset-section > p {

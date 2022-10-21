@@ -14,8 +14,4 @@ Layout: [{"content":{"color":"","heading":"Trouver une action adapt\u00e9e \u00e
 
 ----
 
-Navlabel: 
-
-----
-
 Uuid: qm0sQPbBSM5LZPGM

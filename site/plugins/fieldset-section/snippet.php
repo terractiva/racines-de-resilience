@@ -6,6 +6,6 @@
     </h2>
     <?php endif ?>
 
-    <?= snippet('layout/layouts', ['layouts' => $block->layout()->toLayouts()]) ?>
+    <?php snippet('layout/layouts', ['layouts' => $block->layout()->toLayouts()]) ?>
   </div>
 </section>

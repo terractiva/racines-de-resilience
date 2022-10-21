@@ -1,0 +1,49 @@
+type: group
+fields:
+  label:
+    type: text
+    label: Libellé
+    width: 1/2
+    required: true
+  type:
+    type: select
+    label: Type
+    width: 1/2
+    required: true
+    default: page
+    options:
+      page: Lien interne
+      url: Lien externe
+      email: E-mail
+
+  page:
+    type: pages
+    label: Page
+    required: true
+    max: 1
+    link: false
+    when:
+      type: page
+  pageAnchor:
+    type: slug
+    label: Page - Ancre
+    help: Ancre vers un titre de section ou de boîte, vous pouvez directement le copier-coller
+    when:
+      type: page
+  url:
+    type: url
+    label: Lien
+    required: true
+    when:
+      type: url
+  email:
+    type: email
+    label: E-mail
+    required: true
+    when:
+      type: email
+  emailSubject:
+    type: text
+    label: E-mail - Sujet
+    when:
+      type: email

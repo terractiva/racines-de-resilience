@@ -18,11 +18,16 @@
     <?php if ($showMenu): ?>
     <div class="navbar-menu" id="navbar-menu">
       <div class="navbar-start">
-        <?php foreach ($site->navPages()->toPages() as $navPage): ?>
-        <a class="navbar-item<?php e($navPage->isOpen(), ' is-active') ?>" href="<?= $navPage->url() ?>">
-          <?= $navPage->navLabel()->or($navPage->title())->escape() ?>
-        </a>
-        <?php endforeach ?>
+        <?php
+          foreach ($site->navLinks()->toStructure() as $navLink) {
+            $isOpen = $navLink->type() == 'page' && $navLink->page()->toPage()->isOpen();
+
+            snippet('elements/link', [
+              'class' => 'navbar-item' . ($isOpen ? ' is-active' : ''),
+              'link' => $navLink
+            ]);
+          }
+        ?>
       </div>
 
       <div class="navbar-end">
@@ -32,7 +37,7 @@
 
         <?php if ($site->navButtons()->isNotEmpty()): ?>
         <div class="navbar-item">
-          <?= snippet('elements/buttons', ['buttons' => $site->navButtons()]) ?>
+          <?php snippet('elements/buttons', ['buttons' => $site->navButtons()]) ?>
         </div>
         <?php endif ?>
       </div>

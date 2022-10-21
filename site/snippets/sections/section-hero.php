@@ -4,6 +4,6 @@
       <?= $page->heroHeading() ?>
     </h1>
 
-    <?= snippet('elements/buttons', ['buttons' => $page->heroButtons()]) ?>
+    <?php snippet('elements/buttons', ['buttons' => $page->heroButtons()]) ?>
   </div>
 </section>
