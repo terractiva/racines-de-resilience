@@ -1,5 +1,5 @@
 <?php snippet('layout/html-open') ?>
-  <?php snippet('layout/nav', ['showMenu' => true]) ?>
+  <?php snippet('layout/nav') ?>
   <main>
     <?php snippet('sections/section-hero') ?>
     <?php snippet('layout/layout') ?>

@@ -1,10 +1,15 @@
-<nav class="navbar is-spaced">
-  <div class="container">
+<?php
+  $isTree = isset($isTree) ? $isTree : false;
+  $logo = $isTree ? $site->darkLogo() : $site->lightLogo();
+?>
+
+<nav class="navbar is-transparent <?= $isTree ? 'is-fixed-top' : 'is-dark is-spaced' ?>">
+  <?= e(!$isTree, '<div class="container">') ?>
     <div class="navbar-brand">
       <a class="navbar-item" href="<?= $site->url() ?>">
         <img
           alt="<?= $site->title()->escape('attr') ?>"
-          src="<?= $site->logo()->toFile()->resize(null, 80)->url() ?>"
+          src="<?= $logo->toFile()->resize(null, 80)->url() ?>"
         >
       </a>
 
@@ -15,7 +20,6 @@
       </button>
     </div>
 
-    <?php if ($showMenu): ?>
     <div class="navbar-menu" id="navbar-menu">
       <div class="navbar-start">
         <?php
@@ -42,8 +46,7 @@
         <?php endif ?>
       </div>
     </div>
-    <?php endif ?>
-  </div>
+  <?= e(!$isTree, '</div>') ?>
 </nav>
 
 <script>

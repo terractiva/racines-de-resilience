@@ -48,9 +48,9 @@ columns:
         numbered: false
   - width:
     fields:
-      logo:
+      lightLogo:
         type: files
-        label: Logo
+        label: Logo clair
         width: 1/6
         required: true
         help: L'image sera automatiquement optimisée
@@ -60,12 +60,24 @@ columns:
         uploads: image
         image:
           back: black
+      darkLogo:
+        type: files
+        label: Logo sombre
+        width: 1/6
+        required: true
+        help: L'image sera automatiquement optimisée
+        max: 1
+        layout: cards
+        size: tiny
+        uploads: image
+        image:
+          back: white
       navLinks:
         extends: fields/links
-        width: 5/12
+        width: 1/3
       navButtons:
         extends: fields/buttons
-        width: 5/12
+        width: 1/3
 
   - width:
     fields:

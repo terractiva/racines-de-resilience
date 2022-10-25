@@ -1,0 +1,1170 @@
+[
+  {
+    "level": 3,
+    "categories": ["construire"],
+    "position": [21.925, 20.653],
+    "radius": 1.76,
+    "id": "0101",
+    "subcategory": "Produire d'autres énergies"
+  },
+  {
+    "level": 1,
+    "categories": ["construire"],
+    "position": [15.789, 14.293],
+    "radius": 2.092,
+    "id": "0102",
+    "subcategory": "Produire d'autres énergies"
+  },
+  {
+    "level": 1,
+    "categories": ["construire"],
+    "position": [23.2342, 15.3941],
+    "radius": 2.0944,
+    "id": "0103",
+    "subcategory": "Produire d'autres énergies"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [18.879, 17.174],
+    "radius": 2.069,
+    "id": "0104",
+    "subcategory": "Produire d'autres énergies"
+  },
+  {
+    "level": 3,
+    "categories": ["construire"],
+    "position": [13.163, 20.185],
+    "radius": 2.2,
+    "id": "0201",
+    "subcategory": "Changer la mobilité"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [16.84, 22.75],
+    "radius": 1.813,
+    "id": "0202",
+    "subcategory": "Changer la mobilité"
+  },
+  {
+    "level": 1,
+    "categories": ["construire"],
+    "position": [19.4447, 25.4204],
+    "radius": 2.0514,
+    "id": "0203",
+    "subcategory": "Changer la mobilité"
+  },
+  {
+    "level": 1,
+    "categories": ["construire"],
+    "position": [3.0966, 23.7295],
+    "radius": 2.0146,
+    "id": "0301",
+    "subcategory": "Réinventer l'habitat"
+  },
+  {
+    "level": 3,
+    "categories": ["construire"],
+    "position": [10.3644, 30.4804],
+    "radius": 2.0736,
+    "id": "0302",
+    "subcategory": "Réinventer l'habitat"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [9.4725, 25.6455],
+    "radius": 1.9965,
+    "id": "0303",
+    "subcategory": "Réinventer l'habitat"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [5.8473, 26.9947],
+    "radius": 2.0164,
+    "id": "0304",
+    "subcategory": "Réinventer l'habitat"
+  },
+  {
+    "level": 3,
+    "categories": ["construire"],
+    "position": [16.9393, 31.403],
+    "radius": 2.4867,
+    "id": "0305",
+    "subcategory": "Réinventer l'habitat"
+  },
+  {
+    "level": 3,
+    "categories": ["construire"],
+    "position": [13.8704, 28.1849],
+    "radius": 2.0912,
+    "id": "0306",
+    "subcategory": "Réinventer l'habitat"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [7.0013, 34.7656],
+    "radius": 1.8586,
+    "id": "0401",
+    "subcategory": "Circulariser les déchets"
+  },
+  {
+    "level": 3,
+    "categories": ["construire"],
+    "position": [13.4213, 37.3296],
+    "radius": 2.3151,
+    "id": "0402",
+    "subcategory": "Circulariser les déchets"
+  },
+  {
+    "level": 1,
+    "categories": ["construire"],
+    "position": [3.9241, 35.7164],
+    "radius": 1.7434,
+    "id": "0403",
+    "subcategory": "Circulariser les déchets"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [10.0681, 37.0678],
+    "radius": 1.8811,
+    "id": "0404",
+    "subcategory": "Circulariser les déchets"
+  },
+  {
+    "level": 3,
+    "categories": ["construire"],
+    "position": [17.5856, 39.11],
+    "radius": 2.0007,
+    "id": "0405",
+    "subcategory": "Circulariser les déchets"
+  },
+  {
+    "level": 1,
+    "categories": ["construire"],
+    "position": [3.9493, 42.594],
+    "radius": 1.7678,
+    "id": "0501",
+    "subcategory": "Décarboner tous les secteurs"
+  },
+  {
+    "level": 1,
+    "categories": ["construire"],
+    "position": [4.1209, 54.2866],
+    "radius": 1.8596,
+    "id": "0502",
+    "subcategory": "Décarboner tous les secteurs"
+  },
+  {
+    "level": 1,
+    "categories": ["construire"],
+    "position": [7.0498, 42.042],
+    "radius": 1.9936,
+    "id": "0503",
+    "subcategory": "Décarboner tous les secteurs"
+  },
+  {
+    "level": 1,
+    "categories": ["construire"],
+    "position": [6.7128, 51.0338],
+    "radius": 2.0371,
+    "id": "0504",
+    "subcategory": "Décarboner tous les secteurs"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [9.6831, 48.44],
+    "radius": 2.0201,
+    "id": "0505",
+    "subcategory": "Décarboner tous les secteurs"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [10.6488, 43.1824],
+    "radius": 2.0501,
+    "id": "0506",
+    "subcategory": "Décarboner tous les secteurs"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [13.9138, 45.349],
+    "radius": 2.258,
+    "id": "0507",
+    "subcategory": "Décarboner tous les secteurs"
+  },
+  {
+    "level": 3,
+    "categories": ["construire"],
+    "position": [18.1238, 45.5013],
+    "radius": 1.9592,
+    "id": "0508",
+    "subcategory": "Décarboner tous les secteurs"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [3.6717, 74.5782],
+    "radius": 2.1607,
+    "id": "0601",
+    "subcategory": "Faire évoluer l'agriculture"
+  },
+  {
+    "level": 1,
+    "categories": ["construire"],
+    "position": [8.0535, 60.3114],
+    "radius": 1.7444,
+    "id": "0602",
+    "subcategory": "Faire évoluer l'agriculture"
+  },
+  {
+    "level": 1,
+    "categories": ["construire"],
+    "position": [6.3853, 64.6297],
+    "radius": 2.1119,
+    "id": "0603",
+    "subcategory": "Faire évoluer l'agriculture"
+  },
+  {
+    "level": 1,
+    "categories": ["construire"],
+    "position": [2.2873, 63.2374],
+    "radius": 2.3195,
+    "id": "0604",
+    "subcategory": "Faire évoluer l'agriculture"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [10.2935, 68.6981],
+    "radius": 2.2251,
+    "id": "0605",
+    "subcategory": "Faire évoluer l'agriculture"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [7.6127, 73.063],
+    "radius": 2.0642,
+    "id": "0606",
+    "subcategory": "Faire évoluer l'agriculture"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [13.5927, 59.4222],
+    "radius": 1.9459,
+    "id": "0607",
+    "subcategory": "Faire évoluer l'agriculture"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [10.3701, 62.9331],
+    "radius": 2.217,
+    "id": "0608",
+    "subcategory": "Faire évoluer l'agriculture"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [13.5015, 52.7762],
+    "radius": 1.9459,
+    "id": "0609",
+    "subcategory": "Faire évoluer l'agriculture"
+  },
+  {
+    "level": 3,
+    "categories": ["construire"],
+    "position": [19.2621, 51.7506],
+    "radius": 2.1482,
+    "id": "0610",
+    "subcategory": "Faire évoluer l'agriculture"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [9.9707, 55.6208],
+    "radius": 2.1939,
+    "id": "0611",
+    "subcategory": "Faire évoluer l'agriculture"
+  },
+  {
+    "level": 3,
+    "categories": ["construire"],
+    "position": [16.3342, 55.8665],
+    "radius": 2.1939,
+    "id": "0612",
+    "subcategory": "Faire évoluer l'agriculture"
+  },
+  {
+    "level": 1,
+    "categories": ["construire", "regenerer"],
+    "position": [7.2618, 80.7054],
+    "radius": 1.6825,
+    "id": "0701",
+    "subcategory": "Renforcer la résilience locale"
+  },
+  {
+    "level": 1,
+    "categories": ["construire", "regenerer"],
+    "position": [17.7998, 85.5179],
+    "radius": 2.0554,
+    "id": "0702",
+    "subcategory": "Renforcer la résilience locale"
+  },
+  {
+    "level": 1,
+    "categories": ["construire", "regenerer"],
+    "position": [14.3884, 79.5093],
+    "radius": 1.6979,
+    "id": "0703",
+    "subcategory": "Renforcer la résilience locale"
+  },
+  {
+    "level": 1,
+    "categories": ["construire", "regenerer"],
+    "position": [10.3132, 78.7191],
+    "radius": 2.1529,
+    "id": "0704",
+    "subcategory": "Renforcer la résilience locale"
+  },
+  {
+    "level": 1,
+    "categories": ["construire", "regenerer"],
+    "position": [13.5226, 84.9015],
+    "radius": 2.2527,
+    "id": "0705",
+    "subcategory": "Renforcer la résilience locale"
+  },
+  {
+    "level": 2,
+    "categories": ["construire", "regenerer"],
+    "position": [19.4741, 74.4474],
+    "radius": 2.0646,
+    "id": "0706",
+    "subcategory": "Renforcer la résilience locale"
+  },
+  {
+    "level": 2,
+    "categories": ["construire", "regenerer"],
+    "position": [18.1466, 79.7666],
+    "radius": 2.1769,
+    "id": "0707",
+    "subcategory": "Renforcer la résilience locale"
+  },
+  {
+    "level": 2,
+    "categories": ["construire", "regenerer"],
+    "position": [15.3013, 73.823],
+    "radius": 2.2209,
+    "id": "0708",
+    "subcategory": "Renforcer la résilience locale"
+  },
+  {
+    "level": 2,
+    "categories": ["construire"],
+    "position": [15.1499, 67.6313],
+    "radius": 1.939,
+    "id": "0709",
+    "subcategory": "Renforcer la résilience locale"
+  },
+  {
+    "level": 2,
+    "categories": ["construire", "regenerer"],
+    "position": [19.667, 68.6284],
+    "radius": 2.0869,
+    "id": "0710",
+    "subcategory": "Renforcer la résilience locale"
+  },
+  {
+    "level": 3,
+    "categories": ["construire"],
+    "position": [17.088, 62.7548],
+    "radius": 2.2361,
+    "id": "0711",
+    "subcategory": "Renforcer la résilience locale"
+  },
+  {
+    "level": 3,
+    "categories": ["construire", "regenerer"],
+    "position": [24.8193, 62.0452],
+    "radius": 1.8572,
+    "id": "0712",
+    "subcategory": "Renforcer la résilience locale"
+  },
+  {
+    "level": 3,
+    "categories": ["construire", "regenerer"],
+    "position": [21.1475, 63.5663],
+    "radius": 2.0468,
+    "id": "0713",
+    "subcategory": "Renforcer la résilience locale"
+  },
+  {
+    "level": 3,
+    "categories": ["construire"],
+    "position": [22.0385, 58.3131],
+    "radius": 1.9867,
+    "id": "0714",
+    "subcategory": "Renforcer la résilience locale"
+  },
+  {
+    "level": 2,
+    "categories": ["construire", "regenerer"],
+    "position": [26.1458, 75.5613],
+    "radius": 1.8576,
+    "id": "0801",
+    "subcategory": "Traduire la complexité"
+  },
+  {
+    "level": 1,
+    "categories": ["construire", "regenerer"],
+    "position": [23.1159, 79.032],
+    "radius": 2.269,
+    "id": "0802",
+    "subcategory": "Traduire la complexité"
+  },
+  {
+    "level": 1,
+    "categories": ["construire", "regenerer"],
+    "position": [22.7497, 84.9397],
+    "radius": 2.084,
+    "id": "0803",
+    "subcategory": "Traduire la complexité"
+  },
+  {
+    "level": 3,
+    "categories": ["construire", "regenerer"],
+    "position": [28.5769, 66.4145],
+    "radius": 1.9721,
+    "id": "0804",
+    "subcategory": "Traduire la complexité"
+  },
+  {
+    "level": 2,
+    "categories": ["construire", "regenerer"],
+    "position": [24.9422, 68.2197],
+    "radius": 2.0247,
+    "id": "0805",
+    "subcategory": "Traduire la complexité"
+  },
+  {
+    "level": 3,
+    "categories": ["construire", "regenerer"],
+    "position": [28.7341, 71.6959],
+    "radius": 2.1927,
+    "id": "0806",
+    "subcategory": "Traduire la complexité"
+  },
+  {
+    "level": 1,
+    "categories": ["regenerer"],
+    "position": [30.176, 86.5322],
+    "radius": 2.1565,
+    "id": "0901",
+    "subcategory": "Préparer les enfants"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [32.9851, 82.4123],
+    "radius": 2.3388,
+    "id": "0902",
+    "subcategory": "Préparer les enfants"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [29.6311, 78.9851],
+    "radius": 2.2004,
+    "id": "0903",
+    "subcategory": "Préparer les enfants"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer"],
+    "position": [34.0825, 76.3745],
+    "radius": 2.4898,
+    "id": "0904",
+    "subcategory": "Préparer les enfants"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer"],
+    "position": [33.6524, 70.2031],
+    "radius": 2.3439,
+    "id": "0905",
+    "subcategory": "Préparer les enfants"
+  },
+  {
+    "level": 1,
+    "categories": ["regenerer"],
+    "position": [40.3997, 87.5684],
+    "radius": 1.9575,
+    "id": "1001",
+    "subcategory": "Sensibiliser avec les arts"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [38.6306, 81.612],
+    "radius": 2.0719,
+    "id": "1002",
+    "subcategory": "Sensibiliser avec les arts"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [39.8056, 74.7297],
+    "radius": 1.8411,
+    "id": "1003",
+    "subcategory": "Sensibiliser avec les arts"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [41.7091, 78.6984],
+    "radius": 1.9391,
+    "id": "1004",
+    "subcategory": "Sensibiliser avec les arts"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [42.9717, 83.5874],
+    "radius": 2.0663,
+    "id": "1005",
+    "subcategory": "Sensibiliser avec les arts"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer"],
+    "position": [43.1305, 72.9953],
+    "radius": 1.9475,
+    "id": "1006",
+    "subcategory": "Sensibiliser avec les arts"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [50.3315, 80.7894],
+    "radius": 1.7874,
+    "id": "1101",
+    "subcategory": "Changer les imaginaires"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [47.9667, 84.8266],
+    "radius": 2.1504,
+    "id": "1102",
+    "subcategory": "Changer les imaginaires"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [49.3761, 73.7832],
+    "radius": 2.0705,
+    "id": "1103",
+    "subcategory": "Changer les imaginaires"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [46.5874, 77.8885],
+    "radius": 2.1983,
+    "id": "1104",
+    "subcategory": "Changer les imaginaires"
+  },
+  {
+    "level": 1,
+    "categories": ["regenerer"],
+    "position": [59.3214, 82.831],
+    "radius": 2.3342,
+    "id": "1201",
+    "subcategory": "Cultiver la joie dans l'incertitude"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [54.0178, 76.8987],
+    "radius": 2.0027,
+    "id": "1202",
+    "subcategory": "Cultiver la joie dans l'incertitude"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [57.6614, 78.9284],
+    "radius": 1.8794,
+    "id": "1203",
+    "subcategory": "Cultiver la joie dans l'incertitude"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [54.7485, 81.7787],
+    "radius": 1.9554,
+    "id": "1204",
+    "subcategory": "Cultiver la joie dans l'incertitude"
+  },
+  {
+    "level": 1,
+    "categories": ["regenerer"],
+    "position": [55.4952, 86.752],
+    "radius": 2.035,
+    "id": "1205",
+    "subcategory": "Cultiver la joie dans l'incertitude"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer"],
+    "position": [56.1422, 72.6357],
+    "radius": 2.1256,
+    "id": "1206",
+    "subcategory": "Cultiver la joie dans l'incertitude"
+  },
+  {
+    "level": 1,
+    "categories": ["regenerer"],
+    "position": [66.7679, 86.5665],
+    "radius": 2.2107,
+    "id": "1301",
+    "subcategory": "Se relier à la trame du vivant"
+  },
+  {
+    "level": 1,
+    "categories": ["regenerer"],
+    "position": [71.3384, 83.6604],
+    "radius": 2.032,
+    "id": "1302",
+    "subcategory": "Se relier à la trame du vivant"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [65.318, 75.3352],
+    "radius": 2.0546,
+    "id": "1303",
+    "subcategory": "Se relier à la trame du vivant"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [68.0353, 79.1192],
+    "radius": 2.3687,
+    "id": "1304",
+    "subcategory": "Se relier à la trame du vivant"
+  },
+  {
+    "level": 1,
+    "categories": ["regenerer"],
+    "position": [64.3018, 81.7482],
+    "radius": 2.1472,
+    "id": "1305",
+    "subcategory": "Se relier à la trame du vivant"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer"],
+    "position": [63.2735, 68.325],
+    "radius": 2.0332,
+    "id": "1306",
+    "subcategory": "Se relier à la trame du vivant"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer"],
+    "position": [60.9608, 73.0839],
+    "radius": 2.3993,
+    "id": "1307",
+    "subcategory": "Se relier à la trame du vivant"
+  },
+  {
+    "level": 1,
+    "categories": ["regenerer"],
+    "position": [83.553, 78.2446],
+    "radius": 2.2161,
+    "id": "1401",
+    "subcategory": "Transformer les conflits"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [76.7847, 76.9229],
+    "radius": 1.8028,
+    "id": "1402",
+    "subcategory": "Transformer les conflits"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [79.7025, 79.0988],
+    "radius": 2.0244,
+    "id": "1403",
+    "subcategory": "Transformer les conflits"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [70.5852, 73.2642],
+    "radius": 2.1802,
+    "id": "1404",
+    "subcategory": "Transformer les conflits"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer"],
+    "position": [73.7865, 77.5822],
+    "radius": 1.6451,
+    "id": "1405",
+    "subcategory": "Transformer les conflits"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer"],
+    "position": [67.7801, 69.7237],
+    "radius": 2.081,
+    "id": "1406",
+    "subcategory": "Transformer les conflits"
+  },
+  {
+    "level": 1,
+    "categories": ["regenerer", "interposer"],
+    "position": [86.3897, 71.1482],
+    "radius": 1.7985,
+    "id": "1501",
+    "subcategory": "Réinvestir la démocratie"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer", "interposer"],
+    "position": [83.1942, 71.9448],
+    "radius": 1.828,
+    "id": "1502",
+    "subcategory": "Réinvestir la démocratie"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer", "interposer"],
+    "position": [74.994, 69.4039],
+    "radius": 2.2304,
+    "id": "1503",
+    "subcategory": "Réinvestir la démocratie"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer", "interposer"],
+    "position": [79.0204, 71.4528],
+    "radius": 2.1351,
+    "id": "1504",
+    "subcategory": "Réinvestir la démocratie"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer", "interposer"],
+    "position": [71.6877, 66.5173],
+    "radius": 1.9703,
+    "id": "1505",
+    "subcategory": "Réinvestir la démocratie"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer", "interposer"],
+    "position": [69.4097, 62.589],
+    "radius": 1.943,
+    "id": "1506",
+    "subcategory": "Réinvestir la démocratie"
+  },
+  {
+    "level": 1,
+    "categories": ["regenerer", "interposer"],
+    "position": [82.9104, 64.861],
+    "radius": 2.284,
+    "id": "1601",
+    "subcategory": "Briser le tabou de la démographie"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer", "interposer"],
+    "position": [79.0582, 64.1977],
+    "radius": 2.2132,
+    "id": "1602",
+    "subcategory": "Briser le tabou de la démographie"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer", "interposer"],
+    "position": [72.3132, 56.8603],
+    "radius": 2.25,
+    "id": "1603",
+    "subcategory": "Briser le tabou de la démographie"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer", "interposer"],
+    "position": [74.9776, 61.5071],
+    "radius": 2.3834,
+    "id": "1604",
+    "subcategory": "Briser le tabou de la démographie"
+  },
+  {
+    "level": 1,
+    "categories": ["regenerer", "interposer"],
+    "position": [90.9924, 61.0211],
+    "radius": 1.9717,
+    "id": "1701",
+    "subcategory": "Repenser les communs"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer", "interposer"],
+    "position": [84.5498, 58.8901],
+    "radius": 1.9963,
+    "id": "1702",
+    "subcategory": "Repenser les communs"
+  },
+  {
+    "level": 1,
+    "categories": ["regenerer", "interposer"],
+    "position": [88.1151, 57.4779],
+    "radius": 1.997,
+    "id": "1703",
+    "subcategory": "Repenser les communs"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer", "interposer"],
+    "position": [76.8587, 54.1372],
+    "radius": 2.189,
+    "id": "1704",
+    "subcategory": "Repenser les communs"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer", "interposer"],
+    "position": [80.4237, 57.0626],
+    "radius": 2.2976,
+    "id": "1705",
+    "subcategory": "Repenser les communs"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer", "interposer"],
+    "position": [75.5209, 49.5302],
+    "radius": 1.9464,
+    "id": "1706",
+    "subcategory": "Repenser les communs"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer", "interposer"],
+    "position": [84.9099, 52.6176],
+    "radius": 1.9033,
+    "id": "1801",
+    "subcategory": "Lutter contre les inégalités"
+  },
+  {
+    "level": 1,
+    "categories": ["regenerer", "interposer"],
+    "position": [86.6419, 47.2075],
+    "radius": 2.3444,
+    "id": "1802",
+    "subcategory": "Lutter contre les inégalités"
+  },
+  {
+    "level": 1,
+    "categories": ["regenerer", "interposer"],
+    "position": [90.8932, 46.7948],
+    "radius": 2.2205,
+    "id": "1803",
+    "subcategory": "Lutter contre les inégalités"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer", "interposer"],
+    "position": [78.8429, 44.7566],
+    "radius": 2.0509,
+    "id": "1804",
+    "subcategory": "Lutter contre les inégalités"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer", "interposer"],
+    "position": [80.6122, 49.9604],
+    "radius": 2.0509,
+    "id": "1805",
+    "subcategory": "Lutter contre les inégalités"
+  },
+  {
+    "level": 2,
+    "categories": ["regenerer", "interposer"],
+    "position": [82.8256, 45.1813],
+    "radius": 2.2605,
+    "id": "1806",
+    "subcategory": "Lutter contre les inégalités"
+  },
+  {
+    "level": 3,
+    "categories": ["regenerer", "interposer"],
+    "position": [75.6958, 43.9779],
+    "radius": 1.7669,
+    "id": "1807",
+    "subcategory": "Lutter contre les inégalités"
+  },
+  {
+    "level": 2,
+    "categories": ["interposer"],
+    "position": [83.5217, 38.1736],
+    "radius": 1.7881,
+    "id": "1901",
+    "subcategory": "Contraindre la finance"
+  },
+  {
+    "level": 2,
+    "categories": ["interposer"],
+    "position": [86.1258, 40.2059],
+    "radius": 2.0573,
+    "id": "1902",
+    "subcategory": "Contraindre la finance"
+  },
+  {
+    "level": 1,
+    "categories": ["interposer"],
+    "position": [89.9903, 39.6945],
+    "radius": 2.2699,
+    "id": "1903",
+    "subcategory": "Contraindre la finance"
+  },
+  {
+    "level": 3,
+    "categories": ["interposer"],
+    "position": [80.2755, 38.9843],
+    "radius": 1.8343,
+    "id": "1904",
+    "subcategory": "Contraindre la finance"
+  },
+  {
+    "level": 3,
+    "categories": ["interposer"],
+    "position": [76.3085, 37.5543],
+    "radius": 2.1299,
+    "id": "1905",
+    "subcategory": "Contraindre la finance"
+  },
+  {
+    "level": 2,
+    "categories": ["interposer"],
+    "position": [84.0058, 30.7483],
+    "radius": 2.182,
+    "id": "2001",
+    "subcategory": "Recourir en justice"
+  },
+  {
+    "level": 1,
+    "categories": ["interposer"],
+    "position": [87.241, 34.4122],
+    "radius": 1.9111,
+    "id": "2002",
+    "subcategory": "Recourir en justice"
+  },
+  {
+    "level": 1,
+    "categories": ["interposer"],
+    "position": [88.8185, 29.3052],
+    "radius": 2.2054,
+    "id": "2003",
+    "subcategory": "Recourir en justice"
+  },
+  {
+    "level": 3,
+    "categories": ["interposer"],
+    "position": [75.1553, 30.0494],
+    "radius": 2.4507,
+    "id": "2004",
+    "subcategory": "Recourir en justice"
+  },
+  {
+    "level": 2,
+    "categories": ["interposer"],
+    "position": [79.5976, 31.7468],
+    "radius": 2.3069,
+    "id": "2005",
+    "subcategory": "Recourir en justice"
+  },
+  {
+    "level": 1,
+    "categories": ["interposer"],
+    "position": [89.4396, 16.9202],
+    "radius": 1.9094,
+    "id": "2101",
+    "subcategory": "Occuper l'espace public"
+  },
+  {
+    "level": 1,
+    "categories": ["interposer"],
+    "position": [86.7476, 20.5895],
+    "radius": 2.1068,
+    "id": "2102",
+    "subcategory": "Occuper l'espace public"
+  },
+  {
+    "level": 1,
+    "categories": ["interposer"],
+    "position": [90.1818, 23.9242],
+    "radius": 1.687,
+    "id": "2103",
+    "subcategory": "Occuper l'espace public"
+  },
+  {
+    "level": 3,
+    "categories": ["interposer"],
+    "position": [76.8793, 24.3345],
+    "radius": 1.8753,
+    "id": "2104",
+    "subcategory": "Occuper l'espace public"
+  },
+  {
+    "level": 2,
+    "categories": ["interposer"],
+    "position": [80.3226, 24.5157],
+    "radius": 2.2328,
+    "id": "2105",
+    "subcategory": "Occuper l'espace public"
+  },
+  {
+    "level": 2,
+    "categories": ["interposer"],
+    "position": [84.3738, 24.619],
+    "radius": 1.8452,
+    "id": "2106",
+    "subcategory": "Occuper l'espace public"
+  },
+  {
+    "level": 1,
+    "categories": ["interposer"],
+    "position": [83.6837, 15.1651],
+    "radius": 2.1665,
+    "id": "2201",
+    "subcategory": "Bloquer les activités climaticides"
+  },
+  {
+    "level": 2,
+    "categories": ["interposer"],
+    "position": [80.3946, 17.9381],
+    "radius": 2.0554,
+    "id": "2202",
+    "subcategory": "Bloquer les activités climaticides"
+  },
+  {
+    "level": 3,
+    "categories": ["interposer"],
+    "position": [73.1609, 20.081],
+    "radius": 2.0454,
+    "id": "2203",
+    "subcategory": "Bloquer les activités climaticides"
+  },
+  {
+    "level": 2,
+    "categories": ["interposer"],
+    "position": [76.7106, 17.9398],
+    "radius": 1.9939,
+    "id": "2204",
+    "subcategory": "Bloquer les activités climaticides"
+  },
+  {
+    "level": 2,
+    "categories": ["interposer"],
+    "position": [80.4274, 9.6204],
+    "radius": 2.2517,
+    "id": "2301",
+    "subcategory": "Ouvrir des espaces d'expérimentation"
+  },
+  {
+    "level": 3,
+    "categories": ["interposer"],
+    "position": [72.8748, 12.9006],
+    "radius": 2.2663,
+    "id": "2302",
+    "subcategory": "Ouvrir des espaces d'expérimentation"
+  },
+  {
+    "level": 3,
+    "categories": ["interposer"],
+    "position": [76.957, 11.6131],
+    "radius": 2.011,
+    "id": "2303",
+    "subcategory": "Ouvrir des espaces d'expérimentation"
+  },
+  {
+    "level": 1,
+    "categories": ["interposer"],
+    "position": [70.1024, 1.6267],
+    "radius": 1.9917,
+    "id": "2401",
+    "subcategory": "Préserver les écosystèmes"
+  },
+  {
+    "level": 1,
+    "categories": ["interposer"],
+    "position": [72.0831, 6.3533],
+    "radius": 2.1042,
+    "id": "2402",
+    "subcategory": "Préserver les écosystèmes"
+  },
+  {
+    "level": 1,
+    "categories": ["interposer"],
+    "position": [66.26, 2.2935],
+    "radius": 2.116,
+    "id": "2403",
+    "subcategory": "Préserver les écosystèmes"
+  },
+  {
+    "level": 3,
+    "categories": ["interposer"],
+    "position": [64.9193, 9.618],
+    "radius": 2.2215,
+    "id": "2404",
+    "subcategory": "Préserver les écosystèmes"
+  },
+  {
+    "level": 2,
+    "categories": ["interposer"],
+    "position": [68.6263, 7.3645],
+    "radius": 1.9809,
+    "id": "2405",
+    "subcategory": "Préserver les écosystèmes"
+  },
+  {
+    "level": 3,
+    "categories": ["interposer"],
+    "position": [68.4948, 12.8756],
+    "radius": 1.94,
+    "id": "2406",
+    "subcategory": "Préserver les écosystèmes"
+  },
+  {
+    "level": 3,
+    "categories": ["interposer"],
+    "position": [58.9273, 2.7392],
+    "radius": 2.2716,
+    "id": "2407",
+    "subcategory": "Préserver les écosystèmes"
+  },
+  {
+    "level": 2,
+    "categories": ["interposer"],
+    "position": [62.703, 5.1856],
+    "radius": 2.2138,
+    "id": "2408",
+    "subcategory": "Préserver les écosystèmes"
+  }
+]

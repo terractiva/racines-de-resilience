@@ -9,3 +9,18 @@ options:
 sections:
   treeMemo:
     extends: sections/memo
+
+  settings:
+    type: fields
+    fields:
+      treeImage:
+        type: files
+        label: Arbre
+        required: true
+        help: L'image sera automatiquement optimisée
+        max: 1
+        layout: cards
+        size: huge
+        uploads: image
+        image:
+          back: white

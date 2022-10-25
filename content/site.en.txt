@@ -93,7 +93,11 @@ Partners:
 
 ----
 
-Logo: - file://HTcoYVDBoCcv1PDc
+Lightlogo: - file://HTcoYVDBoCcv1PDc
+
+----
+
+Darklogo: - file://QJLjW3vRtGaqZVM9
 
 ----
 

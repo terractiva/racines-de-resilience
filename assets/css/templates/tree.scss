@@ -1,0 +1,60 @@
+@use "sass:list";
+@use "sass:math";
+
+$tree-width: 6000;
+$tree-height: 4238;
+
+html, body {
+  height: 100%;
+}
+
+html {
+  background-color: #fff;
+}
+
+body {
+  display: flex;
+}
+
+main {
+  height: 100vh;
+  margin: auto;
+  position: relative;
+  width: math.div($tree-width, $tree-height) * 100vh;
+
+  @media (max-aspect-ratio: list.slash($tree-width, $tree-height)) {
+    height: math.div($tree-height, $tree-width) * 100vw;
+    width: 100vw;
+  }
+}
+
+.tree {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.actions {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  li {
+    position: absolute;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+    p {
+      bottom: 50%;
+      position: absolute;
+      right: 50%;
+      transform: translate(50%, 50%);
+    }
+  }
+}

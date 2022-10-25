@@ -91,7 +91,11 @@ Partners:
 
 ----
 
-Logo: - file://Cka1MfFSmd4oUCCe
+Lightlogo: - file://Cka1MfFSmd4oUCCe
+
+----
+
+Darklogo: - file://oh3qxAXdBwd6xsId
 
 ----
 
