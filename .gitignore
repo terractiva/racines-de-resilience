@@ -31,6 +31,8 @@ Icon
 # NEVER publish these files via Git!
 # -------------SECURITY-------------
 
+.env
+
 # Cache Files
 # ---------------
 

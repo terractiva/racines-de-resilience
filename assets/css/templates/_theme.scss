@@ -4,6 +4,7 @@
       url('/police-titre.woff') format('woff');
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 h1, h2 {
@@ -40,6 +41,10 @@ a:not(.button) {
   &.is-intervene {
     @include link-variant($intervene);
   }
+}
+
+button {
+  cursor: pointer;
 }
 
 details {

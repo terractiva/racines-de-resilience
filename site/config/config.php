@@ -1,6 +1,7 @@
 <?php
 
 return [
+  'cache.airtable' => true,
   'debug' => true,
   'environment' => 'dev',
   'languages' => true,

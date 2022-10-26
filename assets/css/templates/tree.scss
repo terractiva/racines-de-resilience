@@ -1,8 +1,20 @@
 @use "sass:list";
 @use "sass:math";
+@import "_variables.scss";
 
 $tree-width: 6000;
 $tree-height: 4238;
+$horizontalTreeHeight: 100vh;
+$verticalTreeHeight: math.div($tree-height, $tree-width) * 100vw;
+
+@font-face {
+  font-family: 'Police Action Arbre';
+  src: url('/police-action-arbre.woff2') format('woff2'),
+      url('/police-action-arbre.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 
 html, body {
   height: 100%;
@@ -17,13 +29,13 @@ body {
 }
 
 main {
-  height: 100vh;
+  height: $horizontalTreeHeight;
   margin: auto;
   position: relative;
   width: math.div($tree-width, $tree-height) * 100vh;
 
   @media (max-aspect-ratio: list.slash($tree-width, $tree-height)) {
-    height: math.div($tree-height, $tree-width) * 100vw;
+    height: $verticalTreeHeight;
     width: 100vw;
   }
 }
@@ -35,26 +47,89 @@ main {
   width: 100%;
 }
 
-.actions {
+.tree-actions {
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
+}
 
-  li {
+.tree-action {
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+
+  @mixin tree-action-variant($pair) {
+    .tree-action-sources {
+      color: nth($pair, 4);
+    }
+  }
+  &.is-build {
+    @include tree-action-variant(map-get($colors, 'build'));
+
+    &.is-regenerate {
+      @include tree-action-variant(map-get($colors, 'build-regenerate'));
+    }
+  }
+  &.is-regenerate {
+    @include tree-action-variant(map-get($colors, 'regenerate'));
+
+    &.is-intervene {
+      @include tree-action-variant(map-get($colors, 'regenerate-intervene'));
+    }
+  }
+  &.is-intervene {
+    @include tree-action-variant(map-get($colors, 'intervene'));
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+  button {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    padding: 15%; // Valeur approximative permettant de faire rentrer un carré dans un cercle
     position: absolute;
+    top: 0;
+    width: 100%;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  &-name, &-sources {
+    font-size: 0.004 * $horizontalTreeHeight;
+    font-weight: $weight-semibold;
+    line-height: 1.2;
+    text-align: center;
+
+    @media (max-aspect-ratio: list.slash($tree-width, $tree-height)) {
+      font-size: 0.004 * $verticalTreeHeight;
+    }
+  }
+  &-separator {
+    border-right: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    margin: 0.001 * $horizontalTreeHeight;
+    transform: rotate(45deg);
+    width: 0.002 * $horizontalTreeHeight;
 
     &::before {
       content: '';
       display: block;
       padding-bottom: 100%;
     }
-    p {
-      bottom: 50%;
-      position: absolute;
-      right: 50%;
-      transform: translate(50%, 50%);
-    }
+  }
+  &-sources {
+    font-family: "Police Action Arbre", $family-sans-serif;
   }
 }

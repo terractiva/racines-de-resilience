@@ -22,7 +22,7 @@
   <p class="action-sources">
     <?php foreach ($sources = $action['sources'] as $source): ?>
     <?php e($hasUrl = $source['url'], '<a class="' . $class . '" href="' . esc($source['url'] ?? '', 'attr') . '">'); ?>
-    <?= $source['name'] ?><?php e($hasUrl, '</a>') . e($source !== end($sources), ','); ?>
+    <?= esc($source['name']) ?><?php e($hasUrl, '</a>') . e($source !== end($sources), ','); ?>
     <?php endforeach ?>
   </p>
 
