@@ -94,9 +94,17 @@
   }
   &.is-build {
     @include action-variant(map-get($colors, 'build'));
+
+    &.is-regenerate {
+      @include action-variant(map-get($colors, 'build-regenerate'));
+    }
   }
   &.is-regenerate {
     @include action-variant(map-get($colors, 'regenerate'));
+
+    &.is-intervene {
+      @include action-variant(map-get($colors, 'regenerate-intervene'));
+    }
   }
   &.is-intervene {
     @include action-variant(map-get($colors, 'intervene'));

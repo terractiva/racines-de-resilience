@@ -34,9 +34,17 @@ a:not(.button) {
   }
   &.is-build {
     @include link-variant($build);
+
+    &.is-regenerate {
+      @include link-variant($build-regenerate);
+    }
   }
   &.is-regenerate {
     @include link-variant($regenerate);
+
+    &.is-intervene {
+      @include link-variant($regenerate-intervene);
+    }
   }
   &.is-intervene {
     @include link-variant($intervene);
@@ -57,6 +65,7 @@ details {
       display: list-item;
     }
     .dropdown-item {
+      font-size: inherit;
       padding-right: $block-spacing;
       text-decoration: none;
       width: initial;

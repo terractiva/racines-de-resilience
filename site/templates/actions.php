@@ -2,12 +2,7 @@
   <?php snippet('layout/nav') ?>
   <main>
     <?php snippet('sections/section-hero') ?>
-
-    <section class="section">
-      <div class="container">
-        <p>TODO: actions</p>
-      </div>
-    </section>
+    <?php snippet('layout/layout') ?>
   </main>
   <?php snippet('layout/footer') ?>
 <?php snippet('layout/html-close') ?>

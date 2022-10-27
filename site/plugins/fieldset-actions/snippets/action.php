@@ -1,32 +1,23 @@
-<?php
-  $class = '';
-  $category = $action['categories'][0];
-
-  if ($category == 'build') $class = 'is-build';
-  if ($category == 'regenerate') $class = 'is-regenerate';
-  if ($category == 'intervene') $class = 'is-intervene';
-
-  $class = esc($class, 'attr');
-?>
-
-<div class="action <?= $class ?>">
+<div class="action<?= $action->classes() ?>">
   <div class="action-name title is-6">
+    <?php if ($action->level()->isNotEmpty() && $action->level()->toInt() > 0): ?>
     <p class="action-level">
-      <?= str_repeat('∎', $action['level']) ?>
+      <?= str_repeat('∎', $action->level()->toInt()) ?>
     </p>
+    <?php endif ?>
     <p>
-      <?= esc($action['name']) ?>
+      <?= $action->title()->escape() ?>
     </p>
   </div>
 
   <p class="action-sources">
-    <?php foreach ($sources = $action['sources'] as $source): ?>
-    <?php e($hasUrl = $source['url'], '<a class="' . $class . '" href="' . esc($source['url'] ?? '', 'attr') . '">'); ?>
-    <?= esc($source['name']) ?><?php e($hasUrl, '</a>') . e($source !== end($sources), ','); ?>
+    <?php foreach ($action->sources()->toStructure() as $source): ?>
+    <?php e($hasLink = $source->link()->isNotEmpty(), '<a class="' . $action->classes() . '" href="' . $source->link()->escape('attr') . '">'); ?>
+    <?= $source->name()->escape() ?><?php e($hasLink, '</a>') . e(!$source->isLast(), ','); ?>
     <?php endforeach ?>
   </p>
 
   <p class="action-subcategory">
-    <?= esc($action['subcategory']) ?>
+    <?= $action->subcategory()->escape() ?>
   </p>
 </div>

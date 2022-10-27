@@ -1,1169 +1,1169 @@
 [
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0101",
     "level": 3,
-    "position": [21.925, 20.653],
+    "position": "21.925, 20.653",
     "radius": 1.76,
     "subcategory": 1
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0102",
     "level": 1,
-    "position": [15.789, 14.293],
+    "position": "15.789, 14.293",
     "radius": 2.092,
     "subcategory": 1
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0103",
     "level": 1,
-    "position": [23.2342, 15.3941],
+    "position": "23.2342, 15.3941",
     "radius": 2.0944,
     "subcategory": 1
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0104",
     "level": 2,
-    "position": [18.879, 17.174],
+    "position": "18.879, 17.174",
     "radius": 2.069,
     "subcategory": 1
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0201",
     "level": 3,
-    "position": [13.163, 20.185],
+    "position": "13.163, 20.185",
     "radius": 2.2,
     "subcategory": 2
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0202",
     "level": 2,
-    "position": [16.84, 22.75],
+    "position": "16.84, 22.75",
     "radius": 1.813,
     "subcategory": 2
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0203",
     "level": 1,
-    "position": [19.4447, 25.4204],
+    "position": "19.4447, 25.4204",
     "radius": 2.0514,
     "subcategory": 2
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0301",
     "level": 1,
-    "position": [3.0966, 23.7295],
+    "position": "3.0966, 23.7295",
     "radius": 2.0146,
     "subcategory": 3
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0302",
     "level": 3,
-    "position": [10.3644, 30.4804],
+    "position": "10.3644, 30.4804",
     "radius": 2.0736,
     "subcategory": 3
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0303",
     "level": 2,
-    "position": [9.4725, 25.6455],
+    "position": "9.4725, 25.6455",
     "radius": 1.9965,
     "subcategory": 3
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0304",
     "level": 2,
-    "position": [5.8473, 26.9947],
+    "position": "5.8473, 26.9947",
     "radius": 2.0164,
     "subcategory": 3
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0305",
     "level": 3,
-    "position": [16.9393, 31.403],
+    "position": "16.9393, 31.403",
     "radius": 2.4867,
     "subcategory": 3
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0306",
     "level": 3,
-    "position": [13.8704, 28.1849],
+    "position": "13.8704, 28.1849",
     "radius": 2.0912,
     "subcategory": 3
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0401",
     "level": 2,
-    "position": [7.0013, 34.7656],
+    "position": "7.0013, 34.7656",
     "radius": 1.8586,
     "subcategory": 4
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0402",
     "level": 3,
-    "position": [13.4213, 37.3296],
+    "position": "13.4213, 37.3296",
     "radius": 2.3151,
     "subcategory": 4
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0403",
     "level": 1,
-    "position": [3.9241, 35.7164],
+    "position": "3.9241, 35.7164",
     "radius": 1.7434,
     "subcategory": 4
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0404",
     "level": 2,
-    "position": [10.0681, 37.0678],
+    "position": "10.0681, 37.0678",
     "radius": 1.8811,
     "subcategory": 4
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0405",
     "level": 3,
-    "position": [17.5856, 39.11],
+    "position": "17.5856, 39.11",
     "radius": 2.0007,
     "subcategory": 4
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0501",
     "level": 1,
-    "position": [3.9493, 42.594],
+    "position": "3.9493, 42.594",
     "radius": 1.7678,
     "subcategory": 5
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0502",
     "level": 1,
-    "position": [4.1209, 54.2866],
+    "position": "4.1209, 54.2866",
     "radius": 1.8596,
     "subcategory": 5
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0503",
     "level": 1,
-    "position": [7.0498, 42.042],
+    "position": "7.0498, 42.042",
     "radius": 1.9936,
     "subcategory": 5
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0504",
     "level": 1,
-    "position": [6.7128, 51.0338],
+    "position": "6.7128, 51.0338",
     "radius": 2.0371,
     "subcategory": 5
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0505",
     "level": 2,
-    "position": [9.6831, 48.44],
+    "position": "9.6831, 48.44",
     "radius": 2.0201,
     "subcategory": 5
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0506",
     "level": 2,
-    "position": [10.6488, 43.1824],
+    "position": "10.6488, 43.1824",
     "radius": 2.0501,
     "subcategory": 5
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0507",
     "level": 2,
-    "position": [13.9138, 45.349],
+    "position": "13.9138, 45.349",
     "radius": 2.258,
     "subcategory": 5
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0508",
     "level": 3,
-    "position": [18.1238, 45.5013],
+    "position": "18.1238, 45.5013",
     "radius": 1.9592,
     "subcategory": 5
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0601",
     "level": 2,
-    "position": [3.6717, 74.5782],
+    "position": "3.6717, 74.5782",
     "radius": 2.1607,
     "subcategory": 6
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0602",
     "level": 1,
-    "position": [8.0535, 60.3114],
+    "position": "8.0535, 60.3114",
     "radius": 1.7444,
     "subcategory": 6
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0603",
     "level": 1,
-    "position": [6.3853, 64.6297],
+    "position": "6.3853, 64.6297",
     "radius": 2.1119,
     "subcategory": 6
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0604",
     "level": 1,
-    "position": [2.2873, 63.2374],
+    "position": "2.2873, 63.2374",
     "radius": 2.3195,
     "subcategory": 6
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0605",
     "level": 2,
-    "position": [10.2935, 68.6981],
+    "position": "10.2935, 68.6981",
     "radius": 2.2251,
     "subcategory": 6
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0606",
     "level": 2,
-    "position": [7.6127, 73.063],
+    "position": "7.6127, 73.063",
     "radius": 2.0642,
     "subcategory": 6
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0607",
     "level": 2,
-    "position": [13.5927, 59.4222],
+    "position": "13.5927, 59.4222",
     "radius": 1.9459,
     "subcategory": 6
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0608",
     "level": 2,
-    "position": [10.3701, 62.9331],
+    "position": "10.3701, 62.9331",
     "radius": 2.217,
     "subcategory": 6
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0609",
     "level": 2,
-    "position": [13.5015, 52.7762],
+    "position": "13.5015, 52.7762",
     "radius": 1.9459,
     "subcategory": 6
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0610",
     "level": 3,
-    "position": [19.2621, 51.7506],
+    "position": "19.2621, 51.7506",
     "radius": 2.1482,
     "subcategory": 6
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0611",
     "level": 2,
-    "position": [9.9707, 55.6208],
+    "position": "9.9707, 55.6208",
     "radius": 2.1939,
     "subcategory": 6
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0612",
     "level": 3,
-    "position": [16.3342, 55.8665],
+    "position": "16.3342, 55.8665",
     "radius": 2.1939,
     "subcategory": 6
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0701",
     "level": 1,
-    "position": [7.2618, 80.7054],
+    "position": "7.2618, 80.7054",
     "radius": 1.6825,
     "subcategory": 7
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0702",
     "level": 1,
-    "position": [17.7998, 85.5179],
+    "position": "17.7998, 85.5179",
     "radius": 2.0554,
     "subcategory": 7
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0703",
     "level": 1,
-    "position": [14.3884, 79.5093],
+    "position": "14.3884, 79.5093",
     "radius": 1.6979,
     "subcategory": 7
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0704",
     "level": 1,
-    "position": [10.3132, 78.7191],
+    "position": "10.3132, 78.7191",
     "radius": 2.1529,
     "subcategory": 7
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0705",
     "level": 1,
-    "position": [13.5226, 84.9015],
+    "position": "13.5226, 84.9015",
     "radius": 2.2527,
     "subcategory": 7
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0706",
     "level": 2,
-    "position": [19.4741, 74.4474],
+    "position": "19.4741, 74.4474",
     "radius": 2.0646,
     "subcategory": 7
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0707",
     "level": 2,
-    "position": [18.1466, 79.7666],
+    "position": "18.1466, 79.7666",
     "radius": 2.1769,
     "subcategory": 7
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0708",
     "level": 2,
-    "position": [15.3013, 73.823],
+    "position": "15.3013, 73.823",
     "radius": 2.2209,
     "subcategory": 7
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0709",
     "level": 2,
-    "position": [15.1499, 67.6313],
+    "position": "15.1499, 67.6313",
     "radius": 1.939,
     "subcategory": 7
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0710",
     "level": 2,
-    "position": [19.667, 68.6284],
+    "position": "19.667, 68.6284",
     "radius": 2.0869,
     "subcategory": 7
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0711",
     "level": 3,
-    "position": [17.088, 62.7548],
+    "position": "17.088, 62.7548",
     "radius": 2.2361,
     "subcategory": 7
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0712",
     "level": 3,
-    "position": [24.8193, 62.0452],
+    "position": "24.8193, 62.0452",
     "radius": 1.8572,
     "subcategory": 7
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0713",
     "level": 3,
-    "position": [21.1475, 63.5663],
+    "position": "21.1475, 63.5663",
     "radius": 2.0468,
     "subcategory": 7
   },
   {
-    "categories": [1],
+    "categories": "build",
     "id": "0714",
     "level": 3,
-    "position": [22.0385, 58.3131],
+    "position": "22.0385, 58.3131",
     "radius": 1.9867,
     "subcategory": 7
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0801",
     "level": 2,
-    "position": [26.1458, 75.5613],
+    "position": "26.1458, 75.5613",
     "radius": 1.8576,
     "subcategory": 8
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0802",
     "level": 1,
-    "position": [23.1159, 79.032],
+    "position": "23.1159, 79.032",
     "radius": 2.269,
     "subcategory": 8
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0803",
     "level": 1,
-    "position": [22.7497, 84.9397],
+    "position": "22.7497, 84.9397",
     "radius": 2.084,
     "subcategory": 8
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0804",
     "level": 3,
-    "position": [28.5769, 66.4145],
+    "position": "28.5769, 66.4145",
     "radius": 1.9721,
     "subcategory": 8
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0805",
     "level": 2,
-    "position": [24.9422, 68.2197],
+    "position": "24.9422, 68.2197",
     "radius": 2.0247,
     "subcategory": 8
   },
   {
-    "categories": [1, 2],
+    "categories": "build, regenerate",
     "id": "0806",
     "level": 3,
-    "position": [28.7341, 71.6959],
+    "position": "28.7341, 71.6959",
     "radius": 2.1927,
     "subcategory": 8
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "0901",
     "level": 1,
-    "position": [30.176, 86.5322],
+    "position": "30.176, 86.5322",
     "radius": 2.1565,
     "subcategory": 9
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "0902",
     "level": 2,
-    "position": [32.9851, 82.4123],
+    "position": "32.9851, 82.4123",
     "radius": 2.3388,
     "subcategory": 9
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "0903",
     "level": 2,
-    "position": [29.6311, 78.9851],
+    "position": "29.6311, 78.9851",
     "radius": 2.2004,
     "subcategory": 9
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "0904",
     "level": 3,
-    "position": [34.0825, 76.3745],
+    "position": "34.0825, 76.3745",
     "radius": 2.4898,
     "subcategory": 9
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "0905",
     "level": 3,
-    "position": [33.6524, 70.2031],
+    "position": "33.6524, 70.2031",
     "radius": 2.3439,
     "subcategory": 9
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1001",
     "level": 1,
-    "position": [40.3997, 87.5684],
+    "position": "40.3997, 87.5684",
     "radius": 1.9575,
     "subcategory": 10
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1002",
     "level": 2,
-    "position": [38.6306, 81.612],
+    "position": "38.6306, 81.612",
     "radius": 2.0719,
     "subcategory": 10
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1003",
     "level": 2,
-    "position": [39.8056, 74.7297],
+    "position": "39.8056, 74.7297",
     "radius": 1.8411,
     "subcategory": 10
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1004",
     "level": 2,
-    "position": [41.7091, 78.6984],
+    "position": "41.7091, 78.6984",
     "radius": 1.9391,
     "subcategory": 10
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1005",
     "level": 2,
-    "position": [42.9717, 83.5874],
+    "position": "42.9717, 83.5874",
     "radius": 2.0663,
     "subcategory": 10
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1006",
     "level": 3,
-    "position": [43.1305, 72.9953],
+    "position": "43.1305, 72.9953",
     "radius": 1.9475,
     "subcategory": 10
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1101",
     "level": 2,
-    "position": [50.3315, 80.7894],
+    "position": "50.3315, 80.7894",
     "radius": 1.7874,
     "subcategory": 11
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1102",
     "level": 2,
-    "position": [47.9667, 84.8266],
+    "position": "47.9667, 84.8266",
     "radius": 2.1504,
     "subcategory": 11
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1103",
     "level": 2,
-    "position": [49.3761, 73.7832],
+    "position": "49.3761, 73.7832",
     "radius": 2.0705,
     "subcategory": 11
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1104",
     "level": 2,
-    "position": [46.5874, 77.8885],
+    "position": "46.5874, 77.8885",
     "radius": 2.1983,
     "subcategory": 11
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1201",
     "level": 1,
-    "position": [59.3214, 82.831],
+    "position": "59.3214, 82.831",
     "radius": 2.3342,
     "subcategory": 12
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1202",
     "level": 2,
-    "position": [54.0178, 76.8987],
+    "position": "54.0178, 76.8987",
     "radius": 2.0027,
     "subcategory": 12
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1203",
     "level": 2,
-    "position": [57.6614, 78.9284],
+    "position": "57.6614, 78.9284",
     "radius": 1.8794,
     "subcategory": 12
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1204",
     "level": 2,
-    "position": [54.7485, 81.7787],
+    "position": "54.7485, 81.7787",
     "radius": 1.9554,
     "subcategory": 12
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1205",
     "level": 1,
-    "position": [55.4952, 86.752],
+    "position": "55.4952, 86.752",
     "radius": 2.035,
     "subcategory": 12
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1206",
     "level": 3,
-    "position": [56.1422, 72.6357],
+    "position": "56.1422, 72.6357",
     "radius": 2.1256,
     "subcategory": 12
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1301",
     "level": 1,
-    "position": [66.7679, 86.5665],
+    "position": "66.7679, 86.5665",
     "radius": 2.2107,
     "subcategory": 13
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1302",
     "level": 1,
-    "position": [71.3384, 83.6604],
+    "position": "71.3384, 83.6604",
     "radius": 2.032,
     "subcategory": 13
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1303",
     "level": 2,
-    "position": [65.318, 75.3352],
+    "position": "65.318, 75.3352",
     "radius": 2.0546,
     "subcategory": 13
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1304",
     "level": 2,
-    "position": [68.0353, 79.1192],
+    "position": "68.0353, 79.1192",
     "radius": 2.3687,
     "subcategory": 13
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1305",
     "level": 1,
-    "position": [64.3018, 81.7482],
+    "position": "64.3018, 81.7482",
     "radius": 2.1472,
     "subcategory": 13
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1306",
     "level": 3,
-    "position": [63.2735, 68.325],
+    "position": "63.2735, 68.325",
     "radius": 2.0332,
     "subcategory": 13
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1307",
     "level": 3,
-    "position": [60.9608, 73.0839],
+    "position": "60.9608, 73.0839",
     "radius": 2.3993,
     "subcategory": 13
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1401",
     "level": 1,
-    "position": [83.553, 78.2446],
+    "position": "83.553, 78.2446",
     "radius": 2.2161,
     "subcategory": 14
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1402",
     "level": 2,
-    "position": [76.7847, 76.9229],
+    "position": "76.7847, 76.9229",
     "radius": 1.8028,
     "subcategory": 14
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1403",
     "level": 2,
-    "position": [79.7025, 79.0988],
+    "position": "79.7025, 79.0988",
     "radius": 2.0244,
     "subcategory": 14
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1404",
     "level": 2,
-    "position": [70.5852, 73.2642],
+    "position": "70.5852, 73.2642",
     "radius": 2.1802,
     "subcategory": 14
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1405",
     "level": 2,
-    "position": [73.7865, 77.5822],
+    "position": "73.7865, 77.5822",
     "radius": 1.6451,
     "subcategory": 14
   },
   {
-    "categories": [2],
+    "categories": "regenerate",
     "id": "1406",
     "level": 3,
-    "position": [67.7801, 69.7237],
+    "position": "67.7801, 69.7237",
     "radius": 2.081,
     "subcategory": 14
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1501",
     "level": 1,
-    "position": [86.3897, 71.1482],
+    "position": "86.3897, 71.1482",
     "radius": 1.7985,
     "subcategory": 15
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1502",
     "level": 2,
-    "position": [83.1942, 71.9448],
+    "position": "83.1942, 71.9448",
     "radius": 1.828,
     "subcategory": 15
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1503",
     "level": 3,
-    "position": [74.994, 69.4039],
+    "position": "74.994, 69.4039",
     "radius": 2.2304,
     "subcategory": 15
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1504",
     "level": 2,
-    "position": [79.0204, 71.4528],
+    "position": "79.0204, 71.4528",
     "radius": 2.1351,
     "subcategory": 15
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1505",
     "level": 3,
-    "position": [71.6877, 66.5173],
+    "position": "71.6877, 66.5173",
     "radius": 1.9703,
     "subcategory": 15
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1506",
     "level": 3,
-    "position": [69.4097, 62.589],
+    "position": "69.4097, 62.589",
     "radius": 1.943,
     "subcategory": 15
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1601",
     "level": 1,
-    "position": [82.9104, 64.861],
+    "position": "82.9104, 64.861",
     "radius": 2.284,
     "subcategory": 16
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1602",
     "level": 2,
-    "position": [79.0582, 64.1977],
+    "position": "79.0582, 64.1977",
     "radius": 2.2132,
     "subcategory": 16
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1603",
     "level": 3,
-    "position": [72.3132, 56.8603],
+    "position": "72.3132, 56.8603",
     "radius": 2.25,
     "subcategory": 16
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1604",
     "level": 3,
-    "position": [74.9776, 61.5071],
+    "position": "74.9776, 61.5071",
     "radius": 2.3834,
     "subcategory": 16
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1701",
     "level": 1,
-    "position": [90.9924, 61.0211],
+    "position": "90.9924, 61.0211",
     "radius": 1.9717,
     "subcategory": 17
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1702",
     "level": 2,
-    "position": [84.5498, 58.8901],
+    "position": "84.5498, 58.8901",
     "radius": 1.9963,
     "subcategory": 17
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1703",
     "level": 1,
-    "position": [88.1151, 57.4779],
+    "position": "88.1151, 57.4779",
     "radius": 1.997,
     "subcategory": 17
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1704",
     "level": 3,
-    "position": [76.8587, 54.1372],
+    "position": "76.8587, 54.1372",
     "radius": 2.189,
     "subcategory": 17
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1705",
     "level": 3,
-    "position": [80.4237, 57.0626],
+    "position": "80.4237, 57.0626",
     "radius": 2.2976,
     "subcategory": 17
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1706",
     "level": 3,
-    "position": [75.5209, 49.5302],
+    "position": "75.5209, 49.5302",
     "radius": 1.9464,
     "subcategory": 17
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1801",
     "level": 2,
-    "position": [84.9099, 52.6176],
+    "position": "84.9099, 52.6176",
     "radius": 1.9033,
     "subcategory": 18
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1802",
     "level": 1,
-    "position": [86.6419, 47.2075],
+    "position": "86.6419, 47.2075",
     "radius": 2.3444,
     "subcategory": 18
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1803",
     "level": 1,
-    "position": [90.8932, 46.7948],
+    "position": "90.8932, 46.7948",
     "radius": 2.2205,
     "subcategory": 18
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1804",
     "level": 3,
-    "position": [78.8429, 44.7566],
+    "position": "78.8429, 44.7566",
     "radius": 2.0509,
     "subcategory": 18
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1805",
     "level": 3,
-    "position": [80.6122, 49.9604],
+    "position": "80.6122, 49.9604",
     "radius": 2.0509,
     "subcategory": 18
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1806",
     "level": 2,
-    "position": [82.8256, 45.1813],
+    "position": "82.8256, 45.1813",
     "radius": 2.2605,
     "subcategory": 18
   },
   {
-    "categories": [2, 3],
+    "categories": "regenerate, intervene",
     "id": "1807",
     "level": 3,
-    "position": [75.6958, 43.9779],
+    "position": "75.6958, 43.9779",
     "radius": 1.7669,
     "subcategory": 18
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "1901",
     "level": 2,
-    "position": [83.5217, 38.1736],
+    "position": "83.5217, 38.1736",
     "radius": 1.7881,
     "subcategory": 19
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "1902",
     "level": 2,
-    "position": [86.1258, 40.2059],
+    "position": "86.1258, 40.2059",
     "radius": 2.0573,
     "subcategory": 19
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "1903",
     "level": 1,
-    "position": [89.9903, 39.6945],
+    "position": "89.9903, 39.6945",
     "radius": 2.2699,
     "subcategory": 19
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "1904",
     "level": 3,
-    "position": [80.2755, 38.9843],
+    "position": "80.2755, 38.9843",
     "radius": 1.8343,
     "subcategory": 19
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "1905",
     "level": 3,
-    "position": [76.3085, 37.5543],
+    "position": "76.3085, 37.5543",
     "radius": 2.1299,
     "subcategory": 19
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2001",
     "level": 2,
-    "position": [84.0058, 30.7483],
+    "position": "84.0058, 30.7483",
     "radius": 2.182,
     "subcategory": 20
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2002",
     "level": 1,
-    "position": [87.241, 34.4122],
+    "position": "87.241, 34.4122",
     "radius": 1.9111,
     "subcategory": 20
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2003",
     "level": 1,
-    "position": [88.8185, 29.3052],
+    "position": "88.8185, 29.3052",
     "radius": 2.2054,
     "subcategory": 20
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2004",
     "level": 3,
-    "position": [75.1553, 30.0494],
+    "position": "75.1553, 30.0494",
     "radius": 2.4507,
     "subcategory": 20
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2005",
     "level": 2,
-    "position": [79.5976, 31.7468],
+    "position": "79.5976, 31.7468",
     "radius": 2.3069,
     "subcategory": 20
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2101",
     "level": 1,
-    "position": [89.4396, 16.9202],
+    "position": "89.4396, 16.9202",
     "radius": 1.9094,
     "subcategory": 21
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2102",
     "level": 1,
-    "position": [86.7476, 20.5895],
+    "position": "86.7476, 20.5895",
     "radius": 2.1068,
     "subcategory": 21
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2103",
     "level": 1,
-    "position": [90.1818, 23.9242],
+    "position": "90.1818, 23.9242",
     "radius": 1.687,
     "subcategory": 21
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2104",
     "level": 3,
-    "position": [76.8793, 24.3345],
+    "position": "76.8793, 24.3345",
     "radius": 1.8753,
     "subcategory": 21
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2105",
     "level": 2,
-    "position": [80.3226, 24.5157],
+    "position": "80.3226, 24.5157",
     "radius": 2.2328,
     "subcategory": 21
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2106",
     "level": 2,
-    "position": [84.3738, 24.619],
+    "position": "84.3738, 24.619",
     "radius": 1.8452,
     "subcategory": 21
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2201",
     "level": 1,
-    "position": [83.6837, 15.1651],
+    "position": "83.6837, 15.1651",
     "radius": 2.1665,
     "subcategory": 22
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2202",
     "level": 2,
-    "position": [80.3946, 17.9381],
+    "position": "80.3946, 17.9381",
     "radius": 2.0554,
     "subcategory": 22
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2203",
     "level": 3,
-    "position": [73.1609, 20.081],
+    "position": "73.1609, 20.081",
     "radius": 2.0454,
     "subcategory": 22
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2204",
     "level": 2,
-    "position": [76.7106, 17.9398],
+    "position": "76.7106, 17.9398",
     "radius": 1.9939,
     "subcategory": 22
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2301",
     "level": 2,
-    "position": [80.4274, 9.6204],
+    "position": "80.4274, 9.6204",
     "radius": 2.2517,
     "subcategory": 23
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2302",
     "level": 3,
-    "position": [72.8748, 12.9006],
+    "position": "72.8748, 12.9006",
     "radius": 2.2663,
     "subcategory": 23
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2303",
     "level": 3,
-    "position": [76.957, 11.6131],
+    "position": "76.957, 11.6131",
     "radius": 2.011,
     "subcategory": 23
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2401",
     "level": 1,
-    "position": [70.1024, 1.6267],
+    "position": "70.1024, 1.6267",
     "radius": 1.9917,
     "subcategory": 24
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2402",
     "level": 1,
-    "position": [72.0831, 6.3533],
+    "position": "72.0831, 6.3533",
     "radius": 2.1042,
     "subcategory": 24
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2403",
     "level": 1,
-    "position": [66.26, 2.2935],
+    "position": "66.26, 2.2935",
     "radius": 2.116,
     "subcategory": 24
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2404",
     "level": 3,
-    "position": [64.9193, 9.618],
+    "position": "64.9193, 9.618",
     "radius": 2.2215,
     "subcategory": 24
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2405",
     "level": 2,
-    "position": [68.6263, 7.3645],
+    "position": "68.6263, 7.3645",
     "radius": 1.9809,
     "subcategory": 24
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2406",
     "level": 3,
-    "position": [68.4948, 12.8756],
+    "position": "68.4948, 12.8756",
     "radius": 1.94,
     "subcategory": 24
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2407",
     "level": 3,
-    "position": [58.9273, 2.7392],
+    "position": "58.9273, 2.7392",
     "radius": 2.2716,
     "subcategory": 24
   },
   {
-    "categories": [3],
+    "categories": "intervene",
     "id": "2408",
     "level": 2,
-    "position": [62.703, 5.1856],
+    "position": "62.703, 5.1856",
     "radius": 2.2138,
     "subcategory": 24
   }

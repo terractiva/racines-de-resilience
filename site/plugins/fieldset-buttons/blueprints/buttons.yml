@@ -19,15 +19,15 @@ fields:
       is-regenerate: Vert (Régénérer)
   isLight:
     type: toggle
-    label: Style de couleur
+    label: Variante claire
     width: 1/3
     text:
-      - Normal
-      - Léger
+      - Non
+      - Oui
   isOutlined:
     type: toggle
-    label: Variante
+    label: Variante bordure
     width: 1/3
     text:
-      - Normal
-      - Bordure
+      - Non
+      - Oui

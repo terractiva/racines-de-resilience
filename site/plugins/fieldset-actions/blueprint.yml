@@ -1,2 +1,10 @@
 name: Actions
 icon: star
+fields:
+  isSelection:
+    type: toggle
+    label: Afficher une sélection
+    help: La sélection contiendra 2 actions aléatoires de chaque niveau.
+    text:
+      - Non
+      - Oui

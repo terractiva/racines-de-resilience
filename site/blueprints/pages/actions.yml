@@ -6,6 +6,39 @@ options:
   delete: false
   duplicate: false
 
-sections:
-  heading:
-    extends: sections/section-hero
+tabs:
+  layout:
+    label: Mise en page
+    icon: template
+    sections:
+      heading:
+        extends: sections/section-hero
+      layout:
+        extends: sections/page-layout
+
+  airtable:
+    label: Airtable
+    icon: server
+    fields:
+      memo:
+        extends: sections/memo
+      cacheMemo:
+        extends: sections/cache-memo
+      airtableBase:
+        type: text
+        label: Airtable - ID Base
+        width: 1/3
+        required: true
+        help: <p>https://airtable.com/<b>appH2RLrdTa38J8wK</b>/tbl3RGTSrxOwDUCsU/viwsGJDZdgQGC7X15</p>
+      airtableTable:
+        type: text
+        label: Airtable - ID Table
+        width: 1/3
+        required: true
+        help: <p>https://airtable.com/appH2RLrdTa38J8wK/<b>tbl3RGTSrxOwDUCsU</b>/viwsGJDZdgQGC7X15</p>
+      airtableView:
+        type: text
+        label: Airtable - ID Vue
+        width: 1/3
+        required: true
+        help: <p>https://airtable.com/appH2RLrdTa38J8wK/tbl3RGTSrxOwDUCsU/<b>viwsGJDZdgQGC7X15</b></p>

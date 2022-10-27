@@ -5,11 +5,7 @@ sections:
   treeMemo:
     extends: sections/memo
   cacheMemo:
-    type: info
-    label: " "
-    text: |
-      Les actions sont mises en cache pendant 24 heures, les changements effectués sur Airtable peuvent donc mettre du temps à apparaître sur le site.
-      Vous pouvez forcer le rafraîchissement en allant sur ce lien : {{ page.url }}?flush-cache.
+    extends: sections/cache-memo
 
   settings:
     type: fields

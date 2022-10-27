@@ -1,92 +1,18 @@
 <?php
-  $actions = array(
-    [
-      'name' => 'Buy local fair-trade products',
-      'categories' => array('build'),
-      'subcategory' => 'Strengthening local resilience',
-      'level' => 1,
-      'sources' => array(
-        [
-          'name' => 'Foodwise',
-          'url' => 'https://www.foodwise.com.au/'
-        ],
-        [
-          'name' => 'Food Connect Foundation',
-          'url' => 'http://foodconnectfoundation.org.au/'
-        ],
-        [
-          'name' => 'Fair Food Forager',
-          'url' => 'https://fairfoodforager.com.au/'
-        ]
-      )
-    ],
-    [
-      'name' => 'Learn to dedramatise my feeling of guilt and inadequacy',
-      'categories' => array('intervene'),
-      'subcategory' => 'Raising awareness through art',
-      'level' => 1,
-      'sources' => array([
-        'name' => 'Sorry Children',
-        'url' => 'https://sorrychildren.com/en/'
-      ])
-    ],
-    [
-      'name' => 'Place my savings into banks that are serious about climate change',
-      'categories' => array('intervene'),
-      'subcategory' => 'Constraining finance',
-      'level' => 2,
-      'sources' => array(
-        [
-          'name' => 'Bank Track',
-          'url' => 'https://www.banktrack.org/search#category=banks'
-        ],
-        [
-          'name' => 'Market Forces',
-          'url' => 'https://www.marketforces.org.au/info/compare-bank-table/'
-        ]
-      )
-    ],
-    [
-      'name' => 'Join a local group raising awareness around systemic collapse risks',
-      'categories' => array('regenerate'),
-      'subcategory' => 'Reflecting complexity',
-      'level' => 2,
-      'sources' => array([
-        'name' => 'Heart Community Group',
-        'url' => 'https://heartcommunitygroup.org/'
-      ])
-    ],
-    [
-      'name' => 'Initiate a national debate for a sustainable population policy',
-      'categories' => array('regenerate'),
-      'subcategory' => 'Tackling the demographic taboo',
-      'level' => 3,
-      'sources' => array(
-        [
-          'name' => 'Center for Biological Diversity',
-          'url' => 'https://www.biologicaldiversity.org/programs/population_and_sustainability/#3'
-        ],
-        [
-          'name' => 'Population Matters',
-          'url' => 'https://populationmatters.org/'
-        ]
-      )
-    ],
-    [
-      'name' => 'Go on hunger strike for a stable climate',
-      'categories' => array('intervene'),
-      'subcategory' => 'Impeaching environmentally damaging activities',
-      'level' => 3,
-      'sources' => array([
-        'name' => 'Beautiful Trouble',
-        'url' => 'https://beautifultrouble.org/toolbox/tool/hunger-strike'
-      ])
-    ]
-  );
+  $actions = site()->children()->findBy('template', 'actions')->children();
+  $selection = $actions;
+
+  if ($block->isSelection()->toBool()) {
+    $selection = $actions->filterBy('level', 0)->random(2, true);
+
+    $selection->add($actions->filterBy('level', 1)->random(2, true));
+    $selection->add($actions->filterBy('level', 2)->random(2, true));
+    $selection->add($actions->filterBy('level', 3)->random(2, true));
+  }
 ?>
 
 <div class="columns is-centered is-multiline">
-  <?php foreach ($actions as $action): ?>
+  <?php foreach ($selection as $action): ?>
   <div class="column is-half-tablet is-two-fifths-desktop">
     <?php snippet('elements/action', ['action' => $action]) ?>
   </div>

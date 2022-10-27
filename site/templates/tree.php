@@ -9,19 +9,20 @@
       />
 
       <ul class="tree-actions">
-        <?php foreach ($page->actions() as $action): ?>
+        <?php foreach ($page->children() as $action): ?>
+        <?php $position = $action->position()->split(); ?>
         <li
-          class="tree-action<?= computeActionClasses($action) ?>"
-          style="left: <?= $action['position'][0] ?>%; top: <?= $action['position'][1] ?>%; width: <?= 2 * $action['radius'] ?>%;"
+          class="tree-action<?= $action->classes() ?>"
+          style="left: <?= $position[0] ?>%; top: <?= $position[1] ?>%; width: <?= 2 * $action->radius()->toFloat() ?>%;"
         >
           <button type="button">
             <p class="tree-action-name">
-              <?= esc($action['name']) ?>
+              <?= $action->title()->escape() ?>
             </p>
             <div class="tree-action-separator"></div>
             <p class="tree-action-sources">
-              <?php foreach ($sources = $action['sources'] as $source): ?>
-              <?= esc($source['name']) ?><?php e($source !== end($sources), ','); ?>
+              <?php foreach ($action->sources()->toStructure() as $source): ?>
+              <?= $source->name()->escape() ?><?php e(!$source->isLast(), ','); ?>
               <?php endforeach ?>
             </p>
           </button>
