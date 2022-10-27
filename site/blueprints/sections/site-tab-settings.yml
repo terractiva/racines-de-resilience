@@ -118,6 +118,8 @@ columns:
         help: Seules les pages disponibles dans la langue sélectionnée seront affichées
         status: listed
         create: false
+        image:
+          query: false
   - width: 1/3
     fields:
       footerFreeText:

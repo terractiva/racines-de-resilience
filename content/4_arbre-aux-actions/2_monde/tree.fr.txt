@@ -1,0 +1,21 @@
+Title: Monde
+
+----
+
+Language: en
+
+----
+
+Airtablebase: appmcfQJfkRzvm9pr
+
+----
+
+Airtabletable: tblHJrXzczq3EH383
+
+----
+
+Airtableview: viwX8ILnt2BwRtwxV
+
+----
+
+Uuid: wEjFUlkhRcSyqYJI

@@ -30,15 +30,15 @@ class TreePage extends Page
 {
   public function actions()
   {
-    $VIEW = 'viwsGJDZdgQGC7X15';
-
-    $cache = kirby()->cache('airtable');
-    $cacheName = 'tree-actions-' . $VIEW;
+    $kirby = kirby();
+    $cache = $kirby->cache('airtable');
+    $cacheName = 'tree-actions-' . $this->airtableView();
+    if ($kirby->request()->query()->get('flush-cache') !== null) $cache->remove($cacheName);
     $actions = $cache->get($cacheName);
 
     if ($actions === null) {
       $actions = [];
-      $records = fetchActions('appH2RLrdTa38J8wK', 'tbl3RGTSrxOwDUCsU', $VIEW);
+      $records = fetchActions($this->airtableBase(), $this->airtableTable(), $this->airtableView());
       $positions = json_decode(file_get_contents('site/plugins/airtable-actions/positions.json'));
       $positionIds = array_column($positions, 'id');
 
@@ -65,7 +65,7 @@ class TreePage extends Page
           }
         }
 
-        if ($actionIndex !== false) {
+        if ($actionIndex !== false && isset($record['fields']['Source - Name'])) {
           $actions[$actionIndex]['sources'][] = [
             'country' => $record['fields']['Source - Country ID'] ?? null,
             'department' => $record['fields']['Source - Department ID'] ?? null,
@@ -76,7 +76,7 @@ class TreePage extends Page
         }
       }
 
-      $cache->set($cacheName, $actions, 12 * 60); // 1/2 journée
+      $cache->set($cacheName, $actions, 24 * 60); // 1 journée
     };
 
     return $actions;

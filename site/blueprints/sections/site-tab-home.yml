@@ -51,3 +51,5 @@ columns:
         type: pages
         label: Pages
         create: default
+        image:
+          query: false

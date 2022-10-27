@@ -29,6 +29,7 @@ $scheme-main: $light;
 
 $radius: 0;
 
+$navbar-height: 3.25rem;
 $navbar-background-color: transparent;
 $navbar-item-img-max-height: 2.25rem;
 $footer-background-color: $black;
@@ -36,6 +37,11 @@ $footer-color: $white;
 
 $card-radius: 0;
 $card-footer-border-top: 1px solid $grey;
+
+$dropdown-menu-min-width: initial;
+$dropdown-content-background-color: $white;
+$dropdown-item-active-color: inherit;
+$dropdown-item-active-background-color: $grey-lightest;
 
 // Utilities
 @import "bulma/sass/utilities/functions.sass";

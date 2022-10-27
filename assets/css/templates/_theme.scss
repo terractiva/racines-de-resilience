@@ -51,6 +51,17 @@ details {
   &:not(:last-child) {
     margin-bottom: $size-6;
   }
+  &.dropdown {
+    summary {
+      box-sizing: border-box;
+      display: list-item;
+    }
+    .dropdown-item {
+      padding-right: $block-spacing;
+      text-decoration: none;
+      width: initial;
+    }
+  }
 
   summary {
     cursor: pointer;

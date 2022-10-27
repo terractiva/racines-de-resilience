@@ -22,6 +22,8 @@ fields:
     required: true
     max: 1
     link: false
+    image:
+      query: false
     when:
       type: page
   pageAnchor:

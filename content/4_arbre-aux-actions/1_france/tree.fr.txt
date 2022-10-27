@@ -1,0 +1,21 @@
+Title: France
+
+----
+
+Language: fr
+
+----
+
+Airtablebase: appH2RLrdTa38J8wK
+
+----
+
+Airtabletable: tbl3RGTSrxOwDUCsU
+
+----
+
+Airtableview: viwsGJDZdgQGC7X15
+
+----
+
+Uuid: DvmlRzNVal9e0QJp

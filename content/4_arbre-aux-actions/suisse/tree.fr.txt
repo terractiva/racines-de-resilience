@@ -1,0 +1,21 @@
+Title: Suisse
+
+----
+
+Language: fr
+
+----
+
+Airtablebase: appkZvRDHNOslcBCJ
+
+----
+
+Airtabletable: tblFwHYtE2nWuxvll
+
+----
+
+Airtableview: viwJZohs18UsWrgdb
+
+----
+
+Uuid: 9y8wciO8YdIwqF5S

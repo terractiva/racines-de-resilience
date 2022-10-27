@@ -1,0 +1,42 @@
+title: Arbres aux actions
+icon: 🌳
+
+options:
+  changeStatus: false
+  delete: false
+  duplicate: false
+
+columns:
+  - width:
+    sections:
+      treeMemo:
+        extends: sections/memo
+      redirectionMemo:
+        type: info
+        label: " "
+        text: |
+          Naviguer vers {{ page.url }} redirige automatiquement vers le premier arbre disponible dans la langue utilisée (selon l'ordre ci-dessous).
+
+  - width: 2/3
+    fields:
+      treeImage:
+        type: files
+        label: Image
+        required: true
+        help: L'image sera automatiquement optimisée
+        max: 1
+        layout: cards
+        size: huge
+        uploads: image
+        image:
+          back: white
+
+  - width: 1/3
+    sections:
+      pages:
+        type: pages
+        label: Arbres
+        create: tree
+        info: "{{ page.language }}"
+        image:
+          query: false

@@ -1,26 +1,48 @@
 title: Arbre aux actions
 icon: 🌳
 
-options:
-  changeStatus: false
-  delete: false
-  duplicate: false
-
 sections:
   treeMemo:
     extends: sections/memo
+  cacheMemo:
+    type: info
+    label: " "
+    text: |
+      Les actions sont mises en cache pendant 24 heures, les changements effectués sur Airtable peuvent donc mettre du temps à apparaître sur le site.
+      Vous pouvez forcer le rafraîchissement en allant sur ce lien : {{ page.url }}?flush-cache.
 
   settings:
     type: fields
     fields:
-      treeImage:
-        type: files
-        label: Arbre
+      language:
+        type: select
+        label: Langue
+        width: 1/4
         required: true
-        help: L'image sera automatiquement optimisée
-        max: 1
-        layout: cards
-        size: huge
-        uploads: image
-        image:
-          back: white
+        translate: false
+        options:
+          type: query
+          query: kirby.languages.flip
+          text: "{{ item.name }}"
+          value: "{{ item.code }}"
+      airtableBase:
+        type: text
+        label: Airtable - ID Base
+        width: 1/4
+        required: true
+        help: <p>https://airtable.com/<b>appH2RLrdTa38J8wK</b>/tbl3RGTSrxOwDUCsU/viwsGJDZdgQGC7X15</p>
+        translate: false
+      airtableTable:
+        type: text
+        label: Airtable - ID Table
+        width: 1/4
+        required: true
+        help: <p>https://airtable.com/appH2RLrdTa38J8wK/<b>tbl3RGTSrxOwDUCsU</b>/viwsGJDZdgQGC7X15</p>
+        translate: false
+      airtableView:
+        type: text
+        label: Airtable - ID Vue
+        width: 1/4
+        required: true
+        help: <p>https://airtable.com/appH2RLrdTa38J8wK/tbl3RGTSrxOwDUCsU/<b>viwsGJDZdgQGC7X15</b></p>
+        translate: false
