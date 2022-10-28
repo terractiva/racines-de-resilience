@@ -8,6 +8,19 @@
   }
 }
 
+.subcategories {
+  a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+
+    &:hover {
+      border-color: $link-hover;
+      color: inherit;
+    }
+  }
+}
+
 .partners {
   font-weight: $weight-medium;
   text-align: center;
