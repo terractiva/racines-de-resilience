@@ -6,4 +6,25 @@ Treeimage: - file://CGYtx7ogSkFwLJRm
 
 ----
 
+Copyright: <p><strong>Illustration</strong> <a href="https://www.theotimenoel.com/" target="_blank" rel="noopener noreferrer">Théotime Noël</a></p><p><strong>Conception graphique</strong> <a href="https://elypss.fr/" target="_blank" rel="noopener noreferrer">Loïc Cimelière/Elypss</a></p><p><strong>Conception éditoriale et recherches</strong> <a href="https://brianneparquier.fr/" target="_blank" rel="noopener noreferrer">Brianne Parquier</a>, Charlotte Ogier, Emmanuel Cappellin</p>
+
+----
+
+Buttons:
+
+- 
+  label: Acheter version papier
+  type: url
+  page: [ ]
+  pageanchor: ""
+  url: >
+    https://www.boutique.racinesderesilience.org/index.php/produit/frune-fois-que-tu-sais-guide-daction/
+  email: ""
+  emailsubject: ""
+  color: is-dark
+  islight: 'false'
+  isoutlined: 'false'
+
+----
+
 Uuid: YKln3T0YKA0khias

@@ -73,7 +73,6 @@ main {
   }
 
   &-action {
-    border-radius: 50%;
     position: absolute;
     overflow: hidden;
 
@@ -100,6 +99,9 @@ main {
       @include tree-action-variant(map-get($colors, 'intervene'));
     }
 
+    &, &::before, button {
+      border-radius: 50%;
+    }
     &::before {
       content: '';
       display: block;
@@ -161,8 +163,28 @@ main {
   }
 
   &-buttons {
+    position: absolute;
+    right: 50%;
+    top: $navbar-height + 0.5rem;
+    transform: translateX(50%);
+
+    @include mobile {
+      right: 0;
+      transform: none;
+    }
+  }
+
+  &-dropdowns {
     left: $size-7;
     position: absolute;
     top: $navbar-height + 0.5rem;
+
+    details {
+      margin-bottom: 0;
+    }
+    &-credits .dropdown-menu {
+      max-width: calc(100vw - 2 * $size-7);
+      width: 35rem;
+    }
   }
 }

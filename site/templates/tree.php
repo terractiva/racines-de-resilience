@@ -31,7 +31,19 @@
       </ul>
     </div>
 
-    <div class="tree-buttons">
+    <div class="tree-dropdowns">
+      <details class="tree-dropdowns-credits dropdown is-active">
+        <summary class="button is-dark is-outlined is-responsive">©</summary>
+
+        <div class="dropdown-menu">
+          <div class="dropdown-content">
+            <div class="dropdown-item">
+              <?= $page->parent()->copyright() ?>
+            </div>
+          </div>
+        </div>
+      </details>
+
       <details class="dropdown is-active">
         <summary class="button is-dark is-outlined is-responsive">
           <?= $page->title()->escape() ?>
@@ -48,5 +60,7 @@
         </div>
       </details>
     </div>
+
+    <?php snippet('elements/buttons', ['buttons' => $page->parent()->buttons(), 'buttonClasses' => 'is-responsive', 'classes' => 'tree-buttons']) ?>
   </main>
 <?php snippet('layout/html-close') ?>

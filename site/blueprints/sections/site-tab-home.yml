@@ -3,6 +3,11 @@ columns:
     sections:
       siteHomeMemo:
         extends: sections/memo
+      cacheMemo:
+        type: info
+        label: " "
+        text: |
+          Les actions sont mises en cache pendant 24 heures, vous pouvez forcer le rafraîchissement en rajoutant `?flush-cache` à l'adresse de la page.
 
   - width: 2/3
     sections:

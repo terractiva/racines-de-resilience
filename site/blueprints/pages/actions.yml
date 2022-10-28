@@ -22,8 +22,6 @@ tabs:
     fields:
       memo:
         extends: sections/memo
-      cacheMemo:
-        extends: sections/cache-memo
       airtableBase:
         type: text
         label: Airtable - ID Base

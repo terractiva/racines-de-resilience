@@ -4,8 +4,6 @@ icon: 🌳
 fields:
   memo:
     extends: sections/memo
-  cacheMemo:
-    extends: sections/cache-memo
 
   language:
     type: select

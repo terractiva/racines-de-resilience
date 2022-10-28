@@ -62,7 +62,6 @@ details {
   &.dropdown {
     summary {
       box-sizing: border-box;
-      display: list-item;
 
       &:hover {
         text-decoration: none;
@@ -70,7 +69,7 @@ details {
     }
     .dropdown-item {
       font-size: inherit;
-      padding-right: $block-spacing;
+      padding-right: $size-6;
       text-decoration: none;
       width: initial;
     }
