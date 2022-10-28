@@ -6,20 +6,7 @@ Heroheading: Énergie, climat, effondrement, résilience...<br>On fait quoi main
 
 ----
 
-Herobuttons:
-
-- 
-  label: Faire le quiz
-  type: page
-  page:
-    - page://glpbimFbvkTWtRnq
-  pageanchor: ""
-  url: ""
-  email: ""
-  emailsubject: ""
-  color: is-white
-  islight: 'false'
-  isoutlined: 'false'
+Herobuttons: 
 
 ----
 

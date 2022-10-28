@@ -14,7 +14,7 @@ Herobuttons:
 
 ----
 
-Layout: [{"content":{"color":"","heading":"<em>Under construction<\/em>","layout":""},"id":"51882604-ee2d-413d-97f4-390b95d82661","isHidden":false,"type":"section"}]
+Layout: [{"content":{"color":"","heading":"<em>The test will be back soon!<\/em>","layout":""},"id":"51882604-ee2d-413d-97f4-390b95d82661","isHidden":false,"type":"section"}]
 
 ----
 

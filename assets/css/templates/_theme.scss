@@ -63,6 +63,10 @@ details {
     summary {
       box-sizing: border-box;
       display: list-item;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
     .dropdown-item {
       font-size: inherit;
@@ -74,6 +78,11 @@ details {
 
   summary {
     cursor: pointer;
+    width: fit-content;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .content {
     margin-top: $size-7;

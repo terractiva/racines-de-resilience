@@ -1,0 +1,29 @@
+Title: Actions
+
+----
+
+Heroheading: Moving forward,<br>Together
+
+----
+
+Herobuttons: 
+
+----
+
+Layout: [{"content":{"color":"","heading":"Finding the right action for me","layout":"[{\"attrs\":[],\"columns\":[{\"blocks\":[{\"content\":{\"isvertical\":\"false\",\"buttons\":[{\"label\":\"Discover the 24 themes\",\"type\":\"page\",\"page\":[\"page:\\\/\\\/qm0sQPbBSM5LZPGM\"],\"pageanchor\":\"24-themes-to-act\",\"url\":\"\",\"email\":\"\",\"emailsubject\":\"\",\"color\":\"is-dark\",\"islight\":\"false\",\"isoutlined\":\"true\"}]},\"id\":\"1f9d5419-522c-4e05-879a-23118419bdbe\",\"isHidden\":false,\"type\":\"buttons\"}],\"id\":\"e1204ef3-05cb-44eb-bc6e-0410badb3800\",\"width\":\"1\\\/1\"}],\"id\":\"9c60b205-ae99-487c-923b-dc703419219d\"}]"},"id":"7b238d7a-c2e1-41bf-98bc-4d205676caad","isHidden":false,"type":"section"},{"content":{"color":"","heading":"","layout":"[{\"attrs\":[],\"columns\":[{\"blocks\":[{\"content\":{\"isselection\":\"false\"},\"id\":\"dcce0240-fc14-47ba-a030-bdd0bf601358\",\"isHidden\":false,\"type\":\"actions\"},{\"content\":{\"isvertical\":\"false\",\"buttons\":[{\"label\":\"Add an action\",\"type\":\"url\",\"page\":[],\"pageanchor\":\"\",\"url\":\"https:\\\/\\\/airtable.com\\\/shrlqNJvuiem0iFkA\",\"email\":\"\",\"emailsubject\":\"\",\"color\":\"is-dark\",\"islight\":\"false\",\"isoutlined\":\"false\"}]},\"id\":\"aba8bf6b-80cc-44cf-8c59-428dfc4b7477\",\"isHidden\":false,\"type\":\"buttons\"}],\"id\":\"6211e903-e605-48f3-b0c5-4cf7f2c942ff\",\"width\":\"1\\\/1\"}],\"id\":\"ef489a42-4e99-4139-b6ea-0160c17617b4\"}]"},"id":"eb914dda-206e-493c-b5a4-ea8709b8335d","isHidden":false,"type":"section"},{"content":{"color":"has-background-build","heading":"The tree of actions","layout":"[{\"attrs\":[],\"columns\":[{\"blocks\":[{\"content\":{\"text\":\"<p>Discover or rediscover the handbook\\u2019s poster of the tree of actions in its <strong>interactive format<\\\/strong>. Over <strong>150 practical actions<\\\/strong> on energy, climate, collapse and resilience, organised by topics like the roots of a tree of possibilities would be.<\\\/p><p>So that <strong>we can lean toward action together<\\\/strong>, every action in the tree connects\\u00a0to at least one reference structure (organisation, community, collective\\u2026).<\\\/p>\"},\"id\":\"2dc8e0a1-65c4-4e27-8552-671524ec8bcc\",\"isHidden\":false,\"type\":\"text\"}],\"id\":\"b6e95f3f-ce90-4700-9416-a98f5ac87eb2\",\"width\":\"5\\\/12\"},{\"blocks\":[{\"content\":{\"isvertical\":\"true\",\"buttons\":[{\"label\":\"Digital version\",\"type\":\"page\",\"page\":[\"page:\\\/\\\/YKln3T0YKA0khias\"],\"pageanchor\":\"\",\"url\":\"\",\"email\":\"\",\"emailsubject\":\"\",\"color\":\"is-white\",\"islight\":\"false\",\"isoutlined\":\"false\"},{\"label\":\"Paper version\",\"type\":\"url\",\"page\":[],\"pageanchor\":\"\",\"url\":\"https:\\\/\\\/www.boutique.racinesderesilience.org\\\/index.php\\\/produit\\\/frune-fois-que-tu-sais-guide-daction\\\/\",\"email\":\"\",\"emailsubject\":\"\",\"color\":\"is-white\",\"islight\":\"false\",\"isoutlined\":\"false\"}]},\"id\":\"203e1254-5ce6-4206-b84e-a4f5c7a649f0\",\"isHidden\":false,\"type\":\"buttons\"}],\"id\":\"3ea196d1-99b3-44b4-82dd-b539a9057e21\",\"width\":\"5\\\/12\"}],\"id\":\"1e268d6b-5ef2-4591-8dd1-adaf8b362c0e\"}]"},"id":"7de1c3e4-c11c-4122-ba30-bd66296044ef","isHidden":false,"type":"section"},{"content":{"color":"","heading":"24 themes to act","layout":""},"id":"c6267e99-4ef7-44c6-bb1e-bdf216c272a0","isHidden":false,"type":"section"}]
+
+----
+
+Airtablebase: appVPpoUBjr6idVoL
+
+----
+
+Airtabletable: tblhEewlPX5zNopkV
+
+----
+
+Airtableview: viwvG7HAdkPkppa85
+
+----
+
+Uuid: qm0sQPbBSM5LZPGM
