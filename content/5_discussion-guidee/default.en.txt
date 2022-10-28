@@ -6,7 +6,7 @@ Slug: guided-discussion
 
 ----
 
-Heroheading: Guided discussion
+Heroheading: 
 
 ----
 

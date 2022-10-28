@@ -2,21 +2,24 @@ Title: Page introuvable
 
 ----
 
-Heroheading: Page introuvable
+Heroheading: 
 
 ----
 
 Herobuttons:
 
 - 
-  color: is-white
-  islight: 'false'
-  isoutlined: 'false'
   label: "Revenir à l'accueil"
   type: page
   page:
     - page://3xOuBIeX2OgO6UgS
+  pageanchor: ""
   url: ""
+  email: ""
+  emailsubject: ""
+  color: is-white
+  islight: 'false'
+  isoutlined: 'false'
 
 ----
 

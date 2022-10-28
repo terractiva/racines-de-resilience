@@ -17,20 +17,10 @@ function fetchActions($base, $table, $view, $offset = null) {
   return [];
 }
 
-class ActionPage extends Page
-{
-  public function classes()
-  {
-    $classes = '';
+function findSubcategory($id) {
+  $subcategory = collection('subcategories')->groupBy('num')->get($id);
 
-    foreach ($this->categories()->split() as $category) {
-      if ($category == 'build') $classes .= ' is-build';
-      if ($category == 'regenerate') $classes .= ' is-regenerate';
-      if ($category == 'intervene') $classes .= ' is-intervene';
-    }
-
-    return $classes;
-  }
+  return $subcategory ? $subcategory->first()->title()->toString() : null;
 }
 
 class ActionsPage extends Page
@@ -60,7 +50,7 @@ class ActionsPage extends Page
               'categories' => $record['fields']['Category - ID'][0] ?? '',
               'level' => $record['fields']['Level - ID'][0] ?? null,
               'sources' => [],
-              'subcategory' => $record['fields']['Theme - ID'][0] ?? '',
+              'subcategory' => findSubcategory($record['fields']['Theme - ID'][0] ?? null),
               'title' => $name
             ]
           ];
@@ -82,9 +72,8 @@ class ActionsPage extends Page
   public function children()
   {
     $pages = $this->actions();
-    $trees = site()->children()->findBy('template', 'trees')->children()->listed()->filterBy('language', kirby()->language()->code());
 
-    foreach ($trees as $tree) $pages = array_merge($pages, $tree->actions());
+    foreach (collection('trees') as $tree) $pages = array_merge($pages, $tree->actions());
 
     return Pages::factory($pages, $this);
   }
@@ -126,7 +115,7 @@ class TreePage extends Page
                 'position' => $position->position,
                 'radius' => $position->radius,
                 'sources' => [],
-                'subcategory' => $position->subcategory,
+                'subcategory' => findSubcategory($position->subcategory),
                 'title' => $name
               ]
             ];
@@ -156,7 +145,6 @@ class TreePage extends Page
 
 Kirby::plugin('racines-de-resilience/airtable-actions', [
   'pageModels' => [
-    'action' => 'ActionPage',
     'actions' => 'ActionsPage',
     'tree' => 'TreePage'
   ]

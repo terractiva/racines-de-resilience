@@ -1,0 +1,14 @@
+title: Thématique
+icon: 📁
+
+options:
+  changeSlug: false
+  changeStatus: false
+  changeTitle: false
+  delete: false
+  duplicate: false
+  sort: false
+
+fields:
+  memo:
+    extends: sections/memo

@@ -17,7 +17,9 @@
     <?php endforeach ?>
   </p>
 
+  <?php if ($action->subcategory()->isNotEmpty()): ?>
   <p class="action-subcategory">
     <?= $action->subcategory()->escape() ?>
   </p>
+  <?php endif ?>
 </div>

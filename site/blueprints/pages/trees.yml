@@ -9,13 +9,8 @@ options:
 columns:
   - width:
     sections:
-      treeMemo:
+      memo:
         extends: sections/memo
-      redirectionMemo:
-        type: info
-        label: " "
-        text: |
-          Naviguer vers {{ page.url }} redirige automatiquement vers le premier arbre disponible dans la langue utilisée (selon l'ordre ci-dessous).
 
   - width: 2/3
     fields:
@@ -36,7 +31,7 @@ columns:
       pages:
         type: pages
         label: Arbres
-        create: tree
         info: "{{ page.language }}"
+        create: tree
         image:
           query: false

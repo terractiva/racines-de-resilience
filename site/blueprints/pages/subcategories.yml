@@ -1,0 +1,18 @@
+title: Thématiques
+icon: 📁
+
+options:
+  changeStatus: false
+  delete: false
+  duplicate: false
+
+sections:
+  memo:
+    extends: sections/memo
+
+  subcategories:
+    type: pages
+    label: " "
+    text: "{{ model.num }} - {{ model.title }}"
+    create: false
+    limit: 24

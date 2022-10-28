@@ -6,6 +6,7 @@ Kirby::plugin('racines-de-resilience/fieldset-actions', [
   ],
   'snippets' => [
     'blocks/actions' => __DIR__ . '/snippet.php',
-    'elements/action' => __DIR__ . '/snippets/action.php'
+    'elements/action' => __DIR__ . '/snippets/action.php',
+    'elements/actions' => __DIR__ . '/snippets/actions.php'
   ]
 ]);

@@ -6,7 +6,8 @@ fields:
   heroHeading:
     extends: fields/heading
     label: Introduction - Titre
-    required: true
+    placeholder: "{{ model.title }}"
+    help: false
 
   heroButtons:
     extends: fields/buttons

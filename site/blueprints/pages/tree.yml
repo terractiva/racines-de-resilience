@@ -1,44 +1,41 @@
 title: Arbre aux actions
 icon: 🌳
 
-sections:
-  treeMemo:
+fields:
+  memo:
     extends: sections/memo
   cacheMemo:
     extends: sections/cache-memo
 
-  settings:
-    type: fields
-    fields:
-      language:
-        type: select
-        label: Langue
-        width: 1/4
-        required: true
-        translate: false
-        options:
-          type: query
-          query: kirby.languages.flip
-          text: "{{ item.name }}"
-          value: "{{ item.code }}"
-      airtableBase:
-        type: text
-        label: Airtable - ID Base
-        width: 1/4
-        required: true
-        help: <p>https://airtable.com/<b>appH2RLrdTa38J8wK</b>/tbl3RGTSrxOwDUCsU/viwsGJDZdgQGC7X15</p>
-        translate: false
-      airtableTable:
-        type: text
-        label: Airtable - ID Table
-        width: 1/4
-        required: true
-        help: <p>https://airtable.com/appH2RLrdTa38J8wK/<b>tbl3RGTSrxOwDUCsU</b>/viwsGJDZdgQGC7X15</p>
-        translate: false
-      airtableView:
-        type: text
-        label: Airtable - ID Vue
-        width: 1/4
-        required: true
-        help: <p>https://airtable.com/appH2RLrdTa38J8wK/tbl3RGTSrxOwDUCsU/<b>viwsGJDZdgQGC7X15</b></p>
-        translate: false
+  language:
+    type: select
+    label: Langue
+    width: 1/4
+    required: true
+    translate: false
+    options:
+      type: query
+      query: kirby.languages.flip
+      text: "{{ item.name }}"
+      value: "{{ item.code }}"
+  airtableBase:
+    type: text
+    label: Airtable - ID Base
+    width: 1/4
+    required: true
+    help: <p>https://airtable.com/<b>appH2RLrdTa38J8wK</b>/tbl3RGTSrxOwDUCsU/viwsGJDZdgQGC7X15</p>
+    translate: false
+  airtableTable:
+    type: text
+    label: Airtable - ID Table
+    width: 1/4
+    required: true
+    help: <p>https://airtable.com/appH2RLrdTa38J8wK/<b>tbl3RGTSrxOwDUCsU</b>/viwsGJDZdgQGC7X15</p>
+    translate: false
+  airtableView:
+    type: text
+    label: Airtable - ID Vue
+    width: 1/4
+    required: true
+    help: <p>https://airtable.com/appH2RLrdTa38J8wK/tbl3RGTSrxOwDUCsU/<b>viwsGJDZdgQGC7X15</b></p>
+    translate: false
