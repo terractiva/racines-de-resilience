@@ -38,10 +38,10 @@ class ActionsPage extends Page
       $records = fetchActions($this->airtableBase(), $this->airtableTable(), $this->airtableView());
 
       foreach ($records as $record) {
-        $pageIndex = array_search($record['fields']['Name'], array_column($actions, 'name'));
+        $name = $record['fields']['Name'] ?? '';
+        $pageIndex = array_search($name, array_column($actions, 'name'));
 
         if ($pageIndex === false) {
-          $name = $record['fields']['Name'] ?? '';
           $actions[] = [
             'model' => 'action',
             'name' => $name,
@@ -50,7 +50,7 @@ class ActionsPage extends Page
               'categories' => $record['fields']['Category - ID'][0] ?? '',
               'level' => $record['fields']['Level - ID'][0] ?? null,
               'sources' => [],
-              'subcategory' => findSubcategory($record['fields']['Theme - ID'][0] ?? null),
+              'subcategory' => findSubcategory($record['fields']['Theme - ID'][0] ?? ''),
               'title' => $name
             ]
           ];
@@ -96,11 +96,12 @@ class TreePage extends Page
       $positionIds = array_column($positions, 'id');
 
       foreach ($records as $record) {
-        $existingActionIndex = array_search($record['fields']['ID'], array_column($actions, 'id'));
+        $recordId = $record['fields']['ID'] ?? null;
+        $existingActionIndex = array_search($recordId, array_column($actions, 'id'));
         $actionIndex = $existingActionIndex;
 
         if ($existingActionIndex === false) {
-          $positionIndex = array_search($record['fields']['ID'], $positionIds);
+          $positionIndex = array_search($recordId, $positionIds);
 
           if ($positionIndex !== false) {
             $name = $record['fields']['Name'] ?? '';

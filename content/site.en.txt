@@ -126,7 +126,7 @@ Navlinks:
   type: url
   page: [ ]
   pageanchor: ""
-  url: https://airtable.com/shrlqNJvuiem0iFkA
+  url: https://airtable.com/shrGDgiigKjlvgtoI
   email: ""
   emailsubject: ""
 
