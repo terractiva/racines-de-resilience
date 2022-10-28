@@ -97,7 +97,7 @@ class TreePage extends Page
 
       foreach ($records as $record) {
         $recordId = $record['fields']['ID'] ?? null;
-        $existingActionIndex = array_search($recordId, array_column($actions, 'id'));
+        $existingActionIndex = array_search($recordId, array_column($actions, 'positionId'));
         $actionIndex = $existingActionIndex;
 
         if ($existingActionIndex === false) {
@@ -107,13 +107,14 @@ class TreePage extends Page
             $name = $record['fields']['Name'] ?? '';
             $position = $positions[$positionIndex];
             $actions[] = [
-              'id' => $position->id,
               'model' => 'action',
+              'positionId' => $position->id,
               'slug' => Str::slug($name),
               'content' => [
                 'categories' => $position->categories,
                 'level' => $position->level,
                 'position' => $position->position,
+                'positionId' => $position->id,
                 'radius' => $position->radius,
                 'sources' => [],
                 'subcategory' => findSubcategory($position->subcategory),
