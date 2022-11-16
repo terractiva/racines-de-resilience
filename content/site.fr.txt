@@ -5,35 +5,36 @@ Title: Racines de résilience
 News:
 
 - 
-  heading: Des cadeaux pour noël ?
+  heading: '📰 La revue <em>Mue</em> partenaire éditorial 📰'
+  date: 2022-11-01
+  text: |
+    <p>Parce qu’elle présente aussi des initiatives inspirantes et concrètes pour co-construire demain, la revue bimestrielle <em><a href="https://je-mue.com/" target="_blank" rel="noopener noreferrer">Mue</a></em> choisit de soutenir <em>Racines de résilience</em> en partageant chaque mois ici l'un des nombreux leviers d'action déclinés dans ses numéros thématiques.</p><p><strong>Issu de leur numéro 6 </strong><em>Low-tech</em> : « Vous voulez fabriquer une marmite norvégienne ? Des toilettes sèches ? Vous aimeriez tirer la chasse avec l’eau de la douche ou construire un chauffage solaire en ardoise ? Rendez-vous sur la plateforme wiki du Low Tech Lab : au programme, 160 tutoriels en open source pour mettre le pied à l’étrier et rendre votre habitat plus autonome ! »</p>
+  linklabel: 'Découvrez les tutoriels du <em>Low-tech Lab</em>'
+  linkurl: https://je-mue.com/6/tutos
+- 
+  heading: 🎁 Des cadeaux pour noël ? 🎁
   date: 2022-10-15
   text: '<p>Pour soutenir notre démarche, des artistes ont créé des <strong>affiches collector</strong> et le compositeur de la musique a monté une <strong>bande originale</strong> et un <strong>podcast</strong> d’<em>Une fois que tu sais</em>. Pour nous soutenir vous aussi et faire parler du film, offrez autour de vous de belles reproductions artisanales et écologiques en risographie et des bandes sonores en numérique.</p>'
   linklabel: Découvrir les œuvres
   linkurl: >
     https://www.boutique.racinesderesilience.org/
 - 
-  heading: '<em>Une fois que tu sais</em> arrive en Suisse et en Belgique'
+  heading: '🇨🇭<em>Une fois que tu sais</em> arrive en Suisse et en Belgique 🇧🇪'
   date: 2022-08-31
   text: "<p>À la rentrée 2022, ce documentaire poignant sort dans les salles chez nos voisins francophones. On a besoin de relais pour faire projeter le film dans les cinémas belges et suisses, animer des temps d’échange, ajouter des actions et des structures locales dans l'arbre et surtout pour faire passer le mot ! Invitez vos réseaux à rejoindre la communauté d'accompagnement du film. Merci de votre soutien !</p>"
   linklabel: "Rejoignez l'aventure"
   linkurl: https://t.ly/8ZuU
 - 
-  heading: 'La revue <em>Mue</em> partenaire éditorial'
-  date: 2022-07-15
-  text: |
-    <p>Parce qu’elle présente aussi des initiatives inspirantes et concrètes pour co-construire demain, la revue bimestrielle <em><a href="https://je-mue.com/" target="_blank" rel="noopener noreferrer">Mue</a></em> choisit de soutenir <em>Racines de résilience</em> en partageant chaque mois ici l'un des nombreux leviers d'action déclinés dans ses numéros thématiques.</p><p>Issue de leur numéro 5 <em>Apprentissages</em> voici l’action <strong>Enseignant·e, parent, j’amène les enfants au contact de la nature</strong>, en lien avec l’initiative citoyenne <em><a href="http://classe-dehors.org/" target="_blank" rel="noopener noreferrer">Classe Dehors</a></em>, une communauté d’entraide pour faciliter la pratique de la classe en extérieur. Choisir un lieu et une durée, obtenir les autorisations, mobiliser des soutiens, trouver des ressources… c’est une véritable mine d’informations pour les enseignant·es tenté·es par l’expérience !</p>
-  linklabel: 'Découvrez <em>Classe Dehors</em>'
-  linkurl: >
-    https://classe-dehors.org/?PagePrincipale
-- 
-  heading: Avec animation, ça change tout !
+  heading: >
+    🎆 Avec animation, ça change tout !
+    🎇
   date: 2022-05-03
   text: '<p>Si vous n’avez pas pu goûter à l’ambiance des salles, découvrez les réactions du public lors d’un événement en octobre dernier à l’espace Saint-Michel à Paris. Et pour les curieux·ses, vous pouvez même trouver <a href="https://tube.nocturlab.fr/videos/watch/c0749df2-fcfa-4a3e-b4ab-c5e8bae9a6a7" target="_blank" rel="noopener noreferrer">ici la vidéo complète</a> de l’animation donnée par <strong>Brianne Parquier</strong> en présence d’<strong>Emmanuel Cappellin</strong>, <strong>Anne-Marie Sangla</strong> et <strong>Jean-Marc Jancovici</strong> !</p>'
   linklabel: "Teaser de l'animation"
   linkurl: >
     https://www.facebook.com/UneFoisQueTuSais/videos/267364971934339/
 - 
-  heading: '<em>Une fois que tu sais</em> en DVD et VOD'
+  heading: '🏠 <em>Une fois que tu sais</em> en DVD et VOD 📀'
   date: 2022-03-01
   text: '<p>Vous voulez voir <em>Une fois que tu sais</em> chez vous ? Le film est disponible en <strong>Vidéo à la Demande (VOD) depuis le 28 février 2022</strong>. Retrouvez le film <a href="https://bit.ly/3huPsHl" target="_blank" rel="noopener noreferrer">sur Vimeo</a> ou <a href="https://bit.ly/3C9zqfK" target="_blank" rel="noopener noreferrer">sur vos plateformes préférées</a>. Emmanuel Cappellin vous annonce cette sortie <a href="https://fb.watch/bwlkPqahCC/" target="_blank" rel="noopener noreferrer">en vidéo ici</a>. Après avoir vu le film chez vous, vous pouvez participer à <a href="/discussion-guidee" rel="noopener noreferrer">la discussion guidée</a> qui propose un temps de recul sur le film et son message. Le <strong>DVD sortira en mai 2022 avec des pré-commandes possibles très bientôt</strong> ! Abonnez-vous à la page Facebook du film pour en être informé·e.</p>'
   linklabel: Page du film
@@ -61,9 +62,9 @@ Partners:
   url: https://www.leanature.com/
 - 
   logo:
-    - file://VfIA2gSqhVXJlwxL
-  name: Infomaniak
-  url: https://www.infomaniak.com/fr
+    - file://uMyqkmS7ckhIoMrx
+  name: The Sustainable future foundation
+  url: https://sustainablefuturefoundation.org
 - 
   logo:
     - file://UYd966SgOfmtQm6y
@@ -88,6 +89,16 @@ Partners:
     - file://rDskjSICg29JgARL
   name: Terractiva
   url: ""
+- 
+  logo:
+    - file://VfIA2gSqhVXJlwxL
+  name: Infomaniak
+  url: https://www.infomaniak.com/fr
+- 
+  logo:
+    - file://QUF7VMfGq9GwUP0q
+  name: Kirby
+  url: https://getkirby.com/
 
 ----
 
@@ -111,7 +122,7 @@ Navlinks:
   email: ""
   emailsubject: ""
 - 
-  label: Arbre
+  label: "L'Arbre aux actions"
   type: page
   page:
     - page://YKln3T0YKA0khias
@@ -133,7 +144,7 @@ Navlinks:
 Navbuttons:
 
 - 
-  label: Le film
+  label: 🎞 Le film
   type: page
   page:
     - page://asaA7JJJPXhOtvsr
@@ -145,7 +156,7 @@ Navbuttons:
   islight: 'true'
   isoutlined: 'false'
 - 
-  label: Nous soutenir
+  label: 💧Nous soutenir
   type: page
   page:
     - page://lAqO3y4hhuMN3Ugu

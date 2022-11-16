@@ -5,6 +5,13 @@ Title: Roots of resilience
 News:
 
 - 
+  heading: '<em>Mue</em> magazine, our press partner'
+  date: 2022-11-01
+  text: '<p>Another stakeholder in co-building tomorrow’s world through inspiring and practical initiatives, the bi-monthly magazine <em><a href="https://je-mue.com/" target="_blank" rel="noopener noreferrer">Mue</a></em> choses to support <em>Roots to resilience</em> by sharing one of many levers outlined in their themed issues.</p><p>From issue #4 <em>Papilles!</em> came the action <strong>Creating outreach grocery shop</strong>, as part of the <em>ANDES </em>initiative which over the past 20 years has developed a network of 460 grocery stores, providing low income families with healthy and diverse food. Thanks to <em>Mue</em>, we can now all start a local outreach grocery project.</p>'
+  linklabel: 'More about <em>ANDES</em>'
+  linkurl: >
+    https://andes-france.com/nos-actions/les-epiceries-solidaires/creer-une-epicerie-solidaire/
+- 
   heading: >
     Need a gift? Limited-edition posters and
     soundtracks
@@ -19,13 +26,6 @@ News:
   text: '<p>This heartbreaking documentary is out in Swiss and Belgian film theatres in the fall 2022. In both countries, we need support to organise screenings, facilitate live forums, localise the actions and organisations in the tree and last but not least, to spread the news. Invite your network to follow the film and its online community. Thank you for your support!</p>'
   linklabel: Join the adventure
   linkurl: https://t.ly/8ZuU
-- 
-  heading: '<em>Mue</em> magazine, our press partner'
-  date: 2022-07-15
-  text: '<p>Another stakeholder in co-building tomorrow’s world through inspiring and practical initiatives, the bi-monthly magazine <em><a href="https://je-mue.com/" target="_blank" rel="noopener noreferrer">Mue</a></em> choses to support <em>Roots to resilience</em> by sharing one of many levers outlined in their themed issues.</p><p>From issue #4 <em>Papilles!</em> came the action <strong>Creating outreach grocery shop</strong>, as part of the <em>ANDES </em>initiative which over the past 20 years has developed a network of 460 grocery stores, providing low income families with healthy and diverse food. Thanks to <em>Mue</em>, we can now all start a local outreach grocery project.</p>'
-  linklabel: 'More about <em>ANDES</em>'
-  linkurl: >
-    https://andes-france.com/nos-actions/les-epiceries-solidaires/creer-une-epicerie-solidaire/
 - 
   heading: Facilitation changes everything!
   date: 2022-05-03
