@@ -6,6 +6,12 @@
     </h2>
     <?php endif ?>
 
+    <?php if ($block->subheading()->isNotEmpty()): ?>
+    <p class="subtitle">
+      <?= $block->subheading() ?>
+    </p>
+    <?php endif ?>
+
     <?php snippet('layout/layouts', ['layouts' => $block->layout()->toLayouts()]) ?>
   </div>
 </section>

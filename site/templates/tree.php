@@ -33,7 +33,9 @@
 
     <div class="tree-dropdowns">
       <details class="tree-dropdowns-credits dropdown is-active">
-        <summary class="button is-dark is-outlined is-responsive">©</summary>
+        <summary class="button is-dark is-outlined is-responsive">
+          <span class="icon">©</span>
+        </summary>
 
         <div class="dropdown-menu">
           <div class="dropdown-content">
@@ -44,7 +46,7 @@
         </div>
       </details>
 
-      <details class="dropdown is-active">
+      <details class="tree-dropdowns-selector dropdown is-active">
         <summary class="button is-dark is-outlined is-responsive">
           <?= $page->title()->escape() ?>
         </summary>

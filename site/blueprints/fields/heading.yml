@@ -1,5 +1,6 @@
 type: writer
 label: Titre
+placeholder: Titre
 help: |
   **Attention :** modifier le titre modifiera son identifiant d'ancre
 inline: true

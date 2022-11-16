@@ -11,8 +11,12 @@ h1, h2 {
   font-family: $family-secondary;
 
   &.title {
-    line-height: inherit;
     text-align: center;
+
+    @include desktop {
+      font-size: $size-2;
+      line-height: inherit;
+    }
 
     &:not(:last-child) {
       margin-bottom: $size-1;

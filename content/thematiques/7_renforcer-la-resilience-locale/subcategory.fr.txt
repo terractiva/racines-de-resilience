@@ -2,4 +2,12 @@ Title: Renforcer la résilience locale
 
 ----
 
+Categories: is-build  is-regenerate
+
+----
+
+Emoji: 🌱
+
+----
+
 Uuid: oHnhnecSCvCbmw7g

@@ -2,4 +2,12 @@ Title: Traduire la complexité
 
 ----
 
+Categories: is-build  is-regenerate
+
+----
+
+Emoji: 🧏
+
+----
+
 Uuid: hGsBSelekKHgCXpF

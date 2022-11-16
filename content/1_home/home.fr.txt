@@ -18,7 +18,7 @@ Herobuttons:
   email: ""
   emailsubject: ""
   color: is-white
-  islight: 'true'
+  islight: 'false'
   isoutlined: 'true'
 
 ----

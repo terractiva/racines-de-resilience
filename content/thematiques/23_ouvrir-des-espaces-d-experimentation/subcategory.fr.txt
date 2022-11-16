@@ -2,4 +2,12 @@ Title: Ouvrir des espaces d'expérimentation
 
 ----
 
+Categories: is-intervene
+
+----
+
+Emoji: 🔍
+
+----
+
 Uuid: 1dwo2sFTVHMqJwmk

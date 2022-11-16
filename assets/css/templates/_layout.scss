@@ -10,6 +10,9 @@
     margin-right: 0;
   }
   &-brand {
+    .navbar-item {
+      padding: 0.25rem 0.75rem;
+    }
     a:hover img {
       opacity: 0.8;
     }

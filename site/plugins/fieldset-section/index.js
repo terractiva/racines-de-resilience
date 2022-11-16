@@ -5,6 +5,7 @@ panel.plugin('racines-de-resilience/fieldset-section', {
         return {
           model: {
             heading: this.content.heading,
+            subheading: this.content.subheading,
             layout: this.content.layout
           }
         };
@@ -13,6 +14,7 @@ panel.plugin('racines-de-resilience/fieldset-section', {
         fields() {
           return {
             heading: this.field('heading'),
+            subheading: this.field('subheading'),
             layout: this.field('layout')
           };
         }
@@ -28,6 +30,7 @@ panel.plugin('racines-de-resilience/fieldset-section', {
             :fields="fields"
             @input="update({
               heading: $event.heading,
+              subheading: $event.subheading,
               layout: $event.layout
             })"
           />

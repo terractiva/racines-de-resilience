@@ -9,12 +9,17 @@ fields:
     options:
       has-background-dark has-text-white: Noir
       has-background-build: Bleu (Construire)
-      has-background-intervene: Rouge (S'interposer)
       has-background-regenerate: Vert (Régénérer)
+      has-background-intervene: Rouge (S'interposer)
 
   heading:
     extends: fields/heading
-    label: Titre
+
+  subheading:
+    extends: fields/heading
+    label: Sous-titre
+    placeholder: Sous-titre
+    help: " "
 
   layout:
     type: layout

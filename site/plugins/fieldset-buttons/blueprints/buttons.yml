@@ -15,8 +15,8 @@ fields:
       is-dark: Noir
       is-white: Blanc
       is-build: Bleu (Construire)
-      is-intervene: Rouge (S'interposer)
       is-regenerate: Vert (Régénérer)
+      is-intervene: Rouge (S'interposer)
   isLight:
     type: toggle
     label: Variante claire

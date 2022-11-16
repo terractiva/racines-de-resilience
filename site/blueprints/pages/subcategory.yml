@@ -10,5 +10,15 @@ options:
   sort: false
 
 fields:
+  categories:
+    type: hidden
+
   memo:
     extends: sections/memo
+
+  emoji:
+    type: text
+    label: Icône
+    width: 1/12
+    required: true
+    translate: false

@@ -200,4 +200,4 @@ Footerfreetext: <p>Le code du site est disponible sur <a href="https://github.co
 
 ----
 
-Footercopyright: <p>Site par <a href="https://tseignette.github.io/" rel="noopener noreferrer">Thomas Seignette</a> • Hébergé gracieusement par <a href="https://www.infomaniak.com/fr" rel="noopener noreferrer">Infomaniak</a></p><p>Terractiva © 2022</p>
+Footercopyright: <p>Réalisé par <a href="https://tseignette.github.io/" rel="noopener noreferrer">Thomas Seignette</a> avec <a href="https://getkirby.com/" rel="noopener noreferrer">Kirby</a> • Hébergé gracieusement par <a href="https://www.infomaniak.com/fr" rel="noopener noreferrer">Infomaniak</a></p><p>Terractiva © 2022</p>

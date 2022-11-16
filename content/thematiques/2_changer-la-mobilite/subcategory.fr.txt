@@ -2,4 +2,12 @@ Title: Changer la mobilité
 
 ----
 
+Categories: is-build
+
+----
+
+Emoji: 🚲
+
+----
+
 Uuid: 6VGwdHRpmB4Jdrgt

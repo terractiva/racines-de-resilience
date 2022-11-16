@@ -2,4 +2,12 @@ Title: Circulariser les déchets
 
 ----
 
+Categories: is-build
+
+----
+
+Emoji: ♻️
+
+----
+
 Uuid: KjyQMZkogkthT4TD
