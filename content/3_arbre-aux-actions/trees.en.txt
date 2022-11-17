@@ -17,12 +17,12 @@ Copyright: <p><strong>Illustration</strong> <a href="https://www.theotimenoel.co
 Buttons:
 
 - 
-  label: Buy paper version
+  label: The paper version
   type: url
   page: [ ]
   pageanchor: ""
   url: >
-    https://www.boutique.racinesderesilience.org/index.php/produit/frune-fois-que-tu-sais-guide-daction/
+    https://framaforms.org/the-printed-action-tree-of-roots-of-resilience-1668679566
   email: ""
   emailsubject: ""
   color: is-dark
