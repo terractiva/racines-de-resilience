@@ -106,6 +106,47 @@
   }
 }
 
+.actions {
+  &-pagination {
+    &-counter {
+      @include mobile {
+        text-align: center;
+      }
+    }
+    form {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      @include mobile {
+        display: none;
+      }
+
+      input {
+        font-weight: $strong-weight;
+        width: calc(3.1em + 2 * $control-padding-horizontal);
+      }
+    }
+    &-buttons {
+      display: flex;
+      justify-content: space-between;
+
+      @include tablet {
+        justify-content: flex-end;
+      }
+
+      .button {
+        padding-left: 0;
+        padding-right: 0;
+
+        &:first-child {
+          margin-right: $size-7;
+        }
+      }
+    }
+  }
+}
+
 .action {
   border: 2px solid;
   display: flex;

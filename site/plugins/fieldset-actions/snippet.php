@@ -1,1 +1,1 @@
-<?php snippet('elements/actions', ['actions' => $block->isSelection()->toBool() ? collection('action-selection') : collection('actions')->sort()]) ?>
+<?php snippet('elements/actions', ['actions' => $block->isSelection()->toBool() ? collection('action-selection') : collection('actions')->sort(), 'disablePagination' => $block->isSelection()->toBool()]) ?>

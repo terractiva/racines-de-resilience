@@ -8,8 +8,14 @@ return [
         'LC_ALL' => 'en_US'
     ],
     'name' => 'English',
+    'url' => option('urls.en'),
     'translations' => [
-
-    ],
-    'url' => option('urls.en')
+        'actions.counter.itemsName' => 'Actions',
+        'actions.counter.to' => 'to',
+        'actions.counter.of' => 'of',
+        'actions.next' => 'Next',
+        'actions.pagination.page' => 'Page',
+        'actions.pagination.of' => 'of',
+        'actions.previous' => 'Previous'
+    ]
 ];

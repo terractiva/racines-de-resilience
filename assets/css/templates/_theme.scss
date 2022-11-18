@@ -57,6 +57,10 @@ a:not(.button) {
 
 button {
   cursor: pointer;
+
+  &.is-ghost:disabled {
+    border-color: transparent;
+  }
 }
 
 details {
