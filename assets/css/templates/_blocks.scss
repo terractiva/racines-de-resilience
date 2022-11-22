@@ -107,6 +107,58 @@
 }
 
 .actions {
+  &-filters {
+    .column {
+      &:not(:first-child) {
+        margin-top: $size-7 !important;
+      }
+
+      > label, > p {
+        flex-shrink: 0;
+      }
+      > input {
+        background: transparent;
+      }
+      details {
+        margin-bottom: 0;
+
+        label {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      @include mobile {
+        span {
+          display: none;
+        }
+        details, summary, button {
+          width: 100%;
+        }
+        summary {
+          text-align: start;
+        }
+        .dropdown-menu {
+          width: 100%;
+        }
+      }
+      @include tablet {
+        align-items: center;
+        display: flex;
+      }
+    }
+
+    @include tablet {
+      justify-content: space-between;
+    }
+  }
+
+  &-placeholder {
+    font-style: italic;
+    text-align: center;
+  }
+
   &-pagination {
     &-counter {
       @include mobile {
@@ -158,8 +210,14 @@
     border-color: nth($pair, 1);
 
     .action-subcategory {
+      border: 1px solid transparent;
       color: nth($pair, 4);
       background-color: nth($pair, 3);
+      text-decoration: none;
+
+      &:hover {
+        border-color: nth($pair, 4);
+      }
     }
   }
   &.is-build {

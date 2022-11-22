@@ -39,6 +39,7 @@ fields:
       soundcloud: true
       box: true
       actions: true
+      filters: true
       subcategories: true
       news: true
       partners: true

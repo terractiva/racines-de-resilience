@@ -20,7 +20,7 @@ function fetchActions($base, $table, $view, $offset = null) {
 function findSubcategory($id) {
   $subcategory = collection('subcategories')->groupBy('num')->get($id);
 
-  return $subcategory ? $subcategory->first()->title()->toString() : null;
+  return $subcategory ? $subcategory->first()->uuid()->toString() : null;
 }
 
 class ActionsPage extends Page

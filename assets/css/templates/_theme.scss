@@ -67,13 +67,29 @@ details {
   &:not(:last-child) {
     margin-bottom: $size-6;
   }
+
   &.dropdown {
+    &.is-center .dropdown-menu {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     summary {
       box-sizing: border-box;
 
+      &.is-bullet-less::-webkit-details-marker {
+        display: none;
+      }
+      &:not(.is-bullet-less) {
+        display: list-item;
+      }
       &:hover {
         text-decoration: none;
       }
+    }
+    .dropdown-content {
+      max-height: 50vh;
+      overflow: auto;
     }
     .dropdown-item {
       font-size: inherit;
@@ -83,16 +99,18 @@ details {
     }
   }
 
-  summary {
-    cursor: pointer;
-    width: fit-content;
+  &:not(.dropdown) {
+    summary {
+      cursor: pointer;
+      width: fit-content;
 
-    &:hover {
-      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
     }
-  }
-  .content {
-    margin-top: $size-7;
+    .content {
+      margin-top: $size-7;
+    }
   }
 }
 

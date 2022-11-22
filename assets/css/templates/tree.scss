@@ -184,16 +184,11 @@ main {
       margin-bottom: 0;
     }
     &-credits {
-      ::-webkit-details-marker {
-        display:none;
-      }
       .dropdown-menu {
         max-width: calc(100vw - 2 * $size-7);
         width: 35rem;
       }
     }
-    &-selector summary {
-      display: list-item;
-    }
+
   }
 }

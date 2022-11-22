@@ -5,7 +5,7 @@
 
     <section class="section">
       <div class="container">
-        <?php snippet('elements/actions', ['actions' => collection('actions')->filterBy('subcategory', $page->title())]) ?>
+        <?php snippet('elements/actions', ['actions' => collection('actions')->filterBy('subcategory', $page->uuid())]) ?>
       </div>
     </section>
   </main>

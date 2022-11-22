@@ -18,8 +18,9 @@
   </p>
 
   <?php if ($action->subcategory()->isNotEmpty()): ?>
-  <p class="action-subcategory">
-    <?= $action->subcategory()->escape() ?>
-  </p>
+  <?php $subcategory = $action->subcategory()->toPage(); ?>
+  <a class="action-subcategory" href="<?= $subcategory->url() ?>">
+    <?= $subcategory->title()->escape() ?>
+  </a>
   <?php endif ?>
 </div>

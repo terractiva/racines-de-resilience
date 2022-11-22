@@ -24,7 +24,7 @@
   }
 
   @include until($navbar-breakpoint) {
-    a:hover {
+    a:hover, a.is-active {
       color: $text;
     }
     .button {
