@@ -54,7 +54,9 @@
   <?php endforeach ?>
 </ul>
 <?php else: ?>
-  <p class="actions-placeholder content">Aucune action trouvée</p>
+  <p class="actions-placeholder content">
+    <?= t('actions.placeholder') ?>
+  </p>
 <?php endif ?>
 
 <?php if (!$disablePagination && $nbPages > 1): ?>
@@ -85,15 +87,15 @@
 
   <div class="actions-pagination-buttons column is-one-third">
     <?php if ($currentPage === 1): ?>
-      <button class="button is-ghost" disabled>← <?= t('actions.previous') ?></button>
+      <button class="button is-ghost" disabled>← <?= t('actions.pagination.previous') ?></button>
     <?php else: ?>
-      <a class="button is-ghost" href="<?= computePageUrl($page, $query, $currentPage - 1) ?>">← <?= t('actions.previous') ?></a>
+      <a class="button is-ghost" href="<?= computePageUrl($page, $query, $currentPage - 1) ?>">← <?= t('actions.pagination.previous') ?></a>
     <?php endif ?>
 
     <?php if ($isLastPage): ?>
-      <button class="button is-ghost" disabled><?= t('actions.next') ?> →</button>
+      <button class="button is-ghost" disabled><?= t('actions.pagination.next') ?> →</button>
     <?php else: ?>
-      <a class="button is-ghost" href="<?= computePageUrl($page, $query, $currentPage + 1) ?>"><?= t('actions.next') ?> →</a>
+      <a class="button is-ghost" href="<?= computePageUrl($page, $query, $currentPage + 1) ?>"><?= t('actions.pagination.next') ?> →</a>
     <?php endif ?>
   </div>
 </div>

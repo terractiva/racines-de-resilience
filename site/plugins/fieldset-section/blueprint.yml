@@ -38,8 +38,8 @@ fields:
       toggle: true
       soundcloud: true
       box: true
-      actions: true
       filters: true
+      actions: true
       subcategories: true
       news: true
       partners: true
