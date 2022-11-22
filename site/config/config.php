@@ -11,7 +11,7 @@ return [
     'favicon' => 'assets/images/favicon.ico'
   ],
   'urls' => [
-    'en' => 'https://www.roots-of-resilience.local',
-    'fr' => 'https://www.racinesderesilience.local'
+    'en' => 'https://www.roots-of-resilience.development',
+    'fr' => 'https://www.racinesderesilience.development'
   ]
 ];

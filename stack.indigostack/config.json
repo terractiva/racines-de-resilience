@@ -13,7 +13,7 @@
         "display_order" : 999,
         "sites" : [
           {
-            "domain" : "www.racinesderesilience.local",
+            "domain" : "www.racinesderesilience.development",
             "id" : "9394",
             "ssl_port" : "auto",
             "linked_php" : "BC07",
@@ -24,14 +24,14 @@
                 "backend_using_ssl" : true,
                 "frontend_port" : "auto",
                 "domains" : [
-                  "www.racinesderesilience.local"
+                  "www.racinesderesilience.development"
                 ]
               }
             ],
             "template" : "generic"
           },
           {
-            "domain" : "www.roots-of-resilience.local",
+            "domain" : "www.roots-of-resilience.development",
             "id" : "A2E7",
             "ssl_port" : "auto",
             "linked_php" : "BC07",
@@ -42,7 +42,7 @@
                 "backend_using_ssl" : true,
                 "frontend_port" : "auto",
                 "domains" : [
-                  "www.roots-of-resilience.local"
+                  "www.roots-of-resilience.development"
                 ]
               }
             ],
