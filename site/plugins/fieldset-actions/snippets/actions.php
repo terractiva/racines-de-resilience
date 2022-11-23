@@ -62,9 +62,9 @@
 <?php if (!$disablePagination && $nbPages > 1): ?>
 <div class="actions-pagination columns is-gapless is-vcentered">
   <p class="actions-pagination-counter column is-one-third">
-    <?= t('actions.counter.itemsName') ?> <strong><?= $nbItemsPerPage * ($currentPage - 1) + 1 ?>
-    </strong><?= t('actions.counter.to') ?><strong> <?= $isLastPage ? $nbActions : $nbItemsPerPage * $currentPage ?>
-    </strong><?= t('actions.counter.of') ?><strong> <?= $nbActions ?></strong>
+    <?= t('actions.pagination.counter.itemsName') ?> <strong><?= $nbItemsPerPage * ($currentPage - 1) + 1 ?>
+    </strong><?= t('actions.pagination.counter.to') ?><strong> <?= $isLastPage ? $nbActions : $nbItemsPerPage * $currentPage ?>
+    </strong><?= t('actions.pagination.counter.of') ?><strong> <?= $nbActions ?></strong>
   </p>
 
   <form action="<?= computePageUrl($page) ?>" class="column is-one-third is-align-self-center">
