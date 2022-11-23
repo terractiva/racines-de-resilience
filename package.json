@@ -6,15 +6,19 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "autoprefixer": "^10.4.12",
     "bulma": "^0.9.4",
     "cssnano": "^5.1.13",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-postcss": "^9.0.1",
     "gulp-purgecss": "^5.0.0",
     "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
     "husky": "^8.0.1",
     "sass": "^1.55.0"
   },

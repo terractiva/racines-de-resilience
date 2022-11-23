@@ -1,0 +1,1 @@
+"use strict";var burgerButton=document.getElementById("navbar-burger-button");burgerButton.addEventListener("click",(function(){document.getElementById("navbar-menu").classList.toggle("is-active"),burgerButton.classList.toggle("is-active")}));
