@@ -8,8 +8,8 @@ $landscapeHeight: 100vh;
 $landscapeWidth: math.div($treeWidth, $treeHeight) * 100vh;
 $portraitHeight: math.div($treeHeight, $treeWidth) * 100vw;
 $portraitWidth: 100vw;
-$actionLandscapeFontSize: 0.004 * $landscapeHeight;
-$actionPortraitFontSize: 0.004 * $portraitHeight;
+$actionLandscapeFontSize: 0.0035 * $landscapeHeight;
+$actionPortraitFontSize: 0.0035 * $portraitHeight;
 $actionLandscapeSeparatorSize: 0.001 * $landscapeHeight;
 $actionPortraitSeparatorSize: 0.001 * $portraitHeight;
 

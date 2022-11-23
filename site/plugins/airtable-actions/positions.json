@@ -3,1168 +3,1168 @@
     "categories": "build",
     "id": "0101",
     "level": 3,
-    "position": "21.925, 20.653",
-    "radius": 1.76,
+    "position": "25.0423, 25.4411",
+    "radius": 1.6229,
     "subcategory": 1
   },
   {
     "categories": "build",
     "id": "0102",
     "level": 1,
-    "position": "15.789, 14.293",
-    "radius": 2.092,
+    "position": "19.3844, 19.5765",
+    "radius": 1.929,
     "subcategory": 1
   },
   {
     "categories": "build",
     "id": "0103",
     "level": 1,
-    "position": "23.2342, 15.3941",
-    "radius": 2.0944,
+    "position": "26.2495, 20.5919",
+    "radius": 1.9312,
     "subcategory": 1
   },
   {
     "categories": "build",
     "id": "0104",
     "level": 2,
-    "position": "18.879, 17.174",
-    "radius": 2.069,
+    "position": "22.2336, 22.2331",
+    "radius": 1.9078,
     "subcategory": 1
   },
   {
     "categories": "build",
     "id": "0201",
     "level": 3,
-    "position": "13.163, 20.185",
-    "radius": 2.2,
+    "position": "16.9630, 25.0096",
+    "radius": 2.0286,
     "subcategory": 2
   },
   {
     "categories": "build",
     "id": "0202",
     "level": 2,
-    "position": "16.84, 22.75",
-    "radius": 1.813,
+    "position": "20.3535, 27.3748",
+    "radius": 1.6717,
     "subcategory": 2
   },
   {
     "categories": "build",
     "id": "0203",
     "level": 1,
-    "position": "19.4447, 25.4204",
-    "radius": 2.0514,
+    "position": "22.7552, 29.8372",
+    "radius": 1.8916,
     "subcategory": 2
   },
   {
     "categories": "build",
     "id": "0301",
     "level": 1,
-    "position": "3.0966, 23.7295",
-    "radius": 2.0146,
+    "position": "7.6809, 28.2780",
+    "radius": 1.8576,
     "subcategory": 3
   },
   {
     "categories": "build",
     "id": "0302",
     "level": 3,
-    "position": "10.3644, 30.4804",
-    "radius": 2.0736,
+    "position": "14.3824, 34.5030",
+    "radius": 1.912,
     "subcategory": 3
   },
   {
     "categories": "build",
     "id": "0303",
     "level": 2,
-    "position": "9.4725, 25.6455",
-    "radius": 1.9965,
+    "position": "13.5600, 30.0447",
+    "radius": 1.8409,
     "subcategory": 3
   },
   {
     "categories": "build",
     "id": "0304",
     "level": 2,
-    "position": "5.8473, 26.9947",
-    "radius": 2.0164,
+    "position": "10.2173, 31.2888",
+    "radius": 1.8593,
     "subcategory": 3
   },
   {
     "categories": "build",
     "id": "0305",
     "level": 3,
-    "position": "16.9393, 31.403",
-    "radius": 2.4867,
+    "position": "20.4450, 35.3538",
+    "radius": 2.2929,
     "subcategory": 3
   },
   {
     "categories": "build",
     "id": "0306",
     "level": 3,
-    "position": "13.8704, 28.1849",
-    "radius": 2.0912,
+    "position": "17.6152, 32.3863",
+    "radius": 1.9283,
     "subcategory": 3
   },
   {
     "categories": "build",
     "id": "0401",
     "level": 2,
-    "position": "7.0013, 34.7656",
-    "radius": 1.8586,
+    "position": "11.2814, 38.4544",
+    "radius": 1.7138,
     "subcategory": 4
   },
   {
     "categories": "build",
     "id": "0402",
     "level": 3,
-    "position": "13.4213, 37.3296",
-    "radius": 2.3151,
+    "position": "17.2011, 40.8187",
+    "radius": 2.1347,
     "subcategory": 4
   },
   {
     "categories": "build",
     "id": "0403",
     "level": 1,
-    "position": "3.9241, 35.7164",
-    "radius": 1.7434,
+    "position": "8.4439, 39.3312",
+    "radius": 1.6076,
     "subcategory": 4
   },
   {
     "categories": "build",
     "id": "0404",
     "level": 2,
-    "position": "10.0681, 37.0678",
-    "radius": 1.8811,
+    "position": "14.1092, 40.5773",
+    "radius": 1.7345,
     "subcategory": 4
   },
   {
     "categories": "build",
     "id": "0405",
     "level": 3,
-    "position": "17.5856, 39.11",
-    "radius": 2.0007,
+    "position": "21.0410, 42.4604",
+    "radius": 1.8448,
     "subcategory": 4
   },
   {
     "categories": "build",
     "id": "0501",
     "level": 1,
-    "position": "3.9493, 42.594",
-    "radius": 1.7678,
+    "position": "8.4672, 45.6731",
+    "radius": 1.6301,
     "subcategory": 5
   },
   {
     "categories": "build",
     "id": "0502",
     "level": 1,
-    "position": "4.1209, 54.2866",
-    "radius": 1.8596,
+    "position": "8.6254, 56.4549",
+    "radius": 1.7147,
     "subcategory": 5
   },
   {
     "categories": "build",
     "id": "0503",
     "level": 1,
-    "position": "7.0498, 42.042",
-    "radius": 1.9936,
+    "position": "11.3261, 45.1641",
+    "radius": 1.8383,
     "subcategory": 5
   },
   {
     "categories": "build",
     "id": "0504",
     "level": 1,
-    "position": "6.7128, 51.0338",
-    "radius": 2.0371,
+    "position": "11.0153, 53.4554",
+    "radius": 1.8784,
     "subcategory": 5
   },
   {
     "categories": "build",
     "id": "0505",
     "level": 2,
-    "position": "9.6831, 48.44",
-    "radius": 2.0201,
+    "position": "13.7542, 51.0637",
+    "radius": 1.8627,
     "subcategory": 5
   },
   {
     "categories": "build",
     "id": "0506",
     "level": 2,
-    "position": "10.6488, 43.1824",
-    "radius": 2.0501,
+    "position": "14.6447, 46.2156",
+    "radius": 1.8904,
     "subcategory": 5
   },
   {
     "categories": "build",
     "id": "0507",
     "level": 2,
-    "position": "13.9138, 45.349",
-    "radius": 2.258,
+    "position": "17.6553, 48.2135",
+    "radius": 2.0821,
     "subcategory": 5
   },
   {
     "categories": "build",
     "id": "0508",
     "level": 3,
-    "position": "18.1238, 45.5013",
-    "radius": 1.9592,
+    "position": "21.5372, 48.3539",
+    "radius": 1.8065,
     "subcategory": 5
   },
   {
     "categories": "build",
     "id": "0601",
     "level": 2,
-    "position": "3.6717, 74.5782",
-    "radius": 2.1607,
+    "position": "8.2112, 75.1659",
+    "radius": 1.9923,
     "subcategory": 6
   },
   {
     "categories": "build",
     "id": "0602",
     "level": 1,
-    "position": "8.0535, 60.3114",
-    "radius": 1.7444,
+    "position": "12.2516, 62.0104",
+    "radius": 1.6085,
     "subcategory": 6
   },
   {
     "categories": "build",
     "id": "0603",
     "level": 1,
-    "position": "6.3853, 64.6297",
-    "radius": 2.1119,
+    "position": "10.7134, 65.9923",
+    "radius": 1.9473,
     "subcategory": 6
   },
   {
     "categories": "build",
     "id": "0604",
     "level": 1,
-    "position": "2.2873, 63.2374",
-    "radius": 2.3195,
+    "position": "6.9347, 64.7085",
+    "radius": 2.1388,
     "subcategory": 6
   },
   {
     "categories": "build",
     "id": "0605",
     "level": 2,
-    "position": "10.2935, 68.6981",
-    "radius": 2.2251,
+    "position": "14.3170, 69.7438",
+    "radius": 2.0517,
     "subcategory": 6
   },
   {
     "categories": "build",
     "id": "0606",
     "level": 2,
-    "position": "7.6127, 73.063",
-    "radius": 2.0642,
+    "position": "11.8451, 73.7687",
+    "radius": 1.9034,
     "subcategory": 6
   },
   {
     "categories": "build",
     "id": "0607",
     "level": 2,
-    "position": "13.5927, 59.4222",
-    "radius": 1.9459,
+    "position": "17.3592, 61.1904",
+    "radius": 1.7943,
     "subcategory": 6
   },
   {
     "categories": "build",
     "id": "0608",
     "level": 2,
-    "position": "10.3701, 62.9331",
-    "radius": 2.217,
+    "position": "14.3877, 64.4279",
+    "radius": 2.0443,
     "subcategory": 6
   },
   {
     "categories": "build",
     "id": "0609",
     "level": 2,
-    "position": "13.5015, 52.7762",
-    "radius": 1.9459,
+    "position": "17.2751, 55.0621",
+    "radius": 1.7943,
     "subcategory": 6
   },
   {
     "categories": "build",
     "id": "0610",
     "level": 3,
-    "position": "19.2621, 51.7506",
-    "radius": 2.1482,
+    "position": "22.5868, 54.1164",
+    "radius": 1.9808,
     "subcategory": 6
   },
   {
     "categories": "build",
     "id": "0611",
     "level": 2,
-    "position": "9.9707, 55.6208",
-    "radius": 2.1939,
+    "position": "14.0194, 57.6852",
+    "radius": 2.023,
     "subcategory": 6
   },
   {
     "categories": "build",
     "id": "0612",
     "level": 3,
-    "position": "16.3342, 55.8665",
-    "radius": 2.1939,
+    "position": "19.8871, 57.9117",
+    "radius": 2.023,
     "subcategory": 6
   },
   {
     "categories": "build, regenerate",
     "id": "0701",
     "level": 1,
-    "position": "7.2618, 80.7054",
-    "radius": 1.6825,
+    "position": "11.5216, 80.8158",
+    "radius": 1.5514,
     "subcategory": 7
   },
   {
     "categories": "build, regenerate",
     "id": "0702",
     "level": 1,
-    "position": "17.7998, 85.5179",
-    "radius": 2.0554,
+    "position": "21.2385, 85.2535",
+    "radius": 1.8953,
     "subcategory": 7
   },
   {
     "categories": "build, regenerate",
     "id": "0703",
     "level": 1,
-    "position": "14.3884, 79.5093",
-    "radius": 1.6979,
+    "position": "18.0929, 79.7129",
+    "radius": 1.5656,
     "subcategory": 7
   },
   {
     "categories": "build, regenerate",
     "id": "0704",
     "level": 1,
-    "position": "10.3132, 78.7191",
-    "radius": 2.1529,
+    "position": "14.3352, 78.9842",
+    "radius": 1.9852,
     "subcategory": 7
   },
   {
     "categories": "build, regenerate",
     "id": "0705",
     "level": 1,
-    "position": "13.5226, 84.9015",
-    "radius": 2.2527,
+    "position": "17.2945, 84.6851",
+    "radius": 2.0772,
     "subcategory": 7
   },
   {
     "categories": "build, regenerate",
     "id": "0706",
     "level": 2,
-    "position": "19.4741, 74.4474",
-    "radius": 2.0646,
+    "position": "22.7823, 75.0453",
+    "radius": 1.9037,
     "subcategory": 7
   },
   {
     "categories": "build, regenerate",
     "id": "0707",
     "level": 2,
-    "position": "18.1466, 79.7666",
-    "radius": 2.1769,
+    "position": "21.5583, 79.9501",
+    "radius": 2.0073,
     "subcategory": 7
   },
   {
     "categories": "build, regenerate",
     "id": "0708",
     "level": 2,
-    "position": "15.3013, 73.823",
-    "radius": 2.2209,
+    "position": "18.9347, 74.4695",
+    "radius": 2.0479,
     "subcategory": 7
   },
   {
     "categories": "build",
     "id": "0709",
     "level": 2,
-    "position": "15.1499, 67.6313",
-    "radius": 1.939,
+    "position": "18.7951, 68.7601",
+    "radius": 1.7879,
     "subcategory": 7
   },
   {
     "categories": "build, regenerate",
     "id": "0710",
     "level": 2,
-    "position": "19.667, 68.6284",
-    "radius": 2.0869,
+    "position": "22.9602, 69.6795",
+    "radius": 1.9243,
     "subcategory": 7
   },
   {
     "categories": "build",
     "id": "0711",
     "level": 3,
-    "position": "17.088, 62.7548",
-    "radius": 2.2361,
+    "position": "20.5821, 64.2635",
+    "radius": 2.0619,
     "subcategory": 7
   },
   {
     "categories": "build, regenerate",
     "id": "0712",
     "level": 3,
-    "position": "24.8193, 62.0452",
-    "radius": 1.8572,
+    "position": "27.7110, 63.6091",
+    "radius": 1.7125,
     "subcategory": 7
   },
   {
     "categories": "build, regenerate",
     "id": "0713",
     "level": 3,
-    "position": "21.1475, 63.5663",
-    "radius": 2.0468,
+    "position": "24.3253, 65.0117",
+    "radius": 1.8873,
     "subcategory": 7
   },
   {
     "categories": "build",
     "id": "0714",
     "level": 3,
-    "position": "22.0385, 58.3131",
-    "radius": 1.9867,
+    "position": "25.1469, 60.1677",
+    "radius": 1.8319,
     "subcategory": 7
   },
   {
     "categories": "build, regenerate",
     "id": "0801",
     "level": 2,
-    "position": "26.1458, 75.5613",
-    "radius": 1.8576,
+    "position": "28.9342, 76.0724",
+    "radius": 1.7129,
     "subcategory": 8
   },
   {
     "categories": "build, regenerate",
     "id": "0802",
     "level": 1,
-    "position": "23.1159, 79.032",
-    "radius": 2.269,
+    "position": "26.1404, 79.2728",
+    "radius": 2.0922,
     "subcategory": 8
   },
   {
     "categories": "build, regenerate",
     "id": "0803",
     "level": 1,
-    "position": "22.7497, 84.9397",
-    "radius": 2.084,
+    "position": "25.8027, 84.7203",
+    "radius": 1.9216,
     "subcategory": 8
   },
   {
     "categories": "build, regenerate",
     "id": "0804",
     "level": 3,
-    "position": "28.5769, 66.4145",
-    "radius": 1.9721,
+    "position": "31.1759, 67.6381",
+    "radius": 1.8184,
     "subcategory": 8
   },
   {
     "categories": "build, regenerate",
     "id": "0805",
     "level": 2,
-    "position": "24.9422, 68.2197",
-    "radius": 2.0247,
+    "position": "27.8244, 69.3027",
+    "radius": 1.8669,
     "subcategory": 8
   },
   {
     "categories": "build, regenerate",
     "id": "0806",
     "level": 3,
-    "position": "28.7341, 71.6959",
-    "radius": 2.1927,
+    "position": "31.3208, 72.5081",
+    "radius": 2.0219,
     "subcategory": 8
   },
   {
     "categories": "regenerate",
     "id": "0901",
     "level": 1,
-    "position": "30.176, 86.5322",
-    "radius": 2.1565,
+    "position": "32.6504, 86.1887",
+    "radius": 1.9885,
     "subcategory": 9
   },
   {
     "categories": "regenerate",
     "id": "0902",
     "level": 2,
-    "position": "32.9851, 82.4123",
-    "radius": 2.3388,
+    "position": "35.2406, 82.3898",
+    "radius": 2.1566,
     "subcategory": 9
   },
   {
     "categories": "regenerate",
     "id": "0903",
     "level": 2,
-    "position": "29.6311, 78.9851",
-    "radius": 2.2004,
+    "position": "32.1479, 79.2295",
+    "radius": 2.029,
     "subcategory": 9
   },
   {
     "categories": "regenerate",
     "id": "0904",
     "level": 3,
-    "position": "34.0825, 76.3745",
-    "radius": 2.4898,
+    "position": "36.2525, 76.8223",
+    "radius": 2.2958,
     "subcategory": 9
   },
   {
     "categories": "regenerate",
     "id": "0905",
     "level": 3,
-    "position": "33.6524, 70.2031",
-    "radius": 2.3439,
+    "position": "35.8559, 71.1316",
+    "radius": 2.1613,
     "subcategory": 9
   },
   {
     "categories": "regenerate",
     "id": "1001",
     "level": 1,
-    "position": "40.3997, 87.5684",
-    "radius": 1.9575,
+    "position": "42.0775, 87.1442",
+    "radius": 1.805,
     "subcategory": 10
   },
   {
     "categories": "regenerate",
     "id": "1002",
     "level": 2,
-    "position": "38.6306, 81.612",
-    "radius": 2.0719,
+    "position": "40.4462, 81.6518",
+    "radius": 1.9105,
     "subcategory": 10
   },
   {
     "categories": "regenerate",
     "id": "1003",
     "level": 2,
-    "position": "39.8056, 74.7297",
-    "radius": 1.8411,
+    "position": "41.5297, 75.3056",
+    "radius": 1.6976,
     "subcategory": 10
   },
   {
     "categories": "regenerate",
     "id": "1004",
     "level": 2,
-    "position": "41.7091, 78.6984",
-    "radius": 1.9391,
+    "position": "43.2849, 78.9651",
+    "radius": 1.788,
     "subcategory": 10
   },
   {
     "categories": "regenerate",
     "id": "1005",
     "level": 2,
-    "position": "42.9717, 83.5874",
-    "radius": 2.0663,
+    "position": "44.4491, 83.4733",
+    "radius": 1.9053,
     "subcategory": 10
   },
   {
     "categories": "regenerate",
     "id": "1006",
     "level": 3,
-    "position": "43.1305, 72.9953",
-    "radius": 1.9475,
+    "position": "44.5955, 73.7063",
+    "radius": 1.7958,
     "subcategory": 10
   },
   {
     "categories": "regenerate",
     "id": "1101",
     "level": 2,
-    "position": "50.3315, 80.7894",
-    "radius": 1.7874,
+    "position": "51.2354, 80.8933",
+    "radius": 1.6481,
     "subcategory": 11
   },
   {
     "categories": "regenerate",
     "id": "1102",
     "level": 2,
-    "position": "47.9667, 84.8266",
-    "radius": 2.1504,
+    "position": "49.0549, 84.6160",
+    "radius": 1.9828,
     "subcategory": 11
   },
   {
     "categories": "regenerate",
     "id": "1103",
     "level": 2,
-    "position": "49.3761, 73.7832",
-    "radius": 2.0705,
+    "position": "50.3545, 74.4328",
+    "radius": 1.9092,
     "subcategory": 11
   },
   {
     "categories": "regenerate",
     "id": "1104",
     "level": 2,
-    "position": "46.5874, 77.8885",
-    "radius": 2.1983,
+    "position": "47.7831, 78.2183",
+    "radius": 2.027,
     "subcategory": 11
   },
   {
     "categories": "regenerate",
     "id": "1201",
     "level": 1,
-    "position": "59.3214, 82.831",
-    "radius": 2.3342,
+    "position": "59.5249, 82.7758",
+    "radius": 2.1523,
     "subcategory": 12
   },
   {
     "categories": "regenerate",
     "id": "1202",
     "level": 2,
-    "position": "54.0178, 76.8987",
-    "radius": 2.0027,
+    "position": "54.6345, 77.3056",
+    "radius": 1.8467,
     "subcategory": 12
   },
   {
     "categories": "regenerate",
     "id": "1203",
     "level": 2,
-    "position": "57.6614, 78.9284",
-    "radius": 1.8794,
+    "position": "57.9942, 79.1772",
+    "radius": 1.733,
     "subcategory": 12
   },
   {
     "categories": "regenerate",
     "id": "1204",
     "level": 2,
-    "position": "54.7485, 81.7787",
-    "radius": 1.9554,
+    "position": "55.3083, 81.8055",
+    "radius": 1.803,
     "subcategory": 12
   },
   {
     "categories": "regenerate",
     "id": "1205",
     "level": 1,
-    "position": "55.4952, 86.752",
-    "radius": 2.035,
+    "position": "55.9968, 86.3914",
+    "radius": 1.8764,
     "subcategory": 12
   },
   {
     "categories": "regenerate",
     "id": "1206",
     "level": 3,
-    "position": "56.1422, 72.6357",
-    "radius": 2.1256,
+    "position": "56.5934, 73.3747",
+    "radius": 1.96,
     "subcategory": 12
   },
   {
     "categories": "regenerate",
     "id": "1301",
     "level": 1,
-    "position": "66.7679, 86.5665",
-    "radius": 2.2107,
+    "position": "66.3912, 86.2204",
+    "radius": 2.0385,
     "subcategory": 13
   },
   {
     "categories": "regenerate",
     "id": "1302",
     "level": 1,
-    "position": "71.3384, 83.6604",
-    "radius": 2.032,
+    "position": "70.6056, 83.5406",
+    "radius": 1.8737,
     "subcategory": 13
   },
   {
     "categories": "regenerate",
     "id": "1303",
     "level": 2,
-    "position": "65.318, 75.3352",
-    "radius": 2.0546,
+    "position": "65.0542, 75.8639",
+    "radius": 1.8945,
     "subcategory": 13
   },
   {
     "categories": "regenerate",
     "id": "1304",
     "level": 2,
-    "position": "68.0353, 79.1192",
-    "radius": 2.3687,
+    "position": "67.5598, 79.3532",
+    "radius": 2.1841,
     "subcategory": 13
   },
   {
     "categories": "regenerate",
     "id": "1305",
     "level": 1,
-    "position": "64.3018, 81.7482",
-    "radius": 2.1472,
+    "position": "64.1172, 81.7774",
+    "radius": 1.9799,
     "subcategory": 13
   },
   {
     "categories": "regenerate",
     "id": "1306",
     "level": 3,
-    "position": "63.2735, 68.325",
-    "radius": 2.0332,
+    "position": "63.1690, 69.3998",
+    "radius": 1.8748,
     "subcategory": 13
   },
   {
     "categories": "regenerate",
     "id": "1307",
     "level": 3,
-    "position": "60.9608, 73.0839",
-    "radius": 2.3993,
+    "position": "61.0365, 73.7880",
+    "radius": 2.2124,
     "subcategory": 13
   },
   {
     "categories": "regenerate",
     "id": "1401",
     "level": 1,
-    "position": "83.553, 78.2446",
-    "radius": 2.2161,
+    "position": "81.8684, 78.5467",
+    "radius": 2.0434,
     "subcategory": 14
   },
   {
     "categories": "regenerate",
     "id": "1402",
     "level": 2,
-    "position": "76.7847, 76.9229",
-    "radius": 1.8028,
+    "position": "75.6275, 77.3279",
+    "radius": 1.6623,
     "subcategory": 14
   },
   {
     "categories": "regenerate",
     "id": "1403",
     "level": 2,
-    "position": "79.7025, 79.0988",
-    "radius": 2.0244,
+    "position": "78.3180, 79.3344",
+    "radius": 1.8667,
     "subcategory": 14
   },
   {
     "categories": "regenerate",
     "id": "1404",
     "level": 2,
-    "position": "70.5852, 73.2642",
-    "radius": 2.1802,
+    "position": "69.9110, 73.9542",
+    "radius": 2.0103,
     "subcategory": 14
   },
   {
     "categories": "regenerate",
     "id": "1405",
     "level": 2,
-    "position": "73.7865, 77.5822",
-    "radius": 1.6451,
+    "position": "72.8629, 77.9359",
+    "radius": 1.5169,
     "subcategory": 14
   },
   {
     "categories": "regenerate",
     "id": "1406",
     "level": 3,
-    "position": "67.7801, 69.7237",
-    "radius": 2.081,
+    "position": "67.3245, 70.6895",
+    "radius": 1.9189,
     "subcategory": 14
   },
   {
     "categories": "regenerate, intervene",
     "id": "1501",
     "level": 1,
-    "position": "86.3897, 71.1482",
-    "radius": 1.7985,
+    "position": "84.4841, 72.0031",
+    "radius": 1.6584,
     "subcategory": 15
   },
   {
     "categories": "regenerate, intervene",
     "id": "1502",
     "level": 2,
-    "position": "83.1942, 71.9448",
-    "radius": 1.828,
+    "position": "81.5376, 72.7376",
+    "radius": 1.6856,
     "subcategory": 15
   },
   {
     "categories": "regenerate, intervene",
     "id": "1503",
     "level": 3,
-    "position": "74.994, 69.4039",
-    "radius": 2.2304,
+    "position": "73.9763, 70.3946",
+    "radius": 2.0566,
     "subcategory": 15
   },
   {
     "categories": "regenerate, intervene",
     "id": "1504",
     "level": 2,
-    "position": "79.0204, 71.4528",
-    "radius": 2.1351,
+    "position": "77.6890, 72.2839",
+    "radius": 1.9687,
     "subcategory": 15
   },
   {
     "categories": "regenerate, intervene",
     "id": "1505",
     "level": 3,
-    "position": "71.6877, 66.5173",
-    "radius": 1.9703,
+    "position": "70.9276, 67.7329",
+    "radius": 1.8168,
     "subcategory": 15
   },
   {
     "categories": "regenerate, intervene",
     "id": "1506",
     "level": 3,
-    "position": "69.4097, 62.589",
-    "radius": 1.943,
+    "position": "68.8271, 64.1106",
+    "radius": 1.7916,
     "subcategory": 15
   },
   {
     "categories": "regenerate, intervene",
     "id": "1601",
     "level": 1,
-    "position": "82.9104, 64.861",
-    "radius": 2.284,
+    "position": "81.2759, 66.2056",
+    "radius": 2.106,
     "subcategory": 16
   },
   {
     "categories": "regenerate, intervene",
     "id": "1602",
     "level": 2,
-    "position": "79.0582, 64.1977",
-    "radius": 2.2132,
+    "position": "77.7239, 65.5940",
+    "radius": 2.0408,
     "subcategory": 16
   },
   {
     "categories": "regenerate, intervene",
     "id": "1603",
     "level": 3,
-    "position": "72.3132, 56.8603",
-    "radius": 2.25,
+    "position": "71.5044, 58.8281",
+    "radius": 2.0747,
     "subcategory": 16
   },
   {
     "categories": "regenerate, intervene",
     "id": "1604",
     "level": 3,
-    "position": "74.9776, 61.5071",
-    "radius": 2.3834,
+    "position": "73.9612, 63.1129",
+    "radius": 2.1977,
     "subcategory": 16
   },
   {
     "categories": "regenerate, intervene",
     "id": "1701",
     "level": 1,
-    "position": "90.9924, 61.0211",
-    "radius": 1.9717,
+    "position": "88.7282, 62.6648",
+    "radius": 1.8181,
     "subcategory": 17
   },
   {
     "categories": "regenerate, intervene",
     "id": "1702",
     "level": 2,
-    "position": "84.5498, 58.8901",
-    "radius": 1.9963,
+    "position": "82.7876, 60.6998",
+    "radius": 1.8408,
     "subcategory": 17
   },
   {
     "categories": "regenerate, intervene",
     "id": "1703",
     "level": 1,
-    "position": "88.1151, 57.4779",
-    "radius": 1.997,
+    "position": "86.0751, 59.3976",
+    "radius": 1.8414,
     "subcategory": 17
   },
   {
     "categories": "regenerate, intervene",
     "id": "1704",
     "level": 3,
-    "position": "76.8587, 54.1372",
-    "radius": 2.189,
+    "position": "75.6957, 56.3171",
+    "radius": 2.0184,
     "subcategory": 17
   },
   {
     "categories": "regenerate, intervene",
     "id": "1705",
     "level": 3,
-    "position": "80.4237, 57.0626",
-    "radius": 2.2976,
+    "position": "78.9830, 59.0146",
+    "radius": 2.1186,
     "subcategory": 17
   },
   {
     "categories": "regenerate, intervene",
     "id": "1706",
     "level": 3,
-    "position": "75.5209, 49.5302",
-    "radius": 1.9464,
+    "position": "74.4622, 52.0690",
+    "radius": 1.7947,
     "subcategory": 17
   },
   {
     "categories": "regenerate, intervene",
     "id": "1801",
     "level": 2,
-    "position": "84.9099, 52.6176",
-    "radius": 1.9033,
+    "position": "83.1196, 54.9159",
+    "radius": 1.755,
     "subcategory": 18
   },
   {
     "categories": "regenerate, intervene",
     "id": "1802",
     "level": 1,
-    "position": "86.6419, 47.2075",
-    "radius": 2.3444,
+    "position": "84.7167, 49.9272",
+    "radius": 2.1617,
     "subcategory": 18
   },
   {
     "categories": "regenerate, intervene",
     "id": "1803",
     "level": 1,
-    "position": "90.8932, 46.7948",
-    "radius": 2.2205,
+    "position": "88.6367, 49.5466",
+    "radius": 2.0475,
     "subcategory": 18
   },
   {
     "categories": "regenerate, intervene",
     "id": "1804",
     "level": 3,
-    "position": "78.8429, 44.7566",
-    "radius": 2.0509,
+    "position": "77.5253, 47.6672",
+    "radius": 1.8911,
     "subcategory": 18
   },
   {
     "categories": "regenerate, intervene",
     "id": "1805",
     "level": 3,
-    "position": "80.6122, 49.9604",
-    "radius": 2.0509,
+    "position": "79.1568, 52.4657",
+    "radius": 1.8911,
     "subcategory": 18
   },
   {
     "categories": "regenerate, intervene",
     "id": "1806",
     "level": 2,
-    "position": "82.8256, 45.1813",
-    "radius": 2.2605,
+    "position": "81.1977, 48.0588",
+    "radius": 2.0844,
     "subcategory": 18
   },
   {
     "categories": "regenerate, intervene",
     "id": "1807",
     "level": 3,
-    "position": "75.6958, 43.9779",
-    "radius": 1.7669,
+    "position": "74.6235, 46.9492",
+    "radius": 1.6292,
     "subcategory": 18
   },
   {
     "categories": "intervene",
     "id": "1901",
     "level": 2,
-    "position": "83.5217, 38.1736",
-    "radius": 1.7881,
+    "position": "81.8396, 41.5970",
+    "radius": 1.6488,
     "subcategory": 19
   },
   {
     "categories": "intervene",
     "id": "1902",
     "level": 2,
-    "position": "86.1258, 40.2059",
-    "radius": 2.0573,
+    "position": "84.2408, 43.4710",
+    "radius": 1.897,
     "subcategory": 19
   },
   {
     "categories": "intervene",
     "id": "1903",
     "level": 1,
-    "position": "89.9903, 39.6945",
-    "radius": 2.2699,
+    "position": "87.8042, 42.9994",
+    "radius": 2.093,
     "subcategory": 19
   },
   {
     "categories": "intervene",
     "id": "1904",
     "level": 3,
-    "position": "80.2755, 38.9843",
-    "radius": 1.8343,
+    "position": "78.8463, 42.3445",
+    "radius": 1.6914,
     "subcategory": 19
   },
   {
     "categories": "intervene",
     "id": "1905",
     "level": 3,
-    "position": "76.3085, 37.5543",
-    "radius": 2.1299,
+    "position": "75.1884, 41.0259",
+    "radius": 1.9639,
     "subcategory": 19
   },
   {
     "categories": "intervene",
     "id": "2001",
     "level": 2,
-    "position": "84.0058, 30.7483",
-    "radius": 2.182,
+    "position": "82.2860, 34.7501",
+    "radius": 2.012,
     "subcategory": 20
   },
   {
     "categories": "intervene",
     "id": "2002",
     "level": 1,
-    "position": "87.241, 34.4122",
-    "radius": 1.9111,
+    "position": "85.2691, 38.1286",
+    "radius": 1.7622,
     "subcategory": 20
   },
   {
     "categories": "intervene",
     "id": "2003",
     "level": 1,
-    "position": "88.8185, 29.3052",
-    "radius": 2.2054,
+    "position": "86.7237, 33.4194",
+    "radius": 2.0336,
     "subcategory": 20
   },
   {
     "categories": "intervene",
     "id": "2004",
     "level": 3,
-    "position": "75.1553, 30.0494",
-    "radius": 2.4507,
+    "position": "74.1251, 34.1056",
+    "radius": 2.2598,
     "subcategory": 20
   },
   {
     "categories": "intervene",
     "id": "2005",
     "level": 2,
-    "position": "79.5976, 31.7468",
-    "radius": 2.3069,
+    "position": "78.2212, 35.6708",
+    "radius": 2.1272,
     "subcategory": 20
   },
   {
     "categories": "intervene",
     "id": "2101",
     "level": 1,
-    "position": "89.4396, 16.9202",
-    "radius": 1.9094,
+    "position": "87.2964, 21.9991",
+    "radius": 1.7606,
     "subcategory": 21
   },
   {
     "categories": "intervene",
     "id": "2102",
     "level": 1,
-    "position": "86.7476, 20.5895",
-    "radius": 2.1068,
+    "position": "84.8141, 25.3826",
+    "radius": 1.9426,
     "subcategory": 21
   },
   {
     "categories": "intervene",
     "id": "2103",
     "level": 1,
-    "position": "90.1818, 23.9242",
-    "radius": 1.687,
+    "position": "87.9808, 28.4575",
+    "radius": 1.5556,
     "subcategory": 21
   },
   {
     "categories": "intervene",
     "id": "2104",
     "level": 3,
-    "position": "76.8793, 24.3345",
-    "radius": 1.8753,
+    "position": "75.7147, 28.8359",
+    "radius": 1.7292,
     "subcategory": 21
   },
   {
     "categories": "intervene",
     "id": "2105",
     "level": 2,
-    "position": "80.3226, 24.5157",
-    "radius": 2.2328,
+    "position": "78.8897, 29.0029",
+    "radius": 2.0588,
     "subcategory": 21
   },
   {
     "categories": "intervene",
     "id": "2106",
     "level": 2,
-    "position": "84.3738, 24.619",
-    "radius": 1.8452,
+    "position": "82.6253, 29.0982",
+    "radius": 1.7014,
     "subcategory": 21
   },
   {
     "categories": "intervene",
     "id": "2201",
     "level": 1,
-    "position": "83.6837, 15.1651",
-    "radius": 2.1665,
+    "position": "81.9890, 20.3807",
+    "radius": 1.9977,
     "subcategory": 22
   },
   {
     "categories": "intervene",
     "id": "2202",
     "level": 2,
-    "position": "80.3946, 17.9381",
-    "radius": 2.0554,
+    "position": "78.9561, 22.9377",
+    "radius": 1.8953,
     "subcategory": 22
   },
   {
     "categories": "intervene",
     "id": "2203",
     "level": 3,
-    "position": "73.1609, 20.081",
-    "radius": 2.0454,
+    "position": "72.2861, 24.9137",
+    "radius": 1.886,
     "subcategory": 22
   },
   {
     "categories": "intervene",
     "id": "2204",
     "level": 2,
-    "position": "76.7106, 17.9398",
-    "radius": 1.9939,
+    "position": "75.5592, 22.9393",
+    "radius": 1.8385,
     "subcategory": 22
   },
   {
     "categories": "intervene",
     "id": "2301",
     "level": 2,
-    "position": "80.4274, 9.6204",
-    "radius": 2.2517,
+    "position": "78.9864, 15.2679",
+    "radius": 2.0763,
     "subcategory": 23
   },
   {
     "categories": "intervene",
     "id": "2302",
     "level": 3,
-    "position": "72.8748, 12.9006",
-    "radius": 2.2663,
+    "position": "72.0223, 18.2926",
+    "radius": 2.0897,
     "subcategory": 23
   },
   {
     "categories": "intervene",
     "id": "2303",
     "level": 3,
-    "position": "76.957, 11.6131",
-    "radius": 2.011,
+    "position": "75.7864, 17.1054",
+    "radius": 1.8543,
     "subcategory": 23
   },
   {
     "categories": "intervene",
     "id": "2401",
     "level": 1,
-    "position": "70.1024, 1.6267",
-    "radius": 1.9917,
+    "position": "69.4659, 7.8969",
+    "radius": 1.8365,
     "subcategory": 24
   },
   {
     "categories": "intervene",
     "id": "2402",
     "level": 1,
-    "position": "72.0831, 6.3533",
-    "radius": 2.1042,
+    "position": "71.2922, 12.2553",
+    "radius": 1.9402,
     "subcategory": 24
   },
   {
     "categories": "intervene",
     "id": "2403",
     "level": 1,
-    "position": "66.26, 2.2935",
-    "radius": 2.116,
+    "position": "65.9229, 8.5117",
+    "radius": 1.9511,
     "subcategory": 24
   },
   {
     "categories": "intervene",
     "id": "2404",
     "level": 3,
-    "position": "64.9193, 9.618",
-    "radius": 2.2215,
+    "position": "64.6866, 15.2657",
+    "radius": 2.0484,
     "subcategory": 24
   },
   {
     "categories": "intervene",
     "id": "2405",
     "level": 2,
-    "position": "68.6263, 7.3645",
-    "radius": 1.9809,
+    "position": "68.1048, 13.1877",
+    "radius": 1.8266,
     "subcategory": 24
   },
   {
     "categories": "intervene",
     "id": "2406",
     "level": 3,
-    "position": "68.4948, 12.8756",
-    "radius": 1.94,
+    "position": "67.9835, 18.2695",
+    "radius": 1.7888,
     "subcategory": 24
   },
   {
     "categories": "intervene",
     "id": "2407",
     "level": 3,
-    "position": "58.9273, 2.7392",
-    "radius": 2.2716,
+    "position": "59.1615, 8.9227",
+    "radius": 2.0946,
     "subcategory": 24
   },
   {
     "categories": "intervene",
     "id": "2408",
     "level": 2,
-    "position": "62.703, 5.1856",
-    "radius": 2.2138,
+    "position": "62.6430, 11.1785",
+    "radius": 2.0413,
     "subcategory": 24
   }
 ]
