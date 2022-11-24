@@ -1,39 +1,43 @@
 <?php snippet('layout/html-open') ?>
   <?php snippet('layout/nav', ['isTree' => true]) ?>
   <main>
-    <div class="tree-container">
-      <img
-        alt="<?= $page->title()->escape('attr') ?>"
-        class="tree-image"
-        src="<?= $page->parent()->content($page->language())->treeImage()->toFile()->resize(6000)->url() ?>"
-      />
+    <canvas></canvas>
 
-      <ul class="tree-actions">
-        <?php foreach ($page->children() as $action): ?>
-        <?php $position = $action->position()->split(); ?>
-        <li
-          class="tree-action<?= $action->classes() ?>"
-          style="left: <?= $position[0] ?>%; top: <?= $position[1] ?>%; width: <?= 2 * $action->radius()->toFloat() ?>%;"
-        >
-          <button class="js-modal-trigger" data-target="modal-<?= $action->positionId() ?>" type="button">
-            <p class="tree-action-name">
-              <?= $action->title()->escape() ?>
-            </p>
-            <div class="tree-action-separator"></div>
-            <p class="tree-action-sources">
-              <?php foreach ($action->sources()->toStructure() as $source): ?>
-              <?= $source->name()->escape() ?><?php e(!$source->isLast(), ','); ?>
-              <?php endforeach ?>
-            </p>
-          </button>
-        </li>
-        <?php endforeach ?>
-      </ul>
+    <div class="tree-container" style="cursor: grab; transform: scale(0.1);">
+      <div>
+        <img
+          alt="<?= $page->title()->escape('attr') ?>"
+          class="tree-image"
+          src="<?= $page->parent()->content($page->language())->treeImage()->toFile()->resize(6000)->url() ?>"
+        />
+
+        <ul class="tree-actions">
+          <?php foreach ($page->children() as $action): ?>
+          <?php $position = $action->position()->split(); ?>
+          <li
+            class="tree-action<?= $action->classes() ?>"
+            style="left: <?= $position[0] ?>%; top: <?= $position[1] ?>%; width: <?= 2 * $action->radius()->toFloat() ?>%;"
+          >
+            <button class="js-modal-trigger" data-target="modal-<?= $action->positionId() ?>" type="button">
+              <p class="tree-action-name">
+                <?= $action->title()->escape() ?>
+              </p>
+              <div class="tree-action-separator"></div>
+              <p class="tree-action-sources">
+                <?php foreach ($action->sources()->toStructure() as $source): ?>
+                <?= $source->name()->escape() ?><?php e(!$source->isLast(), ','); ?>
+                <?php endforeach ?>
+              </p>
+            </button>
+          </li>
+          <?php endforeach ?>
+        </ul>
+      </div>
     </div>
 
     <div class="tree-dropdowns">
       <details class="tree-dropdowns-credits dropdown is-active">
-        <summary class="button is-bullet-less is-dark is-outlined is-responsive">
+        <summary class="button is-bullet-less is-dark is-responsive">
           <span class="icon">©</span>
         </summary>
 
@@ -47,7 +51,7 @@
       </details>
 
       <details class="dropdown is-active">
-        <summary class="button is-dark is-outlined is-responsive">
+        <summary class="button is-dark is-responsive">
           <?= $page->title()->escape() ?>
         </summary>
 
@@ -64,6 +68,11 @@
     </div>
 
     <?php snippet('elements/buttons', ['buttons' => $page->parent()->buttons(), 'buttonClasses' => 'is-responsive', 'classes' => 'tree-buttons']) ?>
+
+    <div class="tree-zoom-buttons buttons has-addons">
+      <button class="button is-minus is-dark is-rounded" type="button"><span class="icon">-</span></button>
+      <button class="button is-plus is-dark is-rounded" type="button"><span class="icon">+</span></button>
+    </div>
 
     <?php foreach ($page->children() as $action): ?>
     <div class="modal" id="modal-<?= $action->positionId() ?>">

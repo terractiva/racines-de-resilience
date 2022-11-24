@@ -1,17 +1,16 @@
-@use "sass:list";
-@use "sass:math";
-@import "_variables.scss";
+@use 'sass:list';
+@use 'sass:math';
+@import '_variables.scss';
 
+$zoomMax: 10;
 $treeWidth: 6000;
 $treeHeight: 4238;
-$landscapeHeight: 100vh;
-$landscapeWidth: math.div($treeWidth, $treeHeight) * 100vh;
-$portraitHeight: math.div($treeHeight, $treeWidth) * 100vw;
-$portraitWidth: 100vw;
+$landscapeHeight: $zoomMax * 100vh;
+$landscapeWidth: $zoomMax * math.div($treeWidth, $treeHeight) * 100vh;
+$portraitHeight: $zoomMax * math.div($treeHeight, $treeWidth) * 100vw;
+$portraitWidth: $zoomMax * 100vw;
 $actionLandscapeFontSize: 0.0035 * $landscapeHeight;
 $actionPortraitFontSize: 0.0035 * $portraitHeight;
-$actionLandscapeSeparatorSize: 0.001 * $landscapeHeight;
-$actionPortraitSeparatorSize: 0.001 * $portraitHeight;
 
 @mixin mediaPortrait() {
   @media (max-aspect-ratio: list.slash($treeWidth, $treeHeight)) {
@@ -41,34 +40,46 @@ html {
 }
 
 main {
-  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+canvas {
+  display: none;
 }
 
 .tree {
   &-container {
-    height: $landscapeHeight;
-    margin: auto;
-    position: relative;
-    width: $landscapeWidth;
+    display: flex;
+    height: $zoomMax * 100%;
+		transform-origin: top left;
+    width: $zoomMax * 100%;
 
-    @include mediaPortrait {
-      height: $portraitHeight;
-      width: $portraitWidth;
+    > div {
+      height: $landscapeHeight;
+      margin: auto;
+      position: relative;
+      width: $landscapeWidth;
+
+      @include mediaPortrait {
+        height: $portraitHeight;
+        width: $portraitWidth;
+      }
     }
   }
 
   &-image {
     display: block;
     height: 100%;
-    object-fit: contain;
+    left: 0;
+    position: absolute;
+    top: 0;
     width: 100%;
   }
 
   &-actions {
     height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
+    position: relative;
     width: 100%;
   }
 
@@ -114,6 +125,7 @@ main {
       color: $text;
       display: flex;
       flex-direction: column;
+      font-size: $actionLandscapeFontSize;
       height: 100%;
       justify-content: center;
       left: 0;
@@ -125,60 +137,43 @@ main {
       &:hover {
         opacity: 0.6;
       }
-    }
-    &-name, &-sources {
-      font-size: $actionLandscapeFontSize;
-      font-weight: $weight-semibold;
-      line-height: 1.2;
-      text-align: center;
 
       @include mediaPortrait() {
         font-size: $actionPortraitFontSize;
       }
     }
+    &-name, &-sources {
+      font-size: 1em;
+      font-weight: $weight-semibold;
+      line-height: 1.2;
+      text-align: center;
+    }
     &-separator {
-      border-bottom: solid $grey;
-      border-right: solid $grey;
-      border-width: $actionLandscapeSeparatorSize;
-      margin-bottom: 2 * $actionLandscapeSeparatorSize;
-      margin-top: $actionLandscapeSeparatorSize;
-      transform: rotate(45deg);
-      width: 2 * $actionLandscapeSeparatorSize;
-
-      @include mediaPortrait() {
-        border-width: $actionPortraitSeparatorSize;
-        margin-bottom: 2 * $actionPortraitSeparatorSize;
-        margin-top: $actionPortraitSeparatorSize;
-        width: 2 * $actionPortraitSeparatorSize;
-      }
+      height: 0.4em;
+      margin: 0.2em 0 0.4em 0;
+      width: 0.4em;
 
       &::before {
+        border-bottom: solid $grey-light 0.1em;
+        border-right: solid $grey-light 0.1em;
         content: '';
         display: block;
-        padding-bottom: 100%;
+        height: 100%;
+        transform: rotate(45deg);
+        width: 100%;
       }
     }
     &-sources {
-      font-family: "Police Action Arbre", $family-sans-serif;
+      font-family: 'Police Action Arbre', $family-sans-serif;
     }
   }
 
-  &-buttons {
+  &-dropdowns, &-buttons, &-zoom-buttons {
     position: absolute;
-    right: 50%;
-    top: $navbar-height + 0.5rem;
-    transform: translateX(50%);
-
-    @include mobile {
-      right: 0;
-      transform: none;
-    }
+    top: $navbar-height + $size-7;
   }
-
   &-dropdowns {
     left: $size-7;
-    position: absolute;
-    top: $navbar-height + 0.5rem;
 
     details {
       margin-bottom: 0;
@@ -189,6 +184,39 @@ main {
         width: 35rem;
       }
     }
+  }
+  &-buttons {
+    right: 50%;
+    transform: translateX(50%);
 
+    button {
+      &:first-child {
+        margin-left: 0 !important;
+      }
+      &:last-child {
+        margin-right: 0 !important;
+      }
+    }
+
+    @include mobile {
+      right: $size-7;
+      transform: none;
+    }
+  }
+  &-zoom-buttons {
+    right: $size-7;
+    touch-action: none; // Empêche le zoom par double-clic
+
+    &, button {
+      margin-bottom: 0 !important;
+    }
+    button {
+      font-weight: $weight-bold;
+    }
+
+    @include mobile {
+      bottom: $size-7;
+      top: initial;
+    }
   }
 }
