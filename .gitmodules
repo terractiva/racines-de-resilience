@@ -4,3 +4,6 @@
 [submodule "site/plugins/kirby3-dotenv"]
 	path = site/plugins/kirby3-dotenv
 	url = https://github.com/bnomei/kirby3-dotenv.git
+[submodule "site/plugins/kirby-matomo"]
+	path = site/plugins/kirby-matomo
+	url = https://github.com/sylvainjule/kirby-matomo.git

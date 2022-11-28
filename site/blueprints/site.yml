@@ -4,6 +4,11 @@ tabs:
     icon: home
     extends: sections/site-tab-home
 
+  statistics:
+    label: Statistiques
+    icon: chart
+    extends: sections/site-tab-statistics
+
   files:
     label: Fichiers
     icon: file
