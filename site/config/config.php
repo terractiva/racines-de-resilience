@@ -1,5 +1,9 @@
 <?php
 
+require_once __DIR__ . '/../plugins/kirby3-dotenv/global.php';
+
+loadenv(['dir' => realpath(__DIR__ . '/../../')]);
+
 return [
   'cache.airtable' => true,
   'debug' => true,
@@ -12,9 +16,7 @@ return [
   ],
   'sylvainjule.matomo.active' => false,
   'sylvainjule.matomo.disableCookies' => true,
-  'sylvainjule.matomo.token' => function () {
-    return env('MATOMO_TOKEN');
-  },
+  'sylvainjule.matomo.token' => env('MATOMO_TOKEN'),
   'sylvainjule.matomo.url' => 'https://statistiques.racinesderesilience.org',
   'urls' => [
     'en' => 'https://www.roots-of-resilience.development',
