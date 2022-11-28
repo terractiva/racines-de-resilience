@@ -5,6 +5,15 @@ Title: Racines de résilience
 News:
 
 - 
+  heading: >
+    🇨🇭 Sortie Suisse le 9 novembre !
+    🇨🇭
+  date: 2022-11-09
+  text: '<p>Nous sommes heureux.ses de vous annoncer la sortie de <a href="https://www.facebook.com/UneFoisQueTuSais?__cft__%5B0%5D=AZWHhSqGOhXc1anOLg_gTQF1xVKYPVnVny0JM2NdSYXvoOcD0_lzf5xciJPWY4xXi78_LqFE07gFCNlpOQ_t63Bid3oCj14JEfwQl4BXMIbf15DFdrKa9se4x87Y_qUiWDLkUxGkvf1xMNUzHrb8PHFfIhRFufosNJMtRqfZEl4xsHVP5krO0lAY6FfoKBLeDis4_iNk-nCeMfLYfkd7hOLF&amp;__tn__=-%5DK-R" target="_blank" rel="noopener noreferrer">Une fois que tu sais</a> en Suisse romande !</p><p>Ami.e.s Helvètes, rendez-vous dès le 9 novembre dans les salles ! Le film sera diffusé au :</p><p>- Cinéma Minimum de Neufchâtel</p><p>- Cinéma CDD de Genève</p><p>- Zinéma Lausanne</p><p>Certaines séances seront accompagnées par une animation post-projection ! Nous vous invitons à vous renseigner sur la page internet de votre cinéma.</p>'
+  linklabel: Découvrez la page du film
+  linkurl: >
+    https://pulp-films.fr/project/une-fois-que-tu-sais/
+- 
   heading: '📰 La revue <em>Mue</em> partenaire éditorial 📰'
   date: 2022-11-01
   text: |

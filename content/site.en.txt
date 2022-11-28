@@ -5,6 +5,14 @@ Title: Roots of resilience
 News:
 
 - 
+  heading: '🇨🇭 <em>Once You Know is in Switzerland </em>🇨🇭'
+  date: 2022-11-09
+  text: |
+    <p>We are happy to announce the <em><a href="https://www.facebook.com/UneFoisQueTuSais/" target="_blank" rel="noopener noreferrer">Once You Know</a></em> release in French-speaking Switzerland! <br>Dear Friends, see you in theaters on November 9th! The film will be shown at :<br>- Cinéma Minimum in Neufchâtel<br>- Cinéma CDD in Geneva<br>- Zinéma Lausanne<br>Some screenings will be accompanied by a post-screening animation! We invite you to get more information on your cinema's webpage.</p>
+  linklabel: 'More about <em>Once You Know</em>'
+  linkurl: >
+    https://pulp-films.fr/project/once-you-know/
+- 
   heading: '<em>Mue</em> magazine, our press partner'
   date: 2022-11-01
   text: '<p>Another stakeholder in co-building tomorrow’s world through inspiring and practical initiatives, the bi-monthly magazine <em><a href="https://je-mue.com/" target="_blank" rel="noopener noreferrer">Mue</a></em> choses to support <em>Roots to resilience</em> by sharing one of many levers outlined in their themed issues.</p><p>From issue #4 <em>Papilles!</em> came the action <strong>Creating outreach grocery shop</strong>, as part of the <em>ANDES </em>initiative which over the past 20 years has developed a network of 460 grocery stores, providing low income families with healthy and diverse food. Thanks to <em>Mue</em>, we can now all start a local outreach grocery project.</p>'
