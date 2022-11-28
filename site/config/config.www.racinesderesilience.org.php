@@ -3,6 +3,7 @@
 return [
   'debug' => false,
   'environment' => 'prod',
+  'sylvainjule.matomo.active' => true,
   'sylvainjule.matomo.id' => '2',
   'urls' => [
     'en' => 'https://www.roots-of-resilience.net',
