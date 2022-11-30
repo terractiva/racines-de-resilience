@@ -7,7 +7,7 @@
     <?php endif ?>
 
     <?php if ($block->subheading()->isNotEmpty()): ?>
-    <p class="subtitle">
+    <p class="section-subtitle subtitle">
       <?= $block->subheading() ?>
     </p>
     <?php endif ?>
