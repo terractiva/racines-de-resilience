@@ -75,7 +75,7 @@
   }
   &.is-regenerate {
     border-color: $regenerate;
-    
+
     &.is-intervene {
       border-color: $regenerate-intervene;
     }
@@ -177,6 +177,17 @@
       input {
         font-weight: $strong-weight;
         width: calc(3.1em + 2 * $control-padding-horizontal);
+      }
+      button {
+        & {
+          border-color: $input-border-color !important;
+        }
+        &:hover {
+          border-color: $input-hover-border-color !important;
+        }
+        &:focus {
+          border-color: $input-focus-border-color !important;
+        }
       }
     }
     &-buttons {

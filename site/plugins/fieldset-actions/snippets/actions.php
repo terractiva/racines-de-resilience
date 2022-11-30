@@ -70,7 +70,10 @@
   <form action="<?= computePageUrl($page) ?>" class="column is-one-third is-align-self-center">
     <p><?= t('actions.pagination.page') ?>&nbsp;</p>
     <input class="input" name="page" type="number" min="1" max="<?= $nbPages ?>" value="<?= $currentPage ?>" />
-    <p>&nbsp;<?= t('actions.pagination.of') ?> <strong><?= $nbPages ?></strong></p>
+    <p>&nbsp;<?= t('actions.pagination.of') ?> <strong><?= $nbPages ?></strong>&nbsp;</p>
+    <button class="button is-white" type="submit">
+      <span class="icon">↳</span>
+    </button>
 
     <?php foreach ($query->toArray() as $key => $value): ?>
     <?php if ($key !== 'page'): ?>

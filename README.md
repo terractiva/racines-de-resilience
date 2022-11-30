@@ -1,3 +1,3 @@
 # Racines de résilience
 
-*TODO:*
+TODO:
