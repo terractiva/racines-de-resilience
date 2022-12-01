@@ -273,4 +273,15 @@ canvas {
     border: none;
     width: 100%;
   }
+  &-card-content {
+    margin-top: $size-5;
+
+    .buttons {
+      margin-bottom: 0;
+    }
+    p {
+      font-style: italic;
+      text-align: center;
+    }
+  }
 }

@@ -33,6 +33,9 @@ return [
         'actions.pagination.of' => 'sur',
         'actions.pagination.page' => 'Page',
         'actions.pagination.previous' => 'Précédent',
-        'actions.placeholder' => 'Aucune action trouvée'
+        'actions.placeholder' => 'Aucune action trouvée',
+        'tree.modal.addSourceButton' => 'Ajouter une structure / organisation / initiative',
+        'tree.modal.airtableActionType' => 'Ajouter une structure/organisation/initiative à une action existante',
+        'tree.modal.openLinkInNewTabHelper' => 'Les liens s\'ouvriront dans un nouvel onglet.'
     ]
 ];

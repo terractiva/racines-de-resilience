@@ -52,6 +52,10 @@ News:
 
 ----
 
+Airtableformurl: https://airtable.com/shrGDgiigKjlvgtoI
+
+----
+
 Partners:
 
 - 

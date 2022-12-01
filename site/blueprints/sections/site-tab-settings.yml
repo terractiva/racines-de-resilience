@@ -12,6 +12,10 @@ columns:
         numbered: false
   - width:
     fields:
+      airtableFormUrl:
+        type: url
+        label: Formulaire d'ajout d'action
+        required: true
       partners:
         type: structure
         label: Partenaires

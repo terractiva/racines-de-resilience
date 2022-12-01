@@ -40,7 +40,7 @@
               <div class="tree-action-separator"></div>
               <p class="tree-action-sources">
                 <?php foreach ($action->sources()->toStructure() as $source): ?>
-                <?= $source->name()->escape() ?><?php e(!$source->isLast(), ','); ?>
+                <?= $source->name()->escape() ?><?php e(!$source->isLast(), ',') ?>
                 <?php endforeach ?>
               </p>
             </button>
@@ -94,9 +94,26 @@
       <button class="modal-background" type="button">
         <div class="modal-close is-large"></div>
       </button>
+
       <div class="modal-card">
         <section class="modal-card-body">
-          <?php snippet('elements/action', ['action' => $action]) ?>
+          <?php snippet('elements/action', ['action' => $action, 'doOpenInNewTab' => true]) ?>
+
+          <div class="modal-card-content">
+            <?php $tmp = 'https://airtable.com/shrlqNJvuiem0iFkA' ?>
+            <div class="buttons">
+              <?php
+                $formUrl = $site->translation($page->language())->content()['airtableformurl'];
+                $formUrlParams = '?prefill_Type=' . esc(t('tree.modal.airtableActionType', null, $page->language()), 'url') .
+                  '&prefill_Name=' . $action->title()->escape('url');
+              ?>
+              <a class="button <?= $action->classes() ?> is-fullwidth" href="<?= $formUrl . $formUrlParams ?>" target="_blank">
+                <?= t('tree.modal.addSourceButton') ?>
+              </a>
+            </div>
+
+            <p><?= t('tree.modal.openLinkInNewTabHelper') ?></p>
+          </div>
         </section>
       </div>
     </div>

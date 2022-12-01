@@ -33,6 +33,9 @@ return [
         'actions.pagination.of' => 'of',
         'actions.pagination.page' => 'Page',
         'actions.pagination.previous' => 'Previous',
-        'actions.placeholder' => 'No actions found'
+        'actions.placeholder' => 'No actions found',
+        'tree.modal.addSourceButton' => 'Add a structure / organization / initiative',
+        'tree.modal.airtableActionType' => 'Add a structure/organization/initiative to an existing action',
+        'tree.modal.openLinkInNewTabHelper' => 'Links will open in a new tab.'
     ]
 ];
