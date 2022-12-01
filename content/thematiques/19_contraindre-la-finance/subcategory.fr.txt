@@ -6,6 +6,14 @@ Categories: is-intervene
 
 ----
 
+Position: 70.6933, 41.0996
+
+----
+
+Size: 2.6796, 1.9484
+
+----
+
 Emoji: 💰
 
 ----

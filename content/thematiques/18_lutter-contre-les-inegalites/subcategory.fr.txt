@@ -6,6 +6,14 @@ Categories: is-regenerate  is-intervene
 
 ----
 
+Position: 71.2251, 47.3638
+
+----
+
+Size: 2.8737, 1.8349
+
+----
+
 Emoji: ✊
 
 ----

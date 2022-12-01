@@ -9,7 +9,7 @@ let hasBeenMoved = false;
   const $target = document.getElementById(modal);
 
   $trigger.addEventListener('click', () => {
-		if (!hasBeenMoved) $target.classList.add('is-active');
+    if (!hasBeenMoved) $target.classList.add('is-active');
   });
 });
 
@@ -20,6 +20,20 @@ let hasBeenMoved = false;
     $target.classList.remove('is-active');
   });
 });
+
+// =================================================================================================
+// Thématiques
+// =================================================================================================
+const subcategoryLinks = document.querySelectorAll('.tree-subcategory a');
+
+for (const subcategoryLink of subcategoryLinks) {
+  subcategoryLink.addEventListener('mousedown', (event) => {
+    event.preventDefault(); // Empêche le glisser-déposer
+  });
+  subcategoryLink.addEventListener('click', (event) => {
+    if (hasBeenMoved) event.preventDefault();
+  });
+}
 
 // =================================================================================================
 // Déplacement dans l'arbre
@@ -40,57 +54,57 @@ let zoom = 1;
 
 updateCanvasSize();
 window.addEventListener('resize', () => {
-	zoom = 1;
+  zoom = 1;
 
-	updateCanvasSize();
-	checkAndApplyMovement();
+  updateCanvasSize();
+  checkAndApplyMovement();
 });
 
 treeContainer.addEventListener('mousedown', ({ clientX, clientY }) => {
-	onMoveStart(clientX, clientY);
+  onMoveStart(clientX, clientY);
 });
 treeContainer.addEventListener('touchstart', ({ touches }) => {
-	if (touches.length === 1) onMoveStart(touches[0].clientX, touches[0].clientY);
+  if (touches.length === 1) onMoveStart(touches[0].clientX, touches[0].clientY);
 }, { passive: true });
 
 treeContainer.addEventListener('mousemove', ({ clientX, clientY }) => {
-	onMoveInProgress(clientX, clientY);
+  onMoveInProgress(clientX, clientY);
 });
 treeContainer.addEventListener('touchmove', (event) => {
-	event.preventDefault();
-	event.stopPropagation();
+  event.preventDefault();
+  event.stopPropagation();
 
-	if (event.touches.length === 1) onMoveInProgress(event.touches[0].clientX, event.touches[0].clientY);
+  if (event.touches.length === 1) onMoveInProgress(event.touches[0].clientX, event.touches[0].clientY);
 }, { passive: false });
 
 window.addEventListener('mouseup', onMoveEnd);
 window.addEventListener('touchend', onMoveEnd);
 
 function onMoveStart(cursorX, cursorY) {
-	isMouseDown = true;
-	hasBeenMoved = false;
-	treeContainer.style.cursor = 'grabbing';
-	fabricCanvas.lastPosX = cursorX;
-	fabricCanvas.lastPosY = cursorY;
+  isMouseDown = true;
+  hasBeenMoved = false;
+  treeContainer.style.cursor = 'grabbing';
+  fabricCanvas.lastPosX = cursorX;
+  fabricCanvas.lastPosY = cursorY;
 }
 
 function onMoveInProgress(cursorX, cursorY) {
-	if (isMouseDown) {
-		hasBeenMoved = true;
-		fabricCanvas.viewportTransform[4] += cursorX - fabricCanvas.lastPosX;
-		fabricCanvas.viewportTransform[5] += cursorY - fabricCanvas.lastPosY;
+  if (isMouseDown) {
+    hasBeenMoved = true;
+    fabricCanvas.viewportTransform[4] += cursorX - fabricCanvas.lastPosX;
+    fabricCanvas.viewportTransform[5] += cursorY - fabricCanvas.lastPosY;
 
-		checkAndApplyMovement();
-		fabricCanvas.requestRenderAll();
+    checkAndApplyMovement();
+    fabricCanvas.requestRenderAll();
 
-		fabricCanvas.lastPosX = cursorX;
-		fabricCanvas.lastPosY = cursorY;
-	}
+    fabricCanvas.lastPosX = cursorX;
+    fabricCanvas.lastPosY = cursorY;
+  }
 }
 
 function onMoveEnd() {
-	treeContainer.style.cursor = 'grab';
-	isMouseDown = false;
+  treeContainer.style.cursor = 'grab';
+  isMouseDown = false;
 }
 
 // =================================================================================================
@@ -106,74 +120,74 @@ const gestureManager = new window.Hammer.Manager(treeContainer);
 let zoomOnPinchStart;
 
 buttonMinus.addEventListener('click', () => {
-	treeContainer.style.transition = `transform ease ${ZOOM_TRANSITION_DURATION}s`;
+  treeContainer.style.transition = `transform ease ${ZOOM_TRANSITION_DURATION}s`;
 
-	updateZoom(zoom - ZOOM_INCREMENT);
-	setTimeout(() => {
-		treeContainer.style.transition = null;
-	}, 100 * ZOOM_TRANSITION_DURATION);
+  updateZoom(zoom - ZOOM_INCREMENT);
+  setTimeout(() => {
+    treeContainer.style.transition = null;
+  }, 100 * ZOOM_TRANSITION_DURATION);
 });
 buttonPlus.addEventListener('click', () => {
-	treeContainer.style.transition = `transform ease ${ZOOM_TRANSITION_DURATION}s`;
+  treeContainer.style.transition = `transform ease ${ZOOM_TRANSITION_DURATION}s`;
 
-	updateZoom(zoom + ZOOM_INCREMENT);
-	setTimeout(() => {
-		treeContainer.style.transition = null;
-	}, 100 * ZOOM_TRANSITION_DURATION);
+  updateZoom(zoom + ZOOM_INCREMENT);
+  setTimeout(() => {
+    treeContainer.style.transition = null;
+  }, 100 * ZOOM_TRANSITION_DURATION);
 });
 
 treeContainer.addEventListener('wheel', (event) => {
-	event.preventDefault();
-	event.stopPropagation();
+  event.preventDefault();
+  event.stopPropagation();
 
-	updateZoom(fabricCanvas.getZoom() * 0.998 ** event.deltaY, { x: event.pageX, y: event.pageY });
+  updateZoom(fabricCanvas.getZoom() * 0.998 ** event.deltaY, { x: event.pageX, y: event.pageY });
 }, { passive: false });
 
 gestureManager.add(new window.Hammer.Pinch());
 gestureManager.on('pinchstart', () => {
-	zoomOnPinchStart = zoom;
+  zoomOnPinchStart = zoom;
 });
 gestureManager.on('pinch', ({ center, scale }) => {
-	updateZoom(zoomOnPinchStart * scale, center);
+  updateZoom(zoomOnPinchStart * scale, center);
 });
 
 // =================================================================================================
 // Fonctions de mise à jour de l'arbre
 // =================================================================================================
 function checkAndApplyMovement() {
-	const vTransform = fabricCanvas.viewportTransform; // vTransform[4] = x, vTransform[5] = y
-	const xMax = fabricCanvas.getWidth() * (1 - zoom);
-	const yMax = fabricCanvas.getHeight() * (1 - zoom);
+  const vTransform = fabricCanvas.viewportTransform; // vTransform[4] = x, vTransform[5] = y
+  const xMax = fabricCanvas.getWidth() * (1 - zoom);
+  const yMax = fabricCanvas.getHeight() * (1 - zoom);
 
-	if (vTransform[4] >= 0) vTransform[4] = 0;
-	else if (vTransform[4] < xMax) vTransform[4] = xMax;
+  if (vTransform[4] >= 0) vTransform[4] = 0;
+  else if (vTransform[4] < xMax) vTransform[4] = xMax;
 
-	if (vTransform[5] >= 0) vTransform[5] = 0;
-	else if (vTransform[5] < yMax) vTransform[5] = yMax;
+  if (vTransform[5] >= 0) vTransform[5] = 0;
+  else if (vTransform[5] < yMax) vTransform[5] = yMax;
 
-	treeContainer.style.transform = `translate(${vTransform[4]}px, ${vTransform[5]}px) scale(${zoom / ZOOM_MAX})`;
+  treeContainer.style.transform = `translate(${vTransform[4]}px, ${vTransform[5]}px) scale(${zoom / ZOOM_MAX})`;
 }
 
 function updateCanvasSize() {
-	fabricCanvas.setViewportTransform([1, 0, 0, 1, 0, 0]); // Réinitialise le zoom et le déplacement
+  fabricCanvas.setViewportTransform([1, 0, 0, 1, 0, 0]); // Réinitialise le zoom et le déplacement
   fabricCanvas.setDimensions({
-		height: main.clientHeight,
-		width: main.clientWidth
-	});
+    height: main.clientHeight,
+    width: main.clientWidth
+  });
 }
 
 function updateZoom(newZoom, pointToZoom) {
-	if (!pointToZoom) {
-		pointToZoom = {
-			x: fabricCanvas.getCenter().left,
-			y: fabricCanvas.getCenter().top
-		};
-	}
-	if (newZoom > ZOOM_MAX) newZoom = ZOOM_MAX;
-	if (newZoom < ZOOM_MIN) newZoom = ZOOM_MIN;
+  if (!pointToZoom) {
+    pointToZoom = {
+      x: fabricCanvas.getCenter().left,
+      y: fabricCanvas.getCenter().top
+    };
+  }
+  if (newZoom > ZOOM_MAX) newZoom = ZOOM_MAX;
+  if (newZoom < ZOOM_MIN) newZoom = ZOOM_MIN;
 
-	zoom = newZoom;
+  zoom = newZoom;
 
-	fabricCanvas.zoomToPoint(pointToZoom, newZoom);
-	checkAndApplyMovement();
+  fabricCanvas.zoomToPoint(pointToZoom, newZoom);
+  checkAndApplyMovement();
 }

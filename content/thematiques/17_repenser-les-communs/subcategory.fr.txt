@@ -6,6 +6,14 @@ Categories: is-regenerate  is-intervene
 
 ----
 
+Position: 70.2776, 52.7580
+
+----
+
+Size: 2.5763, 2.0436
+
+----
+
 Emoji: 🌏
 
 ----

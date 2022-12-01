@@ -6,6 +6,14 @@ Categories: is-regenerate
 
 ----
 
+Position: 39.3397, 67.9960
+
+----
+
+Size: 2.0928, 2.2472
+
+----
+
 Emoji: 🧒
 
 ----

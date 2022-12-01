@@ -6,6 +6,14 @@ Categories: is-build  is-regenerate
 
 ----
 
+Position: 29.3617, 60.2408
+
+----
+
+Size: 3.7355, 2.2763
+
+----
+
 Emoji: 🌱
 
 ----

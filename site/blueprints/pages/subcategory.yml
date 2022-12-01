@@ -12,6 +12,10 @@ options:
 fields:
   categories:
     type: hidden
+  position:
+    type: hidden
+  size:
+    type: hidden
 
   memo:
     extends: sections/memo

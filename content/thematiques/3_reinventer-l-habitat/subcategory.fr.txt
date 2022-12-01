@@ -6,6 +6,14 @@ Categories: is-build
 
 ----
 
+Position: 25.7897, 40.1483
+
+----
+
+Size: 2.5849, 2.0047
+
+----
+
 Emoji: 🏡
 
 ----

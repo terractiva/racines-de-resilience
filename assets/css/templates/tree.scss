@@ -11,6 +11,8 @@ $portraitHeight: $zoomMax * math.div($treeHeight, $treeWidth) * 100vw;
 $portraitWidth: $zoomMax * 100vw;
 $actionLandscapeFontSize: 0.0035 * $landscapeHeight;
 $actionPortraitFontSize: 0.0035 * $portraitHeight;
+$subcategoryLandscapeFontSize: 0.0045 * $landscapeHeight;
+$subcategoryPortraitFontSize: 0.0045 * $portraitHeight;
 
 @mixin mediaPortrait() {
   @media (max-aspect-ratio: list.slash($treeWidth, $treeHeight)) {
@@ -77,10 +79,29 @@ canvas {
     width: 100%;
   }
 
-  &-actions {
+  &-items {
     height: 100%;
     position: relative;
     width: 100%;
+  }
+
+  &-subcategory {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+
+    a {
+      font-family: 'Police Action Arbre', $family-sans-serif;
+      font-size: $subcategoryLandscapeFontSize;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    @include mediaPortrait() {
+      font-size: $subcategoryPortraitFontSize;
+    }
   }
 
   &-action {

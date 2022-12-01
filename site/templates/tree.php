@@ -11,7 +11,22 @@
           src="<?= $page->parent()->content($page->language())->treeImage()->toFile()->resize(6000)->url() ?>"
         />
 
-        <ul class="tree-actions">
+        <ul class="tree-items">
+          <?php foreach (collection('subcategories') as $subcategory): ?>
+          <?php
+            $position = $subcategory->position()->split();
+            $size = $subcategory->size()->split();
+          ?>
+          <li
+            class="tree-subcategory"
+            style="left: <?= $position[0] ?>%; top: <?= $position[1] ?>%; width: <?= $size[0] ?>%; height: <?= $size[1] ?>%;"
+          >
+            <a class="<?= $subcategory->categories() ?>" href="<?= $subcategory->url() ?>" target="_blank">
+              <?= esc($subcategory->translation($page->language())->content()['title']) ?>
+            </a>
+          </li>
+          <?php endforeach ?>
+
           <?php foreach ($page->children() as $action): ?>
           <?php $position = $action->position()->split(); ?>
           <li
