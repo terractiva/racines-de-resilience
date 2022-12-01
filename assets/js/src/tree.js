@@ -2,38 +2,45 @@
 let hasBeenMoved = false;
 
 // =================================================================================================
-// Modal
+// Modals
 // =================================================================================================
-(document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
-  const modal = $trigger.dataset.target;
-  const $target = document.getElementById(modal);
+let openedModal = null;
 
-  $trigger.addEventListener('click', () => {
-    if (!hasBeenMoved) $target.classList.add('is-active');
-  });
+document.addEventListener('keydown', ({ key }) => {
+  if (key === 'Escape' && openedModal) {
+    openedModal.classList.remove('is-active');
+
+    openedModal = null;
+  }
 });
+document.querySelectorAll('.tree-action-button').forEach((actionButton) => {
+  const actionModal = document.getElementById(actionButton.dataset.target);
 
-(document.querySelectorAll('.modal-close') || []).forEach(($close) => {
-  const $target = $close.closest('.modal');
+  actionButton.addEventListener('click', () => {
+    if (!hasBeenMoved) {
+      actionModal.classList.add('is-active');
 
-  $close.addEventListener('click', () => {
-    $target.classList.remove('is-active');
+      openedModal = actionModal;
+    }
+  });
+  actionModal.firstElementChild.addEventListener('click', () => {
+    actionModal.classList.remove('is-active');
+
+    openedModal = null;
   });
 });
 
 // =================================================================================================
 // Thématiques
 // =================================================================================================
-const subcategoryLinks = document.querySelectorAll('.tree-subcategory a');
-
-for (const subcategoryLink of subcategoryLinks) {
+document.querySelectorAll('.tree-subcategory a').forEach((subcategoryLink) => {
   subcategoryLink.addEventListener('mousedown', (event) => {
     event.preventDefault(); // Empêche le glisser-déposer
   });
   subcategoryLink.addEventListener('click', (event) => {
     if (hasBeenMoved) event.preventDefault();
   });
-}
+});
 
 // =================================================================================================
 // Déplacement dans l'arbre

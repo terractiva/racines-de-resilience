@@ -267,3 +267,10 @@ canvas {
     }
   }
 }
+
+.modal {
+  &-background {
+    border: none;
+    width: 100%;
+  }
+}

@@ -6,11 +6,11 @@ Categories: is-build  is-regenerate
 
 ----
 
-Position: 29.3617, 60.2408
+Position: 29.5617, 60.2408
 
 ----
 
-Size: 3.7355, 2.2763
+Size: 3.4355, 2.2763
 
 ----
 

@@ -6,11 +6,11 @@ Categories: is-build
 
 ----
 
-Position: 25.2647, 45.6625
+Position: 25.3647, 45.6625
 
 ----
 
-Size: 2.604, 2.4358
+Size: 2.304, 2.4358
 
 ----
 

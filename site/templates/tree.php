@@ -33,7 +33,7 @@
             class="tree-action<?= $action->classes() ?><?php e($action->level()->toInt() === 0, ' is-bibliography') ?>"
             style="left: <?= $position[0] ?>%; top: <?= $position[1] ?>%; width: <?= 2 * $action->radius()->toFloat() ?>%;"
           >
-            <button class="js-modal-trigger" data-target="modal-<?= $action->positionId() ?>" type="button">
+            <button class="tree-action-button" data-target="modal-<?= $action->positionId() ?>" type="button">
               <p class="tree-action-name">
                 <?= $action->title()->escape() ?>
               </p>
@@ -91,13 +91,14 @@
 
     <?php foreach ($page->children() as $action): ?>
     <div class="modal" id="modal-<?= $action->positionId() ?>">
-      <div class="modal-background"></div>
+      <button class="modal-background" type="button">
+        <div class="modal-close is-large"></div>
+      </button>
       <div class="modal-card">
         <section class="modal-card-body">
           <?php snippet('elements/action', ['action' => $action]) ?>
         </section>
       </div>
-      <button class="modal-close is-large" type="button"></button>
     </div>
     <?php endforeach ?>
   </main>

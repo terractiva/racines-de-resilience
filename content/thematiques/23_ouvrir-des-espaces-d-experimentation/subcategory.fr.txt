@@ -6,11 +6,11 @@ Categories: is-intervene
 
 ----
 
-Position: 64.1930, 21.6084
+Position: 64.3930, 21.6084
 
 ----
 
-Size: 3.2288, 2.6514
+Size: 2.8288, 2.6514
 
 ----
 
