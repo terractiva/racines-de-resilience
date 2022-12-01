@@ -16,6 +16,7 @@ fields:
       query: kirby.languages.flip
       text: "{{ item.name }}"
       value: "{{ item.code }}"
+
   airtableBase:
     type: text
     label: Airtable - ID Base
@@ -37,3 +38,9 @@ fields:
     required: true
     help: <p>https://airtable.com/appH2RLrdTa38J8wK/tbl3RGTSrxOwDUCsU/<b>viwsGJDZdgQGC7X15</b></p>
     translate: false
+
+  copyright:
+    type: writer
+    label: Copyright
+    required: true
+    nodes: false

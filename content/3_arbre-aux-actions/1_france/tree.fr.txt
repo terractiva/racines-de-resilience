@@ -18,4 +18,8 @@ Airtableview: viwsGJDZdgQGC7X15
 
 ----
 
+Copyright: <p><strong>Illustration</strong> <a href="https://www.theotimenoel.com/" target="_blank" rel="noopener noreferrer">Théotime Noël</a></p><p><strong>Conception graphique</strong> <a href="https://elypss.fr/" target="_blank" rel="noopener noreferrer">Loïc Cimelière/Elypss</a></p><p><strong>Conception éditoriale et recherches</strong> <a href="https://brianneparquier.fr/" target="_blank" rel="noopener noreferrer">Brianne Parquier</a>, Charlotte Ogier, Emmanuel Cappellin</p>
+
+----
+
 Uuid: DvmlRzNVal9e0QJp

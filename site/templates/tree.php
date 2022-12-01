@@ -59,7 +59,7 @@
         <div class="dropdown-menu">
           <div class="dropdown-content">
             <div class="dropdown-item">
-              <?= $page->parent()->copyright() ?>
+              <?= $page->copyright() ?>
             </div>
           </div>
         </div>

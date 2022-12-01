@@ -6,4 +6,4 @@ Slug: swiss-romandie
 
 ----
 
-Uuid: 9y8wciO8YdIwqF5S
+Copyright: <p><strong>Illustration</strong> <a href="https://www.theotimenoel.com/" target="_blank" rel="noopener noreferrer">Théotime Noël</a></p><p><strong>Graphic design</strong> <a href="https://elypss.fr/" target="_blank" rel="noopener noreferrer">Loïc Cimelière/Elypss</a></p><p><strong>Editorial design and research</strong> <a href="https://brianneparquier.fr/" target="_blank" rel="noopener noreferrer">Brianne Parquier</a>, Charlotte Ogier, Emmanuel Cappellin</p>

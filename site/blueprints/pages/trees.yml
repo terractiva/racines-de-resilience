@@ -25,11 +25,6 @@ columns:
         uploads: image
         image:
           back: white
-      copyright:
-        type: writer
-        label: Copyright
-        required: true
-        nodes: false
       buttons:
         extends: fields/buttons
 
