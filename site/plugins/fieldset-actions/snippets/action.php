@@ -10,12 +10,15 @@
     </p>
   </div>
 
+  <?php $sources = $action->sources()->toStructure(); ?>
+  <?php if ($sources->isNotEmpty()): ?>
   <p class="action-sources">
-    <?php foreach ($action->sources()->toStructure() as $source): ?>
+    <?php foreach ($sources as $source): ?>
     <?php e($hasLink = $source->link()->isNotEmpty(), '<a class="' . $action->classes() . '" href="' . $source->link()->escape('attr') . '">'); ?>
     <?= $source->name()->escape() ?><?php e($hasLink, '</a>') . e(!$source->isLast(), ','); ?>
     <?php endforeach ?>
   </p>
+  <?php endif ?>
 
   <?php if ($action->subcategory()->isNotEmpty()): ?>
   <?php $subcategory = $action->subcategory()->toPage(); ?>

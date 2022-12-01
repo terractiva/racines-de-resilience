@@ -87,7 +87,27 @@ canvas {
     position: absolute;
     overflow: hidden;
 
+    &.is-bibliography {
+      .tree-action-name {
+        font-style: italic;
+      }
+      .tree-action-separator {
+        display: none;
+      }
+      .tree-action-sources {
+        font-family: inherit;
+      }
+    }
     @mixin tree-action-variant($pair) {
+      &.is-bibliography {
+        button {
+          background: nth($pair, 3);
+        }
+        .tree-action-name {
+          color: nth($pair, 4);
+        }
+      }
+
       .tree-action-sources {
         color: nth($pair, 4);
       }

@@ -76,6 +76,8 @@ function fetchRecordsRecursive($base, $table, $view, $offset = null) {
 }
 
 function findSubcategory($id) {
+  if ($id === null) return null;
+
   $subcategory = collection('subcategories')->groupBy('num')->get($id);
 
   return $subcategory ? $subcategory->first()->uuid()->toString() : null;
@@ -100,10 +102,10 @@ class ActionsPage extends Page
         'level' => $record['fields']['Level - ID'][0] ?? null,
         'name' => $record['fields']['Name'] ?? '',
         'source' => [
-          'name' => $record['fields']['Source - Name'] ?? '',
+          'name' => $record['fields']['Source - Name'] ?? null,
           'link' => $record['fields']['Source - Link'] ?? null
         ],
-        'subcategoryId' => $record['fields']['Theme - ID'][0] ?? ''
+        'subcategoryId' => $record['fields']['Theme - ID'][0] ?? null
       ];
     }
 
@@ -149,10 +151,10 @@ class TreePage extends Page
           'positionId' => $position->id,
           'radius' => $position->radius,
           'source' => [
-            'name' => $record['fields']['Source - Name'] ?? '',
+            'name' => $record['fields']['Source - Name'] ?? null,
             'link' => $record['fields']['Source - Link'] ?? null
           ],
-          'subcategoryId' => $position->subcategory
+          'subcategoryId' => $position->subcategory ?? null
         ];
       }
     }

@@ -15,7 +15,7 @@
           <?php foreach ($page->children() as $action): ?>
           <?php $position = $action->position()->split(); ?>
           <li
-            class="tree-action<?= $action->classes() ?>"
+            class="tree-action<?= $action->classes() ?><?php e($action->level()->toInt() === 0, ' is-bibliography') ?>"
             style="left: <?= $position[0] ?>%; top: <?= $position[1] ?>%; width: <?= 2 * $action->radius()->toFloat() ?>%;"
           >
             <button class="js-modal-trigger" data-target="modal-<?= $action->positionId() ?>" type="button">
