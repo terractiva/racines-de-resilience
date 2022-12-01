@@ -97,10 +97,10 @@ canvas {
       line-height: 1.2;
       text-align: center;
       text-decoration: none;
-    }
 
-    @include mediaPortrait() {
-      font-size: $subcategoryPortraitFontSize;
+      @include mediaPortrait() {
+        font-size: $subcategoryPortraitFontSize;
+      }
     }
   }
 
