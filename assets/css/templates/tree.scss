@@ -106,7 +106,6 @@ canvas {
 
   &-action {
     position: absolute;
-    overflow: hidden;
 
     &.is-bibliography {
       .tree-action-name {
@@ -184,10 +183,16 @@ canvas {
       }
     }
     &-name, &-sources {
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
       font-size: 1em;
       font-weight: $weight-semibold;
       line-height: 1.2;
+      overflow: hidden;
       text-align: center;
+    }
+    &-name {
+      -webkit-line-clamp: 4;
     }
     &-separator {
       height: 0.4em;
@@ -205,6 +210,7 @@ canvas {
       }
     }
     &-sources {
+      -webkit-line-clamp: 3;
       font-family: 'Police Action Arbre', $family-sans-serif;
     }
   }

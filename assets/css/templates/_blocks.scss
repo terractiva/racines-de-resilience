@@ -4,12 +4,19 @@
 
 .section {
   &-subtitle {
-    margin-bottom: $size-1;
+    font-style: italic;
+    font-weight: $weight-medium;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -$size-2;
     text-align: center;
 
+    &:not(:last-child) {
+      margin-bottom: $size-1;
+    }
+
     @include desktop {
+      line-height: inherit;
       max-width: 75%;
     }
   }

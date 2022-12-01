@@ -20,6 +20,7 @@ fields:
     label: Sous-titre
     placeholder: Sous-titre
     help: " "
+    marks: false
 
   layout:
     type: layout
