@@ -46,7 +46,7 @@
 ?>
 
 <?php if (count($actionsSubset) > 0): ?>
-<ul class="columns is-multiline" id="actions">
+<ul class="actions-list columns is-multiline" id="actions">
   <?php foreach ($actionsSubset as $action): ?>
   <li class="column is-half-tablet">
     <?php snippet('elements/action', ['action' => $action]) ?>

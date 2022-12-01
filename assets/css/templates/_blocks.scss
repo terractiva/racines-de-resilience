@@ -114,6 +114,12 @@
 }
 
 .actions {
+  &-list {
+    .action {
+      height: 100%;
+    }
+  }
+
   &-filters {
     .column {
       &:not(:first-child) {
@@ -221,7 +227,6 @@
   border: 2px solid;
   display: flex;
   flex-direction: column;
-  height: 100%;
   padding: $column-gap;
 
   @mixin action-variant($pair) {
