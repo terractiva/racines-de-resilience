@@ -6,7 +6,7 @@ Slug: tree-of-actions
 
 ----
 
-Treeimage: - file://ASCTdZn4zWFdpAXX
+Treeimage: - file://FugMlNJnKODV5CYs
 
 ----
 
@@ -24,7 +24,3 @@ Buttons:
   color: is-dark
   islight: 'false'
   isoutlined: 'false'
-
-----
-
-Uuid: YKln3T0YKA0khias
