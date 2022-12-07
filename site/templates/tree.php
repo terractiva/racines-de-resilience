@@ -124,4 +124,4 @@
     </div>
     <?php endforeach ?>
   </main>
-<?php snippet('layout/html-close') ?>
+<?php snippet('layout/html-close', ['showCarbonBadge' => false]) ?>
