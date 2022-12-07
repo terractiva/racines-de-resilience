@@ -118,7 +118,6 @@ function onMoveEnd() {
 // Zoom dans l'arbre
 // =================================================================================================
 const ZOOM_INCREMENT = 1;
-const ZOOM_TRANSITION_DURATION = 0.1;
 
 const buttonMinus = document.getElementsByClassName('button is-minus')[0];
 const buttonPlus = document.getElementsByClassName('button is-plus')[0];
@@ -127,20 +126,10 @@ const gestureManager = new window.Hammer.Manager(treeContainer);
 let zoomOnPinchStart;
 
 buttonMinus.addEventListener('click', () => {
-  treeContainer.style.transition = `transform ease ${ZOOM_TRANSITION_DURATION}s`;
-
   updateZoom(zoom - ZOOM_INCREMENT);
-  setTimeout(() => {
-    treeContainer.style.transition = null;
-  }, 100 * ZOOM_TRANSITION_DURATION);
 });
 buttonPlus.addEventListener('click', () => {
-  treeContainer.style.transition = `transform ease ${ZOOM_TRANSITION_DURATION}s`;
-
   updateZoom(zoom + ZOOM_INCREMENT);
-  setTimeout(() => {
-    treeContainer.style.transition = null;
-  }, 100 * ZOOM_TRANSITION_DURATION);
 });
 
 treeContainer.addEventListener('wheel', (event) => {
