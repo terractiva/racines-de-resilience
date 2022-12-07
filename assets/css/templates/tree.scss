@@ -225,6 +225,21 @@ canvas {
     details {
       margin-bottom: 0;
     }
+    .dropdown-divider {
+      margin: $size-7 0;
+      position: relative;
+
+      p {
+        background: $dropdown-content-background-color;
+        bottom: 50%;
+        font-weight: $weight-bold;
+        padding: 0 $size-7;
+        position: absolute;
+        right: 50%;
+        text-transform: uppercase;
+        transform: translate(50%, 50%);
+      }
+    }
     &-credits {
       .dropdown-menu {
         max-width: calc(100vw - 2 * $size-7);

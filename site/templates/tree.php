@@ -22,7 +22,7 @@
             style="left: <?= $position[0] ?>%; top: <?= $position[1] ?>%; width: <?= $size[0] ?>%; height: <?= $size[1] ?>%;"
           >
             <a class="<?= $subcategory->categories() ?>" href="<?= $subcategory->url() ?>" target="_blank">
-              <?= esc($subcategory->translation($page->language())->content()['title']) ?>
+              <?= $subcategory->title()->escape() ?>
             </a>
           </li>
           <?php endforeach ?>
@@ -72,10 +72,15 @@
 
         <div class="dropdown-menu">
           <div class="dropdown-content">
-            <?php foreach ($page->parent()->children()->listed() as $tree): ?>
-            <a class="dropdown-item<?= e($tree->isOpen(), ' is-active') ?>" href="<?= $tree->url() ?>">
-              <?= $tree->title()->escape() ?> - <?= $kirby->language($tree->language())->name() ?>
+            <?php foreach ($page->parent()->children()->listed()->groupBy('language') as $language => $trees): ?>
+            <div class="dropdown-divider">
+              <p><?= $kirby->language($language)->name() ?></p>
+            </div>
+            <?php foreach ($trees as $tree): ?>
+            <a class="dropdown-item<?= e($tree->isOpen(), ' is-active') ?>" href="<?= ($tree->urlForLanguage($language)) ?>">
+              <?= esc($tree->translation($language)->content()['title']) ?>
             </a>
+            <?php endforeach ?>
             <?php endforeach ?>
           </div>
         </div>
@@ -103,8 +108,8 @@
             <?php $tmp = 'https://airtable.com/shrlqNJvuiem0iFkA' ?>
             <div class="buttons">
               <?php
-                $formUrl = $site->translation($page->language())->content()['airtableformurl'];
-                $formUrlParams = '?prefill_Type=' . esc(t('tree.modal.airtableActionType', null, $page->language()), 'url') .
+                $formUrl = $site->airtableFormUrl();
+                $formUrlParams = '?prefill_Type=' . esc(t('tree.modal.airtableActionType'), 'url') .
                   '&prefill_Name=' . $action->title()->escape('url');
               ?>
               <a class="button <?= $action->classes() ?> is-fullwidth" href="<?= $formUrl . $formUrlParams ?>" target="_blank">
