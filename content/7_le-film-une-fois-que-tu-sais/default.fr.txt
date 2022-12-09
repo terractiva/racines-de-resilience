@@ -6,7 +6,20 @@ Heroheading: À l’origine du projet, <br>un film 🎞
 
 ----
 
-Herobuttons: 
+Herobuttons:
+
+- 
+  label: "Vous venez de voir le film ? C'est par ici pour la discussion guidée !"
+  type: page
+  page:
+    - page://MFi0DUNYsdjEdOnR
+  pageanchor: ""
+  url: ""
+  email: ""
+  emailsubject: ""
+  color: is-white
+  islight: 'false'
+  isoutlined: 'true'
 
 ----
 
