@@ -143,8 +143,9 @@ class TreePage extends Page
 
       if ($positionIndex !== false) {
         $position = $positions[$positionIndex];
+        $categories = $position->categories ?? join(', ', $record['fields']['Categories - ID'] ?? []);
         $actions[] = [
-          'categories' => $position->categories,
+          'categories' => $categories,
           'level' => $position->level,
           'name' => $record['fields']['Name'] ?? '',
           'position' => $position->position,
@@ -154,7 +155,7 @@ class TreePage extends Page
             'name' => $record['fields']['Source - Name'] ?? null,
             'link' => $record['fields']['Source - Link'] ?? null
           ],
-          'subcategoryId' => $position->subcategory ?? null
+          'subcategoryId' => $position->subcategory ?? $record['fields']['Theme - ID'][0] ?? null
         ];
       }
     }
