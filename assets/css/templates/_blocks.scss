@@ -26,6 +26,9 @@
   .subtitle {
     font-weight: $weight-medium;
   }
+  .button {
+    margin-top: auto;
+  }
 }
 
 .subcategories {
@@ -33,6 +36,7 @@
     display: flex;
     justify-content: center;
     text-decoration: none;
+    width: 300px;
   }
 }
 
@@ -65,7 +69,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: $card-content-padding;
+  padding: $size-4;
 
   &:not(:last-child) {
     margin-bottom: $size-4;
@@ -97,6 +101,9 @@
     + .buttons:last-child {
       margin-bottom: auto;
     }
+  }
+  .subtitle {
+    text-align: center;
   }
   .buttons {
     &:last-child {

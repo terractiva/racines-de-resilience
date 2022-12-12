@@ -1,8 +1,7 @@
-<div class="news columns is-multiline">
-  <?php foreach ($site->news()->toStructure() as $newsItem): ?>
-  <div class="column is-4">
-    <div class="card">
-      <div class="card-content">
+<ul class="news horizontal-slider">
+  <?php foreach ($site->news()->toStructure() as $newsItem) : ?>
+    <li class="column is-11-mobile is-three-fifths-tablet is-two-fifths-desktop is-one-third-widescreen">
+      <div class="box">
         <h3 class="title is-5">
           <?= $newsItem->heading() ?>
         </h3>
@@ -12,16 +11,13 @@
         <div class="content">
           <?= $newsItem->text() ?>
         </div>
-      </div>
 
-      <?php if ($newsItem->linkUrl()->isNotEmpty() && $newsItem->linkLabel()->isNotEmpty()): ?>
-      <footer class="card-footer">
-        <a class="card-footer-item" href="<?= $newsItem->linkUrl()->escape('attr') ?>">
-          <?= $newsItem->linkLabel() ?>
-        </a>
-      </footer>
-      <?php endif ?>
-    </div>
-  </div>
+        <?php if ($newsItem->linkUrl()->isNotEmpty() && $newsItem->linkLabel()->isNotEmpty()) : ?>
+          <a class="button is-dark" href="<?= $newsItem->linkUrl()->escape('attr') ?>">
+            <?= $newsItem->linkLabel() ?>
+          </a>
+        <?php endif ?>
+      </div>
+    </li>
   <?php endforeach ?>
-</div>
+</ul>

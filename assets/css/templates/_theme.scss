@@ -135,6 +135,85 @@ iframe {
   }
 }
 
+ul.horizontal-slider, .horizontal-slider ul {
+  display: flex;
+}
+.horizontal-slider {
+  left: 50%;
+  overflow-x: scroll;
+  position: relative;
+  scrollbar-width: none;
+  transform: translateX(-50%);
+  width: 100vw;
+
+  &.is-fullwidth {
+    li {
+      &:first-child {
+        margin-left: auto;
+      }
+      &:last-child {
+        margin-right: auto;
+      }
+    }
+  }
+  &:not(.is-fullwidth) {
+    // Largeurs copiées depuis `container.sass`
+    @mixin horizontal-slider-padding($containerWidth) {
+      padding: 0 calc(calc(100vw - $containerWidth) / 2);
+    }
+    @include desktop {
+      @include horizontal-slider-padding($desktop - $container-offset);
+    }
+    @include until-widescreen {
+      @include horizontal-slider-padding(min($widescreen, $container-max-width) - $container-offset);
+    }
+    @include until-fullhd {
+      @include horizontal-slider-padding(min($fullhd, $container-max-width) - $container-offset);
+    }
+    @include widescreen {
+      @include horizontal-slider-padding(min($widescreen, $container-max-width) - $container-offset);
+
+      li {
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+    @include fullhd {
+      @include horizontal-slider-padding(min($fullhd, $container-max-width) - $container-offset);
+    }
+  }
+
+  &::-webkit-scrollbar {
+		display: none;
+		-ms-overflow-style: none;
+	}
+  ul {
+    &:not(:last-child) {
+      margin-bottom: 2 * $column-gap;
+    }
+  }
+  li {
+    &.column {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+    &:not(.column) {
+      padding-left: $column-gap;
+      padding-right: $column-gap;
+    }
+    &:first-child {
+      padding-left: 2 * $column-gap;
+    }
+    &:last-child {
+      padding-right: 2 * $column-gap;
+    }
+  }
+}
+
 .buttons {
   &.is-vertical {
     flex-direction: column;
