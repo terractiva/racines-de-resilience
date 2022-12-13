@@ -25,6 +25,8 @@ if (!isMotionDisabled) {
 
       startScroll();
 
+      slider.addEventListener('touchstart', stopScroll);
+      slider.addEventListener('touchend', startScroll);
       slider.addEventListener('mouseenter', stopScroll);
       slider.addEventListener('mouseleave', startScroll);
       slider.addEventListener('focus', stopScroll);
