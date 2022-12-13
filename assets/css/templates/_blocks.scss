@@ -23,11 +23,36 @@
 }
 
 .news {
+  input {
+    display: none;
+
+    &:checked + .box label {
+      display: none;
+    }
+    &:not(:checked) + .box {
+      max-height: 300px;
+      overflow: hidden;
+    }
+  }
+  .box {
+    background: $white;
+    height: initial;
+    position: relative;
+  }
   .subtitle {
     font-weight: $weight-medium;
   }
   .button {
-    margin-top: auto;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  label.button {
+    background: rgba($white, 0.8);
+    bottom: 0;
+    font-weight: $weight-bold;
+    left: 0;
+    position: absolute;
   }
 }
 
