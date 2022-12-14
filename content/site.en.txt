@@ -105,11 +105,7 @@ Partners:
 
 ----
 
-Lightlogo: - file://HTcoYVDBoCcv1PDc
-
-----
-
-Darklogo: - file://QJLjW3vRtGaqZVM9
+Logo: - file://QJLjW3vRtGaqZVM9
 
 ----
 

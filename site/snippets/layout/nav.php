@@ -1,15 +1,12 @@
-<?php
-  $isTree = isset($isTree) ? $isTree : false;
-  $logo = $isTree ? $site->darkLogo() : $site->lightLogo();
-?>
+<?php $isTree = $isTree ?? false; ?>
 
-<nav class="navbar is-transparent <?= $isTree ? 'is-fixed-top' : 'is-dark is-spaced' ?>">
+<nav class="navbar is-fixed-top is-transparent<?php e(!$isTree, ' is-white is-spaced') ?>">
   <?= e(!$isTree, '<div class="container">') ?>
     <div class="navbar-brand">
       <a class="navbar-item" href="<?= $site->url() ?>">
         <img
           alt="<?= $site->title()->escape('attr') ?>"
-          src="<?= $logo->toFile()->resize(null, 80)->url() ?>"
+          src="<?= $site->logo()->toFile()->resize(null, 80)->url() ?>"
         >
       </a>
 

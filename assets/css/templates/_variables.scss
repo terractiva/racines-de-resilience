@@ -30,10 +30,14 @@ $scheme-main: $light;
 $radius: 0;
 
 $navbar-height: 3.25rem;
+$navbar-padding-vertical: 1rem;
 $navbar-background-color: transparent;
 $navbar-item-img-max-height: 2.5rem;
 $footer-background-color: $black;
 $footer-color: $white;
+
+$hero-body-padding: (3rem + $navbar-height) 1.5rem 3rem 1.5rem;
+$hero-body-padding-medium: (9rem + $navbar-height + 2 * $navbar-padding-vertical) 4.5rem 9rem 4.5rem;
 
 $modal-card-body-background-color: $white;
 

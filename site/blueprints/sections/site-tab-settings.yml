@@ -52,22 +52,10 @@ columns:
         numbered: false
   - width:
     fields:
-      lightLogo:
+      logo:
         type: files
-        label: Logo clair
-        width: 1/6
-        required: true
-        help: L'image sera automatiquement optimisée
-        max: 1
-        layout: cards
-        size: tiny
-        uploads: image
-        image:
-          back: black
-      darkLogo:
-        type: files
-        label: Logo sombre
-        width: 1/6
+        label: Logo
+        width: 1/3
         required: true
         help: L'image sera automatiquement optimisée
         max: 1

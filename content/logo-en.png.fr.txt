@@ -1,5 +1,0 @@
-Uuid: HTcoYVDBoCcv1PDc
-
-----
-
-Template: image

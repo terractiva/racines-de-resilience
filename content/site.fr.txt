@@ -115,11 +115,7 @@ Partners:
 
 ----
 
-Lightlogo: - file://Cka1MfFSmd4oUCCe
-
-----
-
-Darklogo: - file://oh3qxAXdBwd6xsId
+Logo: - file://oh3qxAXdBwd6xsId
 
 ----
 
@@ -166,7 +162,7 @@ Navbuttons:
   email: ""
   emailsubject: ""
   color: is-build
-  islight: 'true'
+  islight: 'false'
   isoutlined: 'false'
 - 
   label: 💧Nous soutenir
@@ -178,7 +174,7 @@ Navbuttons:
   email: ""
   emailsubject: ""
   color: is-regenerate
-  islight: 'true'
+  islight: 'false'
   isoutlined: 'false'
 
 ----

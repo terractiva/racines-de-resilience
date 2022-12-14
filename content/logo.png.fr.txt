@@ -1,5 +1,0 @@
-Uuid: Cka1MfFSmd4oUCCe
-
-----
-
-Template: image

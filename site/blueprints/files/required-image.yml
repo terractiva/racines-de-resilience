@@ -1,0 +1,9 @@
+title: Image
+
+options:
+  changeName: false
+  delete: false
+
+accept:
+  mime: image/*
+  type: image

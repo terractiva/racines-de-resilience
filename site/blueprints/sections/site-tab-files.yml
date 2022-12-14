@@ -6,14 +6,20 @@ sections:
     template: font
     sortable: false
 
-  files:
-    type: files
-    label: Fichiers
-    template: default
-    sortable: false
-
   images:
     type: files
     label: Images
+    template: required-image
+    sortable: false
+
+  uploadedFiles:
+    type: files
+    label: Fichiers téléversés
+    template: default
+    sortable: false
+
+  uploadedImages:
+    type: files
+    label: Images téléversés
     template: image
     sortable: false

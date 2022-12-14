@@ -1,0 +1,5 @@
+Uuid: 1LCIdj8aSHns68lU
+
+----
+
+Template: required-image

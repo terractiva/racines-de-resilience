@@ -1,10 +1,14 @@
 .navbar {
   font-weight: $weight-semibold;
+  transition: background $easing 2 * $speed;
+
+  &.is-white {
+    background: rgba($white, 0.9);
+  }
 
   a:not(:hover, .is-active) {
     text-decoration: none;
   }
-
   &-start {
     margin-left: auto;
     margin-right: 0;
@@ -22,6 +26,10 @@
       color: inherit;
     }
   }
+  &-end &-item:last-child {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 
   @include until($navbar-breakpoint) {
     a:hover, a.is-active {
@@ -36,6 +44,12 @@
       background: $white;
     }
   }
+}
+
+.hero {
+  background-image: linear-gradient(transparent, $light), url('/fond-arbre.jpg');
+  background-position: top center;
+  background-size: cover;
 }
 
 .footer {
