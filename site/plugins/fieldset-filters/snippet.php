@@ -2,11 +2,8 @@
 
 <form action="<?= $page->url() . '#action-filters' ?>" class="actions-filters columns is-gapless is-multiline" id="action-filters">
   <div class="column is-12">
-    <label for="search-action"><?= t('actions.filters.search') ?>&nbsp;</label>
-    <input class="input is-dark" id="search-action" minlength="2" name="search-action" placeholder="<?= t('actions.filters.inputs.searchAction.placeholder') ?>" type="text" value="<?= $query->get('search-action') ?>" />
-
-    <label for="search-source"><span>&nbsp;</span><?= t('actions.filters.andOr') ?>&nbsp;</label>
-    <input class="input is-dark" minlength="2" id="search-source" name="search-source" placeholder="<?= t('actions.filters.inputs.searchSource.placeholder') ?>" type="text" value="<?= $query->get('search-source') ?>" />
+    <label for="search"><?= t('actions.filters.search') ?>&nbsp;</label>
+    <input class="input is-dark" id="search" minlength="2" name="search" placeholder="<?= t('actions.filters.inputs.search.placeholder') ?>" type="text" value="<?= $query->get('search') ?>" />
   </div>
 
   <div class="column is-12">

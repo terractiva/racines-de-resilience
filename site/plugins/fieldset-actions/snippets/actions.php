@@ -19,12 +19,11 @@
         return $action->sources()->toStructure()->filterBy('department', $query->get('department'))->count() > 0;
       });
     }
-    if ($query->get('search-action', '') !== '') {
-      $actionsSubset = $actionsSubset->search($query->get('search-action'), 'title');
-    }
-    if ($query->get('search-source', '') !== '') {
-      $actionsSubset = $actionsSubset->filter(function($action) use($query) {
-        return $action->sources()->toStructure()->search($query->get('search-source'), 'name')->count() > 0;
+    if ($query->get('search', '') !== '') {
+      $search = $query->get('search');
+      $actionsSubset = $actionsSubset->filter(function($action) use($search) {
+        return stripos($action->title(), $search) !== false ||
+          $action->sources()->toStructure()->filterBy('name', '*', '/' . $search . '/i')->count() > 0;
       });
     }
     if ($query->get('levels') !== null) {
