@@ -4,6 +4,10 @@
       <input id="news-toggle-<?= $newsItem->id() ?>" type="checkbox" />
 
       <div class="box">
+        <label class="button is-white is-fullwidth" for="news-toggle-<?= $newsItem->id() ?>">
+          +
+        </label>
+
         <h3 class="title is-5">
           <?= $newsItem->heading() ?>
         </h3>
@@ -13,15 +17,13 @@
         <div class="content">
           <?= $newsItem->text() ?>
         </div>
-        <?php if ($newsItem->linkUrl()->isNotEmpty() && $newsItem->linkLabel()->isNotEmpty()) : ?>
-          <a class="button is-dark" href="<?= $newsItem->linkUrl()->escape('attr') ?>">
-            <?= $newsItem->linkLabel() ?>
-          </a>
-        <?php endif ?>
-        <label class="button is-white is-fullwidth" for="news-toggle-<?= $newsItem->id() ?>">
-          +
-        </label>
       </div>
+
+      <?php if ($newsItem->linkUrl()->isNotEmpty() && $newsItem->linkLabel()->isNotEmpty()) : ?>
+        <a class="button is-dark is-fullwidth" href="<?= $newsItem->linkUrl()->escape('attr') ?>">
+          <?= $newsItem->linkLabel() ?>
+        </a>
+      <?php endif ?>
     </li>
   <?php endforeach ?>
 </ul>

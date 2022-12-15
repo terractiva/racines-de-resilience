@@ -1,4 +1,4 @@
-<ul class="partners horizontal-slider is-automatic is-fullwidth">
+<ul class="partners horizontal-slider is-fullwidth">
   <?php foreach ($site->partners()->toStructure() as $partner) : ?>
     <li>
       <?php e($hasUrl = $partner->url()->isNotEmpty(), '<a href="' . $partner->url()->escape('attr') . '">') ?>

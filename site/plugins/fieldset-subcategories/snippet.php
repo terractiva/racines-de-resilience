@@ -1,7 +1,7 @@
-<div class="subcategories horizontal-slider is-automatic is-fullwidth">
+<div class="subcategories horizontal-slider is-fullwidth">
   <?php
     $subcategories = collection('subcategories');
-    $lineSize = $subcategories->count() / 2;
+    $lineSize = $subcategories->count() / 4;
   ?>
   <?php foreach ($subcategories as $subcategory) : ?>
     <?php if ($subcategory->indexOf() % $lineSize === 0) : ?>

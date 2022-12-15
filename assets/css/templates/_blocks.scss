@@ -38,6 +38,10 @@
     background: $white;
     height: initial;
     position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: $size-7;
+    }
   }
   .subtitle {
     font-weight: $weight-medium;
