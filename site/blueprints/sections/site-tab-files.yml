@@ -20,6 +20,6 @@ sections:
 
   uploadedImages:
     type: files
-    label: Images téléversés
+    label: Images téléversées
     template: image
     sortable: false

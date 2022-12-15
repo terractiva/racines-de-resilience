@@ -9,7 +9,7 @@
     <input class="input is-dark" minlength="2" id="search-source" name="search-source" placeholder="<?= t('actions.filters.inputs.searchSource.placeholder') ?>" type="text" value="<?= $query->get('search-source') ?>" />
   </div>
 
-  <div class="column is-narrow">
+  <div class="column is-12">
     <p><?= t('actions.filters.filterBy') ?>&nbsp;</p>
     <details class="dropdown is-center is-active">
       <summary class="button is-dark is-outlined">
@@ -37,7 +37,7 @@
     <p><span>&nbsp;</span><?= t('actions.filters.andOr') ?>&nbsp;</p>
     <details class="dropdown is-center is-active">
       <summary class="button is-dark is-outlined">
-      <?= t('actions.filters.inputs.categories.toggle') ?><?php e(count($query->get('categories', [])) > 0, ' (' . count($query->get('categories', [])) . ')') ?>
+        <?= t('actions.filters.inputs.categories.toggle') ?><?php e(count($query->get('categories', [])) > 0, ' (' . count($query->get('categories', [])) . ')') ?>
       </summary>
 
       <div class="dropdown-menu">
@@ -58,21 +58,63 @@
     <p><span>&nbsp;</span><?= t('actions.filters.andOr') ?>&nbsp;</p>
     <details class="dropdown is-center is-active">
       <summary class="button is-dark is-outlined">
-      <?= t('actions.filters.inputs.subcategories.toggle') ?><?php e(count($query->get('subcategories', [])) > 0, ' (' . count($query->get('subcategories', [])) . ')') ?>
+        <?= t('actions.filters.inputs.subcategories.toggle') ?><?php e(count($query->get('subcategories', [])) > 0, ' (' . count($query->get('subcategories', [])) . ')') ?>
       </summary>
 
       <div class="dropdown-menu">
         <div class="dropdown-content">
-          <?php foreach (collection('subcategories') as $subcategory): ?>
-          <label class="checkbox dropdown-item">
-            <input <?php e(in_array($subcategory->num(), $query->get('subcategories', [])), 'checked ') ?>name="subcategories[]" type="checkbox" value="<?= $subcategory->num() ?>" />
-            <?= $subcategory->title()->escape() ?>
-          </label>
+          <?php foreach (collection('subcategories') as $subcategory) : ?>
+            <label class="checkbox dropdown-item">
+              <input <?php e(in_array($subcategory->num(), $query->get('subcategories', [])), 'checked ') ?>name="subcategories[]" type="checkbox" value="<?= $subcategory->num() ?>" />
+              <?= $subcategory->title()->escape() ?>
+            </label>
           <?php endforeach ?>
         </div>
       </div>
     </details>
   </div>
+
+  <?php $locations = collection('locations'); ?>
+  <column class="column is-narrow">
+    <label for="country"><?= t('actions.filters.filterByLocation') ?>&nbsp;</label>
+
+    <div class="select is-dark">
+      <select id="country" name="country">
+        <option value=""><?= t('actions.filters.inputs.country.placeholder') ?></option>
+        <?php foreach ($locations['countries'] as $country) : ?>
+          <option <?php e($query->get('country') == $country, 'selected') ?>><?= $country ?></option>
+        <?php endforeach ?>
+      </select>
+    </div>
+
+    <?php if ($query->get('country', '') !== '') : ?>
+      <?php $regions = $locations['regionsByCountry'][$query->get('country')] ?? []; ?>
+      <?php if (count($regions) > 0) : ?>
+        <div class="select is-dark">
+          <select id="region" name="region">
+            <option value=""><?= t('actions.filters.inputs.region.placeholder') ?></option>
+            <?php foreach ($regions as $region) : ?>
+              <option <?php e($query->get('region') == $region, 'selected') ?>><?= $region ?></option>
+            <?php endforeach ?>
+          </select>
+        </div>
+      <?php endif ?>
+    <?php endif ?>
+
+    <?php if ($query->get('region', '') !== '') : ?>
+      <?php $departments = $locations['departmentsByRegion'][$query->get('region')] ?? []; ?>
+      <?php if (count($departments) > 0) : ?>
+        <div class="select is-dark">
+          <select id="department" name="department">
+            <option value=""><?= t('actions.filters.inputs.department.placeholder') ?></option>
+            <?php foreach ($departments as $department) : ?>
+              <option <?php e($query->get('department') == $department, 'selected') ?>><?= $department ?></option>
+            <?php endforeach ?>
+          </select>
+        </div>
+      <?php endif ?>
+    <?php endif ?>
+  </column>
 
   <div class="column is-narrow">
     <button class="button is-dark" type="submit">

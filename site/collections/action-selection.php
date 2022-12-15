@@ -1,6 +1,6 @@
 <?php
 
-return function ($site) {
+return function () {
   $actions = collection('actions');
   $selection = $actions->filterBy('level', 0)->random(2, true);
 

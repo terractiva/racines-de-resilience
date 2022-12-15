@@ -153,6 +153,10 @@
   }
 
   &-filters {
+    @include tablet {
+      justify-content: space-between;
+    }
+
     .column {
       &:not(:first-child) {
         margin-top: $size-7 !important;
@@ -161,7 +165,7 @@
       > label, > p {
         flex-shrink: 0;
       }
-      > input {
+      > input, select {
         background: transparent;
       }
       details {
@@ -172,6 +176,9 @@
           text-overflow: ellipsis;
           white-space: nowrap;
         }
+      }
+      .select:not(:last-child) {
+        margin-right: $size-7;
       }
 
       @include mobile {
@@ -184,18 +191,18 @@
         summary {
           text-align: start;
         }
-        .dropdown-menu {
+        .dropdown-menu, .select, select {
           width: 100%;
+        }
+        .select:not(:last-child) {
+          margin-bottom: $size-7;
+          margin-right: 0;
         }
       }
       @include tablet {
         align-items: center;
         display: flex;
       }
-    }
-
-    @include tablet {
-      justify-content: space-between;
     }
   }
 

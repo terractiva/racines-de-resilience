@@ -4,6 +4,21 @@
   $query = $kirby->request()->query();
 
   if (!$disablePagination) {
+    if ($query->get('country', '') !== '') {
+      $actionsSubset = $actionsSubset->filter(function($action) use($query) {
+        return $action->sources()->toStructure()->filterBy('country', $query->get('country'))->count() > 0;
+      });
+    }
+    if ($query->get('region', '') !== '') {
+      $actionsSubset = $actionsSubset->filter(function($action) use($query) {
+        return $action->sources()->toStructure()->filterBy('region', $query->get('region'))->count() > 0;
+      });
+    }
+    if ($query->get('department', '') !== '') {
+      $actionsSubset = $actionsSubset->filter(function($action) use($query) {
+        return $action->sources()->toStructure()->filterBy('department', $query->get('department'))->count() > 0;
+      });
+    }
     if ($query->get('search-action', '') !== '') {
       $actionsSubset = $actionsSubset->search($query->get('search-action'), 'title');
     }
@@ -41,12 +56,12 @@
 
     $resultQuery = http_build_query($resultQuery);
 
-    return $result . ($resultQuery ? '?' . $resultQuery : '') . '#actions';
+    return $result . ($resultQuery ? '?' . $resultQuery : '') . '#action-filters';
   }
 ?>
 
 <?php if (count($actionsSubset) > 0): ?>
-<ul class="actions-list columns is-multiline" id="actions">
+<ul class="actions-list columns is-multiline">
   <?php foreach ($actionsSubset as $action): ?>
   <li class="column is-half-tablet">
     <?php snippet('elements/action', ['action' => $action]) ?>

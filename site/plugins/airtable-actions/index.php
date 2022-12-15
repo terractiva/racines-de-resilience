@@ -102,7 +102,10 @@ class ActionsPage extends Page
         'level' => $record['fields']['Level - ID'][0] ?? null,
         'name' => $record['fields']['Name'] ?? '',
         'source' => [
+          'country' => $record['fields']['Source - Country - Name'][0] ?? null,
+          'department' => $record['fields']['Source - Department - Name'][0] ?? null,
           'name' => $record['fields']['Source - Name'] ?? null,
+          'region' => $record['fields']['Source - Region - Name'][0] ?? null,
           'link' => $record['fields']['Source - Link'] ?? null
         ],
         'subcategoryId' => $record['fields']['Theme - ID'][0] ?? null
@@ -152,7 +155,10 @@ class TreePage extends Page
           'positionId' => $position->id,
           'radius' => $position->radius,
           'source' => [
+            'country' => $record['fields']['Source - Country - Name'][0] ?? null,
+            'department' => $record['fields']['Source - Department - Name'][0] ?? null,
             'name' => $record['fields']['Source - Name'] ?? null,
+            'region' => $record['fields']['Source - Region - Name'][0] ?? null,
             'link' => $record['fields']['Source - Link'] ?? null
           ],
           'subcategoryId' => $position->subcategory ?? $record['fields']['Theme - ID'][0] ?? null
