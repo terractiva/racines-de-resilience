@@ -152,7 +152,7 @@ Navbuttons:
   email: ""
   emailsubject: ""
   color: is-build
-  islight: 'true'
+  islight: 'false'
   isoutlined: 'false'
 - 
   label: Support us
@@ -164,7 +164,7 @@ Navbuttons:
   email: ""
   emailsubject: ""
   color: is-regenerate
-  islight: 'true'
+  islight: 'false'
   isoutlined: 'false'
 
 ----
