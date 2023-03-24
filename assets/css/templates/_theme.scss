@@ -1,13 +1,22 @@
 @font-face {
-  font-family: 'Police Titre';
-  src: url('/police-titre.woff2') format('woff2'),
-      url('/police-titre.woff') format('woff');
+  font-family: "Police Titre";
+  src: url("/police-titre.woff2") format("woff2"),
+    url("/police-titre.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
-h1, h2 {
+[id] {
+  scroll-margin: $navbar-height + $size-7 0 0 0;
+
+  @include from($navbar-breakpoint) {
+    scroll-margin: $navbar-height + 2 * $navbar-padding-vertical + $size-7 0 0 0;
+  }
+}
+
+h1,
+h2 {
   font-family: $family-secondary;
 
   &.title {
@@ -128,7 +137,8 @@ iframe {
   }
 }
 
-ul.horizontal-slider, .horizontal-slider ul {
+ul.horizontal-slider,
+.horizontal-slider ul {
   display: flex;
 }
 .horizontal-slider {
@@ -158,13 +168,19 @@ ul.horizontal-slider, .horizontal-slider ul {
       @include horizontal-slider-padding($desktop - $container-offset);
     }
     @include until-widescreen {
-      @include horizontal-slider-padding(min($widescreen, $container-max-width) - $container-offset);
+      @include horizontal-slider-padding(
+        min($widescreen, $container-max-width) - $container-offset
+      );
     }
     @include until-fullhd {
-      @include horizontal-slider-padding(min($fullhd, $container-max-width) - $container-offset);
+      @include horizontal-slider-padding(
+        min($fullhd, $container-max-width) - $container-offset
+      );
     }
     @include widescreen {
-      @include horizontal-slider-padding(min($widescreen, $container-max-width) - $container-offset);
+      @include horizontal-slider-padding(
+        min($widescreen, $container-max-width) - $container-offset
+      );
 
       li {
         &:first-child {
@@ -176,14 +192,16 @@ ul.horizontal-slider, .horizontal-slider ul {
       }
     }
     @include fullhd {
-      @include horizontal-slider-padding(min($fullhd, $container-max-width) - $container-offset);
+      @include horizontal-slider-padding(
+        min($fullhd, $container-max-width) - $container-offset
+      );
     }
   }
 
   &::-webkit-scrollbar {
-		display: none;
-		-ms-overflow-style: none;
-	}
+    display: none;
+    -ms-overflow-style: none;
+  }
   ul {
     &:not(:last-child) {
       margin-bottom: 2 * $column-gap;
