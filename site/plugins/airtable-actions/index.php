@@ -1,6 +1,7 @@
 <?php
 
-function actionsToPages($cacheName, $actions) {
+function actionsToPages($cacheName, $actions)
+{
   $kirby = kirby();
   $cache = $kirby->cache('airtable');
 
@@ -42,7 +43,8 @@ function actionsToPages($cacheName, $actions) {
   return $pages;
 }
 
-function fetchRecords($cacheName, $base, $table, $view) {
+function fetchRecords($cacheName, $base, $table, $view)
+{
   $kirby = kirby();
   $cache = $kirby->cache('airtable');
 
@@ -58,24 +60,30 @@ function fetchRecords($cacheName, $base, $table, $view) {
 
   return $records;
 }
-function fetchRecordsRecursive($base, $table, $view, $offset = null) {
-  $response = Remote::get(
-    'https://api.airtable.com/v0/' . $base . '/' . $table . '?view=' . $view . ($offset === null ? '' : '&offset=' . $offset),
-    ['headers' => ['Authorization: Bearer ' . env('AIRTABLE_KEY')]]
-  );
+function fetchRecordsRecursive($base, $table, $view, $offset = null)
+{
+  try {
+    $response = Remote::get(
+      'https://api.airtable.com/v0/' . $base . '/' . $table . '?view=' . $view . ($offset === null ? '' : '&offset=' . $offset),
+      ['headers' => ['Authorization: Bearer ' . env('AIRTABLE_KEY')]]
+    );
 
-  if ($response->code() === 200) {
-    $responseJson = $response->json();
+    if ($response->code() === 200) {
+      $responseJson = $response->json();
 
-    return isset($responseJson['offset'])
-      ? array_merge($responseJson['records'], fetchRecordsRecursive($base, $table, $view, $responseJson['offset']))
-      : $responseJson['records'];
+      return isset($responseJson['offset'])
+        ? array_merge($responseJson['records'], fetchRecordsRecursive($base, $table, $view, $responseJson['offset']))
+        : $responseJson['records'];
+    }
+
+    return [];
+  } catch (\Throwable $th) {
+    return [];
   }
-
-  return [];
 }
 
-function findSubcategory($id) {
+function findSubcategory($id)
+{
   if ($id === null) return null;
 
   $subcategory = collection('subcategories')->groupBy('num')->get($id);
