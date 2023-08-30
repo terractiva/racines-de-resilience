@@ -2,7 +2,7 @@ Title: Actions
 
 ----
 
-Heroheading: Moving forward,<br>Together
+Heroheading: <strong>Find my next action</strong>
 
 ----
 
