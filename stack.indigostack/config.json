@@ -10,13 +10,13 @@
         "build_order" : 50,
         "requested_version" : "2.4",
         "label" : "Apache server service",
-        "display_order" : 999,
+        "display_order" : 0,
         "sites" : [
           {
             "domain" : "www.racinesderesilience.development",
             "id" : "9394",
             "ssl_port" : "auto",
-            "linked_php" : "BC07",
+            "linked_php" : "A2E2",
             "non_ssl_port" : "auto",
             "reverse_proxy_http" : [
               {
@@ -34,7 +34,7 @@
             "domain" : "www.roots-of-resilience.development",
             "id" : "A2E7",
             "ssl_port" : "auto",
-            "linked_php" : "BC07",
+            "linked_php" : "A2E2",
             "non_ssl_port" : "auto",
             "reverse_proxy_http" : [
               {
@@ -55,12 +55,12 @@
       "type" : "php",
       "config" : {
         "port" : "auto",
-        "id" : "BC07",
+        "id" : "A2E2",
         "user_and_group" : "current",
-        "requested_version" : "8.1",
+        "requested_version" : "8.2",
         "build_order" : 10,
         "label" : "PHP service",
-        "display_order" : 0
+        "display_order" : 999
       }
     }
   ],
