@@ -65,7 +65,7 @@ function fetchRecordsRecursive($base, $table, $view, $offset = null)
   try {
     $response = Remote::get(
       'https://api.airtable.com/v0/' . $base . '/' . $table . '?view=' . $view . ($offset === null ? '' : '&offset=' . $offset),
-      ['headers' => ['Authorization: Bearer ' . env('AIRTABLE_KEY')]]
+      ['headers' => ['Authorization: Bearer ' . env('AIRTABLE_TOKEN')]]
     );
 
     if ($response->code() === 200) {
