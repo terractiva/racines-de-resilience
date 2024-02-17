@@ -1,6 +1,6 @@
-<?php if ($buttons->isNotEmpty()): ?>
-<div class="buttons is-centered<?= e(isset($isVertical) && $isVertical, ' is-vertical') . (isset($classes) ? ' ' . $classes : '') ?>">
-  <?php
+<?php if ($buttons->isNotEmpty()) : ?>
+  <div class="buttons is-centered<?= e(isset($isVertical) && $isVertical, ' is-vertical') . (isset($classes) ? ' ' . $classes : '') ?>">
+    <?php
     foreach ($buttons->toStructure() as $button) {
       $class = $button->color()->escape('attr') .
         ($button->isLight()->toBool() ? ' is-light' : '') .
@@ -9,9 +9,10 @@
 
       snippet('elements/link', [
         'class' => 'button ' . $class,
-        'link' => $button
+        'link' => $button,
+        'target' => $target ?? null
       ]);
     }
-  ?>
-</div>
+    ?>
+  </div>
 <?php endif ?>

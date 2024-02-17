@@ -1,20 +1,21 @@
 <?php
-  $url = null;
+$url = null;
 
-  switch ($link->type()) {
-    case 'page':
-      $anchor = $link->pageAnchor()->isNotEmpty() ? '#' . $link->pageAnchor()->escape('url') : '';
-      $url = $link->page()->toPage()->url() . $anchor;
-      break;
-    case 'url':
-      $url = $link->url()->escape('attr');
-      break;
-    case 'email':
-      $subject = $link->emailSubject()->isNotEmpty() ? '?subject=' . $link->emailSubject()->escape('url') : '';
-      $url = 'mailto:' . Str::encode($link->email()->escape()) . $subject;
-      break;
-  }
+switch ($link->type()) {
+  case 'page':
+    $anchor = $link->pageAnchor()->isNotEmpty() ? '#' . $link->pageAnchor()->escape('url') : '';
+    $url = $link->page()->toPage()->url() . $anchor;
+    break;
+  case 'url':
+    $url = $link->url()->escape('attr');
+    break;
+  case 'email':
+    $subject = $link->emailSubject()->isNotEmpty() ? '?subject=' . $link->emailSubject()->escape('url') : '';
+    $url = 'mailto:' . Str::encode($link->email()->escape()) . $subject;
+    break;
+}
 ?>
-<a class="<?= $class ?>" href="<?= $url ?>">
+
+<a class="<?= $class ?>" href="<?= $url ?>" <?= Html::attr('target', $target ?? null) ?>>
   <?= $link->label()->escape() ?>
 </a>

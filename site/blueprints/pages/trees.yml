@@ -27,6 +27,7 @@ columns:
           back: white
       buttons:
         extends: fields/buttons
+        help: Les boutons ne seront affichés que sur l'arbre France
 
   - width: 1/3
     sections:
