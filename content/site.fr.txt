@@ -153,7 +153,7 @@ Navlinks:
 Navbuttons:
 
 - 
-  label: 🎞 Le film
+  label: Le film
   type: page
   page:
     - page://asaA7JJJPXhOtvsr
@@ -165,7 +165,7 @@ Navbuttons:
   islight: 'false'
   isoutlined: 'false'
 - 
-  label: 💧Nous soutenir
+  label: Reprendre le projet
   type: page
   page:
     - page://lAqO3y4hhuMN3Ugu
@@ -209,4 +209,4 @@ Footerfreetext: <p>Le code du site est disponible sur <a href="https://github.co
 
 ----
 
-Footercopyright: <p>Réalisé par <a href="https://tseignette.github.io/" rel="noopener noreferrer">Thomas Seignette</a> avec <a href="https://getkirby.com/" rel="noopener noreferrer">Kirby</a> • Hébergé gracieusement par <a href="https://www.infomaniak.com/fr" rel="noopener noreferrer">Infomaniak</a></p><p>Terractiva © 2022</p>
+Footercopyright: <p>Réalisé par <a href="https://tseignette.github.io/" rel="noreferrer">Thomas Seignette</a> avec <a href="https://getkirby.com/" rel="noreferrer">Kirby</a> • Hébergé gracieusement par <a href="https://www.infomaniak.com/fr" rel="noreferrer">Infomaniak</a></p><p>Terractiva © 2024</p>

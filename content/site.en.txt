@@ -155,7 +155,7 @@ Navbuttons:
   islight: 'false'
   isoutlined: 'false'
 - 
-  label: Support us
+  label: Take over the project
   type: page
   page:
     - page://lAqO3y4hhuMN3Ugu
@@ -199,4 +199,4 @@ Footerfreetext: <p>The code of the website is available on <a href="https://gith
 
 ----
 
-Footercopyright: <p>Made by <a href="https://tseignette.github.io/en" rel="noopener noreferrer">Thomas Seignette</a> with <a href="https://getkirby.com/" rel="noopener noreferrer">Kirby</a> • Kindly hosted by <a href="https://www.infomaniak.com/en" rel="noopener noreferrer">Infomaniak</a></p><p>Terractiva © 2022</p>
+Footercopyright: <p>Made by <a href="https://tseignette.github.io/en" rel="noreferrer">Thomas Seignette</a> with <a href="https://getkirby.com/" rel="noreferrer">Kirby</a> • Kindly hosted by <a href="https://www.infomaniak.com/en" rel="noreferrer">Infomaniak</a></p><p>Terractiva © 2024</p>
