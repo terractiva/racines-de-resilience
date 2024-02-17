@@ -105,7 +105,6 @@
           <?php snippet('elements/action', ['action' => $action, 'doOpenInNewTab' => true]) ?>
 
           <div class="modal-card-content">
-            <?php $tmp = 'https://airtable.com/shrlqNJvuiem0iFkA' ?>
             <div class="buttons">
               <?php
                 $formUrl = $site->airtableFormUrl();
